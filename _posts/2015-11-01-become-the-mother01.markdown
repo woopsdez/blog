@@ -2,6 +2,9 @@
 layout: post
 title: 母親になります。
 date: '2015-11-01 07:59:50'
+categories: diary
+banner_image: "/content/images/2015/11/8364039669_24ffcffc1d_k.jpg"
+featured: true
 ---
 
 日記のような取り留めのないコトを、ネット上に書くのはやめていたいのだけど、自分がいつ何をしていたかをブログによって知れるのは便利なので、開き直ることにします。

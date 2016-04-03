@@ -2,9 +2,10 @@
 layout: post
 title: '[出演]CSS Nite LP34「Webデザインで使うPhotoshop」'
 date: '2014-04-22 15:00:10'
+categories: works
+banner_image: "https://fbcdn-sphotos-d-a.akamaihd.net/hphotos-ak-prn2/t31.0-8/1974368_834984949863936_1376015664089756265_o.jpg"
+featured: true
 ---
-
-![登壇写真](https://fbcdn-sphotos-d-a.akamaihd.net/hphotos-ak-prn2/t31.0-8/1974368_834984949863936_1376015664089756265_o.jpg)
 
 2014年4月19日に行われたイベントに出演いたしました。
 [CSS Nite LP34「Webデザインで使うPhotoshop」](http://cssnite.jp/lp/lp34/)

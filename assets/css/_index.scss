@@ -1,0 +1,54 @@
+/*
+	INDEX STYLES
+*/
+
+.index {
+	display: none;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	padding: 20px 0 20px;
+	margin: 0;
+	color: #ececf1;
+	background-color: #272727;
+	background-color: rgba(#272727, 0.9);
+	background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(39, 39, 39, 0.9)), color-stop(100%, rgba(56, 56, 56, 0.9)));
+	background-image: -webkit-linear-gradient(rgba(39, 39, 39, 0.9), rgba(56, 56, 56, 0.9));
+	background-image: -moz-linear-gradient(rgba(39, 39, 39, 0.9), rgba(56, 56, 56, 0.9));
+	background-image: -o-linear-gradient(rgba(39, 39, 39, 0.9), rgba(56, 56, 56, 0.9));
+	background-image: linear-gradient(rgba(39, 39, 39, 0.9), rgba(56, 56, 56, 0.9));
+
+	h1, h2 {
+		margin: 0;
+		padding: 0;
+		font: 700 18px 'Open Sans', sans-serif;
+		color: #fff;
+		text-overflow: ellipsis;
+	  overflow: hidden;
+	  width: 50%;
+	  white-space: nowrap;
+	  text-align: right;
+	}
+
+	h2 {
+		font: 600 18px 'Open Sans', sans-serif;
+		font-weight: 400;
+		text-align: left;
+	}
+
+	.show {
+		display: block;
+	}
+
+	@media screen and (max-width: 790px) {
+		h1 {
+			display: none;
+		}
+	}
+
+	@media screen and (max-width: 675px) {
+		display: none !important;
+	}
+}

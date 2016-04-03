@@ -2,9 +2,10 @@
 layout: post
 title: ライブラリを作る事でプログラミングスキルは本当に向上するのか。
 date: '2014-07-24 12:50:47'
+categories: works
+banner_image: "/content/images/2015/03/library.jpg"
+featured: true
 ---
-
-![](/content/images/2015/03/library.jpg)
 
 [デザイナーのわたしがプログラムの基礎をだいたい3日で覚えた1つの方法](http://blog.mikiishijima.com/start-programing/)で、Minecraftとプラグインを使ってのプログラミングの楽しさについて書きました。
 

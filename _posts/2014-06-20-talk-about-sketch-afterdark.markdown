@@ -2,9 +2,10 @@
 layout: post
 title: Sketchの使い方をお話ししてきました。
 date: '2014-06-20 07:46:06'
+categories: works
+banner_image: "/content/images/2015/03/20140619_af11_0142_.jpg"
+featured: true
 ---
-
-![](/content/images/2015/03/20140619_af11_0142_.jpg)
 
 [CPI x CSS Nite x 優クリエイト「After Dark」（11）](http://cssnite.jp/afterdark/cpi/vol11/)にてSketchの基本的な使い方についてお話してきました。
 

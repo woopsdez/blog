@@ -2,14 +2,15 @@
 layout: post
 title: ニコ動 超チューニング祭で最優秀賞もらいました
 date: '2014-04-27 21:10:43'
+categories: works
+banner_image: "/content/images/2014/04/nico03.jpg"
+featured: true
 ---
 
 ニコニコ超会議で開催された「超チューニング祭り」に恋人である武藤スナイパーカスタムからお誘いされて参加しました。
 
 投票してくださった方々のおかげで最優秀賞！
 ありがとうございます！
-
-<a href="https://www.flickr.com/photos/woops_/15528479205" title="2014-09-15 23.10.15 by Miki Ishijima, on Flickr"><img src="https://farm6.staticflickr.com/5613/15528479205_7b3c0f3807.jpg" width="375" height="500" alt="2014-09-15 23.10.15"></a>
 
 ニコ動モバイル版のトップページのhtml,css,jsを軽量化するお祭りでして、にぎやかな会場、狭いブースの中で詰め込まれておもしろかったです。
 
@@ -18,14 +19,10 @@ date: '2014-04-27 21:10:43'
 武藤さんが狼が好きなのでそれっぽい名前にしました。ギャングらしくふたりとも革ジャン装備。
 
 ### 武藤スナイパーカスタム
-Twitter : [tai2](https://twitter.com/__tai2__)
-![武藤スナイパーカスタム](http://tai2.net/img/tai2.jpg)
-コンピューターグラフィックスとPythonをこよなく愛すマッチ棒エンジニア。
+{% include image_caption.html imageurl="/content/images/2014/04/tai2-opt-min.jpg" title="コンピューターグラフィックスとPythonをこよなく愛すマッチ棒エンジニア。" %} Twitter : [tai2](https://twitter.com/__tai2__)
 
 ### イシジマミキ
-Twitter : [woopsdez](http://twitter.com/woopsdez)
-![イシジマ ミキ](/content/images/2015/03/10258642_834983943197370_4862118391458179078_o.png)
-写真をアップするたびにおおつねさんに「太った？」と言われる番付上昇中のデザイナー
+{% include image_caption.html imageurl="/content/images/2014/04/woopsdez-opt-min.jpg" title="写真をアップするたびにおおつねさんに「太った？」と言われる番付上昇中のデザイナー" %} Twitter : [woopsdez](http://twitter.com/woopsdez)
 
 他はエンジニアふたり、個人での参加などがあり学生さんやエンジニアさんが非常に多かったです。非常に高名なドワンゴスターエンジニアも参加していたのですが、HTML,CSS,JS等の専門外のチューニングを行う。というのがなんかおもしろかったです。
 
@@ -33,7 +30,7 @@ Twitter : [woopsdez](http://twitter.com/woopsdez)
 [https://github.com/tai2/nicohaya](https://github.com/tai2/nicohaya)
 
 ## チーム：ウルフギャングのやったこと
-エンジニア
+### エンジニア
 
 * html5 APIを利用した画像やスクリプトのローカルキャッシュ
 * jsの整理
@@ -41,9 +38,9 @@ Twitter : [woopsdez](http://twitter.com/woopsdez)
 * css,jsのminify
 
 エンジニアがやったことがGistにまとめられました。
-https://gist.github.com/tai2/11366229
+[https://gist.github.com/tai2/11366229](https://gist.github.com/tai2/11366229)
 
-デザイナー
+### デザイナー
 
 * 意味のない装飾はしない
 * CSS Sprite

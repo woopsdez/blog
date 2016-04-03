@@ -2,16 +2,17 @@
 layout: post
 title: MONSTERZ モンスターズ
 date: '2014-05-01 06:27:13'
+categories: diary
 ---
 
 マスコミ試写会にブロガーとして招待していただきましたので行ってきました！デザインのことくらいしか書いていない弱小ブログですが誘われて感激です！
 
-![](/content/images/2014/May/2014-04-22-13-01-16-1.jpg)
+![](/content/images/2014/03/2014-04-22-13-01-16-1.jpg)
 
 2014年5月30日（金）新宿ピカデリー他全国ロードショー
 配給：ワーナー・ブラザース映画
 
-![](/content/images/2014/May/ishijima_-2014-05-01-16-15-05.png)
+![](/content/images/2014/03/ishijima_-2014-05-01-16-15-05.png)
 
 公式サイト： [www.monsterz-movie.jp](www.monsterz-movie.jp)
 
@@ -45,7 +46,7 @@ date: '2014-05-01 06:27:13'
 
 ## どうせイケメンと美女を出しただけの流行の映画でしょ〜？
 
-![](/content/images/2014/May/o--o-3o-4o--o-2o---c-c-3c-9c--c--c--c--c--c--c-3.jpg)
+![](/content/images/2014/03/o--o-3o-4o--o-2o---c-c-3c-9c--c--c--c--c--c--c-3.jpg)
 ©2014「MONSTERZ」FILM PARTNERS
 
 と、思ってナメてかかってたんですけど不覚にも泣いてしまいました。あれですね。年とると涙脆くなるから。いやー悔しい。
@@ -59,7 +60,7 @@ date: '2014-05-01 06:27:13'
 
 こんなにされてもちゃんと持ってる
 
-![](/content/images/2014/May/o--o-3o-4o--o-2o---c-c-3c-9c--c--c--c--c-5c--c-0e0-.jpg)
+![](/content/images/2014/03/o--o-3o-4o--o-2o---c-c-3c-9c--c--c--c--c-5c--c-0e0-.jpg)
 ©2014「MONSTERZ」FILM PARTNERS
 
 もちろんお母さんがくれたものだからってのもあるんですが、実は大切にしている理由はもうひとつあって…。それがなんかグッっときます！
@@ -72,7 +73,7 @@ date: '2014-05-01 06:27:13'
 
 かわいい
 
-![](/content/images/2014/May/01.jpg)
+![](/content/images/2014/03/01.jpg)
 ©2014「MONSTERZ」FILM PARTNERS
 
 ## 操れるなんて絶対有利じゃん

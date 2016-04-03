@@ -2,9 +2,10 @@
 layout: post
 title: 帰ってから、甘いものが食べたくなってもいいようにと思ったのだ。
 date: '2015-12-04 07:59:17'
+categories: diary
+banner_image: "/content/images/2015/12/banner.jpg"
+featured: true
 ---
-
-[photo](https://www.flickr.com/photos/djwtwo/14033143291/in/photolist-no4wAp-3Hc8Fe-y5gu8z-nmoWLG-pVnzbb-jTnaTZ-i1WEps-8djWT-ppf74m-4ZkRU7-hygvDz-n6v31R-ukiT3o-3HjsHw-vcTvL-vXosnZ-ktD1uT-7oyYC8-9HNPZE-csp4UY-nxEpdy-dphsK-sDQTi4-CvfKx-5kSnS3-nkiiFr-BqxdwZ-hCCQYG-8w417z-4eyWgu-5Ugx7V-99qvo2-8Wmeu3-4h8Mjq-aJz9GZ-9Quy3z-ok513v-ohtPki-5d711L-91AWGf-aCxBeh-bVKcFg-5RhgE2-nWi9FR-pa92CM-6hGeP-6cVdcu-a6DLAk-4KaG5E-4yxcan) by [Dennis Wilkinson](https://www.flickr.com/photos/djwtwo/)
 
 <a rel="nofollow" href="http://www.amazon.co.jp/gp/product/4167753693/ref=as_li_ss_il?ie=UTF8&camp=247&creative=7399&creativeASIN=4167753693&linkCode=as2&tag=fastfargroove-22"><img border="0" src="http://ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=4167753693&Format=_SL250_&ID=AsinImage&MarketPlace=JP&ServiceVersion=20070822&WS=1&tag=fastfargroove-22" ></a><img src="http://ir-jp.amazon-adsystem.com/e/ir?t=fastfargroove-22&l=as2&o=9&a=4167753693" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" /> <a rel="nofollow" href="http://www.amazon.co.jp/gp/product/B0006M197K/ref=as_li_ss_il?ie=UTF8&camp=247&creative=7399&creativeASIN=B0006M197K&linkCode=as2&tag=fastfargroove-22"><img border="0" src="http://ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B0006M197K&Format=_SL250_&ID=AsinImage&MarketPlace=JP&ServiceVersion=20070822&WS=1&tag=fastfargroove-22" ></a><img src="http://ir-jp.amazon-adsystem.com/e/ir?t=fastfargroove-22&l=as2&o=9&a=B0006M197K" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
 <small>タイトルの元ネタたち</small>

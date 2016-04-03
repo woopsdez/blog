@@ -2,6 +2,7 @@
 layout: post
 title: 10年目を目前に新たなスタートをきろうと思います。
 date: '2014-04-18 09:01:52'
+categories: diary
 ---
 
 MT2.5→WordPressで2005年7月から2014年3月まで続けていた「ウープスデザインブログ」ですが、2014年4月から「blog.mikiishijima」として新たに仕切り直します。

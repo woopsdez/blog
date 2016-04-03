@@ -2,9 +2,10 @@
 layout: post
 title: こけむさズ リニューアルオープンいたしました！
 date: '2014-05-08 09:32:07'
+categories: works
+banner_image: "https://fbcdn-sphotos-c-a.akamaihd.net/hphotos-ak-xpa1/t31.0-8/10687445_809346465770441_3846403664794715884_o.jpg"
+featured: true
 ---
-
-![](https://fbcdn-sphotos-c-a.akamaihd.net/hphotos-ak-xpa1/t31.0-8/10687445_809346465770441_3846403664794715884_o.jpg)
 
 これまでより倍近く広い、同ビルの1Fに移転いたしました！なんかおしゃれっぽい上に、キッチンやらシャワー室やら駐輪場、サンドバックまでも増設されて「真面目っぽく」なりました！
 

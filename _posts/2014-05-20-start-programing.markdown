@@ -2,9 +2,10 @@
 layout: post
 title: デザイナーのわたしがプログラミングの基礎をだいたい3日で覚えた1つの方法
 date: '2014-05-20 05:52:52'
+categories: works
+banner_image: "/content/images/2015/03/498951987_0de3be68a3_o.jpg"
+featured: true
 ---
-
-![](/content/images/2015/03/498951987_0de3be68a3_o.jpg)
 
 フルスタックエンジニア！フルスタックエンジニア！
 

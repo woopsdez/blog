@@ -2,9 +2,10 @@
 layout: post
 title: dist.3 Photoshop and me に登壇しました
 date: '2014-06-20 08:19:18'
+categories: works
+banner_image: "/content/images/2015/03/36029186f1328434faaedd4257b44b71.png"
+featured: true
 ---
-
-![](/content/images/2015/03/36029186f1328434faaedd4257b44b71.png)
 
 [dist.3 Photoshop and me](http://http://dist.connpass.com/event/6385/)にてお話させていただきました。
 
