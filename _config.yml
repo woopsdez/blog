@@ -1,6 +1,9 @@
 # External Gems
 gems: 						[jekyll-paginate]
 
+# Exclude build files
+exclude: ["node_modules", "gulpfile.js", "package.json"]
+
 # Site Settings
 title: 						"Miki Ishijima Blog"
 email: 						"woops.mirai@gmail.com"
