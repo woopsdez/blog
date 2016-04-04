@@ -33,7 +33,7 @@ featured: true
 
 ## 甘いものが欲しい…!
 
-![はじめの一歩 42巻より](/content/images/2015/12/lowcarb-01.png)
+![はじめの一歩 42巻より]({{site.content_url}}/content/images/2015/12/lowcarb-01.png)
 
 はじめの一歩 42巻より
 
@@ -65,11 +65,11 @@ featured: true
 
 食べたあとの血糖値も平均値をキープできる!!! もっ最高です!
 
-![](/content/images/2015/12/lowcarb-05.png)
+![]({{site.content_url}}/images/2015/12/lowcarb-05.png)
 
 アイスって甘味も感じやすいし、特別感もあって良いガス抜きになりますね。
 
-![](/content/images/2015/12/p4.jpg)
+![]({{site.content_url}}/images/2015/12/p4.jpg)
 
 ナチュラルローソンには、パンケーキやクリームサンドなどでも低糖質のものがたくさんあります。すでにたくさんのレビューがあるので、ここでの紹介は割愛いたしますが、ダイエットとして糖質制限する方もぜひ試してください。
 

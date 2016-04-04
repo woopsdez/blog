@@ -5,8 +5,9 @@ gems: 						[jekyll-paginate]
 title: 						"Miki Ishijima Blog"
 email: 						"woops.mirai@gmail.com"
 description: 			"イシジマミキ 個人ブログ"
-baseurl: 					""
-logourl: 					"/assets/img/bloglogo.jpg"
+baseurl: 					"http://blog.mikiishijima.com"
+content_url: 	    "/content"
+logourl: 				  "/assets/img/bloglogo.jpg"
 fa-logo: 					"fa-bookmark-o"
 paginate: 				5
 
@@ -34,7 +35,7 @@ linkedin_url:  			""
 # Theme Settings
 theme_disqus_shortname: 	""
 theme_google_comments: 		true
-theme_analytics_id: 		""
+theme_analytics_id: 		"UA-413655-12"
 theme_reading_time: 		true
 theme_autoload_comments: 	false
 theme_always_show_nav: 		false
@@ -49,4 +50,5 @@ sass:
 
 # Build Settings
 markdown: 					kramdown
+# permalink: 					/:title/
 permalink: 					pretty

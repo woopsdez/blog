@@ -5,8 +5,8 @@
 body, html {
 	height: 100%;
 	background: #fff;
-	font: 400 20px "Open Sans", serif;
-	font-family: Lato, 游ゴシック体, 'Yu Gothic', YuGothic, 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', Meiryo, メイリオ, sans-serif;
+	font: 400 20px "Open Sans", sans-serif;
+	font-family: Lato, 游ゴシック体, 'Yu Gothic', YuGothic, 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', Meiryo, メイリオ, sans-sans-serif;
 	color: #3b3b3b;
 	padding: 0;
 	margin: 0;
@@ -31,7 +31,7 @@ h1 a:hover, p a:hover {
 
 h1, h2, h3, h4 {
 	margin: 30px 0;
-	font: 700 36px Lato, 游ゴシック体, 'Yu Gothic', YuGothic, 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', Meiryo, メイリオ, sans-serif;
+	font: 700 36px Lato, 游ゴシック体, 'Yu Gothic', YuGothic, 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', Meiryo, メイリオ, sans-sans-serif;
 	line-height: 56px;
 	color: #262b30;
 
@@ -42,17 +42,17 @@ h1, h2, h3, h4 {
 
 h2 {
 	margin: 30px 0 20px;
-	font: 700 28px Lato, 游ゴシック体, 'Yu Gothic', YuGothic, 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', Meiryo, メイリオ, sans-serif;
+	font: 700 28px Lato, 游ゴシック体, 'Yu Gothic', YuGothic, 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', Meiryo, メイリオ, sans-sans-serif;
 }
 
 h3 {
 	margin: 20px 0 10px;
-	font: 600 24px 'Open Sans', Serif;
+	font: 600 24px 'Open Sans', sans-serif;
 }
 
 h4 {
 	margin: 20px 0 10px;
-	font: 600 22px 'Open Sans', Serif;
+	font: 600 22px 'Open Sans', sans-serif;
 }
 
 p {
@@ -64,6 +64,11 @@ p {
 
 strong, em {
 	font-weight: 600;
+}
+
+small{
+	color: #666;
+	font-size: 16px;
 }
 
 img {
@@ -92,7 +97,7 @@ blockquote, q, cite {
 	margin: 30px 0 30px 4%;
 	border-left: 3px solid #c6d5e1;
 	padding: 5px 4%;
-	font: italic 700 18px Lato, 游ゴシック体, 'Yu Gothic', YuGothic, 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', Meiryo, メイリオ, sans-serif;
+	font: italic 700 18px Lato, 游ゴシック体, 'Yu Gothic', YuGothic, 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', Meiryo, メイリオ, sans-sans-serif;
 	line-height: 38px;
 
 	p {
@@ -105,7 +110,7 @@ input:not([type=submit]):not([type=file]) {
 	padding: 8px 15px;
 	background: #fff;
 	border: 2px solid #808080;
-	font: 600 15px 'Open Sans', Serif;
+	font: 600 15px 'Open Sans', sans-serif;
 	border-radius: 4px;
 	outline: 0;
 
@@ -193,7 +198,7 @@ input:not([type=submit]):not([type=file]):active, input:not([type=submit]):not([
 footer {
 	padding: 25px 0;
 	text-align: center;
-	font: 400 13px 'Open Sans', Serif;
+	font: 400 13px 'Open Sans', sans-serif;
 	line-height: 34px;
 	color: #a6a6a6;
 
@@ -225,14 +230,14 @@ footer {
 
 .notification .ntitle {
 	color: #c4e2f8;
-	font: 700 18px 'Open Sans',Serif;
+	font: 700 18px 'Open Sans',sans-serif;
 	padding-right: 20px;
 	border-right: 2px solid #3285c4;
 }
 
 .notification .message {
 	color: #fff;
-	font: 700 18px 'Open Sans',Serif;
+	font: 700 18px 'Open Sans',sans-serif;
 	padding-left: 20px;
 }
 

@@ -4,7 +4,7 @@ layout: default
 
 {% if page.featured == true %} 
 <div id="cover" class="cover featured">
-	<div class="background" style="background-image:url('{{ page.banner_image }}');"></div>
+	<div class="background" style="background-image:url('{{ site.baseurl }}{{ page.banner_image }}');"></div>
 	<header class="wrapper">
 		<h2>
 			{% for category in post.categories %}

@@ -20,7 +20,7 @@ layout: default
 					{{ category }} 
 				{% endfor %}
 			</h2>
-			<h1><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h1>
+			<h1><a href="{{ post.url | prepend: site.siteurl }}">{{ post.title }}</a></h1>
 			<span>
 				Posted on <i class="fa fa-clock-o"></i><time datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%B %-d, %Y" }}</time>.
 			</span>

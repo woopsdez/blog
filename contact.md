@@ -5,6 +5,6 @@ permalink: /contact/
 comments: false
 ---
 
-We provide in-depth documentation detailing theme installation, feature usage, configuration options and demo setup. If you have any queries, bug reports or features requests, please submit a new ticket on our [support site](http://support.ecko.me). We aim to answer all tickets within one business day.
+記事に関するだけでなく、取材・講演・仕事などのお問い合わせも[woops.mirai@gmail.com](mailto:woops.mirai@gmail.com)へどうぞ。
 
-If you have any bug reports, or feature requests, please let us know!
+TwitterやFacebookも確認しております。返信は遅めです。ご了承ください。
