@@ -11,6 +11,11 @@
 		<meta name="MobileOptimized" content="320" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+		<meta property="og:title" content="{{page.title}}" />
+    <meta property="og:type" content="blog" />
+    <meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl }}" />
+    <meta property="og:image" content="{{ site.baseurl }}{{ page.banner_image }}" />
+
 		<link rel="alternate" type="application/rss+xml" href="{{ site.baseurl }}/feed.xml">
 		<link rel="shortcut icon" href="{{ "/favicon.ico" | prepend: site.baseurl }}">
 		<link rel="prefetch" href="{{ site.baseurl }}">

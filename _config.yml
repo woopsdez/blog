@@ -6,8 +6,8 @@ exclude: ["node_modules", "gulpfile.js", "package.json"]
 
 # Site Settings
 title: 						"Miki Ishijima Blog"
+description: 			"イシジマミキ ブログ"
 email: 						"woops.mirai@gmail.com"
-description: 			"イシジマミキ 個人ブログ"
 baseurl: 					"http://blog.mikiishijima.com"
 content_url: 	    "/content"
 logourl: 				  "/assets/img/bloglogo.jpg"
@@ -53,5 +53,5 @@ sass:
 
 # Build Settings
 markdown: 					kramdown
-# permalink: 					/:title/
-permalink: 					pretty
+permalink: 					/:title/
+# permalink: 					pretty
