@@ -1,0 +1,8 @@
+<Files ~ "^\.(htaccess|htpasswd)$">
+deny from all
+</Files>
+Redirect permanent /works/2014/05/20/start-programing/ http://blog.mikiishijima.com/start-programing/
+Redirect permanent /works/2014/04/27/cho-tuning-fes/ http://blog.mikiishijima.com/cho-tuning-fes/
+Redirect permanent /works/2014/07/24/my-first-library/ http://blog.mikiishijima.com/my-first-library/
+Redirect permanent /diary/2015/11/01/become-the-mother01/ http://blog.mikiishijima.com/become-the-mother01/
+order deny,allow
