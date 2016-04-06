@@ -3,6 +3,7 @@ var browserSync = require('browser-sync');
 var sass        = require('gulp-sass');
 var prefix      = require('gulp-autoprefixer');
 var cp          = require('child_process');
+var git         = require('gulp-git');
 
 var jekyll   = process.platform === 'win32' ? 'jekyll.bat' : 'jekyll';
 var messages = {
@@ -24,6 +25,25 @@ gulp.task('jekyll-build', function (done) {
 gulp.task('jekyll-rebuild', ['jekyll-build'], function () {
     browserSync.reload();
 });
+
+/**
+ * Deploy the Jekyll Site
+ */
+
+ gulp.task('deploy', ['jekyll-build'], function (done) {
+    return cp.spawn( git , ['status'])
+ });
+
+// ----
+gulp.task('add', function(){
+    return gulp.src('./')
+        .pipe(git.add())
+        .pipe(git.commit('test'))
+        .pipe(git.push('origin','master', function(err){
+            if (err) throw err;
+        }));
+});
+// ----
 
 /**
  * Wait for jekyll-build, then launch the Server
