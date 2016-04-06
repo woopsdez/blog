@@ -32,7 +32,10 @@ gulp.task('jekyll-rebuild', ['jekyll-build'], function () {
 gulp.task('push', function(){
     return gulp.src('./')
         .pipe(git.add())
-        .pipe(git.commit('test'))
+        .pipe(git.commit(undefined,{
+            args: '-m "hoge"',
+            disableMessageRequirement: true
+        }))
         .pipe(git.push('origin','master', function(err){
             if (err) throw err;
         }));
