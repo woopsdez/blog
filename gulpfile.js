@@ -58,10 +58,13 @@ gulp.task('browser-sync', ['sass', 'jekyll-build'], function() {
 /**
  * Resize & Optimize Image
  */ 
-gulp.task('resize', function() {
+gulp.task('image', function() {
     gulp.src('content/images/**/**/*.{jpg,png}', {base:'content/images/'})
-    .pipe(imageResize({ 
-      width : 1000
+    .pipe(imageResize({width : 1000}))
+    .pipe(imagemin({
+        progressive: true,
+        svgoPlugins: [{removeViewBox: false}],
+        use: [pngquant()]
     }))
     .pipe(gulp.dest('_site/content/images/'));
 });
