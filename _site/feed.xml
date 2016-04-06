@@ -3,10 +3,10 @@
 	<channel>
 		<title>Miki Ishijima Blog</title>
 		<description>イシジマミキ ブログ</description>
-		<link>/</link>
-		<atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
-		<pubDate>Wed, 06 Apr 2016 10:40:19 +0900</pubDate>
-		<lastBuildDate>Wed, 06 Apr 2016 10:40:19 +0900</lastBuildDate>
+		<link>http://blog.mikiishijima.com/</link>
+		<atom:link href="http://blog.mikiishijima.com/feed.xml" rel="self" type="application/rss+xml" />
+		<pubDate>Wed, 06 Apr 2016 11:00:46 +0900</pubDate>
+		<lastBuildDate>Wed, 06 Apr 2016 11:00:46 +0900</lastBuildDate>
 		<generator>Jekyll v3.1.2</generator>
 		
 			<item>
@@ -108,8 +108,8 @@ mv /yourdomain.com/blog/htaccess.txt yourdomain.com/blog/.htaccess;
 &lt;p&gt;来年にはtumblrに移行してるかもしれませんが、ひとまずこれでよろしくお願いします。&lt;/p&gt;
 </description>
 				<pubDate>Tue, 05 Apr 2016 00:00:00 +0900</pubDate>
-				<link>/hello-jekyll/</link>
-				<guid isPermaLink="true">/hello-jekyll/</guid>
+				<link>http://blog.mikiishijima.com/diary/2016/04/05/hello-jekyll/</link>
+				<guid isPermaLink="true">http://blog.mikiishijima.com/diary/2016/04/05/hello-jekyll/</guid>
 				
 				
 					<category>diary</category>
@@ -202,8 +202,8 @@ mv /yourdomain.com/blog/htaccess.txt yourdomain.com/blog/.htaccess;
 &lt;p&gt;この冬はナチュラルローソンとともに気軽に糖質制限をはじめてみては？&lt;/p&gt;
 </description>
 				<pubDate>Fri, 04 Dec 2015 07:59:17 +0900</pubDate>
-				<link>/started-lowcarb-life/</link>
-				<guid isPermaLink="true">/started-lowcarb-life/</guid>
+				<link>http://blog.mikiishijima.com/diary/2015/12/04/started-lowcarb-life/</link>
+				<guid isPermaLink="true">http://blog.mikiishijima.com/diary/2015/12/04/started-lowcarb-life/</guid>
 				
 				
 					<category>diary</category>
@@ -333,8 +333,8 @@ mv /yourdomain.com/blog/htaccess.txt yourdomain.com/blog/.htaccess;
 &lt;p&gt;元気な子が生まれますように。&lt;/p&gt;
 </description>
 				<pubDate>Sun, 01 Nov 2015 07:59:50 +0900</pubDate>
-				<link>/become-the-mother01/</link>
-				<guid isPermaLink="true">/become-the-mother01/</guid>
+				<link>http://blog.mikiishijima.com/diary/2015/11/01/become-the-mother01/</link>
+				<guid isPermaLink="true">http://blog.mikiishijima.com/diary/2015/11/01/become-the-mother01/</guid>
 				
 				
 					<category>diary</category>
@@ -490,8 +490,8 @@ mv /yourdomain.com/blog/htaccess.txt yourdomain.com/blog/.htaccess;
 &lt;noscript&gt;&lt;a href=&quot;http://www.nicovideo.jp/watch/sm23969139&quot;&gt;【ニコニコ動画】【Minecraft】タートルとごはん Part10【ゆっくり実況】&lt;/a&gt;&lt;/noscript&gt;
 </description>
 				<pubDate>Thu, 24 Jul 2014 12:50:47 +0900</pubDate>
-				<link>/my-first-library/</link>
-				<guid isPermaLink="true">/my-first-library/</guid>
+				<link>http://blog.mikiishijima.com/works/2014/07/24/my-first-library/</link>
+				<guid isPermaLink="true">http://blog.mikiishijima.com/works/2014/07/24/my-first-library/</guid>
 				
 				
 					<category>works</category>
@@ -555,8 +555,8 @@ mv /yourdomain.com/blog/htaccess.txt yourdomain.com/blog/.htaccess;
 &lt;p&gt;&lt;a href=&quot;http://www.amazon.co.jp/gp/product/B00IWM8VBS/ref=as_li_ss_il?ie=UTF8&amp;amp;camp=247&amp;amp;creative=7399&amp;amp;creativeASIN=B00IWM8VBS&amp;amp;linkCode=as2&amp;amp;tag=fastfargroove-22&quot;&gt;&lt;img border=&quot;0&quot; src=&quot;http://ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;amp;ASIN=B00IWM8VBS&amp;amp;Format=_SL250_&amp;amp;ID=AsinImage&amp;amp;MarketPlace=JP&amp;amp;ServiceVersion=20070822&amp;amp;WS=1&amp;amp;tag=fastfargroove-22&quot; /&gt;&lt;/a&gt;&lt;img src=&quot;http://ir-jp.amazon-adsystem.com/e/ir?t=fastfargroove-22&amp;amp;l=as2&amp;amp;o=9&amp;amp;a=B00IWM8VBS&quot; width=&quot;1&quot; height=&quot;1&quot; border=&quot;0&quot; alt=&quot;&quot; style=&quot;border:none !important; margin:0px !important;&quot; /&gt;&lt;/p&gt;
 </description>
 				<pubDate>Fri, 20 Jun 2014 09:11:01 +0900</pubDate>
-				<link>/markdown-plesentation/</link>
-				<guid isPermaLink="true">/markdown-plesentation/</guid>
+				<link>http://blog.mikiishijima.com/works/2014/06/20/markdown-plesentation/</link>
+				<guid isPermaLink="true">http://blog.mikiishijima.com/works/2014/06/20/markdown-plesentation/</guid>
 				
 				
 					<category>works</category>
@@ -595,8 +595,8 @@ mv /yourdomain.com/blog/htaccess.txt yourdomain.com/blog/.htaccess;
 &lt;p&gt;&lt;a href=&quot;http://www.amazon.co.jp/gp/product/4532168139/ref=as_li_ss_il?ie=UTF8&amp;amp;camp=247&amp;amp;creative=7399&amp;amp;creativeASIN=4532168139&amp;amp;linkCode=as2&amp;amp;tag=fastfargroove-22&quot;&gt;&lt;img border=&quot;0&quot; src=&quot;http://ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;amp;ASIN=4532168139&amp;amp;Format=_SL250_&amp;amp;ID=AsinImage&amp;amp;MarketPlace=JP&amp;amp;ServiceVersion=20070822&amp;amp;WS=1&amp;amp;tag=fastfargroove-22&quot; /&gt;&lt;/a&gt;&lt;img src=&quot;http://ir-jp.amazon-adsystem.com/e/ir?t=fastfargroove-22&amp;amp;l=as2&amp;amp;o=9&amp;amp;a=4532168139&quot; width=&quot;1&quot; height=&quot;1&quot; border=&quot;0&quot; alt=&quot;&quot; style=&quot;border:none !important; margin:0px !important;&quot; /&gt;&lt;/p&gt;
 </description>
 				<pubDate>Fri, 20 Jun 2014 08:19:18 +0900</pubDate>
-				<link>/dist3-photoshopandme/</link>
-				<guid isPermaLink="true">/dist3-photoshopandme/</guid>
+				<link>http://blog.mikiishijima.com/works/2014/06/20/dist3-photoshopandme/</link>
+				<guid isPermaLink="true">http://blog.mikiishijima.com/works/2014/06/20/dist3-photoshopandme/</guid>
 				
 				
 					<category>works</category>
@@ -646,8 +646,8 @@ mv /yourdomain.com/blog/htaccess.txt yourdomain.com/blog/.htaccess;
 &lt;p&gt;&lt;a href=&quot;http://www.amazon.co.jp/gp/product/4844335375/ref=as_li_ss_il?ie=UTF8&amp;amp;camp=247&amp;amp;creative=7399&amp;amp;creativeASIN=4844335375&amp;amp;linkCode=as2&amp;amp;tag=fastfargroove-22&quot;&gt;&lt;img border=&quot;0&quot; src=&quot;http://ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;amp;ASIN=4844335375&amp;amp;Format=_SL250_&amp;amp;ID=AsinImage&amp;amp;MarketPlace=JP&amp;amp;ServiceVersion=20070822&amp;amp;WS=1&amp;amp;tag=fastfargroove-22&quot; /&gt;&lt;/a&gt;&lt;img src=&quot;http://ir-jp.amazon-adsystem.com/e/ir?t=fastfargroove-22&amp;amp;l=as2&amp;amp;o=9&amp;amp;a=4844335375&quot; width=&quot;1&quot; height=&quot;1&quot; border=&quot;0&quot; alt=&quot;&quot; style=&quot;border:none !important; margin:0px !important;&quot; /&gt;&lt;/p&gt;
 </description>
 				<pubDate>Fri, 20 Jun 2014 07:46:06 +0900</pubDate>
-				<link>/talk-about-sketch-afterdark/</link>
-				<guid isPermaLink="true">/talk-about-sketch-afterdark/</guid>
+				<link>http://blog.mikiishijima.com/works/2014/06/20/talk-about-sketch-afterdark/</link>
+				<guid isPermaLink="true">http://blog.mikiishijima.com/works/2014/06/20/talk-about-sketch-afterdark/</guid>
 				
 				
 					<category>works</category>
@@ -841,8 +841,8 @@ end
 &lt;p&gt;興味のある方はフォームにちょちょいとメールアドレスを送ると、無料でスキルヒアリングしてくれますよ。&lt;/p&gt;
 </description>
 				<pubDate>Tue, 20 May 2014 05:52:52 +0900</pubDate>
-				<link>/start-programing/</link>
-				<guid isPermaLink="true">/start-programing/</guid>
+				<link>http://blog.mikiishijima.com/works/2014/05/20/start-programing/</link>
+				<guid isPermaLink="true">http://blog.mikiishijima.com/works/2014/05/20/start-programing/</guid>
 				
 				
 					<category>works</category>
@@ -942,8 +942,8 @@ end
 &lt;p&gt;きっと少しだけ胸にひびくものがあるはずです。&lt;/p&gt;
 </description>
 				<pubDate>Thu, 08 May 2014 14:24:01 +0900</pubDate>
-				<link>/ukiyodoko-coworkingspace/</link>
-				<guid isPermaLink="true">/ukiyodoko-coworkingspace/</guid>
+				<link>http://blog.mikiishijima.com/works/2014/05/08/ukiyodoko-coworkingspace/</link>
+				<guid isPermaLink="true">http://blog.mikiishijima.com/works/2014/05/08/ukiyodoko-coworkingspace/</guid>
 				
 				
 					<category>works</category>
@@ -1028,8 +1028,8 @@ end
 &lt;p&gt;&lt;img src=&quot;https://scontent.xx.fbcdn.net/hphotos-xpa1/t31.0-8/10631119_798112260227195_4431205507748721234_o.jpg&quot; alt=&quot;Insert&quot; /&gt;&lt;/p&gt;
 </description>
 				<pubDate>Thu, 08 May 2014 09:32:07 +0900</pubDate>
-				<link>/kokemusazu-riniyuaruopunitasimasita/</link>
-				<guid isPermaLink="true">/kokemusazu-riniyuaruopunitasimasita/</guid>
+				<link>http://blog.mikiishijima.com/works/2014/05/08/kokemusazu-riniyuaruopunitasimasita/</link>
+				<guid isPermaLink="true">http://blog.mikiishijima.com/works/2014/05/08/kokemusazu-riniyuaruopunitasimasita/</guid>
 				
 				
 					<category>works</category>
