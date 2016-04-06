@@ -1,5 +1,4 @@
 var gulp        = require('gulp');
-var gulpif        = require('gulp-if');
 var sass        = require('gulp-sass');
 var prefix      = require('gulp-autoprefixer');
 var git         = require('gulp-git');
@@ -46,7 +45,7 @@ gulp.task('jekyll-rebuild', ['jekyll-build'], function () {
 // parse command line argument
 var argv = minimist(process.argv.slice(2));
 gulp.task('push', function(){
-    return gulp.src('./')
+    return gulp.src('.')
         .pipe(git.add())
         .pipe(git.commit(argv['m']))
         .pipe(git.push('origin','master', function(err){
