@@ -29,13 +29,7 @@ gulp.task('jekyll-rebuild', ['jekyll-build'], function () {
 /**
  * Deploy the Jekyll Site
  */
-
- gulp.task('deploy', ['jekyll-build'], function (done) {
-    return cp.spawn( git , ['status'])
- });
-
-// ----
-gulp.task('add', function(){
+gulp.task('push', function(){
     return gulp.src('./')
         .pipe(git.add())
         .pipe(git.commit('test'))
@@ -43,7 +37,6 @@ gulp.task('add', function(){
             if (err) throw err;
         }));
 });
-// ----
 
 /**
  * Wait for jekyll-build, then launch the Server
@@ -81,3 +74,4 @@ gulp.task('watch', function () {
  * compile the jekyll site, launch BrowserSync & watch files.
  */
 gulp.task('default', ['browser-sync', 'watch']);
+gulp.task('deploy',  ['jekyll-build', 'push']);
