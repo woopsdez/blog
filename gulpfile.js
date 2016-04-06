@@ -6,6 +6,7 @@ var imageResize = require('gulp-image-resize');
 var browserSync = require('browser-sync');
 var cp          = require('child_process');
 var minimist    = require('minimist');
+var runSequence = require('run-sequence');
 const imagemin  = require('gulp-imagemin');
 const pngquant  = require('imagemin-pngquant');
 
@@ -44,14 +45,31 @@ gulp.task('jekyll-rebuild', ['jekyll-build'], function () {
 
 // parse command line argument
 var argv = minimist(process.argv.slice(2));
-gulp.task('push', function(){
+
+gulp.task('add', function() {
     return gulp.src('.')
-        .pipe(git.add())
-        .pipe(git.commit(argv['m']))
-        .pipe(git.push('origin','master', function(err){
-            if (err) throw err;
-        }));
+        .pipe(git.add());
 });
+
+gulp.task('commit', function() {
+    return gulp.src('.')
+        .pipe(git.commit(argv['m']));
+});
+
+gulp.task('push', function() {
+    return git.push('origin', 'master', function (err) {
+        if (err) throw err;
+    });
+});
+
+// gulp.task('push', function(){
+//     return gulp.src('.')
+//         .pipe(git.add())
+//         .pipe(git.commit(argv['m']))
+//         .pipe(git.push('origin','master', function(err){
+//             if (err) throw err;
+//         }));
+// });
 
 /**
  * Wait for jekyll-build, then launch the Server
@@ -101,6 +119,8 @@ gulp.task('watch', function () {
 /**
  * Default task, running just `gulp` will compile the sass,
  * compile the jekyll site, launch BrowserSync & watch files.
- */
+ */ 
 gulp.task('default', ['browser-sync', 'watch']);
-gulp.task('deploy',  ['jekyll-build', 'push']);
+gulp.task('deploy', function (callback) {
+    runSequence('jekyll-build', 'add', 'commit', 'push', callback);
+});
