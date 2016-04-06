@@ -1,10 +1,11 @@
 var gulp        = require('gulp');
-var browserSync = require('browser-sync');
 var sass        = require('gulp-sass');
 var prefix      = require('gulp-autoprefixer');
-var cp          = require('child_process');
 var git         = require('gulp-git');
-var imageResize = require('gulp-image-resize')
+var imageResize = require('gulp-image-resize');
+var browserSync = require('browser-sync');
+var cp          = require('child_process');
+var minimist    = require('minimist');
 const imagemin  = require('gulp-imagemin');
 const pngquant  = require('imagemin-pngquant');
 
@@ -32,13 +33,13 @@ gulp.task('jekyll-rebuild', ['jekyll-build'], function () {
 /**
  * Deploy the Jekyll Site
  */
+
+// parse command line argument
+var argv = minimist(process.argv.slice(2));
 gulp.task('push', function(){
     return gulp.src('./')
         .pipe(git.add())
-        .pipe(git.commit(undefined,{
-            args: '-m "hoge"',
-            disableMessageRequirement: true
-        }))
+        .pipe(git.commit('-m ' + argv['f']))
         .pipe(git.push('origin','master', function(err){
             if (err) throw err;
         }));
