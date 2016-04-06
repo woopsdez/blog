@@ -4,6 +4,7 @@ var sass        = require('gulp-sass');
 var prefix      = require('gulp-autoprefixer');
 var cp          = require('child_process');
 var git         = require('gulp-git');
+var imageResize = require('gulp-image-resize')
 
 var jekyll   = process.platform === 'win32' ? 'jekyll.bat' : 'jekyll';
 var messages = {
@@ -50,6 +51,17 @@ gulp.task('browser-sync', ['sass', 'jekyll-build'], function() {
             baseDir: '_site'
         }
     });
+});
+
+/**
+ * Optimize Image
+ */ 
+gulp.task('resize', function() {
+    gulp.src('content/images/**/**/*.{jpg,png}', {base:'content/images/'})
+    .pipe(imageResize({ 
+      width : 1000
+    }))
+    .pipe(gulp.dest('_site/'));
 });
 
 /**
