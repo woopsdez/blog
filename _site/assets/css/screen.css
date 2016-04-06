@@ -442,7 +442,9 @@ code {
   margin: 0 5px;
   background: #f3f3f3;
   border: 1px solid #e6e6e6;
-  border-radius: 4px; }
+  border-radius: 4px;
+  font-family: lato sans-serif;
+  font-size: 16px; }
 
 blockquote, q, cite {
   margin: 30px 0 30px 4%;
@@ -1270,6 +1272,9 @@ nav {
   width: 100% !important; }
   #g-comments iframe {
     width: 100% !important; }
+
+.postbody > p strong {
+  background: #F2F1C2; }
 
 /*
 	SYNTAXH HIGHLIGHTER

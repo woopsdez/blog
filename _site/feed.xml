@@ -3,19 +3,113 @@
 	<channel>
 		<title>Miki Ishijima Blog</title>
 		<description>イシジマミキ ブログ</description>
-		<link>http://blog.mikiishijima.com/</link>
-		<atom:link href="http://blog.mikiishijima.com/feed.xml" rel="self" type="application/rss+xml" />
-		<pubDate>Wed, 06 Apr 2016 07:11:24 +0900</pubDate>
-		<lastBuildDate>Wed, 06 Apr 2016 07:11:24 +0900</lastBuildDate>
+		<link>/</link>
+		<atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
+		<pubDate>Wed, 06 Apr 2016 10:40:19 +0900</pubDate>
+		<lastBuildDate>Wed, 06 Apr 2016 10:40:19 +0900</lastBuildDate>
 		<generator>Jekyll v3.1.2</generator>
 		
 			<item>
-				<title>ほげげ</title>
-				<description>&lt;p&gt;ほげげをあいうえおか&lt;/p&gt;
+				<title>ghostからjekyllに移行しました。</title>
+				<description>&lt;p&gt;ghostはシンプルで使いやすかった。でも月1000円は高い。管理の手間はあるけれど触ってて楽しいjekyllによるセルフホスティングに移行しました。&lt;/p&gt;
+
+&lt;div class=&quot;container&quot;&gt;
+	&lt;img src=&quot;/content/images/2016/04/ghost-logos.png&quot; alt=&quot;&quot; /&gt;
+	&lt;div class=&quot;reference&quot;&gt;
+		&lt;strong&gt;node.jsで動くちょう今っぽいおしゃれブログプラットホーム&lt;/strong&gt;
+		&lt;p&gt;&lt;/p&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;自分でホスティングするのが嫌。&lt;/p&gt;
+
+&lt;p&gt;今っぽいシンプルなブログプラットホームがいい。&lt;/p&gt;
+
+&lt;p&gt;そういう理由でghost(pro)を利用していました。しかし、&lt;strong&gt;月1000円前後でブログ1個。無料の場合はブログすら持てない。&lt;/strong&gt;というのは、ちょっとワタシには高すぎたかな。&lt;/p&gt;
+
+&lt;h2 id=&quot;section&quot;&gt;ブログ難民の流れ&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;2005年〜 Movable Type&lt;/li&gt;
+  &lt;li&gt;2007年〜 WordPress&lt;/li&gt;
+  &lt;li&gt;2014年〜 ghost&lt;/li&gt;
+  &lt;li&gt;2016年〜 jekyll&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;シンプルでおしゃれで今っぽい技術。それでいて、ほぼ無料に近いサービスというのは無いのでしょうか。&lt;/p&gt;
+
+&lt;p&gt;いまのところはtumblrが一番良さそうですが、本腰入れて使ったことがないからなんとも言えないですね。記事のimport/exportやURLがどうなってるのかも気になるところ。&lt;/p&gt;
+
+&lt;p&gt;それでも、いろんな可能性を考えるのが面倒になって、触ってて楽しかったjekyllでの運用となりました。&lt;/p&gt;
+
+&lt;h2 id=&quot;section-1&quot;&gt;メンテナンスを考えないですむブログ環境&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/content/images/2016/04/spanner.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;書くだけに集中したいと言いつつ、おしゃれっぽさや「スゴそう感」で環境選んじゃうのでいつも苦労します。ミーハーですね。&lt;/p&gt;
+
+&lt;p&gt;今回は「10年ほぼメンテナンスフリー」を目標に考えてみましたが、そうしたら国内の老舗サービスしか候補に残りませんでした。&lt;/p&gt;
+
+&lt;p&gt;個人ブログくらい無責任におもしろそうな技術使いたいのでそれは断念。&lt;/p&gt;
+
+&lt;h2 id=&quot;section-2&quot;&gt;良いお勉強になった&lt;/h2&gt;
+
+&lt;p&gt;構築にあたって、gulpとgit-hookについて勉強できました。&lt;/p&gt;
+
+&lt;div class=&quot;container&quot;&gt;
+	&lt;img src=&quot;/content/images/2016/04/gulp_logo.jpg&quot; alt=&quot;&quot; /&gt;
+	&lt;div class=&quot;reference&quot;&gt;
+		&lt;strong&gt;サイト制作中によくやるアレやコレを自動化できるヤーツ&lt;/strong&gt;
+		&lt;p&gt;&lt;/p&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;gulpではjekyllのビルド、scssのコンパイル、ブラウザの自動リロードをしてくれる便利なnpmパッケージを使ってます。github-pageならデプロイまで簡単。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/shakyShane/jekyll-gulp-sass-browser-sync&quot;&gt;jekyll-gulp-sass-browser-sync
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;あとは、ビルド時に画像をリサイズ、最適化できるようにしたいです。&lt;/p&gt;
+
+&lt;p&gt;画像の保存場所を記事と同じディレクトリにしたいのだけど、それはどの技術でできるのかがさっぱり検討つかないのでまた今度。&lt;/p&gt;
+
+&lt;p&gt;デプロイはgit-hookを使ってます。push時にはワークツリーのファイルを配置することができないらしく、&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;受けとる場所(rep/ファイルなし、情報のみ)&lt;/li&gt;
+  &lt;li&gt;ソースファイルを展開する場所(rep/ワークツリーあり)&lt;/li&gt;
+  &lt;li&gt;公開用ディレクトリ(_site以下にある静的ファイル)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;と3つのディレクトリが必要になっています。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/content/images/2016/04/hook-memo.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;2でローカルと同じソースファイルがサーバーに配置されるので、そこから_siteだけをcpで&lt;code class=&quot;highlighter-rouge&quot;&gt;public_html/blog&lt;/code&gt;にコピーしてきています。&lt;/p&gt;
+
+&lt;p&gt;hookはpost-updateを使っています。中身はこんな感じ。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-code&quot;&gt;# ソースファイル リポジトリへ移動してファイルを取得
+cd /yourdomain.com/blog-source;
+git --git-dir=.git pull origin master;
+
+# 公開用ディレクトリのファイルを全消去して新にコピー
+rm -rf /yourdomain.com/blog/*;
+cp -r youdomain.com/blog-source/_site/* /yourdomain.com/blog/;
+
+# htaccess.txtを正式な名前リネーム
+mv /yourdomain.com/blog/htaccess.txt yourdomain.com/blog/.htaccess; 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;最後のhtaccessは別に不要ですが、os xのfinderでリネームしようとすると「.(ドット)から始まるファイル名はシステムのみ」と怒られるのでこっちでやってます。&lt;/p&gt;
+
+&lt;p&gt;ブログのメンテを行ったあとって無闇に記事を書きたくなりますよね。&lt;/p&gt;
+
+&lt;p&gt;来年にはtumblrに移行してるかもしれませんが、ひとまずこれでよろしくお願いします。&lt;/p&gt;
 </description>
 				<pubDate>Tue, 05 Apr 2016 00:00:00 +0900</pubDate>
-				<link>http://blog.mikiishijima.com/test/</link>
-				<guid isPermaLink="true">http://blog.mikiishijima.com/test/</guid>
+				<link>/hello-jekyll/</link>
+				<guid isPermaLink="true">/hello-jekyll/</guid>
 				
 				
 					<category>diary</category>
@@ -108,8 +202,8 @@
 &lt;p&gt;この冬はナチュラルローソンとともに気軽に糖質制限をはじめてみては？&lt;/p&gt;
 </description>
 				<pubDate>Fri, 04 Dec 2015 07:59:17 +0900</pubDate>
-				<link>http://blog.mikiishijima.com/started-lowcarb-life/</link>
-				<guid isPermaLink="true">http://blog.mikiishijima.com/started-lowcarb-life/</guid>
+				<link>/started-lowcarb-life/</link>
+				<guid isPermaLink="true">/started-lowcarb-life/</guid>
 				
 				
 					<category>diary</category>
@@ -239,8 +333,8 @@
 &lt;p&gt;元気な子が生まれますように。&lt;/p&gt;
 </description>
 				<pubDate>Sun, 01 Nov 2015 07:59:50 +0900</pubDate>
-				<link>http://blog.mikiishijima.com/become-the-mother01/</link>
-				<guid isPermaLink="true">http://blog.mikiishijima.com/become-the-mother01/</guid>
+				<link>/become-the-mother01/</link>
+				<guid isPermaLink="true">/become-the-mother01/</guid>
 				
 				
 					<category>diary</category>
@@ -396,8 +490,8 @@
 &lt;noscript&gt;&lt;a href=&quot;http://www.nicovideo.jp/watch/sm23969139&quot;&gt;【ニコニコ動画】【Minecraft】タートルとごはん Part10【ゆっくり実況】&lt;/a&gt;&lt;/noscript&gt;
 </description>
 				<pubDate>Thu, 24 Jul 2014 12:50:47 +0900</pubDate>
-				<link>http://blog.mikiishijima.com/my-first-library/</link>
-				<guid isPermaLink="true">http://blog.mikiishijima.com/my-first-library/</guid>
+				<link>/my-first-library/</link>
+				<guid isPermaLink="true">/my-first-library/</guid>
 				
 				
 					<category>works</category>
@@ -461,8 +555,8 @@
 &lt;p&gt;&lt;a href=&quot;http://www.amazon.co.jp/gp/product/B00IWM8VBS/ref=as_li_ss_il?ie=UTF8&amp;amp;camp=247&amp;amp;creative=7399&amp;amp;creativeASIN=B00IWM8VBS&amp;amp;linkCode=as2&amp;amp;tag=fastfargroove-22&quot;&gt;&lt;img border=&quot;0&quot; src=&quot;http://ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;amp;ASIN=B00IWM8VBS&amp;amp;Format=_SL250_&amp;amp;ID=AsinImage&amp;amp;MarketPlace=JP&amp;amp;ServiceVersion=20070822&amp;amp;WS=1&amp;amp;tag=fastfargroove-22&quot; /&gt;&lt;/a&gt;&lt;img src=&quot;http://ir-jp.amazon-adsystem.com/e/ir?t=fastfargroove-22&amp;amp;l=as2&amp;amp;o=9&amp;amp;a=B00IWM8VBS&quot; width=&quot;1&quot; height=&quot;1&quot; border=&quot;0&quot; alt=&quot;&quot; style=&quot;border:none !important; margin:0px !important;&quot; /&gt;&lt;/p&gt;
 </description>
 				<pubDate>Fri, 20 Jun 2014 09:11:01 +0900</pubDate>
-				<link>http://blog.mikiishijima.com/markdown-plesentation/</link>
-				<guid isPermaLink="true">http://blog.mikiishijima.com/markdown-plesentation/</guid>
+				<link>/markdown-plesentation/</link>
+				<guid isPermaLink="true">/markdown-plesentation/</guid>
 				
 				
 					<category>works</category>
@@ -501,8 +595,8 @@
 &lt;p&gt;&lt;a href=&quot;http://www.amazon.co.jp/gp/product/4532168139/ref=as_li_ss_il?ie=UTF8&amp;amp;camp=247&amp;amp;creative=7399&amp;amp;creativeASIN=4532168139&amp;amp;linkCode=as2&amp;amp;tag=fastfargroove-22&quot;&gt;&lt;img border=&quot;0&quot; src=&quot;http://ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;amp;ASIN=4532168139&amp;amp;Format=_SL250_&amp;amp;ID=AsinImage&amp;amp;MarketPlace=JP&amp;amp;ServiceVersion=20070822&amp;amp;WS=1&amp;amp;tag=fastfargroove-22&quot; /&gt;&lt;/a&gt;&lt;img src=&quot;http://ir-jp.amazon-adsystem.com/e/ir?t=fastfargroove-22&amp;amp;l=as2&amp;amp;o=9&amp;amp;a=4532168139&quot; width=&quot;1&quot; height=&quot;1&quot; border=&quot;0&quot; alt=&quot;&quot; style=&quot;border:none !important; margin:0px !important;&quot; /&gt;&lt;/p&gt;
 </description>
 				<pubDate>Fri, 20 Jun 2014 08:19:18 +0900</pubDate>
-				<link>http://blog.mikiishijima.com/dist3-photoshopandme/</link>
-				<guid isPermaLink="true">http://blog.mikiishijima.com/dist3-photoshopandme/</guid>
+				<link>/dist3-photoshopandme/</link>
+				<guid isPermaLink="true">/dist3-photoshopandme/</guid>
 				
 				
 					<category>works</category>
@@ -552,8 +646,8 @@
 &lt;p&gt;&lt;a href=&quot;http://www.amazon.co.jp/gp/product/4844335375/ref=as_li_ss_il?ie=UTF8&amp;amp;camp=247&amp;amp;creative=7399&amp;amp;creativeASIN=4844335375&amp;amp;linkCode=as2&amp;amp;tag=fastfargroove-22&quot;&gt;&lt;img border=&quot;0&quot; src=&quot;http://ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;amp;ASIN=4844335375&amp;amp;Format=_SL250_&amp;amp;ID=AsinImage&amp;amp;MarketPlace=JP&amp;amp;ServiceVersion=20070822&amp;amp;WS=1&amp;amp;tag=fastfargroove-22&quot; /&gt;&lt;/a&gt;&lt;img src=&quot;http://ir-jp.amazon-adsystem.com/e/ir?t=fastfargroove-22&amp;amp;l=as2&amp;amp;o=9&amp;amp;a=4844335375&quot; width=&quot;1&quot; height=&quot;1&quot; border=&quot;0&quot; alt=&quot;&quot; style=&quot;border:none !important; margin:0px !important;&quot; /&gt;&lt;/p&gt;
 </description>
 				<pubDate>Fri, 20 Jun 2014 07:46:06 +0900</pubDate>
-				<link>http://blog.mikiishijima.com/talk-about-sketch-afterdark/</link>
-				<guid isPermaLink="true">http://blog.mikiishijima.com/talk-about-sketch-afterdark/</guid>
+				<link>/talk-about-sketch-afterdark/</link>
+				<guid isPermaLink="true">/talk-about-sketch-afterdark/</guid>
 				
 				
 					<category>works</category>
@@ -747,8 +841,8 @@ end
 &lt;p&gt;興味のある方はフォームにちょちょいとメールアドレスを送ると、無料でスキルヒアリングしてくれますよ。&lt;/p&gt;
 </description>
 				<pubDate>Tue, 20 May 2014 05:52:52 +0900</pubDate>
-				<link>http://blog.mikiishijima.com/start-programing/</link>
-				<guid isPermaLink="true">http://blog.mikiishijima.com/start-programing/</guid>
+				<link>/start-programing/</link>
+				<guid isPermaLink="true">/start-programing/</guid>
 				
 				
 					<category>works</category>
@@ -848,8 +942,8 @@ end
 &lt;p&gt;きっと少しだけ胸にひびくものがあるはずです。&lt;/p&gt;
 </description>
 				<pubDate>Thu, 08 May 2014 14:24:01 +0900</pubDate>
-				<link>http://blog.mikiishijima.com/ukiyodoko-coworkingspace/</link>
-				<guid isPermaLink="true">http://blog.mikiishijima.com/ukiyodoko-coworkingspace/</guid>
+				<link>/ukiyodoko-coworkingspace/</link>
+				<guid isPermaLink="true">/ukiyodoko-coworkingspace/</guid>
 				
 				
 					<category>works</category>
@@ -934,8 +1028,8 @@ end
 &lt;p&gt;&lt;img src=&quot;https://scontent.xx.fbcdn.net/hphotos-xpa1/t31.0-8/10631119_798112260227195_4431205507748721234_o.jpg&quot; alt=&quot;Insert&quot; /&gt;&lt;/p&gt;
 </description>
 				<pubDate>Thu, 08 May 2014 09:32:07 +0900</pubDate>
-				<link>http://blog.mikiishijima.com/kokemusazu-riniyuaruopunitasimasita/</link>
-				<guid isPermaLink="true">http://blog.mikiishijima.com/kokemusazu-riniyuaruopunitasimasita/</guid>
+				<link>/kokemusazu-riniyuaruopunitasimasita/</link>
+				<guid isPermaLink="true">/kokemusazu-riniyuaruopunitasimasita/</guid>
 				
 				
 					<category>works</category>

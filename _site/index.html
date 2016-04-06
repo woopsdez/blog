@@ -13,31 +13,31 @@
 
 		<meta property="og:title" content="" />
     <meta property="og:type" content="blog" />
-    <meta property="og:url" content="http://blog.mikiishijima.com/" />
-    <meta property="og:image" content="http://blog.mikiishijima.com" />
+    <meta property="og:url" content="/" />
+    <meta property="og:image" content="" />
 
-		<link rel="alternate" type="application/rss+xml" href="http://blog.mikiishijima.com/feed.xml">
-		<link rel="shortcut icon" href="http://blog.mikiishijima.com/favicon.ico">
-		<link rel="prefetch" href="http://blog.mikiishijima.com">
-		<link rel="canonical" href="http://blog.mikiishijima.com/">
+		<link rel="alternate" type="application/rss+xml" href="/feed.xml">
+		<link rel="shortcut icon" href="/favicon.ico">
+		<link rel="prefetch" href="">
+		<link rel="canonical" href="/">
 
-		<link rel="stylesheet" href="http://blog.mikiishijima.com/assets/css/screen.css">
+		<link rel="stylesheet" href="/assets/css/screen.css">
 		<link href='//fonts.googleapis.com/css?family=Domine:700|Open+Sans:400,600|Source+Code+Pro:500' rel='stylesheet' type='text/css'>
 		<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
 	</head>
 	<body>
 
 	<header class="title">
-	<a href="http://blog.mikiishijima.com"><i class="fa fa-bookmark-o fa-lg"></i><span>Miki Ishijima Blog</span></a>
+	<a href=""><i class="fa fa-bookmark-o fa-lg"></i><span>Miki Ishijima Blog</span></a>
 </header>
 
 <nav class="wrapper  ">
 	<a href="#" onclick="return false;"><i class="fa fa-navicon fa-lg"></i></a>
 	<ul>
 		
-			<li><a href="http://blog.mikiishijima.com/about/">About Me</a></li>
+			<li><a href="/about/">About Me</a></li>
 		
-			<li><a href="http://blog.mikiishijima.com/contact/">Contact</a></li>
+			<li><a href="/contact/">Contact</a></li>
 		
 			
 		
@@ -51,7 +51,7 @@
 </nav>
 
 	<div class="profile">
-	<img src="http://blog.mikiishijima.com/assets/img/bloglogo.jpg" class="profileimage" alt="user">
+	<img src="/assets/img/bloglogo.jpg" class="profileimage" alt="user">
 	<h4>Miki Ishijima Blog</h4>
 	<p>イシジマミキ ブログ</p>
 	<hr>
@@ -60,7 +60,7 @@
 <section class="posts postindex wrapper">
 
 	
-	<article class="post ">
+	<article class="post  featured ">
 		<header>
 			<div class="feature"><span>Featured</span><i class="fa fa-bookmark fa-lg"></i></div>
 			<h2>
@@ -68,13 +68,107 @@
 					diary 
 				
 			</h2>
-			<h1><a href="/test/">ほげげ</a></h1>
+			<h1><a href="/hello-jekyll/">ghostからjekyllに移行しました。</a></h1>
 			<span>
 				Posted on <i class="fa fa-clock-o"></i><time datetime="2016-04-05">April 5, 2016</time>.
 			</span>
 			<!-- <div class="excerpt">
 				
-					<p>ほげげをあいうえおか</p>
+					<p>ghostはシンプルで使いやすかった。でも月1000円は高い。管理の手間はあるけれど触ってて楽しいjekyllによるセルフホスティングに移行しました。</p>
+
+<div class="container">
+	<img src="/content/images/2016/04/ghost-logos.png" alt="" />
+	<div class="reference">
+		<strong>node.jsで動くちょう今っぽいおしゃれブログプラットホーム</strong>
+		<p></p>
+	</div>
+</div>
+
+<p>自分でホスティングするのが嫌。</p>
+
+<p>今っぽいシンプルなブログプラットホームがいい。</p>
+
+<p>そういう理由でghost(pro)を利用していました。しかし、<strong>月1000円前後でブログ1個。無料の場合はブログすら持てない。</strong>というのは、ちょっとワタシには高すぎたかな。</p>
+
+<h2 id="section">ブログ難民の流れ</h2>
+
+<ul>
+  <li>2005年〜 Movable Type</li>
+  <li>2007年〜 WordPress</li>
+  <li>2014年〜 ghost</li>
+  <li>2016年〜 jekyll</li>
+</ul>
+
+<p>シンプルでおしゃれで今っぽい技術。それでいて、ほぼ無料に近いサービスというのは無いのでしょうか。</p>
+
+<p>いまのところはtumblrが一番良さそうですが、本腰入れて使ったことがないからなんとも言えないですね。記事のimport/exportやURLがどうなってるのかも気になるところ。</p>
+
+<p>それでも、いろんな可能性を考えるのが面倒になって、触ってて楽しかったjekyllでの運用となりました。</p>
+
+<h2 id="section-1">メンテナンスを考えないですむブログ環境</h2>
+
+<p><img src="/content/images/2016/04/spanner.jpg" alt="" /></p>
+
+<p>書くだけに集中したいと言いつつ、おしゃれっぽさや「スゴそう感」で環境選んじゃうのでいつも苦労します。ミーハーですね。</p>
+
+<p>今回は「10年ほぼメンテナンスフリー」を目標に考えてみましたが、そうしたら国内の老舗サービスしか候補に残りませんでした。</p>
+
+<p>個人ブログくらい無責任におもしろそうな技術使いたいのでそれは断念。</p>
+
+<h2 id="section-2">良いお勉強になった</h2>
+
+<p>構築にあたって、gulpとgit-hookについて勉強できました。</p>
+
+<div class="container">
+	<img src="/content/images/2016/04/gulp_logo.jpg" alt="" />
+	<div class="reference">
+		<strong>サイト制作中によくやるアレやコレを自動化できるヤーツ</strong>
+		<p></p>
+	</div>
+</div>
+
+<p>gulpではjekyllのビルド、scssのコンパイル、ブラウザの自動リロードをしてくれる便利なnpmパッケージを使ってます。github-pageならデプロイまで簡単。</p>
+
+<p><a href="https://github.com/shakyShane/jekyll-gulp-sass-browser-sync">jekyll-gulp-sass-browser-sync
+</a></p>
+
+<p>あとは、ビルド時に画像をリサイズ、最適化できるようにしたいです。</p>
+
+<p>画像の保存場所を記事と同じディレクトリにしたいのだけど、それはどの技術でできるのかがさっぱり検討つかないのでまた今度。</p>
+
+<p>デプロイはgit-hookを使ってます。push時にはワークツリーのファイルを配置することができないらしく、</p>
+
+<ol>
+  <li>受けとる場所(rep/ファイルなし、情報のみ)</li>
+  <li>ソースファイルを展開する場所(rep/ワークツリーあり)</li>
+  <li>公開用ディレクトリ(_site以下にある静的ファイル)</li>
+</ol>
+
+<p>と3つのディレクトリが必要になっています。</p>
+
+<p><img src="/content/images/2016/04/hook-memo.jpg" alt="" /></p>
+
+<p>2でローカルと同じソースファイルがサーバーに配置されるので、そこから_siteだけをcpで<code class="highlighter-rouge">public_html/blog</code>にコピーしてきています。</p>
+
+<p>hookはpost-updateを使っています。中身はこんな感じ。</p>
+
+<pre><code class="language-code"># ソースファイル リポジトリへ移動してファイルを取得
+cd /yourdomain.com/blog-source;
+git --git-dir=.git pull origin master;
+
+# 公開用ディレクトリのファイルを全消去して新にコピー
+rm -rf /yourdomain.com/blog/*;
+cp -r youdomain.com/blog-source/_site/* /yourdomain.com/blog/;
+
+# htaccess.txtを正式な名前リネーム
+mv /yourdomain.com/blog/htaccess.txt yourdomain.com/blog/.htaccess; 
+</code></pre>
+
+<p>最後のhtaccessは別に不要ですが、os xのfinderでリネームしようとすると「.(ドット)から始まるファイル名はシステムのみ」と怒られるのでこっちでやってます。</p>
+
+<p>ブログのメンテを行ったあとって無闇に記事を書きたくなりますよね。</p>
+
+<p>来年にはtumblrに移行してるかもしれませんが、ひとまずこれでよろしくお願いします。</p>
 
 				
 			</div> -->
@@ -563,7 +657,7 @@
 
 	<div class="pagination">
 	
-		<a href="http://blog.mikiishijima.com/page2" class="smallbutton lightgray right"><span>Older Posts</span><i class="fa fa-chevron-right"></i></a>
+		<a href="/page2" class="smallbutton lightgray right"><span>Older Posts</span><i class="fa fa-chevron-right"></i></a>
 	
 	
 </div>
@@ -573,9 +667,9 @@
 	<footer class="wrapper">
 	<div class="smallnav">
 		
-			<a href="http://blog.mikiishijima.com/about/">About Me</a> &bull;
+			<a href="/about/">About Me</a> &bull;
 		
-			<a href="http://blog.mikiishijima.com/contact/">Contact</a> &bull;
+			<a href="/contact/">Contact</a> &bull;
 		
 			
 		
@@ -587,7 +681,7 @@
 		
 	</div>
 	<div>
-		Copyright &copy; <a href="http://blog.mikiishijima.com/">Miki Ishijima Blog</a>. 2016 &bull; All rights reserved.
+		Copyright &copy; <a href="/">Miki Ishijima Blog</a>. 2016 &bull; All rights reserved.
 		<span class="ghost">Proudly published with <a href="http://jekyllrb.com/" target="_blank">Jekyll</a>.</span>
 	</div>
 </footer>
@@ -602,7 +696,7 @@
 			'autoload_comments': false
 		};
 	</script>
-	<script async type="text/javascript" src="http://blog.mikiishijima.com/assets/js/theme.min.js"></script>
+	<script async type="text/javascript" src="/assets/js/theme.min.js"></script>
 
   </body>
 </html>
