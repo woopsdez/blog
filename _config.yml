@@ -2,7 +2,7 @@
 gems: 						[jekyll-paginate]
 
 # Exclude build files
-exclude: ["node_modules", "gulpfile.js", "package.json"]
+exclude: ["node_modules", "gulpfile.js", "package.json", "themes"]
 
 # Site Settings
 title: 						"Miki Ishijima Blog"

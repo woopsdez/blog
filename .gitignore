@@ -49,6 +49,7 @@ sftp-config.json
 ### Jekyll ###
 .sass-cache/
 .jekyll-metadata
+themes/
 
 ### glynn (jekyll project ftp upload tool) ###
 _glynn.yml
