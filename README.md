@@ -15,17 +15,17 @@
 ## ディレクトリ・ファイルについて
 * README.md
 
-gulp
+### gulp
 
 * package.json
 * gulpfile.js
 * node_modules
 
-jekyll
+### jekyll
 
 * _config.yml
 * _config_dev.yml - 開発環境用URL
-* _glynn.yml      - FTPアップロード用
+* _glynn.yml      - FTPアップロード用 .gitignore対象
 * _site
 * _posts
 * _plugins
@@ -33,7 +33,7 @@ jekyll
 * _includes
 * _layouts
 
-html
+### html
 
 * index.html
 * feed.xml
@@ -45,13 +45,18 @@ html
 * htaccess.txt
 
 ## 一部古いURLを維持するための作業。
-サイト全体に及ぶ変更をした場合、ghost運用時に反響のあった記事はURLを維持するために_config.yml上で/:title/で一度buildしデプロイする必要がある。
+反響のあった記事URLを移行後も保持しておくため、本番環境にのみ残したい記事ファイルが存在します。
 
-そのあとにprettyに戻して再度デプロイすることで、古い記事にも新しいサイトの設定を適用させられる。
+* 2016年5月 下記条件だと、残したい記事ファイルも消えてしまうので、glynnでFTPアップロードに変更。
+* 2016年4月 hookを使ってgit pushした時に同期するよう。
 
 ## 自動で行われること
 * scssのコンパイル
 * ブラウザのオートリロード
 * 画像のリサイズ(w:1000)
 * 画像の軽量化
-* 本番環境へのデプロイ
+* <del>本番環境へのデプロイ</del>
+
+## TODO
+* 画像を記事をひとつのフォルダにまとめて管理
+* pluginを使って画像をレスポンシブ対応 [robwierzbowski/jekyll-picture-tag: Easy responsive images for Jekyll.](https://github.com/robwierzbowski/jekyll-picture-tag)
