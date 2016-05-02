@@ -5,7 +5,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
 		<title>浮世床とコワーキングスペース</title>
-		<meta name="description" content="イシジマミキ ブログ" />
+		<meta name="description" content="趣味のゲームやプログラミング、レビューなど個人イシジマミキにより近しい内容を書いています。普遍的なデザインの話はThe Marsknowledge Blogで。" />
 
 		<meta name="HandheldFriendly" content="True" />
 		<meta name="MobileOptimized" content="320" />
@@ -28,7 +28,7 @@
 	<body>
 
 	<header class="title">
-	<a href="http://blog.mikiishijima.com"><i class="fa fa-bookmark-o fa-lg"></i><span>Miki Ishijima Blog</span></a>
+	<a href="http://blog.mikiishijima.com"><img src="http://blog.mikiishijima.com/favicon-transparent.svg" alt=""><span>Miki Ishijima Blog</span></a>
 </header>
 
 <nav class="wrapper  ">
@@ -38,8 +38,6 @@
 			<li><a href="http://blog.mikiishijima.com/about/">About Me</a></li>
 		
 			<li><a href="http://blog.mikiishijima.com/contact/">Contact</a></li>
-		
-			
 		
 			
 		
@@ -62,9 +60,9 @@
 	<h4>Miki Ishijima</h4>
 	<ul>
 		<li><a href="http://twitter.com/woopsdez" class="smallsocialbutton twitter" target="_blank"><i class="fa fa-twitter"></i></a></li>
-		
+		<li><a href="http://facebook.com/woopsdez" class="smallsocialbutton facebook" target="_blank"><i class="fa fa-facebook"></i></a></li>
 		<li><a href="http://github.com/woopsdez" class="smallsocialbutton github" target="_blank"><i class="fa fa-github"></i></a></li>
-		
+		<li><a href="https://www.instagram.com/woopsdez/" class="smallsocialbutton instagram" target="_blank"><i class="fa fa-instagram"></i></a></li>
 		<li><a href="http://blog.mikiishijima.com/feed.xml" class="smallsocialbutton rss" target="_blank"><i class="fa fa-rss"></i></a></li>
 	</ul>
 	<p>デザインワーク、ソフトウェア開発のワークフロー、デザイン自体の考え方に関する著書を持つ。2013年にザ・マーズナレッジ株式会社設立。</p>
@@ -198,14 +196,14 @@
 				<p>デザインワーク、ソフトウェア開発のワークフロー、デザイン自体の考え方に関する著書を持つ。2013年にザ・マーズナレッジ株式会社設立。</p>
 				<ul class="social">
 					<li><a href="http://twitter.com/woopsdez" class="twitter" target="_blank"><i class="fa fa-twitter"></i></a></li>
-					
+					<li><a href="http://facebook.com/woopsdez" class="facebook" target="_blank"><i class="fa fa-facebook"></i></a></li>
 					<li><a href="http://github.com/woopsdez" class="github" target="_blank"><i class="fa fa-github-alt"></i></a></li>
-					
+					<li><a href="https://www.youtube.com/channel/UCfIyl592fkdyBOep9H54pgg" class="youtube" target="_blank"><i class="fa fa-youtube"></i></a></li>
 					<li><a href="http://dribbble.com/woopsdez" class="dribbble" target="_blank"><i class="fa fa-dribbble"></i></a></li>
-					
-					
-					
-					
+					<li><a href="https://plus.google.com/u/0/+woopsdez" class="googleplus" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+					<li><a href="https://www.instagram.com/woopsdez/" class="instagram" target="_blank"><i class="fa fa-instagram"></i></a></li>
+					<li><a href="https://www.pinterest.com/woopsdez/" class="pinterest" target="_blank"><i class="fa fa-pinterest"></i></a></li>
+					<li><a href="https://www.linkedin.com/in/woopsdez" class="linkedin" target="_blank"><i class="fa fa-linkedin"></i></a></li>
 					<li><a href="http://blog.mikiishijima.com/feed.xml" class="rss" target="_blank"><i class="fa fa-rss"></i></a></li>
 				</ul>
 			</div>
@@ -217,15 +215,12 @@
 
 </section>
 
-
 	<footer class="wrapper">
 	<div class="smallnav">
 		
 			<a href="http://blog.mikiishijima.com/about/">About Me</a> &bull;
 		
 			<a href="http://blog.mikiishijima.com/contact/">Contact</a> &bull;
-		
-			
 		
 			
 		
@@ -251,6 +246,23 @@
 		};
 	</script>
 	<script async type="text/javascript" src="http://blog.mikiishijima.com/assets/js/theme.min.js"></script>
+	<script>
+	// 記事サイドバーに目次を追加
+	$('.profile').append('<ul id="index"></ul>');
+	$('.postbody h2').each(function(){
+		$('#index').append('<li><a href="#' + $(this).attr('id') + '">' + $(this).text() + '</a></li>')
+	});
+	$('#index a').click(function(e){
+			e.preventDefault();
+			var self = String($(this).attr('href'));
+			console.log('element ' + self);
 
+			var pos = $(self).offset().top;
+			var offset = pos - 100;
+			console.log('num ' + pos + ' / ' + offset);
+			$('html, body').animate({scrollTop: offset}, 1000);
+			
+	});
+	</script>
   </body>
 </html>

@@ -44,6 +44,23 @@
 		};
 	</script>
 	<script async type="text/javascript" src="{{ "/assets/js/theme.min.js" | prepend: site.baseurl }}"></script>
+	<script>
+	// 記事サイドバーに目次を追加
+	$('.profile').append('<ul id="index"></ul>');
+	$('.postbody h2').each(function(){
+		$('#index').append('<li><a href="#' + $(this).attr('id') + '">' + $(this).text() + '</a></li>')
+	});
+	$('#index a').click(function(e){
+			e.preventDefault();
+			var self = String($(this).attr('href'));
+			console.log('element ' + self);
 
+			var pos = $(self).offset().top;
+			var offset = pos - 100;
+			console.log('num ' + pos + ' / ' + offset);
+			$('html, body').animate({scrollTop: offset}, 1000);
+			
+	});
+	</script>
   </body>
 </html>

@@ -6,14 +6,14 @@ exclude: ["node_modules", "gulpfile.js", "package.json", "themes"]
 
 # Site Settings
 title: 						"Miki Ishijima Blog"
-description: 			"イシジマミキ ブログ"
+description: 			"趣味のゲームやプログラミング、レビューなど個人イシジマミキにより近しい内容を書いています。普遍的なデザインの話はThe Marsknowledge Blogで。"
 email: 						"woops.mirai@gmail.com"
 baseurl: 					"http://blog.mikiishijima.com"
 url: 					    "http://blog.mikiishijima.com"
 content_url: 	    "/content"
 logourl: 				  "/assets/img/bloglogo.jpg"
-fa-logo: 					"fa-bookmark-o"
-paginate: 				5
+fa-logo: 					"fa-bolt"
+paginate: 				10
 
 
 # Author Settings
@@ -26,14 +26,14 @@ author_image: 			"https://dl.dropboxusercontent.com/u/797976/profile/woopsdez-ow
 
 # Social Settings
 twitter_url: 				"http://twitter.com/woopsdez"
-facebook_url: 			""
+facebook_url: 			"http://facebook.com/woopsdez"
 github_url:  				"http://github.com/woopsdez"
-youtube_url:  			""
+youtube_url:  			"https://www.youtube.com/channel/UCfIyl592fkdyBOep9H54pgg"
 dribbble_url:  			"http://dribbble.com/woopsdez"
-googleplus_url: 		""
-instagram_url:  		""
-pinterest_url:  		""
-linkedin_url:  			""
+googleplus_url: 		"https://plus.google.com/u/0/+woopsdez"
+instagram_url:  		"https://www.instagram.com/woopsdez/"
+pinterest_url:  		"https://www.pinterest.com/woopsdez/"
+linkedin_url:  			"https://www.linkedin.com/in/woopsdez"
 
 
 # Theme Settings
@@ -54,5 +54,4 @@ sass:
 
 # Build Settings
 markdown: 					kramdown
-# permalink: 					/:title/
 permalink: 					pretty

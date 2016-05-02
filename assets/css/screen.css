@@ -509,6 +509,12 @@ input:not([type=submit]):not([type=file]):active, input:not([type=submit]):not([
         display: inline-block; } }
   .title a i {
     font-size: 1.533333em; }
+  .title a img {
+    position: relative;
+    top: -3px;
+    width: 1.533333em;
+    margin: 0;
+    vertical-align: middle; }
   .title a:hover span {
     display: inline-block;
     width: auto; }
@@ -1134,7 +1140,7 @@ nav {
   .posts article.featured .feature {
     position: absolute;
     right: 0;
-    display: inline-block;
+    display: none;
     padding: 7px 15px;
     background: #fff;
     color: #78a300;
@@ -1276,6 +1282,14 @@ nav {
 .postbody > p strong {
   background: #F2F1C2; }
 
+#index {
+  padding-left: 10px; }
+  #index li {
+    list-style-position: inside;
+    float: none;
+    list-style-type: disc;
+    font-size: small; }
+
 /*
 	SYNTAXH HIGHLIGHTER
 */
@@ -1284,7 +1298,7 @@ figure {
 
 pre {
   background: #F8F8F8;
-  padding: 20px;
+  padding: 3px 10px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;

@@ -2,7 +2,7 @@
 layout: post
 title: ライブラリを作る事でプログラミングスキルは本当に向上するのか。
 date: '2014-07-24 12:50:47'
-categories: works
+categories: private-works
 banner_image: "/content/images/2015/03/library.jpg"
 featured: true
 ---

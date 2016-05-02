@@ -28,7 +28,7 @@ gulp.task('jekyll-build', function (done) {
     console.log(option['e']);
     console.log(config.option, config.yml);
     browserSync.notify(messages.jekyllBuild);
-    return cp.spawn( jekyll , ['build', config.option, config.yml], {stdio: 'inherit'})
+    return cp.spawn( jekyll , ['build', config.option, config.yml, '--drafts'], {stdio: 'inherit'})
         .on('close', done);
 });
 
@@ -61,15 +61,6 @@ gulp.task('push', function() {
         if (err) throw err;
     });
 });
-
-// gulp.task('push', function(){
-//     return gulp.src('.')
-//         .pipe(git.add())
-//         .pipe(git.commit(argv['m']))
-//         .pipe(git.push('origin','master', function(err){
-//             if (err) throw err;
-//         }));
-// });
 
 /**
  * Wait for jekyll-build, then launch the Server
@@ -113,7 +104,7 @@ gulp.task('sass', function () {
  */
 gulp.task('watch', function () {
     gulp.watch('assets/css/*.scss', ['sass']);
-    gulp.watch(['*.md', '_layouts/*.html', '_posts/*'], ['jekyll-rebuild']);
+    gulp.watch(['*.md', '_layouts/*.html', '_includes/*.html', '_posts/*', '_drafts/*'], ['jekyll-rebuild']);
 });
 
 /**

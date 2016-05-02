@@ -168,6 +168,14 @@ input:not([type=submit]):not([type=file]):active, input:not([type=submit]):not([
 		font-size: 1.533333em;
 	}
 
+	img {
+		position: relative;
+    top: -3px;
+    width: 1.533333em;
+    margin: 0;
+    vertical-align: middle;
+	}
+
 	&:hover span {
 		display: inline-block;
 		width: auto;

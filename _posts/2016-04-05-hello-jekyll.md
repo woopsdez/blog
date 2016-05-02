@@ -1,7 +1,7 @@
 ---
 layout: post
 title: ghostからjekyllに移行しました。
-categories: diary
+categories: private-works
 banner_image: "/content/images/2016/04/Jekyll_and_Hyde.jpg"
 featured: true
 ---

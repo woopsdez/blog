@@ -182,7 +182,7 @@
 	&.featured .feature {
 		position: absolute;
 		right: 0;
-		display: inline-block;
+		display: none;
 		padding: 7px 15px;
 		background: #fff;
 		color: #78a300;
@@ -411,4 +411,14 @@
 		background: #F2F1C2;
 	}
 	}
+}
+
+#index{
+	padding-left: 10px;
+	li{
+		list-style-position: inside;
+    float: none;
+    list-style-type: disc;
+    font-size: small;
+  }
 }

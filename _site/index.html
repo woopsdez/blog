@@ -5,7 +5,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
 		<title>Miki Ishijima Blog</title>
-		<meta name="description" content="イシジマミキ ブログ" />
+		<meta name="description" content="趣味のゲームやプログラミング、レビューなど個人イシジマミキにより近しい内容を書いています。普遍的なデザインの話はThe Marsknowledge Blogで。" />
 
 		<meta name="HandheldFriendly" content="True" />
 		<meta name="MobileOptimized" content="320" />
@@ -28,7 +28,7 @@
 	<body>
 
 	<header class="title">
-	<a href="http://blog.mikiishijima.com"><i class="fa fa-bookmark-o fa-lg"></i><span>Miki Ishijima Blog</span></a>
+	<a href="http://blog.mikiishijima.com"><img src="http://blog.mikiishijima.com/favicon-transparent.svg" alt=""><span>Miki Ishijima Blog</span></a>
 </header>
 
 <nav class="wrapper  ">
@@ -45,15 +45,13 @@
 		
 			
 		
-			
-		
 	</ul>
 </nav>
 
 	<div class="profile">
 	<img src="http://blog.mikiishijima.com/assets/img/bloglogo.jpg" class="profileimage" alt="user">
 	<h4>Miki Ishijima Blog</h4>
-	<p>イシジマミキ ブログ</p>
+	<p>趣味のゲームやプログラミング、レビューなど個人イシジマミキにより近しい内容を書いています。普遍的なデザインの話はThe Marsknowledge Blogで。</p>
 	<hr>
 </div>
 
@@ -65,10 +63,290 @@
 			<div class="feature"><span>Featured</span><i class="fa fa-bookmark fa-lg"></i></div>
 			<h2>
 				
-					diary 
+					private-works 
 				
 			</h2>
-			<h1><a href="/diary/2016/04/05/hello-jekyll/">ghostからjekyllに移行しました。</a></h1>
+			<h1><a href="/private-works/2016/05/02/undefinde-variables/">Floaty Color Clock開発で得られたこと</a></h1>
+			<span>
+				Posted on <i class="fa fa-clock-o"></i><time datetime="2016-05-02">May 2, 2016</time>.
+			</span>
+			<!-- <div class="excerpt">
+				
+					<p>「クリックでふわっと動くアレやコレ」を作ってみたい。そんな思いから着手したFloaty Color Clockですが、ついでで開発しはじめた天気予報機能が難しく思わぬ方向に…。この記事は開発中の思い出話を書いていきます。</p>
+
+<h2 id="undefind">Undefindの嵐</h2>
+
+<p><a href="https://github.com/woopsdez/omikujigohan">7年前のPHPコード</a>、<a href="http://omikujigohan.woopsdez.jp/">おみくじゴハン</a>のリファクタリング、そして<a href="http://woopsdez.github.io/floaty-color-clock/">Floaty Color Clock</a>の開発。</p>
+
+<p>どちらもNotice, undefindの嵐でした。わたしが良く怒られたケースはこちら。</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4</pre></td><td class="code"><pre>	<span class="k">if</span><span class="p">(</span><span class="nx">fuga</span> <span class="o">===</span> <span class="kc">true</span><span class="p">){</span>
+		<span class="kd">var</span> <span class="nx">hoge</span> <span class="o">=</span> <span class="nx">fuga</span><span class="p">;</span> <span class="c1">// fugaがtrueじゃないとif文の中を通らない</span>
+	<span class="p">}</span>
+	<span class="kd">var</span> <span class="nx">hage</span> <span class="o">=</span> <span class="nx">hoge</span> <span class="o">*</span> <span class="mi">2</span><span class="p">;</span> <span class="c1">//するとhogeはここで初出になる</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
+
+<p>if文の中で使ったあと、後に続く処理でしれっと変数を呼び出していると怒られるのですね。</p>
+
+<p>じゃあ、ちゃんとif文を経由させたり、if文を経由しなくても値が入ってるようにすれば良いのでは？と、グローバルで変数に初期値を入れておいたり、isset()やundefindチェックをしたりしています。</p>
+
+<p>HTML内で呼び出すこともあるので、長ったらしい文になるのは避けたいところ。</p>
+
+<figure class="highlight"><pre><code class="language-php" data-lang="php"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4</pre></td><td class="code"><pre><span class="c">&lt;!-- これが --&gt;</span>
+<span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"</span><span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="nv">$hoge</span> <span class="cp">?&gt;</span><span class="s">"</span><span class="nt">&gt;</span>
+<span class="c">&lt;!-- こうなってしまう --&gt;</span>
+<span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"</span><span class="cp">&lt;?php</span> <span class="k">if</span><span class="p">(</span><span class="nb">isset</span><span class="p">(</span><span class="nv">$hoge</span><span class="p">)){</span><span class="k">echo</span> <span class="nv">$hoge</span><span class="p">}</span> <span class="cp">?&gt;</span><span class="s">"</span><span class="nt">&gt;</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
+
+<h2 id="section">関数内で完結させる</h2>
+<p>プログラミングの師匠(<a href="http://blog.tai2.net/">@tai2</a>)に、アドバイスを求めたところ下記の返答をいただきました。</p>
+
+<blockquote>
+  <p>「グローバルで変数を定義し、関数内でもやりとりさせてしまっているのをやめ、関数で完結させる。値は引数として受け渡しするといい。」</p>
+</blockquote>
+
+<p>なるほどなるほど。</p>
+
+<p>マインクラフト内でのLuaプログラミングでは、それができていたのに今回の開発ではしっちゃかめっちゃかになってしまっていました。</p>
+
+<p>自分のスキルより難しい実装が入ると、コード全体の把握がおろそかになってしまうのがわたしの悪いクセ。</p>
+
+<div class="container">
+	<a href="http://www.amazon.co.jp/gp/product/4569792189/ref=as_li_ss_il?ie=UTF8&amp;camp=247&amp;creative=7399&amp;creativeASIN=4569792189&amp;linkCode=as2&amp;tag=fastfargroove-22"><img src="http://ecx.images-amazon.com/images/I/51wBC4deA4L._M500_.jpg" alt="" /></a>
+	<div class="reference">
+		<strong>右京さんの口癖</strong>
+		<p></p>
+	</div>
+</div>
+
+<h2 id="section-1">ユーザー設定がある場合の初期値のやりくりが苦手</h2>
+<p>「二回目に処理するとき、一回目に保存しておいた値があるならそちらを利用する。」というのがうまく書けません。</p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4</pre></td><td class="code"><pre><span class="kd">var</span> <span class="nx">color</span> <span class="o">=</span> <span class="s1">'white'</span><span class="p">;</span> <span class="c1">// 初期値</span>
+<span class="k">if</span><span class="p">(</span><span class="nx">user</span><span class="p">.</span><span class="nx">setColor</span> <span class="o">!==</span> <span class="nx">undefind</span><span class="p">){</span> <span class="c1">//ユーザーが設定した値があるかどうか</span>
+	<span class="nx">color</span> <span class="o">=</span> <span class="nx">user</span><span class="p">.</span><span class="nx">setColor</span><span class="p">;</span> <span class="c1">//あれば、初期値として扱う</span>
+<span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
+
+<p>こんな感じで書けばいいのですよね。いまもですが、分岐の流れ、今はどこの処理に辿りついたかを理解するのに時間がかかります。</p>
+
+<div class="container">
+	<a href=""><img src="/content/images/2016/05/undefinde-variables/702167001386764518.gif" alt="" /></a>
+	<div class="reference">
+		<strong>映画のようにはなかなかいかない</strong>
+		<p></p>
+	</div>
+</div>
+
+<p><img src="" alt="" /></p>
+
+<h2 id="section-2">時刻に合わせて回転する画像</h2>
+<p>他の方から見れば簡単なことですが、算数が苦手なわたしは「よくこの実装を思いつけたな」と有頂天になっています。</p>
+
+<p>小学校で習った「割合の公式」の出番です!</p>
+
+<blockquote>
+
+  <ul>
+    <li>「割合」＝「比べる値」÷「もとの値」</li>
+    <li>「比べる値」＝「もとの値」×「割合」</li>
+    <li>「もとの値」＝「比べる値」÷「割合」</li>
+  </ul>
+</blockquote>
+
+<p>まず、24時間を円とみなして、現在時刻ではどの角度にいるのかを割り出す必要があります。</p>
+
+<p>必要な値として</p>
+
+<ul>
+  <li>24時間の秒数(86400s)</li>
+  <li>0時から現在時刻までの秒数</li>
+  <li>24時間を100%とした時の現在時刻の割合</li>
+  <li>円の角度 360°</li>
+</ul>
+
+<p>が分かればあとは</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2</pre></td><td class="code"><pre><span class="kd">var</span> <span class="nx">per</span> <span class="o">=</span> <span class="nx">_nowsec</span> <span class="o">/</span> <span class="mi">86400</span> <span class="c1">//割合を求める</span>
+<span class="kd">var</span> <span class="nx">nowdeg</span> <span class="o">=</span> <span class="nx">_per</span> <span class="o">*</span> <span class="mi">360</span> <span class="c1">// 360°中 per%は何°になるかが分かる</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
+
+<p>という式で求められるのですね。</p>
+
+<p>あとはこの値を、jQueryにてcssのプロパティにセットしていけばOKです。</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td><td class="code"><pre><span class="nx">$</span><span class="p">(</span><span class="s1">'.bg image'</span><span class="p">).</span><span class="nx">css</span><span class="p">(</span><span class="s1">'transform'</span><span class="p">,</span><span class="s1">'rotate('</span><span class="o">+</span> <span class="nx">nowdeg</span> <span class="o">+</span><span class="s1">'deg)'</span><span class="p">)</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
+
+<p>上記がhtml内で毎秒実行される訳です。</p>
+
+<p>cssの値を変更するのだから、cssファイルの書き換えを行うのでは？それにはどうしたら？と疑問に思ってましたが、jsでhtml内にインラインで書いちゃえばいいのですよね。</p>
+
+<p>すでに知っている知識でも、いっぱいいっぱいになるとこぼれ落ちちゃう。</p>
+
+<h2 id="qiita">Qiitaに投稿しています。</h2>
+
+<p><img src="/content/images/2016/05/undefinde-variables/qiita-woopsdez.png" alt="http://qiita.com/woopsdez" /></p>
+
+<ul>
+  <li><a href="http://qiita.com/woopsdez/items/bc6108460de13d668e78">Chromeエクステンションで、どうしてもJSONPでやりとりしないといけない場合の対処 - Qiita</a></li>
+  <li><a href="http://qiita.com/woopsdez/items/cb0e59245d4ee13e8ae5">gulpでのgit操作 commit messageをコマンドライン引数で渡そう - Qiita</a></li>
+  <li><a href="http://qiita.com/woopsdez/items/cc2b64800a6de3112920">jekyllで構築したサイト、本番へアップしたらcssが適用されない場合に試しておきたいbaseurlの便利な変更の仕方。 - Qiita</a></li>
+</ul>
+
+<p>ぜひチェックしてくださいな。</p>
+
+				
+			</div> -->
+		</header>
+	</article>
+	
+	<article class="post  featured ">
+		<header>
+			<div class="feature"><span>Featured</span><i class="fa fa-bookmark fa-lg"></i></div>
+			<h2>
+				
+					private-works 
+				
+			</h2>
+			<h1><a href="/private-works/2016/05/02/the-importance-of-the-private-work/">プライベートワークの重要さ</a></h1>
+			<span>
+				Posted on <i class="fa fa-clock-o"></i><time datetime="2016-05-02">May 2, 2016</time>.
+			</span>
+			<!-- <div class="excerpt">
+				
+					<h2 id="section">と、その前に</h2>
+<p>プライベートワークの良いところは、もちろん学習に直結しているところです。</p>
+
+<p>しかし、副産物もまたおいしい。このブログの構築時にも検索して見つからなかったノウハウはＱiitaに投稿していますが、他の人がストックしてくれるとさらにモチベーションが上がり、学習への意欲が増します。</p>
+
+<p>それだけでなく、リリースまで到達できると、アプリストアに並びちゃんとしたプロダクトに見えてさらにニヤニヤ。「インストールしたよ。」とのコメントを見て、下手な運用はできなくなったと責任感も少し芽生えます。</p>
+
+<p>学習して、それを後の自分のためにオンラインで記録しているだけなのに、自分の事を知る人が増え、良い情報が集ってくる流れが勝手にできていくのです。</p>
+
+<p>人に強制されずにものを作るのは非常に楽しいので</p>
+
+				
+			</div> -->
+		</header>
+	</article>
+	
+	<article class="post  featured ">
+		<header>
+			<div class="feature"><span>Featured</span><i class="fa fa-bookmark fa-lg"></i></div>
+			<h2>
+				
+					private-works 
+				
+			</h2>
+			<h1><a href="/private-works/2016/05/01/floatycolorclock/">Floaty Color Clockをリリースしました。</a></h1>
+			<span>
+				Posted on <i class="fa fa-clock-o"></i><time datetime="2016-05-01">May 1, 2016</time>.
+			</span>
+			<!-- <div class="excerpt">
+				
+					<p>2年前、プログラミングの勉強のために開発しはじめたものです。見てくれはなんとか公開できるレベルになりました。いやあ、長かった。</p>
+
+<p><a href="http://woopsdez.github.io/floaty-color-clock/">Floaty color clock</a>
+<img src="/content/images/2016/05/floaty-color-clock/fcc-screenshot.png" alt="" /></p>
+
+<h2 id="section">インストール</h2>
+<p>お使いのブラウザで表示するだけです。ブラウザのスタートページに設定しておくと、ちょっと幸せになれるかも。</p>
+
+<h2 id="chrome-">Chrome エクステンション</h2>
+<p>Chromeをお使いの方は、こちらからでもインストールできます。
+<a href="https://chrome.google.com/webstore/detail/floaty-color-clock/cdcefhaockeolpljckbhklnppdppceoi">Floaty Color Clock - Chrome ウェブストア</a>
+<img src="/content/images/2016/05/floaty-color-clock/fcc-chrome-store.png" alt="" /></p>
+
+<h2 id="section-1">機能一覧</h2>
+<ul>
+  <li>時計</li>
+  <li>指定した地域の降水確率</li>
+  <li>文字色変更</li>
+  <li>書体変更</li>
+  <li>背景色が変わる</li>
+  <li>時刻に合わせて月や太陽がのぼる</li>
+  <li>更新しても設定が保持される</li>
+</ul>
+
+<h2 id="section-2">利用シーン</h2>
+
+<h3 id="section-3">ネットサーフィンの合間に</h3>
+<ol>
+  <li>ブラウザのスタートページに設定</li>
+  <li>新規タブを開く</li>
+  <li>時刻と天気が分かる</li>
+  <li>「あ、今日夕方から雨じゃん。早く帰ろう」</li>
+</ol>
+
+<p>なかなかいい感じに機能してくれています。ただ、すぐに別のページに遷移するので、アニメーションはもっと少なくていいかも。</p>
+
+<h3 id="section-4">壁掛け時計の代わりに</h3>
+<ol>
+  <li>新居に合わせた時計を買おう</li>
+  <li>けっこう高いから買うのやめようかな</li>
+  <li>そういえば使ってないタブレットがあるじゃん</li>
+  <li>このページを設定してっと</li>
+  <li>壁に設置して</li>
+  <li>「うん、いい感じ!」</li>
+</ol>
+
+<p>後者の場合、文字が小さめなので遠いところからだと見づらいこともありました。なのでスタートページに設定しておくのがちょうどいいかもですね。PCでの利用がメイン。</p>
+
+<h2 id="section-5">名前の由来</h2>
+
+<p><img src="/content/images/2016/05/floaty-color-clock/icon_128.png" alt="" /></p>
+
+<p>“Floaty Color”、流れるような色の変化を名前にしました。</p>
+
+<p>水墨画は命名後に採用となったのですが、いい具合に名前を補強してくれていますね。フリー素材に感謝です。</p>
+
+<p>贅沢を言うと、峠の合間にのぼる月を表現したかった。水墨画…。誰か描いてみませんか？</p>
+
+<h2 id="todo">TODO</h2>
+<ul>
+  <li>書体の追加</li>
+  <li>Google カレンダーからのスケジュールの取得、表示</li>
+  <li>ゴミの日 Notice</li>
+  <li>多言語対応</li>
+</ul>
+
+<h2 id="section-6">デバッグユーザー、コントリビューター募集</h2>
+
+<p>校正がザルなワタシを、しゃんとさせてくれる方が欲しいです。興味のある方はTwitterかFacebook、もしくはいきなりgithub上でプルリク送ってください。</p>
+
+<p>いままでいくつか小粒サービスを作ってきましたが、今回は時計という、常に表示しておくものは初めてです。</p>
+
+<p>気付かないうちに本番のデータを変更しちゃう…。なんてことが無いように気をつけねば。</p>
+
+<p>github上でやりとりができるように公開していますので、なにかおかしいところがあったりしたらissueに登録しておいてくださいね。</p>
+
+<p><a href="https://github.com/woopsdez/floaty-color-clock/issues/">https://github.com/woopsdez/floaty-color-clock/issues/</a></p>
+
+				
+			</div> -->
+		</header>
+	</article>
+	
+	<article class="post  featured ">
+		<header>
+			<div class="feature"><span>Featured</span><i class="fa fa-bookmark fa-lg"></i></div>
+			<h2>
+				
+					private-works 
+				
+			</h2>
+			<h1><a href="/private-works/2016/04/05/hello-jekyll/">ghostからjekyllに移行しました。</a></h1>
 			<span>
 				Posted on <i class="fa fa-clock-o"></i><time datetime="2016-04-05">April 5, 2016</time>.
 			</span>
@@ -77,7 +355,7 @@
 					<p>ghostはシンプルで使いやすかった。でも月1000円は高い。管理の手間はあるけれど触ってて楽しいjekyllによるセルフホスティングに移行しました。</p>
 
 <div class="container">
-	<img src="/content/images/2016/04/ghost-logos.png" alt="" />
+	<a href=""><img src="/content/images/2016/04/ghost-logos.png" alt="" /></a>
 	<div class="reference">
 		<strong>node.jsで動くちょう今っぽいおしゃれブログプラットホーム</strong>
 		<p></p>
@@ -120,7 +398,7 @@
 <p>構築にあたって、gulpとgit-hookについて勉強できました。</p>
 
 <div class="container">
-	<img src="/content/images/2016/04/gulp_logo.jpg" alt="" />
+	<a href=""><img src="/content/images/2016/04/gulp_logo.jpg" alt="" /></a>
 	<div class="reference">
 		<strong>サイト制作中によくやるアレやコレを自動化できるヤーツ</strong>
 		<p></p>
@@ -421,10 +699,10 @@ mv /yourdomain.com/blog/htaccess.txt yourdomain.com/blog/.htaccess;
 			<div class="feature"><span>Featured</span><i class="fa fa-bookmark fa-lg"></i></div>
 			<h2>
 				
-					works 
+					private-works 
 				
 			</h2>
-			<h1><a href="/works/2014/07/24/my-first-library/">ライブラリを作る事でプログラミングスキルは本当に向上するのか。</a></h1>
+			<h1><a href="/private-works/2014/07/24/my-first-library/">ライブラリを作る事でプログラミングスキルは本当に向上するのか。</a></h1>
 			<span>
 				Posted on <i class="fa fa-clock-o"></i><time datetime="2014-07-24">July 24, 2014</time>.
 			</span>
@@ -586,10 +864,10 @@ mv /yourdomain.com/blog/htaccess.txt yourdomain.com/blog/.htaccess;
 			<div class="feature"><span>Featured</span><i class="fa fa-bookmark fa-lg"></i></div>
 			<h2>
 				
-					works 
+					review 
 				
 			</h2>
-			<h1><a href="/works/2014/06/20/markdown-plesentation/">markdownでプレゼンしたい！</a></h1>
+			<h1><a href="/review/2014/06/20/markdown-plesentation/">markdownでプレゼンしたい！</a></h1>
 			<span>
 				Posted on <i class="fa fa-clock-o"></i><time datetime="2014-06-20">June 20, 2014</time>.
 			</span>
@@ -654,6 +932,113 @@ mv /yourdomain.com/blog/htaccess.txt yourdomain.com/blog/.htaccess;
 		</header>
 	</article>
 	
+	<article class="post  featured ">
+		<header>
+			<div class="feature"><span>Featured</span><i class="fa fa-bookmark fa-lg"></i></div>
+			<h2>
+				
+					works 
+				
+			</h2>
+			<h1><a href="/works/2014/06/20/dist3-photoshopandme/">dist.3 Photoshop and me に登壇しました</a></h1>
+			<span>
+				Posted on <i class="fa fa-clock-o"></i><time datetime="2014-06-20">June 20, 2014</time>.
+			</span>
+			<!-- <div class="excerpt">
+				
+					<p><a href="http://http://dist.connpass.com/event/6385/">dist.3 Photoshop and me</a>にてお話させていただきました。</p>
+
+<iframe src="http://www.slideshare.net/slideshow/embed_code/36100312" width="597" height="486" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px 1px 0; margin-bottom:5px; max-width: 100%;" allowfullscreen=""> </iframe>
+<div style="margin-bottom:5px"> <a href="https://www.slideshare.net/woopsdez/dist3" title="それでもPhotoshopを選ぶ？ in Dist3" target="_blank">それでもPhotoshopを選ぶ？ in Dist3</a> from <a href="http://www.slideshare.net/woopsdez" target="_blank">イシジマミキ</a></div>
+
+<p>Photoshopをテーマに、というコトだったのですが、最近めっきり触れる機会が減りました。コーディングしていたり検証したり、これでいいのか考えたりしているばかりです。</p>
+
+<p>元々グラフィックデザイナーだった自分がWebの現場において、たくさん変化してきたのだから、もっとWebに注力している人はわたしなどより感じていると思います。</p>
+
+<p>グラフィックは美しいのは当たり前で、それと同時に実現性があるかも評価されるようになったのですよね。</p>
+
+<h2 id="section">自分はどうやって生きていきたいの？</h2>
+
+<p>Photoshopを投げすてろ。という話ではありません。自分がWebというチャネルにおいてどこを目指したいかの話なのです。</p>
+
+<p>「それでもPhotoshop？」というタイトルは、参加者に自分の根幹を見つめる機会を促しているのです。</p>
+
+<p><strong>イベントで話をきいて「もっと頑張ろう」とか「プログラム覚えないと」とやみくもに思ってしまうのは大きな間違いです。</strong></p>
+
+<p>こういった潮流がでてきている上で、自分はどんな道を行くのか。を考える機会にした方が良く、そこが明確じゃないと、いろんな人の話に触発されるたびに頑張ることになって、けっきょく何をしていいか分からなくなるという堂々めぐりに陥いってしまう。</p>
+
+<p>煽り気味なメッセージを投げかけることで、参加者にそういった気付きを与える意図があった、と、言う話を今考えました。</p>
+
+<p>真に受けるも受けないもアナタ次第！</p>
+
+<p>お目汚し失礼しましたー。</p>
+
+<p><a href="http://www.amazon.co.jp/gp/product/4532168139/ref=as_li_ss_il?ie=UTF8&amp;camp=247&amp;creative=7399&amp;creativeASIN=4532168139&amp;linkCode=as2&amp;tag=fastfargroove-22"><img border="0" src="http://ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;ASIN=4532168139&amp;Format=_SL250_&amp;ID=AsinImage&amp;MarketPlace=JP&amp;ServiceVersion=20070822&amp;WS=1&amp;tag=fastfargroove-22" /></a><img src="http://ir-jp.amazon-adsystem.com/e/ir?t=fastfargroove-22&amp;l=as2&amp;o=9&amp;a=4532168139" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" /></p>
+
+				
+			</div> -->
+		</header>
+	</article>
+	
+	<article class="post  featured ">
+		<header>
+			<div class="feature"><span>Featured</span><i class="fa fa-bookmark fa-lg"></i></div>
+			<h2>
+				
+					works 
+				
+			</h2>
+			<h1><a href="/works/2014/06/20/talk-about-sketch-afterdark/">Sketchの使い方をお話ししてきました。</a></h1>
+			<span>
+				Posted on <i class="fa fa-clock-o"></i><time datetime="2014-06-20">June 20, 2014</time>.
+			</span>
+			<!-- <div class="excerpt">
+				
+					<p><a href="http://cssnite.jp/afterdark/cpi/vol11/">CPI x CSS Nite x 優クリエイト「After Dark」（11）</a>にてSketchの基本的な使い方についてお話してきました。</p>
+
+<p><img src="/content/images/2015/03/20140619_af11_0024_.jpg" alt="" />
+準備中の様子</p>
+
+<p>題して「<strong><a href="http://cssnite.jp/afterdark/cpi/vol11/">ワイヤーフレーム・プロトタイプ制作に使うSketch</a></strong>」です。</p>
+
+<blockquote>
+  <p>Adobe Fireworksの新規開発中止をうけて注目を集めたSketch。実はWebページやアプリのUIデザインに最適化されたベクタードローイングツールとして有名です。そのSketchがバージョン3になり、さらに使いやすく大幅に機能強化されました。</p>
+</blockquote>
+
+<blockquote>
+  <p>本セッションでは、Sketchの基本からWebサイトのワイヤーフレームをスムーズに作る方法を紹介します。</p>
+</blockquote>
+
+<p>と、言うような内容でワイヤーフレームなど軽量なものを作るのに、Sketchはおすすめだよー。というコトをデモを交えて解説しました。</p>
+
+<h2 id="section">話した内容からちょっとプラスα</h2>
+
+<p>ちょっとこぼれてしまった話として、iOSのmockupはテンプレートとして最初から準備されています。</p>
+
+<iframe name="quickcast" src="http://quick.as/embed/lxvgi8e8" scrolling="no" frameborder="0" width="100%" allowfullscreen=""></iframe>
+<script src="http://quick.as/embed/script/1.60"></script>
+
+<p>上記のようにそれらを組み合わせれば、簡単に再現したいイメージを作れますね。</p>
+
+<h2 id="section-1">まとめ</h2>
+
+<p>ワイヤーフレームなど、「ちょっと作りたい」というときに使えるツールとしてさまざまなものがありますが今のところSketchで決定したというのが自分の所感です。</p>
+
+<p>Cacooなどは共有や議論がしやすいメリットがありますし、OmniGraffleも高機能でさまざまなことができます。</p>
+
+<p>そこでKeynoteに非常に近しい感触であり、さらにAI,PSに関連するような機能が用意されているというのはポイント高しです。</p>
+
+<p>ニコニコ動画でいくつか動画を投稿しているのですが、それほどデザインに凝っている訳でもないスチルなどはSketchで作っています。</p>
+
+<p>イベントでお話されていたFramer.jsで、動くモックアップを作るキレイな流れもできているのでこの機会に覚えてみてはいかがでしょうか！</p>
+
+<p><a href="http://www.amazon.co.jp/gp/product/4844335375/ref=as_li_ss_il?ie=UTF8&amp;camp=247&amp;creative=7399&amp;creativeASIN=4844335375&amp;linkCode=as2&amp;tag=fastfargroove-22"><img border="0" src="http://ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;ASIN=4844335375&amp;Format=_SL250_&amp;ID=AsinImage&amp;MarketPlace=JP&amp;ServiceVersion=20070822&amp;WS=1&amp;tag=fastfargroove-22" /></a><img src="http://ir-jp.amazon-adsystem.com/e/ir?t=fastfargroove-22&amp;l=as2&amp;o=9&amp;a=4844335375" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" /></p>
+
+				
+			</div> -->
+		</header>
+	</article>
+	
 
 	<div class="pagination">
 	
@@ -670,8 +1055,6 @@ mv /yourdomain.com/blog/htaccess.txt yourdomain.com/blog/.htaccess;
 			<a href="http://blog.mikiishijima.com/about/">About Me</a> &bull;
 		
 			<a href="http://blog.mikiishijima.com/contact/">Contact</a> &bull;
-		
-			
 		
 			
 		
@@ -697,6 +1080,23 @@ mv /yourdomain.com/blog/htaccess.txt yourdomain.com/blog/.htaccess;
 		};
 	</script>
 	<script async type="text/javascript" src="http://blog.mikiishijima.com/assets/js/theme.min.js"></script>
+	<script>
+	// 記事サイドバーに目次を追加
+	$('.profile').append('<ul id="index"></ul>');
+	$('.postbody h2').each(function(){
+		$('#index').append('<li><a href="#' + $(this).attr('id') + '">' + $(this).text() + '</a></li>')
+	});
+	$('#index a').click(function(e){
+			e.preventDefault();
+			var self = String($(this).attr('href'));
+			console.log('element ' + self);
 
+			var pos = $(self).offset().top;
+			var offset = pos - 100;
+			console.log('num ' + pos + ' / ' + offset);
+			$('html, body').animate({scrollTop: offset}, 1000);
+			
+	});
+	</script>
   </body>
 </html>

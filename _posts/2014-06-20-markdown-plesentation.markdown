@@ -2,7 +2,7 @@
 layout: post
 title: markdownでプレゼンしたい！
 date: '2014-06-20 09:11:01'
-categories: works
+categories: review
 banner_image: "/content/images/2015/03/6098560857_5a8ccb2fa0_o.jpg"
 featured: true
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: ニコ動 超チューニング祭で最優秀賞もらいました
 date: '2014-04-27 21:10:43'
-categories: works
+categories: private-works
 banner_image: "/content/images/2014/04/nico03.jpg"
 featured: true
 ---

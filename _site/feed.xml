@@ -2,19 +2,275 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
 		<title>Miki Ishijima Blog</title>
-		<description>イシジマミキ ブログ</description>
+		<description>趣味のゲームやプログラミング、レビューなど個人イシジマミキにより近しい内容を書いています。普遍的なデザインの話はThe Marsknowledge Blogで。</description>
 		<link>http://blog.mikiishijima.com/</link>
 		<atom:link href="http://blog.mikiishijima.com/feed.xml" rel="self" type="application/rss+xml" />
-		<pubDate>Sat, 09 Apr 2016 14:39:05 +0900</pubDate>
-		<lastBuildDate>Sat, 09 Apr 2016 14:39:05 +0900</lastBuildDate>
+		<pubDate>Tue, 03 May 2016 01:14:54 +0900</pubDate>
+		<lastBuildDate>Tue, 03 May 2016 01:14:54 +0900</lastBuildDate>
 		<generator>Jekyll v3.1.2</generator>
+		
+			<item>
+				<title>Floaty Color Clock開発で得られたこと</title>
+				<description>&lt;p&gt;「クリックでふわっと動くアレやコレ」を作ってみたい。そんな思いから着手したFloaty Color Clockですが、ついでで開発しはじめた天気予報機能が難しく思わぬ方向に…。この記事は開発中の思い出話を書いていきます。&lt;/p&gt;
+
+&lt;h2 id=&quot;undefind&quot;&gt;Undefindの嵐&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/woopsdez/omikujigohan&quot;&gt;7年前のPHPコード&lt;/a&gt;、&lt;a href=&quot;http://omikujigohan.woopsdez.jp/&quot;&gt;おみくじゴハン&lt;/a&gt;のリファクタリング、そして&lt;a href=&quot;http://woopsdez.github.io/floaty-color-clock/&quot;&gt;Floaty Color Clock&lt;/a&gt;の開発。&lt;/p&gt;
+
+&lt;p&gt;どちらもNotice, undefindの嵐でした。わたしが良く怒られたケースはこちら。&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;	&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;fuga&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+		&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;hoge&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;fuga&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// fugaがtrueじゃないとif文の中を通らない&lt;/span&gt;
+	&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+	&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;hage&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;hoge&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//するとhogeはここで初出になる&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;if文の中で使ったあと、後に続く処理でしれっと変数を呼び出していると怒られるのですね。&lt;/p&gt;
+
+&lt;p&gt;じゃあ、ちゃんとif文を経由させたり、if文を経由しなくても値が入ってるようにすれば良いのでは？と、グローバルで変数に初期値を入れておいたり、isset()やundefindチェックをしたりしています。&lt;/p&gt;
+
+&lt;p&gt;HTML内で呼び出すこともあるので、長ったらしい文になるのは避けたいところ。&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-php&quot; data-lang=&quot;php&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;c&quot;&gt;&amp;lt;!-- これが --&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;img&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;?php&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$hoge&lt;/span&gt; &lt;span class=&quot;cp&quot;&gt;?&amp;gt;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;&amp;lt;!-- こうなってしまう --&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;img&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;?php&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;isset&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$hoge&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)){&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$hoge&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;cp&quot;&gt;?&amp;gt;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;section&quot;&gt;関数内で完結させる&lt;/h2&gt;
+&lt;p&gt;プログラミングの師匠(&lt;a href=&quot;http://blog.tai2.net/&quot;&gt;@tai2&lt;/a&gt;)に、アドバイスを求めたところ下記の返答をいただきました。&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;「グローバルで変数を定義し、関数内でもやりとりさせてしまっているのをやめ、関数で完結させる。値は引数として受け渡しするといい。」&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;なるほどなるほど。&lt;/p&gt;
+
+&lt;p&gt;マインクラフト内でのLuaプログラミングでは、それができていたのに今回の開発ではしっちゃかめっちゃかになってしまっていました。&lt;/p&gt;
+
+&lt;p&gt;自分のスキルより難しい実装が入ると、コード全体の把握がおろそかになってしまうのがわたしの悪いクセ。&lt;/p&gt;
+
+&lt;div class=&quot;container&quot;&gt;
+	&lt;a href=&quot;http://www.amazon.co.jp/gp/product/4569792189/ref=as_li_ss_il?ie=UTF8&amp;amp;camp=247&amp;amp;creative=7399&amp;amp;creativeASIN=4569792189&amp;amp;linkCode=as2&amp;amp;tag=fastfargroove-22&quot;&gt;&lt;img src=&quot;http://ecx.images-amazon.com/images/I/51wBC4deA4L._M500_.jpg&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;
+	&lt;div class=&quot;reference&quot;&gt;
+		&lt;strong&gt;右京さんの口癖&lt;/strong&gt;
+		&lt;p&gt;&lt;/p&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;section-1&quot;&gt;ユーザー設定がある場合の初期値のやりくりが苦手&lt;/h2&gt;
+&lt;p&gt;「二回目に処理するとき、一回目に保存しておいた値があるならそちらを利用する。」というのがうまく書けません。&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;color&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;white&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 初期値&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;user&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;setColor&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!==&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;undefind&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//ユーザーが設定した値があるかどうか&lt;/span&gt;
+	&lt;span class=&quot;nx&quot;&gt;color&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;user&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;setColor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//あれば、初期値として扱う&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;こんな感じで書けばいいのですよね。いまもですが、分岐の流れ、今はどこの処理に辿りついたかを理解するのに時間がかかります。&lt;/p&gt;
+
+&lt;div class=&quot;container&quot;&gt;
+	&lt;a href=&quot;&quot;&gt;&lt;img src=&quot;/content/images/2016/05/undefinde-variables/702167001386764518.gif&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;
+	&lt;div class=&quot;reference&quot;&gt;
+		&lt;strong&gt;映画のようにはなかなかいかない&lt;/strong&gt;
+		&lt;p&gt;&lt;/p&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;section-2&quot;&gt;時刻に合わせて回転する画像&lt;/h2&gt;
+&lt;p&gt;他の方から見れば簡単なことですが、算数が苦手なわたしは「よくこの実装を思いつけたな」と有頂天になっています。&lt;/p&gt;
+
+&lt;p&gt;小学校で習った「割合の公式」の出番です!&lt;/p&gt;
+
+&lt;blockquote&gt;
+
+  &lt;ul&gt;
+    &lt;li&gt;「割合」＝「比べる値」÷「もとの値」&lt;/li&gt;
+    &lt;li&gt;「比べる値」＝「もとの値」×「割合」&lt;/li&gt;
+    &lt;li&gt;「もとの値」＝「比べる値」÷「割合」&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;まず、24時間を円とみなして、現在時刻ではどの角度にいるのかを割り出す必要があります。&lt;/p&gt;
+
+&lt;p&gt;必要な値として&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;24時間の秒数(86400s)&lt;/li&gt;
+  &lt;li&gt;0時から現在時刻までの秒数&lt;/li&gt;
+  &lt;li&gt;24時間を100%とした時の現在時刻の割合&lt;/li&gt;
+  &lt;li&gt;円の角度 360°&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;が分かればあとは&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;per&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;_nowsec&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;86400&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//割合を求める&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;nowdeg&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;_per&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;360&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 360°中 per%は何°になるかが分かる&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;という式で求められるのですね。&lt;/p&gt;
+
+&lt;p&gt;あとはこの値を、jQueryにてcssのプロパティにセットしていけばOKです。&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;.bg image&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;css&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;transform&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;rotate(&#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;nowdeg&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;deg)&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;上記がhtml内で毎秒実行される訳です。&lt;/p&gt;
+
+&lt;p&gt;cssの値を変更するのだから、cssファイルの書き換えを行うのでは？それにはどうしたら？と疑問に思ってましたが、jsでhtml内にインラインで書いちゃえばいいのですよね。&lt;/p&gt;
+
+&lt;p&gt;すでに知っている知識でも、いっぱいいっぱいになるとこぼれ落ちちゃう。&lt;/p&gt;
+
+&lt;h2 id=&quot;qiita&quot;&gt;Qiitaに投稿しています。&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/content/images/2016/05/undefinde-variables/qiita-woopsdez.png&quot; alt=&quot;http://qiita.com/woopsdez&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://qiita.com/woopsdez/items/bc6108460de13d668e78&quot;&gt;Chromeエクステンションで、どうしてもJSONPでやりとりしないといけない場合の対処 - Qiita&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://qiita.com/woopsdez/items/cb0e59245d4ee13e8ae5&quot;&gt;gulpでのgit操作 commit messageをコマンドライン引数で渡そう - Qiita&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://qiita.com/woopsdez/items/cc2b64800a6de3112920&quot;&gt;jekyllで構築したサイト、本番へアップしたらcssが適用されない場合に試しておきたいbaseurlの便利な変更の仕方。 - Qiita&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;ぜひチェックしてくださいな。&lt;/p&gt;
+</description>
+				<pubDate>Mon, 02 May 2016 00:00:00 +0900</pubDate>
+				<link>http://blog.mikiishijima.com/private-works/2016/05/02/undefinde-variables/</link>
+				<guid isPermaLink="true">http://blog.mikiishijima.com/private-works/2016/05/02/undefinde-variables/</guid>
+				
+				
+					<category>private-works</category>
+				
+			</item>
+		
+			<item>
+				<title>プライベートワークの重要さ</title>
+				<description>&lt;h2 id=&quot;section&quot;&gt;と、その前に&lt;/h2&gt;
+&lt;p&gt;プライベートワークの良いところは、もちろん学習に直結しているところです。&lt;/p&gt;
+
+&lt;p&gt;しかし、副産物もまたおいしい。このブログの構築時にも検索して見つからなかったノウハウはＱiitaに投稿していますが、他の人がストックしてくれるとさらにモチベーションが上がり、学習への意欲が増します。&lt;/p&gt;
+
+&lt;p&gt;それだけでなく、リリースまで到達できると、アプリストアに並びちゃんとしたプロダクトに見えてさらにニヤニヤ。「インストールしたよ。」とのコメントを見て、下手な運用はできなくなったと責任感も少し芽生えます。&lt;/p&gt;
+
+&lt;p&gt;学習して、それを後の自分のためにオンラインで記録しているだけなのに、自分の事を知る人が増え、良い情報が集ってくる流れが勝手にできていくのです。&lt;/p&gt;
+
+&lt;p&gt;人に強制されずにものを作るのは非常に楽しいので&lt;/p&gt;
+</description>
+				<pubDate>Mon, 02 May 2016 00:00:00 +0900</pubDate>
+				<link>http://blog.mikiishijima.com/private-works/2016/05/02/the-importance-of-the-private-work/</link>
+				<guid isPermaLink="true">http://blog.mikiishijima.com/private-works/2016/05/02/the-importance-of-the-private-work/</guid>
+				
+				
+					<category>private-works</category>
+				
+			</item>
+		
+			<item>
+				<title>Floaty Color Clockをリリースしました。</title>
+				<description>&lt;p&gt;2年前、プログラミングの勉強のために開発しはじめたものです。見てくれはなんとか公開できるレベルになりました。いやあ、長かった。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://woopsdez.github.io/floaty-color-clock/&quot;&gt;Floaty color clock&lt;/a&gt;
+&lt;img src=&quot;/content/images/2016/05/floaty-color-clock/fcc-screenshot.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;section&quot;&gt;インストール&lt;/h2&gt;
+&lt;p&gt;お使いのブラウザで表示するだけです。ブラウザのスタートページに設定しておくと、ちょっと幸せになれるかも。&lt;/p&gt;
+
+&lt;h2 id=&quot;chrome-&quot;&gt;Chrome エクステンション&lt;/h2&gt;
+&lt;p&gt;Chromeをお使いの方は、こちらからでもインストールできます。
+&lt;a href=&quot;https://chrome.google.com/webstore/detail/floaty-color-clock/cdcefhaockeolpljckbhklnppdppceoi&quot;&gt;Floaty Color Clock - Chrome ウェブストア&lt;/a&gt;
+&lt;img src=&quot;/content/images/2016/05/floaty-color-clock/fcc-chrome-store.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;section-1&quot;&gt;機能一覧&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;時計&lt;/li&gt;
+  &lt;li&gt;指定した地域の降水確率&lt;/li&gt;
+  &lt;li&gt;文字色変更&lt;/li&gt;
+  &lt;li&gt;書体変更&lt;/li&gt;
+  &lt;li&gt;背景色が変わる&lt;/li&gt;
+  &lt;li&gt;時刻に合わせて月や太陽がのぼる&lt;/li&gt;
+  &lt;li&gt;更新しても設定が保持される&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;section-2&quot;&gt;利用シーン&lt;/h2&gt;
+
+&lt;h3 id=&quot;section-3&quot;&gt;ネットサーフィンの合間に&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;ブラウザのスタートページに設定&lt;/li&gt;
+  &lt;li&gt;新規タブを開く&lt;/li&gt;
+  &lt;li&gt;時刻と天気が分かる&lt;/li&gt;
+  &lt;li&gt;「あ、今日夕方から雨じゃん。早く帰ろう」&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;なかなかいい感じに機能してくれています。ただ、すぐに別のページに遷移するので、アニメーションはもっと少なくていいかも。&lt;/p&gt;
+
+&lt;h3 id=&quot;section-4&quot;&gt;壁掛け時計の代わりに&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;新居に合わせた時計を買おう&lt;/li&gt;
+  &lt;li&gt;けっこう高いから買うのやめようかな&lt;/li&gt;
+  &lt;li&gt;そういえば使ってないタブレットがあるじゃん&lt;/li&gt;
+  &lt;li&gt;このページを設定してっと&lt;/li&gt;
+  &lt;li&gt;壁に設置して&lt;/li&gt;
+  &lt;li&gt;「うん、いい感じ!」&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;後者の場合、文字が小さめなので遠いところからだと見づらいこともありました。なのでスタートページに設定しておくのがちょうどいいかもですね。PCでの利用がメイン。&lt;/p&gt;
+
+&lt;h2 id=&quot;section-5&quot;&gt;名前の由来&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/content/images/2016/05/floaty-color-clock/icon_128.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;“Floaty Color”、流れるような色の変化を名前にしました。&lt;/p&gt;
+
+&lt;p&gt;水墨画は命名後に採用となったのですが、いい具合に名前を補強してくれていますね。フリー素材に感謝です。&lt;/p&gt;
+
+&lt;p&gt;贅沢を言うと、峠の合間にのぼる月を表現したかった。水墨画…。誰か描いてみませんか？&lt;/p&gt;
+
+&lt;h2 id=&quot;todo&quot;&gt;TODO&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;書体の追加&lt;/li&gt;
+  &lt;li&gt;Google カレンダーからのスケジュールの取得、表示&lt;/li&gt;
+  &lt;li&gt;ゴミの日 Notice&lt;/li&gt;
+  &lt;li&gt;多言語対応&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;section-6&quot;&gt;デバッグユーザー、コントリビューター募集&lt;/h2&gt;
+
+&lt;p&gt;校正がザルなワタシを、しゃんとさせてくれる方が欲しいです。興味のある方はTwitterかFacebook、もしくはいきなりgithub上でプルリク送ってください。&lt;/p&gt;
+
+&lt;p&gt;いままでいくつか小粒サービスを作ってきましたが、今回は時計という、常に表示しておくものは初めてです。&lt;/p&gt;
+
+&lt;p&gt;気付かないうちに本番のデータを変更しちゃう…。なんてことが無いように気をつけねば。&lt;/p&gt;
+
+&lt;p&gt;github上でやりとりができるように公開していますので、なにかおかしいところがあったりしたらissueに登録しておいてくださいね。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/woopsdez/floaty-color-clock/issues/&quot;&gt;https://github.com/woopsdez/floaty-color-clock/issues/&lt;/a&gt;&lt;/p&gt;
+</description>
+				<pubDate>Sun, 01 May 2016 00:00:00 +0900</pubDate>
+				<link>http://blog.mikiishijima.com/private-works/2016/05/01/floatycolorclock/</link>
+				<guid isPermaLink="true">http://blog.mikiishijima.com/private-works/2016/05/01/floatycolorclock/</guid>
+				
+				
+					<category>private-works</category>
+				
+			</item>
 		
 			<item>
 				<title>ghostからjekyllに移行しました。</title>
 				<description>&lt;p&gt;ghostはシンプルで使いやすかった。でも月1000円は高い。管理の手間はあるけれど触ってて楽しいjekyllによるセルフホスティングに移行しました。&lt;/p&gt;
 
 &lt;div class=&quot;container&quot;&gt;
-	&lt;img src=&quot;/content/images/2016/04/ghost-logos.png&quot; alt=&quot;&quot; /&gt;
+	&lt;a href=&quot;&quot;&gt;&lt;img src=&quot;/content/images/2016/04/ghost-logos.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;
 	&lt;div class=&quot;reference&quot;&gt;
 		&lt;strong&gt;node.jsで動くちょう今っぽいおしゃれブログプラットホーム&lt;/strong&gt;
 		&lt;p&gt;&lt;/p&gt;
@@ -57,7 +313,7 @@
 &lt;p&gt;構築にあたって、gulpとgit-hookについて勉強できました。&lt;/p&gt;
 
 &lt;div class=&quot;container&quot;&gt;
-	&lt;img src=&quot;/content/images/2016/04/gulp_logo.jpg&quot; alt=&quot;&quot; /&gt;
+	&lt;a href=&quot;&quot;&gt;&lt;img src=&quot;/content/images/2016/04/gulp_logo.jpg&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;
 	&lt;div class=&quot;reference&quot;&gt;
 		&lt;strong&gt;サイト制作中によくやるアレやコレを自動化できるヤーツ&lt;/strong&gt;
 		&lt;p&gt;&lt;/p&gt;
@@ -108,11 +364,11 @@ mv /yourdomain.com/blog/htaccess.txt yourdomain.com/blog/.htaccess;
 &lt;p&gt;来年にはtumblrに移行してるかもしれませんが、ひとまずこれでよろしくお願いします。&lt;/p&gt;
 </description>
 				<pubDate>Tue, 05 Apr 2016 00:00:00 +0900</pubDate>
-				<link>http://blog.mikiishijima.com/diary/2016/04/05/hello-jekyll/</link>
-				<guid isPermaLink="true">http://blog.mikiishijima.com/diary/2016/04/05/hello-jekyll/</guid>
+				<link>http://blog.mikiishijima.com/private-works/2016/04/05/hello-jekyll/</link>
+				<guid isPermaLink="true">http://blog.mikiishijima.com/private-works/2016/04/05/hello-jekyll/</guid>
 				
 				
-					<category>diary</category>
+					<category>private-works</category>
 				
 			</item>
 		
@@ -490,11 +746,11 @@ mv /yourdomain.com/blog/htaccess.txt yourdomain.com/blog/.htaccess;
 &lt;noscript&gt;&lt;a href=&quot;http://www.nicovideo.jp/watch/sm23969139&quot;&gt;【ニコニコ動画】【Minecraft】タートルとごはん Part10【ゆっくり実況】&lt;/a&gt;&lt;/noscript&gt;
 </description>
 				<pubDate>Thu, 24 Jul 2014 12:50:47 +0900</pubDate>
-				<link>http://blog.mikiishijima.com/works/2014/07/24/my-first-library/</link>
-				<guid isPermaLink="true">http://blog.mikiishijima.com/works/2014/07/24/my-first-library/</guid>
+				<link>http://blog.mikiishijima.com/private-works/2014/07/24/my-first-library/</link>
+				<guid isPermaLink="true">http://blog.mikiishijima.com/private-works/2014/07/24/my-first-library/</guid>
 				
 				
-					<category>works</category>
+					<category>private-works</category>
 				
 			</item>
 		
@@ -555,11 +811,11 @@ mv /yourdomain.com/blog/htaccess.txt yourdomain.com/blog/.htaccess;
 &lt;p&gt;&lt;a href=&quot;http://www.amazon.co.jp/gp/product/B00IWM8VBS/ref=as_li_ss_il?ie=UTF8&amp;amp;camp=247&amp;amp;creative=7399&amp;amp;creativeASIN=B00IWM8VBS&amp;amp;linkCode=as2&amp;amp;tag=fastfargroove-22&quot;&gt;&lt;img border=&quot;0&quot; src=&quot;http://ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;amp;ASIN=B00IWM8VBS&amp;amp;Format=_SL250_&amp;amp;ID=AsinImage&amp;amp;MarketPlace=JP&amp;amp;ServiceVersion=20070822&amp;amp;WS=1&amp;amp;tag=fastfargroove-22&quot; /&gt;&lt;/a&gt;&lt;img src=&quot;http://ir-jp.amazon-adsystem.com/e/ir?t=fastfargroove-22&amp;amp;l=as2&amp;amp;o=9&amp;amp;a=B00IWM8VBS&quot; width=&quot;1&quot; height=&quot;1&quot; border=&quot;0&quot; alt=&quot;&quot; style=&quot;border:none !important; margin:0px !important;&quot; /&gt;&lt;/p&gt;
 </description>
 				<pubDate>Fri, 20 Jun 2014 09:11:01 +0900</pubDate>
-				<link>http://blog.mikiishijima.com/works/2014/06/20/markdown-plesentation/</link>
-				<guid isPermaLink="true">http://blog.mikiishijima.com/works/2014/06/20/markdown-plesentation/</guid>
+				<link>http://blog.mikiishijima.com/review/2014/06/20/markdown-plesentation/</link>
+				<guid isPermaLink="true">http://blog.mikiishijima.com/review/2014/06/20/markdown-plesentation/</guid>
 				
 				
-					<category>works</category>
+					<category>review</category>
 				
 			</item>
 		
@@ -648,388 +904,6 @@ mv /yourdomain.com/blog/htaccess.txt yourdomain.com/blog/.htaccess;
 				<pubDate>Fri, 20 Jun 2014 07:46:06 +0900</pubDate>
 				<link>http://blog.mikiishijima.com/works/2014/06/20/talk-about-sketch-afterdark/</link>
 				<guid isPermaLink="true">http://blog.mikiishijima.com/works/2014/06/20/talk-about-sketch-afterdark/</guid>
-				
-				
-					<category>works</category>
-				
-			</item>
-		
-			<item>
-				<title>デザイナーのわたしがプログラミングの基礎をだいたい3日で覚えた1つの方法</title>
-				<description>&lt;p&gt;フルスタックエンジニア！フルスタックエンジニア！&lt;/p&gt;
-
-&lt;p&gt;最近なんでもかんでも出来る人が求められていますね。Webデザイナーの人でも簡単なプログラムに触れる機会は以前より格段に増えています。&lt;/p&gt;
-
-&lt;p&gt;わたしもプログラムを覚えたいと思い、勉強していました。しかしそれは、禁煙と同じようなもので触ってはやめて、触ってはやめて、飽きてしまうの繰り返しでした。&lt;/p&gt;
-
-&lt;h2 id=&quot;section&quot;&gt;身につかない原因&lt;/h2&gt;
-
-&lt;p&gt;プログラムの勉強会や、本、ブログなどを読んでもなぜ身につかないのか。難しいというのは理由ではありません。&lt;/p&gt;
-
-&lt;p&gt;むしろ、基礎の「き」くらいであればコーディングと同じくらい簡単です。&lt;/p&gt;
-
-&lt;p&gt;わたしが一番の原因だと考えるのは&lt;strong&gt;作りたいものがない&lt;/strong&gt;というコトです。&lt;/p&gt;
-
-&lt;p&gt;子供向けプログラム学習アプリケーション(言語？)のScratchというのがあります。&lt;/p&gt;
-
-&lt;p&gt;繰り返し処理や条件分岐が日本語で、レゴブロックのように組み合わせればプログラムの思考を学習できるとても良いものです。&lt;/p&gt;
-
-&lt;p&gt;わたしも触ってみたのですが、書いている途中は楽しめてもその後が続きませんでした。なぜなら「作りたいものがない」からです。&lt;/p&gt;
-
-&lt;p&gt;デジタル時計を作ってみよう！
-fizzbuzzを書いてみよう！&lt;/p&gt;
-
-&lt;p&gt;と演習では良く行われますが、正直そういったものを作れたとしても、その後が続かないのです。&lt;/p&gt;
-
-&lt;h2 id=&quot;minecraft&quot;&gt;そこでMinecraft&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src=&quot;/content/images/2015/03/img_14052201.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Minecraftはスウェーデンで開発されたサンドボックス型のPCゲームです。大学の授業でも教材として取り上げられたりしています。&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;[スウェーデンの大学が教育プログラムに『Minecraft』を採用、環境と都市計画の授業に&lt;/td&gt;
-      &lt;td&gt;Game*Spark - 国内・海外ゲーム情報サイト](http://www.gamespark.jp/article/2013/01/10/38107.html)&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;ストーリーはなく、建築を楽しんだり、旅をしたりしてのんびり過ごすこともできます。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/content/images/2015/03/58f1fecdacf0d81ff494a6c7b356faca-1.jpg&quot; alt=&quot;Insert&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;最初はのんびりやっているのですが、少し慣れてくると途端に忙しくなってきます。
-モンスターに対抗するための装備、食料、そして美しい建築のための資材。いろいろ必要です。&lt;/p&gt;
-
-&lt;p&gt;マルチプレイも可能なのでサーバー上で仲間とプレイしているときは仲間のために生活環境を安定させるべくトロッコでの駅開通や、養鶏場などの大量生産施設が欲しくなってくるでしょう。&lt;/p&gt;
-
-&lt;p&gt;そのとき、木材を自分で切り倒していたり、畑の収穫、ステーキを焼いたりを手作業でしていてはとても追いつかないのです。&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;そうすると、どんどん「自動化」をしたくなってきます。&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;レッドストーンを使い出すと論理回路(ANDとかOR)などを組み合わせてクロック回路やパルサー回路が必要になってきます。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/content/images/2015/03/------.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www26.atwiki.jp/minecraft/pages/26.html&quot;&gt;Minecraft Japan Wiki - テクニック/レッドストーン回路&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;もちろん大変なことばかりですが、仲間のためにファミチキを提供したり、自分で作ったファミリーマートで販売したり、入店音などを作ろうと思えばあんまり苦になりません。&lt;/p&gt;
-
-&lt;h2 id=&quot;lua&quot;&gt;Luaを覚えてみる&lt;/h2&gt;
-
-&lt;p&gt;レッドストーンで自動化していくと、ほんの小さな自動化でも回路が大きくなってしまいます。
-小さな建物におしゃれに自動化を取り入れたい場合は難しくなってくるのです。&lt;/p&gt;
-
-&lt;p&gt;そうすると工業化をしたくなり、工業化をやりだすと耳にするのが「&lt;a href=&quot;http://www.computercraft.info/&quot;&gt;Computer Craft&lt;/a&gt;」です。ゲーム内にプログラムで操作できるロボット登場させるプラグイン(Mod)というものです。&lt;/p&gt;
-
-&lt;p&gt;ロボットを使えば、畑での収穫して調理してもらう過程を自動化できるようになるのです。&lt;/p&gt;
-
-&lt;iframe width=&quot;853&quot; height=&quot;480&quot; src=&quot;//www.youtube.com/embed/n_L8RE26twM&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-
-&lt;p&gt;プログラムはLuaという言語で行います。
-非常にシンプルな言語で、カッコやセミコロンで悩まないで良いのがうれしいです。&lt;/p&gt;
-
-&lt;p&gt;シンプル。&lt;/p&gt;
-
-&lt;h3 id=&quot;section-1&quot;&gt;すぐに動かせる！&lt;/h3&gt;
-
-&lt;p&gt;ゲーム内に使いそうなものはあらかじめメソッドとして用意されています。&lt;/p&gt;
-
-&lt;p&gt;前に進む、ブロックを壊す、アイテムを比較するなどこれを使うだけなのですぐに動かせます。&lt;/p&gt;
-
-&lt;p&gt;前に進むのを10回繰り返すのには for文とそのメソッドを使います。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-Lua&quot;&gt;for i = 1, 10 do
-  turtle.forward()
-end
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;これだけです。&lt;/p&gt;
-
-&lt;p&gt;前に進んでから、帰ってくる。というだけならスグに書けそうな気がしませんか？&lt;/p&gt;
-
-&lt;h2 id=&quot;section-2&quot;&gt;難しそうなものは問題を細きれにしてみる&lt;/h2&gt;
-
-&lt;p&gt;Minecraft内でプログラムをしてみて一番苦労したのが、整地プログラムです。&lt;/p&gt;
-
-&lt;p&gt;大きな建物を立てるときに、でこぼこの大地を平にならす必要があります。これも自動化しようと試みたのですが今の自分には非常に難問でした。&lt;/p&gt;
-
-&lt;p&gt;何から書いていいか分からないとき、まずは書き出してみる。&lt;/p&gt;
-
-&lt;p&gt;このひとつひとつをもっと細かく見ていけば良いのです。
-どうしても、いまの実力では無理なものもあるのでゆっくり考えてチョイスしていきます。&lt;/p&gt;
-
-&lt;p&gt;例えば「上にあるブロックを整地するには？」&lt;/p&gt;
-
-&lt;p&gt;に対しては&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;自身の真上にブロックがあるか調べる&lt;/li&gt;
-  &lt;li&gt;あれば掘る&lt;/li&gt;
-  &lt;li&gt;上がる&lt;/li&gt;
-  &lt;li&gt;もう一度1から3まで行う&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;というフローにしてみました。&lt;/p&gt;
-
-&lt;p&gt;上にあるブロックを調べるのはメソッドとして用意されているのでそれを使えば良く、2,3に関しても同様です。&lt;/p&gt;
-
-&lt;p&gt;あとはこれをwhileで回せばOK。ミスがある場合、無限ループになってしまう可能性があるので回数を制限するか、繰り返すときに少し停止させるようにする必要があります。&lt;/p&gt;
-
-&lt;p&gt;こういう考えは言語による差はとくに無くプログラムの考え方として他の言語でも行えるものだと思います。あってますか？&lt;/p&gt;
-
-&lt;h2 id=&quot;section-3&quot;&gt;やってみて分かったプログラミング習得の秘訣&lt;/h2&gt;
-
-&lt;p&gt;まだ条件分岐と繰り返し文、そしてデバッグのためのログ出力を習得したくらいです。
-けれども、プログラムを覚えるポイントを見つけました。&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;それは、考え方です。&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;どの言語をやるかなどはたいした問題ではなく(初心者には、ですよ？)、プログラムが何ができるのか、用意されたメソッドなどをどう使えば目的が達成できるのか。を考えることがすごく重要でした。&lt;/p&gt;
-
-&lt;p&gt;それさえ分かれば異る言語のコードをざっくりと読むことができたり書式をカンニングしながらプログラムが書けるようになります。&lt;/p&gt;
-
-&lt;p&gt;※Sublime Text2にはComputer Craft用のシンタックスなどが用意されていますw&lt;/p&gt;
-
-&lt;h2 id=&quot;minecraft-1&quot;&gt;Minecraftは学習に向いているステキゲーム！&lt;/h2&gt;
-
-&lt;p&gt;ゲームが好きで、プログラムをおぼえたいと思っている人は、ぜひやってみましょう！&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://blog.supermomonga.com/articles/ruby/sugoi-learning-way.html&quot;&gt;今年こそRubyを始めたいあなたに！ももんが流・最強のRuby学習法 - かなりすごいブログ&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.lifehacker.jp/2014/01/140123teach_computing.html&quot;&gt;PythonにMinecraft…。いま教育現場に拡がる「子どものプログラミング」 : ライフハッカー［日本版］&lt;/a&gt;&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;[Raspberry Piに移植されたMinecraftで子どもが遊びながらプログラミングを体験&lt;/td&gt;
-      &lt;td&gt;TechCrunch Japan](http://jp.techcrunch.com/2012/11/28/20121127minecraft-raspberry-pi-edition-to-help-kids-learn-to-code-while-they-build/)&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://hevohevo.hatenablog.com/entry/2014/01/28/213256&quot;&gt;ComputeCraftの魅力について語ってみる - Minecraftとタートルと僕&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Computer Craftの作者さんが作った他のModでは量子物理学が勉強できるらしいですよ！
-今度はこれをいれて遊んでみたいですw&lt;/p&gt;
-
-&lt;iframe width=&quot;853&quot; height=&quot;480&quot; src=&quot;//www.youtube.com/embed/nD-iVXglyTQ&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://gigazine.net/news/20131021-qcraft-mod/&quot;&gt;マインクラフトで量子物理学の概念を体験できるGoogleとNASA製のMOD「qCraft」 - GIGAZINE&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;section-4&quot;&gt;さあ、プログラミングを覚えましょう！&lt;/h2&gt;
-
-&lt;p&gt;実はMinecraftにハマりすぎて実況動画を見るだけじゃ飽きたらず、自分でも投稿してみるということを始めてみました。エンコードなどがヘタすぎてアレですが、今後もプログラムの解説をやってみるので見てやってくださいw&lt;/p&gt;
-
-&lt;script type=&quot;text/javascript&quot; src=&quot;http://ext.nicovideo.jp/thumb_watch/sm23969139?w=490&amp;amp;h=307&quot;&gt;&lt;/script&gt;
-&lt;noscript&gt;&lt;a href=&quot;http://www.nicovideo.jp/watch/sm23969139&quot;&gt;【ニコニコ動画】【Minecraft】タートルとごはん Part10【ゆっくり実況】&lt;/a&gt;&lt;/noscript&gt;
-
-&lt;p&gt;追記：調べてみたら「ComputerCraftEdu」というワールドを作って、生徒にプログラムに触れてもらう取り組みも行われているようです。&lt;/p&gt;
-
-&lt;iframe width=&quot;853&quot; height=&quot;480&quot; src=&quot;//www.youtube.com/embed/cWweAgn8WdA&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-
-&lt;p&gt;Google Groupに「Minecraft Teachers」というグループがあるのにもビックリ。&lt;/p&gt;
-
-&lt;h2 id=&quot;section-5&quot;&gt;一緒に覚えよう&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://themarsknowledge.com/training/&quot;&gt;ザ・マーズナレッジトレーニングスクール&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;わたしのやっている会社、ザ・マーズナレッジのデザインスクールではデザインやブランディングについて教えていますが、エンジニアリングもちょこっと教えています。&lt;/p&gt;
-
-&lt;p&gt;興味のある方はフォームにちょちょいとメールアドレスを送ると、無料でスキルヒアリングしてくれますよ。&lt;/p&gt;
-</description>
-				<pubDate>Tue, 20 May 2014 05:52:52 +0900</pubDate>
-				<link>http://blog.mikiishijima.com/works/2014/05/20/start-programing/</link>
-				<guid isPermaLink="true">http://blog.mikiishijima.com/works/2014/05/20/start-programing/</guid>
-				
-				
-					<category>works</category>
-				
-			</item>
-		
-			<item>
-				<title>浮世床とコワーキングスペース</title>
-				<description>&lt;p&gt;落語をいくつか聞いているうちに「浮世床」という落語を知りました。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.amazon.co.jp/exec/obidos/ASIN/4122038979/&quot; rel=&quot;nofollow&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;http://ecx.images-amazon.com/images/I/514YE8QQGKL._SX328_.jpg&quot; alt=&quot;浮世床―マンガ日本の古典〈30〉 (中公文庫)&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://ja.wikipedia.org/wiki/%E6%B5%AE%E4%B8%96%E5%BA%8A&quot;&gt;浮世床&lt;/a&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;昔の髪結床（床屋）は町内の若い衆の寄合の場所であり、一日中、町内の若い者が無駄っ話をしていた。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;要は寄合で繰り広げられるくだらない事を取り上げた落語なんですよね。&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;###床屋の看板
-八五郎と熊五郎の2人組が、床屋の看板を眺めて話し込んでいる。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;「この【海老床】の看板の絵、まるで生きてるようだなぁ」&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;「生きてる…？　こいつは絵だぞ、死んでいるさ」&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;喧嘩になりかけている所へ、うまい具合に米屋の隠居が通りかかった。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;「何々、この看板が…フム。こいつは生きてもいませんが、死んでもいませんな」&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;「じゃあ、何なんです？」&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;「こいつは患っているんだよ。ほらごらん、床についている」&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;看板やら書物や将棋、客についての話など床屋なのに関係ないことばかりです。&lt;/p&gt;
-
-&lt;h2 id=&quot;section&quot;&gt;こういうコワーキングスペースにしたい&lt;/h2&gt;
-
-&lt;p&gt;ちょっと休憩ついでにくだらない話したり&lt;/p&gt;
-
-&lt;p&gt;楽器の練習にやってきたり&lt;/p&gt;
-
-&lt;iframe width=&quot;640&quot; height=&quot;360&quot; src=&quot;//www.youtube.com/embed/6xRI7Q4AxmE&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-&lt;p&gt;いきなりライブはじめてみたり&lt;/p&gt;
-
-&lt;p&gt;先ほどの落語のように、何しに来たかわからない輩があつまってどうでもいい日々を過ごすスペースになったらいいなと思っています。&lt;/p&gt;
-
-&lt;p&gt;これはわたし個人の希望であってオーナーの総意ではないのですが、なにをしたらいいか分からないとなりがちなコワーキングスペースがもっと当たり前になって自分なりの過ごし方を見つけてくれる人が増えたらなぁ。&lt;/p&gt;
-
-&lt;h2 id=&quot;section-1&quot;&gt;働くだけじゃ成り立たない&lt;/h2&gt;
-
-&lt;p&gt;コワーキングスペースは簡単に言ってしまえば共同仕事場ですが、それだけでは表せないほど些細だけれどいろいろな可能性を秘めています。&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;店舗がなくてお店ができない人の助けにもなるし※１&lt;/li&gt;
-  &lt;li&gt;人を集めて手芸をしたい&lt;/li&gt;
-  &lt;li&gt;家は狭いからここで料理したい&lt;/li&gt;
-  &lt;li&gt;いろんな大人をみて、こんな生き方もできるんだ！と思ってもらう&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;※１ こけむさズでは整体師さんが店舗を持たない、出張サービスというカタチでサービスを提供してくれています。&lt;/p&gt;
-
-&lt;p&gt;など場所をシェアすることで広がるものがけっこう多いのです。&lt;/p&gt;
-
-&lt;p&gt;生活って仕事以外にもいろいろありますよね？そこもシェアできる良さというのをもっとしっかり伝えていこうとしています。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.amazon.co.jp/exec/obidos/ASIN/448780812X/&quot; rel=&quot;nofollow&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;http://ecx.images-amazon.com/images/I/41hT2z7yx3L._SX343_.jpg&quot; alt=&quot;フルサトをつくる: 帰れば食うに困らない場所を持つ暮らし方&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;ナリワイの伊藤さんとニートのphaさんの本。
-こういった生き方や考え方、雰囲気を見つけたりするのにもコワーキングスペースは役立つのではないかと。&lt;/p&gt;
-
-&lt;h2 id=&quot;section-2&quot;&gt;共同作業場ではない、生き方の見本市として&lt;/h2&gt;
-
-&lt;p&gt;いろんな大人、職業を見られることって年齢関係なくためになることだと思います。&lt;/p&gt;
-
-&lt;p&gt;「どんな生き方をしてもよい」と言われてもどうしたらいいか想像できませんが、「あの人の生き方面白そうだな、一部だけ真似してみよう」というのはできそうじゃないですか？&lt;/p&gt;
-
-&lt;p&gt;こけむさズもリニューアルしたことですし、これまでと同じじゃつまりません。スペースだけでなく在り方も広げられたらなと。&lt;/p&gt;
-
-&lt;p&gt;新しい活動をしたい、なにか刺激がほしい。そんなときはあなたの近くのコワーキングスペースへ足を運んで、そこの人たちと話しをしてみてください。&lt;/p&gt;
-
-&lt;p&gt;きっと少しだけ胸にひびくものがあるはずです。&lt;/p&gt;
-</description>
-				<pubDate>Thu, 08 May 2014 14:24:01 +0900</pubDate>
-				<link>http://blog.mikiishijima.com/works/2014/05/08/ukiyodoko-coworkingspace/</link>
-				<guid isPermaLink="true">http://blog.mikiishijima.com/works/2014/05/08/ukiyodoko-coworkingspace/</guid>
-				
-				
-					<category>works</category>
-				
-			</item>
-		
-			<item>
-				<title>こけむさズ リニューアルオープンいたしました！</title>
-				<description>&lt;p&gt;これまでより倍近く広い、同ビルの1Fに移転いたしました！なんかおしゃれっぽい上に、キッチンやらシャワー室やら駐輪場、サンドバックまでも増設されて「真面目っぽく」なりました！&lt;/p&gt;
-
-&lt;p&gt;1Fで路面店になったので、通りがかった人たちが不思議そうに見ていきます。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://fbcdn-sphotos-g-a.akamaihd.net/hphotos-ak-xfa1/t31.0-8/1795319_10202640049975281_45995559159238618_o.jpg&quot; alt=&quot;Insert&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;section&quot;&gt;旧こけむさズ&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://woopsdez.jp/wp/wp-content/uploads/2013/03/DSC09547.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;section-1&quot;&gt;新こけむさズ&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://d1nc9n01ephlj6.cloudfront.net/uploads/attachments/1846/slide_image.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;section-2&quot;&gt;キッチン&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://d1nc9n01ephlj6.cloudfront.net/uploads/attachments/1840/large_slide_image.jpg&quot; alt=&quot;&quot; /&gt;
-中でも好評なのがこのキッチンです。外食や出前もいいですけど自炊した方が健康そうだし良い気分転換になりますよね。&lt;/p&gt;
-
-&lt;p&gt;移転してから、スタッフや利用者さんが料理をすることが多くなり、おこぼれにあずかる機会も増えました！材料費+投げ銭として作ってくれた人に御礼する感じです。&lt;/p&gt;
-
-&lt;p&gt;キッチン万歳。&lt;/p&gt;
-
-&lt;h3 id=&quot;section-3&quot;&gt;駐輪場&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://d1nc9n01ephlj6.cloudfront.net/uploads/attachments/1844/slide_image.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;こんな感じで壁掛けできます。路上に置くのが不安だったりすることも多いと思いますし、通行者とのゆずりあいも大変だと思うので中に土間を作り、そこに置けるようになりました。&lt;/p&gt;
-
-&lt;p&gt;土間として広く使えるので、燻製や梅酒漬け、ちょっとした作業にも使えます。&lt;/p&gt;
-
-&lt;h3 id=&quot;section-4&quot;&gt;シャワー&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://d1nc9n01ephlj6.cloudfront.net/uploads/attachments/1849/slide_image.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;納屋の奥なので、そこまで快適とはいかないのですが夏など熱い時期に簡単にリフレッシュすることができます。&lt;/p&gt;
-
-&lt;h2 id=&quot;section-5&quot;&gt;工事前の様子&lt;/h2&gt;
-
-&lt;p&gt;わたしが海外へ長期出張している間にオーナーや私の会社の社員たちが頑張ってくれました！&lt;/p&gt;
-
-&lt;p&gt;本当にありがとうございます！&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://fbcdn-sphotos-d-a.akamaihd.net/hphotos-ak-xfp1/t31.0-8/10003765_10152284666284445_1864746491_o.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;こんな感じで何もない言わゆる「スケルトン」状態です。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://scontent.xx.fbcdn.net/hphotos-xpf1/t31.0-8/1658715_10152284670424445_6062173_o.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;ただっ広い、壁や天井を塗って…。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://fbcdn-sphotos-e-a.akamaihd.net/hphotos-ak-xpt1/v/t1.0-9/1794736_701257636579325_1157623049_n.jpg?oh=e37ec4d0c7b3e30454f3d9ed1e729231&amp;amp;oe=557CF56E&amp;amp;__gda__=1438314855_b43e71839d0624cecb7280c077de0ea1&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;床を作りました。コンクリのままだと寒いのと、デスクを置いたときにガタつくのを避けるためです。資金節約で全面引かなかったのですが、奥を引くくすることで奥行とリズムがでてスゴい良くなったと思っています。&lt;/p&gt;
-
-&lt;p&gt;案出してくれた人に感謝。&lt;/p&gt;
-
-&lt;h2 id=&quot;section-6&quot;&gt;自由に使えるプロジェクタ&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://fbcdn-sphotos-d-a.akamaihd.net/hphotos-ak-xfp1/t31.0-8/10708701_798112266893861_5286449190982632389_o.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Apple TVを使っています。スペースのWifiを使えばiPhoneやMBAで簡単にプロジェクタに表示させることができます。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://fbcdn-sphotos-a-a.akamaihd.net/hphotos-ak-xpa1/t31.0-8/1495134_798112386893849_6641455932590022052_o.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;みんなでソファに座ってゲームを応援したり、こたつでまったりなど。&lt;/p&gt;
-
-&lt;h2 id=&quot;section-7&quot;&gt;みんな遊びにきてね！&lt;/h2&gt;
-
-&lt;p&gt;勉強会や打ち合せ、スペースの本を読んでみたり、ただただノンビリしてみたり使い方はたくさんあります。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://scontent.xx.fbcdn.net/hphotos-xpt1/t31.0-8/10478340_798113660227055_7708589497444942129_o.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://scontent.xx.fbcdn.net/hphotos-xpa1/t31.0-8/10631119_798112260227195_4431205507748721234_o.jpg&quot; alt=&quot;Insert&quot; /&gt;&lt;/p&gt;
-</description>
-				<pubDate>Thu, 08 May 2014 09:32:07 +0900</pubDate>
-				<link>http://blog.mikiishijima.com/works/2014/05/08/kokemusazu-riniyuaruopunitasimasita/</link>
-				<guid isPermaLink="true">http://blog.mikiishijima.com/works/2014/05/08/kokemusazu-riniyuaruopunitasimasita/</guid>
 				
 				
 					<category>works</category>
