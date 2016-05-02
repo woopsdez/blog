@@ -112,6 +112,8 @@ gulp.task('watch', function () {
  * compile the jekyll site, launch BrowserSync & watch files.
  */ 
 gulp.task('default', ['browser-sync', 'watch']);
-gulp.task('deploy', function (callback) {
-    runSequence('jekyll-build', 'add', 'commit', 'push', callback);
-});
+
+// 本番環境にのみ残しておきたい記事があるため、完全同期のhookではなく、ファイル追記のみ行うglynnでデプロイします。
+// gulp.task('deploy', function (callback) {
+//     runSequence('jekyll-build', 'add', 'commit', 'push', callback);
+// });
