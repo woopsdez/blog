@@ -17,13 +17,31 @@
     <meta property="og:image" content="{{ site.baseurl }}{{ page.banner_image }}" />
 
 		<link rel="alternate" type="application/rss+xml" href="{{ site.baseurl }}/feed.xml">
-		<link rel="shortcut icon" href="{{ "/favicon.ico" | prepend: site.baseurl }}">
 		<link rel="prefetch" href="{{ site.baseurl }}">
 		<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl }}">
 
 		<link rel="stylesheet" href="{{ "/assets/css/screen.css" | prepend: site.baseurl }}">
 		<link href='//fonts.googleapis.com/css?family=Domine:700|Open+Sans:400,600|Source+Code+Pro:500' rel='stylesheet' type='text/css'>
 		<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+
+		<!-- favicon -->
+  <link rel="apple-touch-icon" sizes="57x57" href="{{site.baseurl}}/assets/img/icons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="{{site.baseurl}}/assets/img/icons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="{{site.baseurl}}/assets/img/icons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="{{site.baseurl}}/assets/img/icons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="{{site.baseurl}}/assets/img/icons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="{{site.baseurl}}/assets/img/icons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="{{site.baseurl}}/assets/img/icons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="{{site.baseurl}}/assets/img/icons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{site.baseurl}}/assets/img/icons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="{{site.baseurl}}/assets/img/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{site.baseurl}}/assets/img/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="{{site.baseurl}}/assets/img/icons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{site.baseurl}}/assets/img/icons/favicon-16x16.png">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="{{site.baseurl}}/assets/img/icons/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
 	</head>
 	<body>
 
@@ -46,11 +64,11 @@
 	<script async type="text/javascript" src="{{ "/assets/js/theme.min.js" | prepend: site.baseurl }}"></script>
 	<script>
 	// 記事サイドバーに目次を追加
-	$('.profile').append('<ul id="index"></ul>');
+	$('.profile').append('<ul id="headlines"></ul>');
 	$('.postbody h2').each(function(){
-		$('#index').append('<li><a href="#' + $(this).attr('id') + '">' + $(this).text() + '</a></li>')
+		$('#headlines').append('<li><a href="#' + $(this).attr('id') + '">' + $(this).text() + '</a></li>')
 	});
-	$('#index a').click(function(e){
+	$('#headlines a').click(function(e){
 			e.preventDefault();
 			var self = String($(this).attr('href'));
 			console.log('element ' + self);

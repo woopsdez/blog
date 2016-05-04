@@ -40,7 +40,8 @@
 
 		ul li a {
 			color: #797979;
-			background: #000;
+			display: none;
+			// background: #000;
 		}
 
 		&.stuck {
