@@ -77,14 +77,14 @@ gulp.task('browser-sync', ['sass', 'jekyll-build'], function() {
  * Resize & Optimize Image
  */ 
 gulp.task('image', function() {
-    gulp.src('content/images/**/**/*.{jpg,png}', {base:'content/images/'})
+    gulp.src('content/images/**/**/**/*.{jpg,png}', {base:'content/images/'})
     .pipe(imageResize({width : 1000}))
     .pipe(imagemin({
         progressive: true,
         svgoPlugins: [{removeViewBox: false}],
         use: [pngquant()]
     }))
-    .pipe(gulp.dest('_site/content/images/'));
+    .pipe(gulp.dest('content/images/'));
 });
 
 /**
@@ -111,7 +111,7 @@ gulp.task('watch', function () {
  * Default task, running just `gulp` will compile the sass,
  * compile the jekyll site, launch BrowserSync & watch files.
  */ 
-gulp.task('default', ['browser-sync', 'watch','image']);
+gulp.task('default', ['browser-sync', 'watch']);
 
 // 本番環境にのみ残しておきたい記事があるため、完全同期のhookではなく、ファイル追記のみ行うglynnでデプロイします。
 // gulp.task('deploy', function (callback) {

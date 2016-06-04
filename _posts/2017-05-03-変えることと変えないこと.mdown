@@ -1,3 +1,13 @@
+---
+layout: post
+title: 変えることと変えないこと
+categories: diary
+banner_image: ""
+featured: true
+comments: true
+published: false
+---
+
 # 変えることと変えないこと
 
 クリスマスシーズンの新宿で、窮屈そうなママさんたちを数人みかけました。3ヶ月くらいの赤ちゃんをベビーカーにのせて、大きな買い物袋を小脇に下げてる。旦那さんや友人はおらず一人で新宿駅をエレベーターで移動しているようでした。

@@ -878,6 +878,8 @@ nav {
     float: left;
     list-style: none;
     font-size: 16px; }
+  .profile #headlines li {
+    float: none; }
   .profile strong {
     margin: 20px 0 10px;
     font: 600 14px 'Open Sans', Serif;

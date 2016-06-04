@@ -5,7 +5,140 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
 		<title>Floaty Color Clock開発で得られたこと</title>
-		<meta name="description" content="趣味のゲームやプログラミング、レビューなど個人イシジマミキにより近しい内容を書いています。普遍的なデザインの話はThe Marsknowledge Blogで。" />
+	  <meta name="description" content="「クリックでふわっと動くアレやコレ」を作ってみたい。そんな思いから着手したFloaty Color Clockですが、ついでで開発しはじめた天気予報機能が難しく思わぬ方向に…。この記事は開発中の思い出話を書いていきます。
+
+Undefindの嵐
+
+7年前のPHPコード、おみくじゴハンのリファクタリング、そしてFloaty Color Clockの開発。
+
+どちらもNotice, undefindの嵐でした。わたしが良く怒られたケースはこちら。
+
+1
+2
+3
+4	if(fuga === true){
+		var hoge = fuga; // fugaがtrueじゃないとif文の中を通らない
+	}
+	var hage = hoge * 2; //するとhogeはここで初出になる
+
+
+if文の中で使ったあと、後に続く処理でしれっと変数を呼び出していると怒られるのですね。
+
+じゃあ、ちゃんとif文を経由させたり、if文を経由しなくても値が入ってるようにすれば良いのでは？と、グローバルで変数に初期値を入れておいたり、isset()やundefindチェックをしたりしています。
+
+HTML内で呼び出すこともあるので、長ったらしい文になるのは避けたいところ。
+
+1
+2
+3
+4&lt;!-- これが --&gt;
+&lt;img src="&lt;?php echo $hoge ?&gt;"&gt;
+&lt;!-- こうなってしまう --&gt;
+&lt;img src="&lt;?php if(isset($hoge)){echo $hoge} ?&gt;"&gt;
+
+
+関数内で完結させる
+プログラミングの師匠(@tai2)に、アドバイスを求めたところ下記の返答をいただきました。
+
+
+  「グローバルで変数を定義し、関数内でもやりとりさせてしまっているのをやめ、関数で完結させる。値は引数として受け渡しするといい。」
+
+
+なるほどなるほど。
+
+マインクラフト内でのLuaプログラミングでは、それができていたのに今回の開発ではしっちゃかめっちゃかになってしまっていました。
+
+自分のスキルより難しい実装が入ると、コード全体の把握がおろそかになってしまうのがわたしの悪いクセ。
+
+
+	
+	
+		右京さんの口癖
+		
+	
+
+
+ユーザー設定がある場合の初期値のやりくりが苦手
+「二回目に処理するとき、一回目に保存しておいた値があるならそちらを利用する。」というのがうまく書けません。
+
+1
+2
+3
+4var color = 'white'; // 初期値
+if(user.setColor !== undefind){ //ユーザーが設定した値があるかどうか
+	color = user.setColor; //あれば、初期値として扱う
+}
+
+
+こんな感じで書けばいいのですよね。いまもですが、分岐の流れ、今はどこの処理に辿りついたかを理解するのに時間がかかります。
+
+
+	
+	
+		映画のようにはなかなかいかない
+		
+	
+
+
+
+
+時刻に合わせて回転する画像
+他の方から見れば簡単なことですが、算数が苦手なわたしは「よくこの実装を思いつけたな」と有頂天になっています。
+
+小学校で習った「割合の公式」の出番です!
+
+
+
+  
+    「割合」＝「比べる値」÷「もとの値」
+    「比べる値」＝「もとの値」×「割合」
+    「もとの値」＝「比べる値」÷「割合」
+  
+
+
+まず、24時間を円とみなして、現在時刻ではどの角度にいるのかを割り出す必要があります。
+
+必要な値として
+
+
+  24時間の秒数(86400s)
+  0時から現在時刻までの秒数
+  24時間を100%とした時の現在時刻の割合
+  円の角度 360°
+
+
+が分かればあとは
+
+1
+2var per = _nowsec / 86400 //割合を求める
+var nowdeg = _per * 360 // 360°中 per%は何°になるかが分かる
+
+
+という式で求められるのですね。
+
+あとはこの値を、jQueryにてcssのプロパティにセットしていけばOKです。
+
+1$('.bg image').css('transform','rotate('+ nowdeg +'deg)')
+
+
+上記がhtml内で毎秒実行される訳です。
+
+cssの値を変更するのだから、cssファイルの書き換えを行うのでは？それにはどうしたら？と疑問に思ってましたが、jsでhtml内にインラインで書いちゃえばいいのですよね。
+
+すでに知っている知識でも、いっぱいいっぱいになるとこぼれ落ちちゃう。
+
+Qiitaに投稿しています。
+
+
+
+
+  Chromeエクステンションで、どうしてもJSONPでやりとりしないといけない場合の対処 - Qiita
+  gulpでのgit操作 commit messageをコマンドライン引数で渡そう - Qiita
+  jekyllで構築したサイト、本番へアップしたらcssが適用されない場合に試しておきたいbaseurlの便利な変更の仕方。 - Qiita
+
+
+ぜひチェックしてくださいな。
+"/>
 
 		<meta name="HandheldFriendly" content="True" />
 		<meta name="MobileOptimized" content="320" />
@@ -13,49 +146,49 @@
 
 		<meta property="og:title" content="Floaty Color Clock開発で得られたこと" />
     <meta property="og:type" content="blog" />
-    <meta property="og:url" content=" /private-works/2016/05/02/undefinde-variables/" />
-    <meta property="og:image" content=" /content/images/2016/05/undefinde-variables/fcc-screenshot.png" />
+    <meta property="og:url" content="http://blog.mikiishijima.com/private-works/2016/05/02/undefinde-variables/" />
+    <meta property="og:image" content="http://blog.mikiishijima.com/content/images/2016/05/undefinde-variables/fcc-screenshot.png" />
 
-		<link rel="alternate" type="application/rss+xml" href=" /feed.xml">
-		<link rel="prefetch" href=" ">
-		<link rel="canonical" href=" /private-works/2016/05/02/undefinde-variables/">
+		<link rel="alternate" type="application/rss+xml" href="http://blog.mikiishijima.com/feed.xml">
+		<link rel="prefetch" href="http://blog.mikiishijima.com">
+		<link rel="canonical" href="http://blog.mikiishijima.com/private-works/2016/05/02/undefinde-variables/">
 
-		<link rel="stylesheet" href=" /assets/css/screen.css">
+		<link rel="stylesheet" href="http://blog.mikiishijima.com/assets/css/screen.css">
 		<link href='//fonts.googleapis.com/css?family=Domine:700|Open+Sans:400,600|Source+Code+Pro:500' rel='stylesheet' type='text/css'>
 		<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
 
 		<!-- favicon -->
-  <link rel="apple-touch-icon" sizes="57x57" href=" /assets/img/icons/apple-icon-57x57.png">
-  <link rel="apple-touch-icon" sizes="60x60" href=" /assets/img/icons/apple-icon-60x60.png">
-  <link rel="apple-touch-icon" sizes="72x72" href=" /assets/img/icons/apple-icon-72x72.png">
-  <link rel="apple-touch-icon" sizes="76x76" href=" /assets/img/icons/apple-icon-76x76.png">
-  <link rel="apple-touch-icon" sizes="114x114" href=" /assets/img/icons/apple-icon-114x114.png">
-  <link rel="apple-touch-icon" sizes="120x120" href=" /assets/img/icons/apple-icon-120x120.png">
-  <link rel="apple-touch-icon" sizes="144x144" href=" /assets/img/icons/apple-icon-144x144.png">
-  <link rel="apple-touch-icon" sizes="152x152" href=" /assets/img/icons/apple-icon-152x152.png">
-  <link rel="apple-touch-icon" sizes="180x180" href=" /assets/img/icons/apple-icon-180x180.png">
-  <link rel="icon" type="image/png" sizes="192x192"  href=" /assets/img/icons/android-icon-192x192.png">
-  <link rel="icon" type="image/png" sizes="32x32" href=" /assets/img/icons/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="96x96" href=" /assets/img/icons/favicon-96x96.png">
-  <link rel="icon" type="image/png" sizes="16x16" href=" /assets/img/icons/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="57x57" href="http://blog.mikiishijima.com/assets/img/icons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="http://blog.mikiishijima.com/assets/img/icons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="http://blog.mikiishijima.com/assets/img/icons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="http://blog.mikiishijima.com/assets/img/icons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="http://blog.mikiishijima.com/assets/img/icons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="http://blog.mikiishijima.com/assets/img/icons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="http://blog.mikiishijima.com/assets/img/icons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="http://blog.mikiishijima.com/assets/img/icons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="http://blog.mikiishijima.com/assets/img/icons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="http://blog.mikiishijima.com/assets/img/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="http://blog.mikiishijima.com/assets/img/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="http://blog.mikiishijima.com/assets/img/icons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="http://blog.mikiishijima.com/assets/img/icons/favicon-16x16.png">
   <link rel="manifest" href="/manifest.json">
   <meta name="msapplication-TileColor" content="#ffffff">
-  <meta name="msapplication-TileImage" content=" /assets/img/icons/ms-icon-144x144.png">
+  <meta name="msapplication-TileImage" content="http://blog.mikiishijima.com/assets/img/icons/ms-icon-144x144.png">
   <meta name="theme-color" content="#ffffff">
 	</head>
 	<body>
 
 	<header class="title">
-	<a href=" "><img src=" /favicon-transparent.svg" alt=""><span>Miki Ishijima Blog</span></a>
+	<a href="http://blog.mikiishijima.com"><img src="http://blog.mikiishijima.com/favicon-transparent.svg" alt=""><span>Miki Ishijima Blog</span></a>
 </header>
 
 <nav class="wrapper  featured  ">
 	<a href="#" onclick="return false;"><i class="fa fa-navicon fa-lg"></i></a>
 	<ul>
 		
-			<li><a href=" /about/">About Me</a></li>
+			<li><a href="http://blog.mikiishijima.com/about/">About Me</a></li>
 		
-			<li><a href=" /contact/">Contact</a></li>
+			<li><a href="http://blog.mikiishijima.com/contact/">Contact</a></li>
 		
 			
 		
@@ -80,7 +213,7 @@
 		<li><a href="http://twitter.com/woopsdez" class="smallsocialbutton twitter" target="_blank"><i class="fa fa-twitter"></i></a></li>
 		<li><a href="http://facebook.com/woopsdez" class="smallsocialbutton facebook" target="_blank"><i class="fa fa-facebook"></i></a></li>
 		<li><a href="http://github.com/woopsdez" class="smallsocialbutton github" target="_blank"><i class="fa fa-github"></i></a></li>
-		<li><a href=" /feed.xml" class="smallsocialbutton rss" target="_blank"><i class="fa fa-rss"></i></a></li>
+		<li><a href="http://blog.mikiishijima.com/feed.xml" class="smallsocialbutton rss" target="_blank"><i class="fa fa-rss"></i></a></li>
 	</ul>
 	<p>デザインワーク、ソフトウェア開発のワークフロー、デザイン自体の考え方に関する著書を持つ。2013年にザ・マーズナレッジ株式会社設立。</p>
 	<hr>
@@ -88,7 +221,7 @@
 
 
 <div id="cover" class="cover featured">
-	<div class="background" style="background-image:url(' /content/images/2016/05/undefinde-variables/fcc-screenshot.png');"></div>
+	<div class="background" style="background-image:url('http://blog.mikiishijima.com/content/images/2016/05/undefinde-variables/fcc-screenshot.png');"></div>
 	<header class="wrapper">
 		<h2>
 			
@@ -262,7 +395,7 @@
 		<footer>
 			<ul class="share left">
 				<li><a href="http://twitter.com/share?text=Floaty Color Clock開発で得られたこと" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" class="smallbutton lightgray"><i class="fa fa-twitter"></i>Twitter</a></li>
-				<li><a href="https://www.facebook.com/sharer/sharer.php?u= /private-works/2016/05/02/undefinde-variables/" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" class="smallbutton lightgray"><i class="fa fa-facebook"></i>Facebook</a></li>
+				<li><a href="https://www.facebook.com/sharer/sharer.php?u=http://blog.mikiishijima.com/private-works/2016/05/02/undefinde-variables/" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" class="smallbutton lightgray"><i class="fa fa-facebook"></i>Facebook</a></li>
 			</ul>
 		</footer>
 
@@ -276,7 +409,7 @@
 					<li><a href="http://twitter.com/woopsdez" class="twitter" target="_blank"><i class="fa fa-twitter"></i></a></li>
 					<li><a href="http://facebook.com/woopsdez" class="facebook" target="_blank"><i class="fa fa-facebook"></i></a></li>
 					<li><a href="http://github.com/woopsdez" class="github" target="_blank"><i class="fa fa-github-alt"></i></a></li>
-					<li><a href=" /feed.xml" class="rss" target="_blank"><i class="fa fa-rss"></i></a></li>
+					<li><a href="http://blog.mikiishijima.com/feed.xml" class="rss" target="_blank"><i class="fa fa-rss"></i></a></li>
 				</ul>
 			</div>
 		</div>
@@ -296,9 +429,9 @@
 	<footer class="wrapper">
 	<div class="smallnav">
 		
-			<a href=" /about/">About Me</a> &bull;
+			<a href="http://blog.mikiishijima.com/about/">About Me</a> &bull;
 		
-			<a href=" /contact/">Contact</a> &bull;
+			<a href="http://blog.mikiishijima.com/contact/">Contact</a> &bull;
 		
 			
 		
@@ -308,7 +441,7 @@
 		
 	</div>
 	<div>
-		Copyright &copy; <a href=" /">Miki Ishijima Blog</a>. 2016 &bull; All rights reserved.
+		Copyright &copy; <a href="http://blog.mikiishijima.com/">Miki Ishijima Blog</a>. 2016 &bull; All rights reserved.
 		<span class="ghost">Proudly published with <a href="http://jekyllrb.com/" target="_blank">Jekyll</a>.</span>
 	</div>
 </footer>
@@ -323,7 +456,7 @@
 			'autoload_comments': false
 		};
 	</script>
-	<script async type="text/javascript" src=" /assets/js/theme.min.js"></script>
+	<script async type="text/javascript" src="http://blog.mikiishijima.com/assets/js/theme.min.js"></script>
 	<script>
 	// 記事サイドバーに目次を追加
 	$('.profile').append('<ul id="headlines"></ul>');

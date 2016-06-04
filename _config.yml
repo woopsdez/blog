@@ -12,9 +12,11 @@ baseurl: 					"http://blog.mikiishijima.com"
 url: 					    "http://blog.mikiishijima.com"
 content_url: 	    "/content"
 logourl: 				  "/assets/img/bloglogo.jpg"
-fa-logo: 					"fa-bolt"
 paginate: 				10
-
+excerpt_separator: "<!--more-->"
+featured: true
+comments: true
+published: false
 
 # Author Settings
 author_name: 				"Miki Ishijima"

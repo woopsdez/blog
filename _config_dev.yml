@@ -1,3 +1,5 @@
 # Override _config.yml
 url:              " "
 baseurl: 					" "
+future: true
+published: true

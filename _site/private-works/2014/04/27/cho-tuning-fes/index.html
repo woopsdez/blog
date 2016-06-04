@@ -5,7 +5,137 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
 		<title>ニコ動 超チューニング祭で最優秀賞もらいました</title>
-		<meta name="description" content="趣味のゲームやプログラミング、レビューなど個人イシジマミキにより近しい内容を書いています。普遍的なデザインの話はThe Marsknowledge Blogで。" />
+	  <meta name="description" content="ニコニコ超会議で開催された「超チューニング祭り」に恋人である武藤スナイパーカスタムからお誘いされて参加しました。
+
+投票してくださった方々のおかげで最優秀賞！
+ありがとうございます！
+
+ニコ動モバイル版のトップページのhtml,css,jsを軽量化するお祭りでして、にぎやかな会場、狭いブースの中で詰め込まれておもしろかったです。
+
+チーム：ウルフギャングの紹介
+エンジニア、デザイナーのバランスチーム。
+武藤さんが狼が好きなのでそれっぽい名前にしました。ギャングらしくふたりとも革ジャン装備。
+
+武藤スナイパーカスタム
+
+	
+	
+		コンピューターグラフィックスとPythonをこよなく愛すマッチ棒エンジニア。
+		
+	
+
+Twitter : tai2
+
+イシジマミキ
+
+	
+	
+		写真をアップするたびにおおつねさんに「太った？」と言われる番付上昇中のデザイナー
+		
+	
+
+Twitter : woopsdez
+
+他はエンジニアふたり、個人での参加などがあり学生さんやエンジニアさんが非常に多かったです。非常に高名なドワンゴスターエンジニアも参加していたのですが、HTML,CSS,JS等の専門外のチューニングを行う。というのがなんかおもしろかったです。
+
+コード
+https://github.com/tai2/nicohaya
+
+チーム：ウルフギャングのやったこと
+### エンジニア
+
+
+  html5 APIを利用した画像やスクリプトのローカルキャッシュ
+  jsの整理
+  jsCacheの改造
+  css,jsのminify
+
+
+エンジニアがやったことがGistにまとめられました。
+https://gist.github.com/tai2/11366229
+
+デザイナー
+
+
+  意味のない装飾はしない
+  CSS Sprite
+  PNGのフィルタを利用した画像ごとの書き出し
+  ImgOptimでPNG軽量化
+  JPGの軽量化
+
+
+意味のない装飾はしない
+以前参加したフロントエンドのイベントであほむさんが出していたCSS3プロパティ レンダリングの速度が印象に残っていたので意識してみました。
+
+引用：http://havelog.ayumusato.com/develop/performance/e561-wcan_2013_summer.html
+
+つい角丸やシャドウは使ってしまいがちですけど、重要なものってそうないんですよね。
+
+CSS Sprite
+
+アイコンなど、背景だけで使う小さな画像をまとめておきリクエスト回数を削減する方法です。小さいアイコンで何度もリクエストが発生するとサーバーを圧迫しちゃうんですね。同じ画像サイズならリクエストが少ない方がお得。
+
+CSS Sprite Generator
+画像群をzipで圧縮したものを添付するだけで自動で作成してくれます。
+
+スプライトした方がいい画像はChrome拡張機能のPageSpeed Insights (by Google)で教えてもらえます。
+
+PNGフィルタを利用した画像ごとの書き出し
+
+GIF BOOKの作例にてGIFは横方向に同じ色が続くと軽量化できるという記述があったのでPNGでもあるかなと探したらビンゴでした。
+
+引用：わかりやすい PNG の話 for Web
+
+ですので画像形式に合わせてこのフィルタを活用しています。
+
+ImgOptimでPNG軽量化
+
+
+画像の軽量化、圧縮ではかなりと言っていいほど紹介されるアプリですね。ImageOptim
+
+使い方も非常に簡単で、ドラッグ&amp;ドロップするだけで圧縮して置き換えてくれます。
+
+JPEGの圧縮はJPEG mini Lite
+いろんなの使ってみたかったんでこちらも試しました。
+
+JPEG mini LITEは1日使える回数に制限がありますが、無償で使えます。とりあえず試したいならブラウザ版を使うと良いでしょう。
+
+JPEG mini
+
+JPEGの圧縮アルゴリズムを利用した一石二鳥の圧縮
+それだけではつまらないので特徴のあるアプローチをしました。
+
+PNGは色数で軽量化でき、色の範囲が多くても関係ないですが、JPGも色情報が多いほど重くなるのは一緒。
+
+と、言うことは近似色をまとめておけば軽くなる？と思ったので絵柄によってぼかしをかけても問題ない場合は演出に見せかけてぼかしています。
+
+僅かだけど確かに変わったので何かしら影響あったんだろうと思いますが、詳しくは良く分かりません。時間があればここら辺を理解して検証してみたいです。
+
+JPEG画像形式の概要(圧縮アルゴリズム)。
+
+正直、画像の軽量化とかあんまり興味なかった。
+
+スマフォで使う画像なんて、ほとんどユーザー投稿系じゃないですか。細かいアイコンはWebフォント化するなりしているだろうし、メイン画像はデザイナー作ってくるから軽量化アプリとかちょっとかますくらい。
+
+そんなの誰でもできそうなので、「何しようかなー」と軽部さんのガッチャマン聞きながらボーっとしてました。
+
+でも、やってみたらけっこう面白くて新しい知識を得られておもしろかったです。
+
+絵柄と画像形式ごとに最適な圧縮方法を見つけたり、演出っぽいエフェクトをかけて軽量化の実験するのは簡単でスグ効果も分かるし、普段身近に扱っている「画像」たちの新な一面を知ることができました。
+
+LTのスライド
+
+ 
+  ニコニコ動画 超チューニング祭  from イシジマミキ 
+
+同じものをみんなで作るのやりたい
+
+同じものでのいろんなアプローチは非常におもしろかったです。今度、わたしの運営しているコワーキングスペースこけむさズで何かやってみたいですね。
+
+Webサービス系の企業さま! トップいじらせてくれませんか！ グッズとかくれませんか!
+
+
+"/>
 
 		<meta name="HandheldFriendly" content="True" />
 		<meta name="MobileOptimized" content="320" />
@@ -13,49 +143,49 @@
 
 		<meta property="og:title" content="ニコ動 超チューニング祭で最優秀賞もらいました" />
     <meta property="og:type" content="blog" />
-    <meta property="og:url" content=" /private-works/2014/04/27/cho-tuning-fes/" />
-    <meta property="og:image" content=" /content/images/2014/04/nico03.jpg" />
+    <meta property="og:url" content="http://blog.mikiishijima.com/private-works/2014/04/27/cho-tuning-fes/" />
+    <meta property="og:image" content="http://blog.mikiishijima.com/content/images/2014/04/nico03.jpg" />
 
-		<link rel="alternate" type="application/rss+xml" href=" /feed.xml">
-		<link rel="prefetch" href=" ">
-		<link rel="canonical" href=" /private-works/2014/04/27/cho-tuning-fes/">
+		<link rel="alternate" type="application/rss+xml" href="http://blog.mikiishijima.com/feed.xml">
+		<link rel="prefetch" href="http://blog.mikiishijima.com">
+		<link rel="canonical" href="http://blog.mikiishijima.com/private-works/2014/04/27/cho-tuning-fes/">
 
-		<link rel="stylesheet" href=" /assets/css/screen.css">
+		<link rel="stylesheet" href="http://blog.mikiishijima.com/assets/css/screen.css">
 		<link href='//fonts.googleapis.com/css?family=Domine:700|Open+Sans:400,600|Source+Code+Pro:500' rel='stylesheet' type='text/css'>
 		<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
 
 		<!-- favicon -->
-  <link rel="apple-touch-icon" sizes="57x57" href=" /assets/img/icons/apple-icon-57x57.png">
-  <link rel="apple-touch-icon" sizes="60x60" href=" /assets/img/icons/apple-icon-60x60.png">
-  <link rel="apple-touch-icon" sizes="72x72" href=" /assets/img/icons/apple-icon-72x72.png">
-  <link rel="apple-touch-icon" sizes="76x76" href=" /assets/img/icons/apple-icon-76x76.png">
-  <link rel="apple-touch-icon" sizes="114x114" href=" /assets/img/icons/apple-icon-114x114.png">
-  <link rel="apple-touch-icon" sizes="120x120" href=" /assets/img/icons/apple-icon-120x120.png">
-  <link rel="apple-touch-icon" sizes="144x144" href=" /assets/img/icons/apple-icon-144x144.png">
-  <link rel="apple-touch-icon" sizes="152x152" href=" /assets/img/icons/apple-icon-152x152.png">
-  <link rel="apple-touch-icon" sizes="180x180" href=" /assets/img/icons/apple-icon-180x180.png">
-  <link rel="icon" type="image/png" sizes="192x192"  href=" /assets/img/icons/android-icon-192x192.png">
-  <link rel="icon" type="image/png" sizes="32x32" href=" /assets/img/icons/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="96x96" href=" /assets/img/icons/favicon-96x96.png">
-  <link rel="icon" type="image/png" sizes="16x16" href=" /assets/img/icons/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="57x57" href="http://blog.mikiishijima.com/assets/img/icons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="http://blog.mikiishijima.com/assets/img/icons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="http://blog.mikiishijima.com/assets/img/icons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="http://blog.mikiishijima.com/assets/img/icons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="http://blog.mikiishijima.com/assets/img/icons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="http://blog.mikiishijima.com/assets/img/icons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="http://blog.mikiishijima.com/assets/img/icons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="http://blog.mikiishijima.com/assets/img/icons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="http://blog.mikiishijima.com/assets/img/icons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="http://blog.mikiishijima.com/assets/img/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="http://blog.mikiishijima.com/assets/img/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="http://blog.mikiishijima.com/assets/img/icons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="http://blog.mikiishijima.com/assets/img/icons/favicon-16x16.png">
   <link rel="manifest" href="/manifest.json">
   <meta name="msapplication-TileColor" content="#ffffff">
-  <meta name="msapplication-TileImage" content=" /assets/img/icons/ms-icon-144x144.png">
+  <meta name="msapplication-TileImage" content="http://blog.mikiishijima.com/assets/img/icons/ms-icon-144x144.png">
   <meta name="theme-color" content="#ffffff">
 	</head>
 	<body>
 
 	<header class="title">
-	<a href=" "><img src=" /favicon-transparent.svg" alt=""><span>Miki Ishijima Blog</span></a>
+	<a href="http://blog.mikiishijima.com"><img src="http://blog.mikiishijima.com/favicon-transparent.svg" alt=""><span>Miki Ishijima Blog</span></a>
 </header>
 
 <nav class="wrapper  featured  ">
 	<a href="#" onclick="return false;"><i class="fa fa-navicon fa-lg"></i></a>
 	<ul>
 		
-			<li><a href=" /about/">About Me</a></li>
+			<li><a href="http://blog.mikiishijima.com/about/">About Me</a></li>
 		
-			<li><a href=" /contact/">Contact</a></li>
+			<li><a href="http://blog.mikiishijima.com/contact/">Contact</a></li>
 		
 			
 		
@@ -80,7 +210,7 @@
 		<li><a href="http://twitter.com/woopsdez" class="smallsocialbutton twitter" target="_blank"><i class="fa fa-twitter"></i></a></li>
 		<li><a href="http://facebook.com/woopsdez" class="smallsocialbutton facebook" target="_blank"><i class="fa fa-facebook"></i></a></li>
 		<li><a href="http://github.com/woopsdez" class="smallsocialbutton github" target="_blank"><i class="fa fa-github"></i></a></li>
-		<li><a href=" /feed.xml" class="smallsocialbutton rss" target="_blank"><i class="fa fa-rss"></i></a></li>
+		<li><a href="http://blog.mikiishijima.com/feed.xml" class="smallsocialbutton rss" target="_blank"><i class="fa fa-rss"></i></a></li>
 	</ul>
 	<p>デザインワーク、ソフトウェア開発のワークフロー、デザイン自体の考え方に関する著書を持つ。2013年にザ・マーズナレッジ株式会社設立。</p>
 	<hr>
@@ -88,7 +218,7 @@
 
 
 <div id="cover" class="cover featured">
-	<div class="background" style="background-image:url(' /content/images/2014/04/nico03.jpg');"></div>
+	<div class="background" style="background-image:url('http://blog.mikiishijima.com/content/images/2014/04/nico03.jpg');"></div>
 	<header class="wrapper">
 		<h2>
 			
@@ -259,7 +389,7 @@
 		<footer>
 			<ul class="share left">
 				<li><a href="http://twitter.com/share?text=ニコ動 超チューニング祭で最優秀賞もらいました" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" class="smallbutton lightgray"><i class="fa fa-twitter"></i>Twitter</a></li>
-				<li><a href="https://www.facebook.com/sharer/sharer.php?u= /private-works/2014/04/27/cho-tuning-fes/" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" class="smallbutton lightgray"><i class="fa fa-facebook"></i>Facebook</a></li>
+				<li><a href="https://www.facebook.com/sharer/sharer.php?u=http://blog.mikiishijima.com/private-works/2014/04/27/cho-tuning-fes/" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" class="smallbutton lightgray"><i class="fa fa-facebook"></i>Facebook</a></li>
 			</ul>
 		</footer>
 
@@ -273,7 +403,7 @@
 					<li><a href="http://twitter.com/woopsdez" class="twitter" target="_blank"><i class="fa fa-twitter"></i></a></li>
 					<li><a href="http://facebook.com/woopsdez" class="facebook" target="_blank"><i class="fa fa-facebook"></i></a></li>
 					<li><a href="http://github.com/woopsdez" class="github" target="_blank"><i class="fa fa-github-alt"></i></a></li>
-					<li><a href=" /feed.xml" class="rss" target="_blank"><i class="fa fa-rss"></i></a></li>
+					<li><a href="http://blog.mikiishijima.com/feed.xml" class="rss" target="_blank"><i class="fa fa-rss"></i></a></li>
 				</ul>
 			</div>
 		</div>
@@ -287,9 +417,9 @@
 	<footer class="wrapper">
 	<div class="smallnav">
 		
-			<a href=" /about/">About Me</a> &bull;
+			<a href="http://blog.mikiishijima.com/about/">About Me</a> &bull;
 		
-			<a href=" /contact/">Contact</a> &bull;
+			<a href="http://blog.mikiishijima.com/contact/">Contact</a> &bull;
 		
 			
 		
@@ -299,7 +429,7 @@
 		
 	</div>
 	<div>
-		Copyright &copy; <a href=" /">Miki Ishijima Blog</a>. 2016 &bull; All rights reserved.
+		Copyright &copy; <a href="http://blog.mikiishijima.com/">Miki Ishijima Blog</a>. 2016 &bull; All rights reserved.
 		<span class="ghost">Proudly published with <a href="http://jekyllrb.com/" target="_blank">Jekyll</a>.</span>
 	</div>
 </footer>
@@ -314,7 +444,7 @@
 			'autoload_comments': false
 		};
 	</script>
-	<script async type="text/javascript" src=" /assets/js/theme.min.js"></script>
+	<script async type="text/javascript" src="http://blog.mikiishijima.com/assets/js/theme.min.js"></script>
 	<script>
 	// 記事サイドバーに目次を追加
 	$('.profile').append('<ul id="headlines"></ul>');
