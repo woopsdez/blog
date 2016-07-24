@@ -3,10 +3,10 @@
 	<channel>
 		<title>Miki Ishijima Blog</title>
 		<description>趣味のゲームやプログラミング、レビューなど個人イシジマミキにより近しい内容を書いています。普遍的なデザインの話はThe Marsknowledge Blogで。</description>
-		<link> /</link>
-		<atom:link href=" /feed.xml" rel="self" type="application/rss+xml" />
-		<pubDate>Sun, 24 Jul 2016 23:27:19 +0900</pubDate>
-		<lastBuildDate>Sun, 24 Jul 2016 23:27:19 +0900</lastBuildDate>
+		<link>http://blog.mikiishijima.com/</link>
+		<atom:link href="http://blog.mikiishijima.com/feed.xml" rel="self" type="application/rss+xml" />
+		<pubDate>Sun, 24 Jul 2016 23:32:15 +0900</pubDate>
+		<lastBuildDate>Sun, 24 Jul 2016 23:32:15 +0900</lastBuildDate>
 		<generator>Jekyll v3.1.2</generator>
 		
 			<item>
@@ -60,8 +60,8 @@
 &lt;p&gt;結婚ってスゴくね!?&lt;/p&gt;
 </description>
 				<pubDate>Sun, 24 Jul 2016 00:00:00 +0900</pubDate>
-				<link> /diary/2016/07/24/in-marriage-we-fill-those-missing/</link>
-				<guid isPermaLink="true"> /diary/2016/07/24/in-marriage-we-fill-those-missing/</guid>
+				<link>http://blog.mikiishijima.com/diary/2016/07/24/in-marriage-we-fill-those-missing/</link>
+				<guid isPermaLink="true">http://blog.mikiishijima.com/diary/2016/07/24/in-marriage-we-fill-those-missing/</guid>
 				
 				
 					<category>diary</category>
@@ -359,8 +359,8 @@
 &lt;p&gt;妊娠糖尿病と診断されても、悲観的にならず楽しく食事をしていきましょう! 何かの役に立てば幸いです。&lt;/p&gt;
 </description>
 				<pubDate>Thu, 02 Jun 2016 00:00:00 +0900</pubDate>
-				<link> /diary/2016/06/02/lowcarb-matanitylife-01/</link>
-				<guid isPermaLink="true"> /diary/2016/06/02/lowcarb-matanitylife-01/</guid>
+				<link>http://blog.mikiishijima.com/diary/2016/06/02/lowcarb-matanitylife-01/</link>
+				<guid isPermaLink="true">http://blog.mikiishijima.com/diary/2016/06/02/lowcarb-matanitylife-01/</guid>
 				
 				
 					<category>diary</category>
@@ -504,8 +504,8 @@
 &lt;p&gt;とにかく今は楽しく、幸せにあふれている。そんなコトを未来の自分のために記録しておきます。ではでは。&lt;/p&gt;
 </description>
 				<pubDate>Fri, 06 May 2016 00:00:00 +0900</pubDate>
-				<link> /diary/2016/05/06/gavebirth/</link>
-				<guid isPermaLink="true"> /diary/2016/05/06/gavebirth/</guid>
+				<link>http://blog.mikiishijima.com/diary/2016/05/06/gavebirth/</link>
+				<guid isPermaLink="true">http://blog.mikiishijima.com/diary/2016/05/06/gavebirth/</guid>
 				
 				
 					<category>diary</category>
@@ -562,8 +562,8 @@
 &lt;p&gt;まわりにプライベートワークを勧めるのであれば、まずは自分がプライベートワークをして、得している様を見せていきましょう。&lt;/p&gt;
 </description>
 				<pubDate>Tue, 03 May 2016 00:00:00 +0900</pubDate>
-				<link> /private-works/2016/05/03/the-importance-of-the-private-work/</link>
-				<guid isPermaLink="true"> /private-works/2016/05/03/the-importance-of-the-private-work/</guid>
+				<link>http://blog.mikiishijima.com/private-works/2016/05/03/the-importance-of-the-private-work/</link>
+				<guid isPermaLink="true">http://blog.mikiishijima.com/private-works/2016/05/03/the-importance-of-the-private-work/</guid>
 				
 				
 					<category>private-works</category>
@@ -659,8 +659,8 @@
 &lt;p&gt;これからも、このブログで答えのないテーマや気付きを書いていきたいと思います。あなたのブログは、どうですか？&lt;/p&gt;
 </description>
 				<pubDate>Tue, 03 May 2016 00:00:00 +0900</pubDate>
-				<link> /private-works/2016/05/03/myblogpolicy/</link>
-				<guid isPermaLink="true"> /private-works/2016/05/03/myblogpolicy/</guid>
+				<link>http://blog.mikiishijima.com/private-works/2016/05/03/myblogpolicy/</link>
+				<guid isPermaLink="true">http://blog.mikiishijima.com/private-works/2016/05/03/myblogpolicy/</guid>
 				
 				
 					<category>private-works</category>
@@ -804,8 +804,8 @@
 &lt;p&gt;ぜひチェックしてくださいな。&lt;/p&gt;
 </description>
 				<pubDate>Mon, 02 May 2016 00:00:00 +0900</pubDate>
-				<link> /private-works/2016/05/02/undefinde-variables/</link>
-				<guid isPermaLink="true"> /private-works/2016/05/02/undefinde-variables/</guid>
+				<link>http://blog.mikiishijima.com/private-works/2016/05/02/undefinde-variables/</link>
+				<guid isPermaLink="true">http://blog.mikiishijima.com/private-works/2016/05/02/undefinde-variables/</guid>
 				
 				
 					<category>private-works</category>
@@ -893,8 +893,8 @@
 &lt;p&gt;&lt;a href=&quot;https://github.com/woopsdez/floaty-color-clock/issues/&quot;&gt;https://github.com/woopsdez/floaty-color-clock/issues/&lt;/a&gt;&lt;/p&gt;
 </description>
 				<pubDate>Sun, 01 May 2016 00:00:00 +0900</pubDate>
-				<link> /private-works/2016/05/01/floatycolorclock/</link>
-				<guid isPermaLink="true"> /private-works/2016/05/01/floatycolorclock/</guid>
+				<link>http://blog.mikiishijima.com/private-works/2016/05/01/floatycolorclock/</link>
+				<guid isPermaLink="true">http://blog.mikiishijima.com/private-works/2016/05/01/floatycolorclock/</guid>
 				
 				
 					<category>private-works</category>
@@ -1000,8 +1000,8 @@ mv /yourdomain.com/blog/htaccess.txt yourdomain.com/blog/.htaccess;
 &lt;p&gt;来年にはtumblrに移行してるかもしれませんが、ひとまずこれでよろしくお願いします。&lt;/p&gt;
 </description>
 				<pubDate>Tue, 05 Apr 2016 00:00:00 +0900</pubDate>
-				<link> /private-works/2016/04/05/hello-jekyll/</link>
-				<guid isPermaLink="true"> /private-works/2016/04/05/hello-jekyll/</guid>
+				<link>http://blog.mikiishijima.com/private-works/2016/04/05/hello-jekyll/</link>
+				<guid isPermaLink="true">http://blog.mikiishijima.com/private-works/2016/04/05/hello-jekyll/</guid>
 				
 				
 					<category>private-works</category>
@@ -1094,8 +1094,8 @@ mv /yourdomain.com/blog/htaccess.txt yourdomain.com/blog/.htaccess;
 &lt;p&gt;この冬はナチュラルローソンとともに気軽に糖質制限をはじめてみては？&lt;/p&gt;
 </description>
 				<pubDate>Fri, 04 Dec 2015 07:59:17 +0900</pubDate>
-				<link> /diary/2015/12/04/started-lowcarb-life/</link>
-				<guid isPermaLink="true"> /diary/2015/12/04/started-lowcarb-life/</guid>
+				<link>http://blog.mikiishijima.com/diary/2015/12/04/started-lowcarb-life/</link>
+				<guid isPermaLink="true">http://blog.mikiishijima.com/diary/2015/12/04/started-lowcarb-life/</guid>
 				
 				
 					<category>diary</category>
@@ -1225,8 +1225,8 @@ mv /yourdomain.com/blog/htaccess.txt yourdomain.com/blog/.htaccess;
 &lt;p&gt;元気な子が生まれますように。&lt;/p&gt;
 </description>
 				<pubDate>Sun, 01 Nov 2015 07:59:50 +0900</pubDate>
-				<link> /diary/2015/11/01/become-the-mother01/</link>
-				<guid isPermaLink="true"> /diary/2015/11/01/become-the-mother01/</guid>
+				<link>http://blog.mikiishijima.com/diary/2015/11/01/become-the-mother01/</link>
+				<guid isPermaLink="true">http://blog.mikiishijima.com/diary/2015/11/01/become-the-mother01/</guid>
 				
 				
 					<category>diary</category>
