@@ -60,3 +60,4 @@
 ## TODO
 * 画像を記事をひとつのフォルダにまとめて管理
 * pluginを使って画像をレスポンシブ対応 [robwierzbowski/jekyll-picture-tag: Easy responsive images for Jekyll.](https://github.com/robwierzbowski/jekyll-picture-tag)
+* github-pagesへもbaseurlを対応させたい
