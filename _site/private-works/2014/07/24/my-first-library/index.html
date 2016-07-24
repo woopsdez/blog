@@ -158,49 +158,195 @@ jsなどの言語だとあらかたあって、何を作ったらいいのやら
 
 		<meta property="og:title" content="ライブラリを作る事でプログラミングスキルは本当に向上するのか。" />
     <meta property="og:type" content="blog" />
-    <meta property="og:url" content="http://blog.mikiishijima.com/private-works/2014/07/24/my-first-library/" />
-    <meta property="og:image" content="/content/images/2015/03/library.jpg" />
+    <meta property="og:url" content=" /private-works/2014/07/24/my-first-library/" />
+    <meta property="og:image" content=" /content/images/2015/03/library.jpg" />
+		<meta property="og:description" content="デザイナーのわたしがプログラムの基礎をだいたい3日で覚えた1つの方法で、Minecraftとプラグインを使ってのプログラミングの楽しさについて書きました。
 
-		<link rel="alternate" type="application/rss+xml" href="/feed.xml">
-		<link rel="prefetch" href="">
-		<link rel="canonical" href="http://blog.mikiishijima.com/private-works/2014/07/24/my-first-library/">
+あれから、いまだに飽きもせず休みの日などにコードを書いています。
 
-		<link rel="stylesheet" href="/assets/css/screen.css">
+まだまだ微妙なこともあるのですが、いくつかプログラムを作ってみて良く使う機能をライブラリにしておきたいなと思ったので作ってみました。
+
+
+woopsdez/ComputerCraft
+
+他の人にも使ってもらえるといいな。
+
+ライブラリ作成の実際の流れ
+
+いきなり作るのは無理でした。何が良く使うものなのか、汎用性を高められそうなコードはどれか。などを最初から考えるのはわたしには難しいです。
+
+けっきょくは
+
+1.作りたいプログラムをいくつか書く。
+2.良く使うものをピックアップ
+3.ライブラリにコピペ
+4.変数や値を置き換え
+5.作ったプログラムに逆輸入
+6.動作確認
+
+と、いう流れになりました。
+
+プログラム力は向上するのか
+
+答えはイエスです。
+
+実際、本当に初心者ですし設計の考え方もうまくはありません。
+
+
+  もっと分かりやすい名前にできないか
+  どのようにコメントをいれていけば他者が分かるコードになるのか
+  決め打ちで書いていた部分を引数で処理できるようにできないか
+  同じような処理をひとつの関数でまとめられないか
+
+
+を強く意識するようになりました。
+
+ひとりで使うコードであれば、その場で動けば良いのでかなり汚いです。
+何回も書いていると、ここはライブラリに実装してしまった方が「自分が」ラクになるので、良く使うものをまとめだします。
+
+一度自分の書いたコードの読みづらさを感じると、次に書くときにはもっとキレイに書けるように。
+
+こんなサイクルが回り出します。
+プログラムをたくさん書いていけば自ずと上がるものだと思いますが、何度も使えるようにライブラリ化する。というサブクエストのおかげで、漫然とコードを書くことが少なくなったように思います。
+
+もっと分かりやすい名前にできないか
+
+例えばx,y,zなんかの変数は良く使うだけに被りやすいです。関数もいくつも定義しているとあっという間にボキャブラリを使いつくしてしまいます。
+
+
+
+placeTourchという「松明を一定感覚に置く」という処理の関数でした。実際は松明じゃなくてもアイテムなら他のも置けるので、placeItemに変更してみたり。
+
+変数に名詞を使うようにしたのですが、これはこれで長くなると面倒ですし…。
+一文字で良い変数と、ちゃんと分かりやすい名前にしておいた方が良い変数。
+
+スコープが小さい場合には、短くて使いやすい変数の方が良く、逆にいろんな箇所で参照されるような変数は長くても分かりやすい名前の方が安全でしょう。
+
+まだまだ「出来る！」というレベルには及ばないけど、なるべくそれに沿う努力ができるようになりました。
+
+
+  スコープ
+  変数や関数が参照される範囲のこと。
+何も考えずに変数を定義したり、いろんなところで使っちゃうと、思わぬところで書き変わってたりしてバグのもとになりますよ！
+
+
+どのようにコメントをいれていけば他者が分かるコードになるのか
+
+HTMLは見ればなんとなく分かることが多いと思いますが、CSSや他のプログラム言語だと、変数を初期化して、関数を定義して、実行部分が〜と書いたりする必要がでてきます。(全ての言語ではありませんが)
+
+実行部分で関数を呼び出していると、どの関数か見るためにスクロールを繰り返すのもちょっと面倒ですよね。
+
+また、定義された関数を上から読んでいくのも疲れます。
+
+ですので、なるべく「これはどんな処理をしているのか」が分かるようなコメントがあると分かりやすいなぁと思いました。
+
+CSSのフレームワークであるBootstrapなどは丁寧にコメントされていて、何故そのコードが定義されているかが分かりやすいので、カスタマイズも容易ですしドキュメントを読まずとも理解することができます。
+
+
+コメントが丁寧なので、ドキュメントなしでも意図が分かる。
+
+決め打ちで書いていた部分を引数で処理できるようにできないか
+
+繰り返す回数や、関数内で処理する変数、ComputerCraftで言えば操作する向きなど、そういったものを決め打ちで入れていた箇所が変わっても動くようにするのはとても面白かったです。
+
+
+左はチェストを置いてアイテムを格納する処理。右側は汎用性を持たせるため、アイテムを収納する部分だけを抜き出して関数にしたもの。forで繰り返す回数や、turtle.dropDownなどで決定されるアイテムを落とす方向を引数で処理できるようにしている。
+
+みるみる便利になりますし、ライブラリとして別ファイルに移設すると、アプリケーション本体が非常にスリムになっていきます。
+
+そういった様子を見るとキレイにコードが書けた気がして一番楽しかったです。
+
+同じような処理をひとつの関数でまとめられないか
+
+例えば、前を向いてアイテムを回収する処理。上を向く場合、下を向く場合で関数を3つ作っていました。
+
+
+左側が古い方、方向によって3つの関数が定義されている。右側のように引数で方向を渡し、文字列で結合するようにして、テーブルのキーとして渡すことでひとつの関数で処理するようにしている。
+
+プログラムの師匠に教わりLuaのテーブルが少しだけ分かったので、これもひとつの関数でまとめられるようになりました。
+
+これがもう大活躍で、多くの処理がこれでまとめられるようになり、一気にスリム化することができました。
+
+Read Meを書くってカッコいい！
+
+githubなどで良く見るreadme.mdown。自分でも書くときが来るなんて！とちょっとワクワクしました。
+
+change logの重要性
+
+
+
+いままでは、見向きもしていなかったchage logですが、何が変わったのかはスゴく重要ですよね。例えば以前から使っていた関数名が変更になったり、処理の仕方が変わったりしていたら。
+
+そんなときに必要なんだと、作ってみるまで分からなかったです。(そういう使い方しかしていなかった自分がアレなんですが…。)
+
+コミットログを抜き出して整形したり編集して、change logをカンタンに作れるものってないのでしょうか？
+
+バージョンの付け方
+
+同時にバージョンの付け方も勉強になりました。0.0.0みたいなカタチ。多いですよね。
+
+あれは、左からメジャーアップデート、新機能追加、それ以外の細かいアップデートなんだそうです。これって常識だったのかしら…。
+
+長くなっちゃった…。
+
+解説やサンプルコードを入れたり、上記のchange log、さらに付属ファイルの使い方なども入れていくとread meが膨大になっていきます。誰も読まないのでは？というレベルです。
+
+ここまでくると、それっぽいサイトのひとつでも作った方がいいのでしょうか？
+
+最後に
+
+今回はMinecraftというゲームのMOD(プラグインのようなもの)のライブラリでしたので、国内では非常に少なく作る意義のあるものだった。というのは非常についていたなと思います。
+
+jsなどの言語だとあらかたあって、何を作ったらいいのやら？となりそうですもんね。
+
+ただjQueryプラグイン系も非常に似たカタチで実装するものですので、良く使うのだけれど決定版がない！というものは実装してみると面白いかもしれません。
+
+ぜひ、一緒にMinecraftやりましょー！！！
+
+
+【ニコニコ動画】【Minecraft】タートルとごはん Part10【ゆっくり実況】
+">
+
+		<link rel="alternate" type="application/rss+xml" href=" /feed.xml">
+		<link rel="prefetch" href=" ">
+		<link rel="canonical" href=" /private-works/2014/07/24/my-first-library/">
+
+		<link rel="stylesheet" href=" /assets/css/screen.css">
 		<link href='//fonts.googleapis.com/css?family=Domine:700|Open+Sans:400,600|Source+Code+Pro:500' rel='stylesheet' type='text/css'>
 		<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
 
 		<!-- favicon -->
-  <link rel="apple-touch-icon" sizes="57x57" href="/assets/img/icons/apple-icon-57x57.png">
-  <link rel="apple-touch-icon" sizes="60x60" href="/assets/img/icons/apple-icon-60x60.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="/assets/img/icons/apple-icon-72x72.png">
-  <link rel="apple-touch-icon" sizes="76x76" href="/assets/img/icons/apple-icon-76x76.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="/assets/img/icons/apple-icon-114x114.png">
-  <link rel="apple-touch-icon" sizes="120x120" href="/assets/img/icons/apple-icon-120x120.png">
-  <link rel="apple-touch-icon" sizes="144x144" href="/assets/img/icons/apple-icon-144x144.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="/assets/img/icons/apple-icon-152x152.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/icons/apple-icon-180x180.png">
-  <link rel="icon" type="image/png" sizes="192x192"  href="/assets/img/icons/android-icon-192x192.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/icons/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="96x96" href="/assets/img/icons/favicon-96x96.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/icons/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="57x57" href=" /assets/img/icons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href=" /assets/img/icons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href=" /assets/img/icons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href=" /assets/img/icons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href=" /assets/img/icons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href=" /assets/img/icons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href=" /assets/img/icons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href=" /assets/img/icons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href=" /assets/img/icons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href=" /assets/img/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href=" /assets/img/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href=" /assets/img/icons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href=" /assets/img/icons/favicon-16x16.png">
   <link rel="manifest" href="/manifest.json">
   <meta name="msapplication-TileColor" content="#ffffff">
-  <meta name="msapplication-TileImage" content="/assets/img/icons/ms-icon-144x144.png">
+  <meta name="msapplication-TileImage" content=" /assets/img/icons/ms-icon-144x144.png">
   <meta name="theme-color" content="#ffffff">
 	</head>
 	<body>
 
 	<header class="title">
-	<a href=""><img src="/favicon-transparent.svg" alt=""><span>Miki Ishijima Blog</span></a>
+	<a href=" "><img src=" /favicon-transparent.svg" alt=""><span>Miki Ishijima Blog</span></a>
 </header>
 
 <nav class="wrapper  featured  ">
 	<a href="#" onclick="return false;"><i class="fa fa-navicon fa-lg"></i></a>
 	<ul>
 		
-			<li><a href="/about/">About Me</a></li>
+			<li><a href=" /about/">About Me</a></li>
 		
-			<li><a href="/contact/">Contact</a></li>
+			<li><a href=" /contact/">Contact</a></li>
 		
 			
 		
@@ -225,7 +371,7 @@ jsなどの言語だとあらかたあって、何を作ったらいいのやら
 		<li><a href="http://twitter.com/woopsdez" class="smallsocialbutton twitter" target="_blank"><i class="fa fa-twitter"></i></a></li>
 		<li><a href="http://facebook.com/woopsdez" class="smallsocialbutton facebook" target="_blank"><i class="fa fa-facebook"></i></a></li>
 		<li><a href="http://github.com/woopsdez" class="smallsocialbutton github" target="_blank"><i class="fa fa-github"></i></a></li>
-		<li><a href="/feed.xml" class="smallsocialbutton rss" target="_blank"><i class="fa fa-rss"></i></a></li>
+		<li><a href=" /feed.xml" class="smallsocialbutton rss" target="_blank"><i class="fa fa-rss"></i></a></li>
 	</ul>
 	<p>デザインワーク、ソフトウェア開発のワークフロー、デザイン自体の考え方に関する著書を持つ。2013年にザ・マーズナレッジ株式会社設立。</p>
 	<hr>
@@ -233,7 +379,7 @@ jsなどの言語だとあらかたあって、何を作ったらいいのやら
 
 
 <div id="cover" class="cover featured">
-	<div class="background" style="background-image:url('/content/images/2015/03/library.jpg');"></div>
+	<div class="background" style="background-image:url(' /content/images/2015/03/library.jpg');"></div>
 	<header class="wrapper">
 		<h2>
 			
@@ -419,7 +565,7 @@ jsなどの言語だとあらかたあって、何を作ったらいいのやら
 		<footer>
 			<ul class="share left">
 				<li><a href="http://twitter.com/share?text=ライブラリを作る事でプログラミングスキルは本当に向上するのか。" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" class="smallbutton lightgray"><i class="fa fa-twitter"></i>Twitter</a></li>
-				<li><a href="https://www.facebook.com/sharer/sharer.php?u=http://blog.mikiishijima.com/private-works/2014/07/24/my-first-library/" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" class="smallbutton lightgray"><i class="fa fa-facebook"></i>Facebook</a></li>
+				<li><a href="https://www.facebook.com/sharer/sharer.php?u= /private-works/2014/07/24/my-first-library/" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" class="smallbutton lightgray"><i class="fa fa-facebook"></i>Facebook</a></li>
 			</ul>
 		</footer>
 
@@ -433,7 +579,7 @@ jsなどの言語だとあらかたあって、何を作ったらいいのやら
 					<li><a href="http://twitter.com/woopsdez" class="twitter" target="_blank"><i class="fa fa-twitter"></i></a></li>
 					<li><a href="http://facebook.com/woopsdez" class="facebook" target="_blank"><i class="fa fa-facebook"></i></a></li>
 					<li><a href="http://github.com/woopsdez" class="github" target="_blank"><i class="fa fa-github-alt"></i></a></li>
-					<li><a href="/feed.xml" class="rss" target="_blank"><i class="fa fa-rss"></i></a></li>
+					<li><a href=" /feed.xml" class="rss" target="_blank"><i class="fa fa-rss"></i></a></li>
 				</ul>
 			</div>
 		</div>
@@ -447,9 +593,9 @@ jsなどの言語だとあらかたあって、何を作ったらいいのやら
 	<footer class="wrapper">
 	<div class="smallnav">
 		
-			<a href="/about/">About Me</a> &bull;
+			<a href=" /about/">About Me</a> &bull;
 		
-			<a href="/contact/">Contact</a> &bull;
+			<a href=" /contact/">Contact</a> &bull;
 		
 			
 		
@@ -459,7 +605,7 @@ jsなどの言語だとあらかたあって、何を作ったらいいのやら
 		
 	</div>
 	<div>
-		Copyright &copy; <a href="/">Miki Ishijima Blog</a>. 2016 &bull; All rights reserved.
+		Copyright &copy; <a href=" /">Miki Ishijima Blog</a>. 2016 &bull; All rights reserved.
 		<span class="ghost">Proudly published with <a href="http://jekyllrb.com/" target="_blank">Jekyll</a>.</span>
 	</div>
 </footer>
@@ -474,7 +620,7 @@ jsなどの言語だとあらかたあって、何を作ったらいいのやら
 			'autoload_comments': false
 		};
 	</script>
-	<script async type="text/javascript" src="/assets/js/theme.min.js"></script>
+	<script async type="text/javascript" src=" /assets/js/theme.min.js"></script>
 	<script>
 	// 記事サイドバーに目次を追加
 	$('.profile').append('<ul id="headlines"></ul>');
