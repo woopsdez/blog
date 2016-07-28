@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+		<title>Twitterの画像を原寸表示するChrome拡張をリリースしました。</title>
+	  <meta name="description" content="Twitterをブラウザで見ていると、画像が小さく、文字が書いてあると見辛くて仕方がないのでChrome拡張を自作しました。
+
+"/>
+
+		<meta name="HandheldFriendly" content="True" />
+		<meta name="MobileOptimized" content="320" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<meta property="og:title" content="Twitterの画像を原寸表示するChrome拡張をリリースしました。" />
+    <meta property="og:type" content="blog" />
+    <meta property="og:url" content="http://blog.mikiishijima.com/works/2016/07/26/launch-toi-chromeextention/" />
+    <meta property="og:image" content="http://blog.mikiishijima.com/content/images/2016/07/launch-toi-chromeextention/banner.png" />
+		<meta property="og:description" content="Twitterをブラウザで見ていると、画像が小さく、文字が書いてあると見辛くて仕方がないのでChrome拡張を自作しました。
+
+">
+
+		<link rel="alternate" type="application/rss+xml" href="http://blog.mikiishijima.com/feed.xml">
+		<link rel="prefetch" href="http://blog.mikiishijima.com">
+		<link rel="canonical" href="http://blog.mikiishijima.com/works/2016/07/26/launch-toi-chromeextention/">
+
+		<link rel="stylesheet" href="http://blog.mikiishijima.com/assets/css/screen.css">
+		<link href='//fonts.googleapis.com/css?family=Domine:700|Open+Sans:400,600|Source+Code+Pro:500' rel='stylesheet' type='text/css'>
+		<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+
+		<!-- favicon -->
+  <link rel="apple-touch-icon" sizes="57x57" href="http://blog.mikiishijima.com/assets/img/icons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="http://blog.mikiishijima.com/assets/img/icons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="http://blog.mikiishijima.com/assets/img/icons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="http://blog.mikiishijima.com/assets/img/icons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="http://blog.mikiishijima.com/assets/img/icons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="http://blog.mikiishijima.com/assets/img/icons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="http://blog.mikiishijima.com/assets/img/icons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="http://blog.mikiishijima.com/assets/img/icons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="http://blog.mikiishijima.com/assets/img/icons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="http://blog.mikiishijima.com/assets/img/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="http://blog.mikiishijima.com/assets/img/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="http://blog.mikiishijima.com/assets/img/icons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="http://blog.mikiishijima.com/assets/img/icons/favicon-16x16.png">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="http://blog.mikiishijima.com/assets/img/icons/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+	</head>
+	<body>
+
+	<header class="title">
+	<a href="http://blog.mikiishijima.com"><img src="http://blog.mikiishijima.com/favicon-transparent.svg" alt=""><span>Miki Ishijima Blog</span></a>
+</header>
+
+<nav class="wrapper  featured  ">
+	<a href="#" onclick="return false;"><i class="fa fa-navicon fa-lg"></i></a>
+	<ul>
+		
+			<li><a href="http://blog.mikiishijima.com/about/">About Me</a></li>
+		
+			<li><a href="http://blog.mikiishijima.com/contact/">Contact</a></li>
+		
+			
+		
+			
+		
+			
+		
+			
+		
+	</ul>
+</nav>
+
+	<div class="index">
+	<div class="wrapper">
+		<h1 class="right">Twitterの画像を原寸表示するChrome拡張をリリースしました。</h1>
+		<h2 class="left">Introduction</h2>
+	</div>
+</div>
+
+<div class="profile  featured ">
+	<img src="https://dl.dropboxusercontent.com/u/797976/profile/woopsdez-owner-sq.jpg" class="profileimage" alt="user">
+	<h4>Miki Ishijima</h4>
+	<ul>
+		<li><a href="http://twitter.com/woopsdez" class="smallsocialbutton twitter" target="_blank"><i class="fa fa-twitter"></i></a></li>
+		<li><a href="http://facebook.com/woopsdez" class="smallsocialbutton facebook" target="_blank"><i class="fa fa-facebook"></i></a></li>
+		<li><a href="http://github.com/woopsdez" class="smallsocialbutton github" target="_blank"><i class="fa fa-github"></i></a></li>
+		<li><a href="http://blog.mikiishijima.com/feed.xml" class="smallsocialbutton rss" target="_blank"><i class="fa fa-rss"></i></a></li>
+	</ul>
+	<p>デザインワーク、ソフトウェア開発のワークフロー、デザイン自体の考え方に関する著書を持つ。2013年にザ・マーズナレッジ株式会社設立。</p>
+	<hr>
+</div>
+
+
+<div id="cover" class="cover featured">
+	<div class="background" style="background-image:url('http://blog.mikiishijima.com/content/images/2016/07/launch-toi-chromeextention/banner.png');"></div>
+	<header class="wrapper">
+		<h2>
+			
+				works 
+			
+		</h2>
+		<h1>Twitterの画像を原寸表示するChrome拡張をリリースしました。</h1>
+		<span>
+			Posted by <a href="http://mikiishijima.com/" target="_blank">Miki Ishijima</a>
+				on <i class="fa fa-clock-o"></i> <time datetime="2016-07-26">July 26, 2016</time>.
+		</span>
+	</header>
+	<i class="fa fa-chevron-down movedown"></i>
+</div>
+
+
+<section class="posts wrapper">
+	<article class="post  featured ">
+		
+		<header>
+			<div class="feature"><span>Featured</span><i class="fa fa-bookmark fa-lg"></i></div>
+			<h2>
+				
+					works 
+				
+			</h2>
+			<h1 id="posttitle">Twitterの画像を原寸表示するChrome拡張をリリースしました。</h1>
+			<span>
+				Posted by <a href="" target="_blank">Miki Ishijima</a>
+				on <i class="fa fa-clock-o"></i> <time datetime="2016-07-26">July 26, 2016</time>.
+			</span>
+		</header>
+
+		<section class="postbody">
+			<p>Twitterをブラウザで見ていると、画像が小さく、文字が書いてあると見辛くて仕方がないのでChrome拡張を自作しました。</p>
+
+<!--more-->
+
+<p>似たような拡張はいくつかあったのですが、わたしがインストールしたものはうまく動かなかったので、習作を兼ねて。と、いうことにしています。</p>
+
+<p><small>例にもれず、後から高機能でちゃんと動作するものが見つかるというお決まりのパターンでした。</small></p>
+
+<p><img src="/content/images/2016/07/launch-toi-chromeextention/02.png" alt="" />
+<a href="https://chrome.google.com/webstore/detail/twitter-original-images-m/gngemdehcfeffjiifgpjedncfppnmcko">TOI Twitter元画像ビューアー - Chrome ウェブストア</a></p>
+
+<p>下手くそながら、二ヶ国語対応した自分、褒めたい! ぜひダウンロードしてやってくださいね。</p>
+
+<h2 id="section">動作概要</h2>
+<ul>
+  <li>Gallery(画像表示用モーダル)表示時にボタンを追加</li>
+  <li>ボタン or キーボード操作時、画像に付与されているstyleを除去</li>
+  <li>除去前にstyleを変数に格納し、原寸から表示用サイズに戻ることもできる(ボタン、キーボードでのトグル操作)</li>
+</ul>
+
+<p>こんな風に動きます。</p>
+
+<style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style>
+<div class="embed-container"><iframe src="https://www.youtube.com/embed/dhz06Hh_Yno" frameborder="0" allowfullscreen=""></iframe></div>
+
+<h2 id="section-1">苦労したこと</h2>
+
+<p>Chromeのデベロッパーツールで、画像を原寸表示にするのは非常に簡単です。適用されているスタイルをはずして、真ん中寄せにしてあげるだけで意図した表示にできました。「お、こりゃスグにできるな。」なんて思ったり。</p>
+
+<p>しかし、それをChrome拡張で実装するのには、いくつかの工夫と学習が必要でした。</p>
+
+<h2 id="section-2">自動で原寸表示に失敗</h2>
+
+<p><img src="/content/images/2016/07/launch-toi-chromeextention/03.png" alt="" />
+この表示がGallery。</p>
+
+<p>最初は、画像をGalleryで表示する時点で、勝手に原寸表示にしようとしていました。</p>
+
+<p>しかし、クリックするまではGallery内に画像はロードされていないので、jsロード時に見当らない要素をいくら操作してもなんにも動かないのです。</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="nx">$</span><span class="p">(</span><span class="s1">'.Gallery-content'</span><span class="p">).</span><span class="nx">removeAttr</span><span class="p">(</span><span class="s1">'Style'</span><span class="p">);</span>
+<span class="nx">$</span><span class="p">(</span><span class="s1">'.Gallery-media img'</span><span class="p">).</span><span class="nx">removeAttr</span><span class="p">(</span><span class="s1">'Style'</span><span class="p">);</span>
+</code></pre>
+</div>
+
+<p>.Gallery-content、.Gallery-media img、どちらも画像クリックするまでは追加されない要素なので、こう書いても実行されない。</p>
+
+<h2 id="section-3">ボタンクリックで発火</h2>
+
+<p>と、言うことは画像が表示されてから、上記コードを実行する必要があります。</p>
+
+<p>想定していた動作イメージと違いクリックが必要になってしまったので、ちょっと苦しいなと思いつつ自分の技量で実装できる事を優先。</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="nx">$</span><span class="p">(</span><span class="s1">'.Gallery-content'</span><span class="p">).</span><span class="nx">append</span><span class="p">(</span>
+	<span class="s1">'&lt;button type="button" id="toi-btn" class="toi-btn"&gt;&lt;img src="'</span> <span class="o">+</span> <span class="nx">imgURL</span> <span class="o">+</span> <span class="s1">'" alt="View original size" /&gt;&lt;span&gt;Open!&lt;/span&gt;&lt;/button&gt;'</span>
+<span class="p">);</span>
+<span class="nx">$</span><span class="p">(</span><span class="s1">'#toi-btn'</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">'click'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">){</span>
+	<span class="nx">$</span><span class="p">(</span><span class="s1">'.Gallery-content'</span><span class="p">).</span><span class="nx">removeAttr</span><span class="p">(</span><span class="s1">'Style'</span><span class="p">);</span>
+	<span class="nx">$</span><span class="p">(</span><span class="s1">'.Gallery-media img'</span><span class="p">).</span><span class="nx">removeAttr</span><span class="p">(</span><span class="s1">'Style'</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre>
+</div>
+
+<p>画像を表示されているdiv.Gallery-content内にボタンを追加。そのボタンがクリックされたら、スタイルを除去するコードが実行されるように。</p>
+
+<p><img src="/content/images/2016/07/launch-toi-chromeextention/04.png" alt="" /></p>
+
+<p>左上の丸いのがボタン。</p>
+
+<h2 id="section-4">用済みのボタンの処理</h2>
+
+<p>無事、画像は原寸表示できるようになりました。しかしコード実行後、クリックしても動かないボタンが表示されたままになってしまう。</p>
+
+<p>せっかくだから、原寸表示ができるようになったらボタンを非表示にしたい。そして、表示用のサイズに戻ったらまたボタンを表示させたくなります。</p>
+
+<p>削除するのは簡単。クリックされた時に自分自身をremove()すれば良い。しかし、また画像が表示用サイズに戻ったときに再度ボタンを追加するのが出来なかった。</p>
+
+<p>拡張開発時は、Gallery自体がhtmlとしてloadされているような挙動だったので、unloadを検知してボタンの追加ができないか模索してみたのですが、ダメでした。</p>
+
+<h3 id="unload">ページを閉じる、更新時などに特定の動作ができる.unload()</h3>
+
+<p>facebookなどでよくある、投稿フォームに文字が残っていたら「リロード本当にするの？」みたいに質問してくるヤツとかがコレで真似できます。</p>
+
+<p><img src="/content/images/2016/07/launch-toi-chromeextention/01.png" alt="" /></p>
+
+<h2 id="node">Nodeの変化を監視できる？</h2>
+<p>そのような事を旦那さんに話したら、MutationObserverというのがある、それで監視ができるらしいと教えてもらいました。</p>
+
+<p><a href="https://developer.mozilla.org/en/docs/Web/API/MutationObserver">MutationObserver - Web APIs MDN</a></p>
+
+<p>htmlを読み込んだり読み込まなかったりしていたので、.unload()などのメソッドばかり調べていたけど、監視!</p>
+
+<p>そうか、変化を監視してコールバックで指定した関数を実行すればいいんですねー! なるほどなるほど。</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">config</span> <span class="o">=</span> <span class="p">{</span> <span class="na">attributes</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> <span class="na">childList</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> <span class="na">characterData</span><span class="p">:</span> <span class="kc">true</span> <span class="p">};</span>
+<span class="kd">var</span> <span class="nx">parent</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementsByClassName</span><span class="p">(</span><span class="s1">'Gallery-content'</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">target</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementsByClassName</span><span class="p">(</span><span class="s1">'media-image'</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">mo</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">MutationObserver</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
+	<span class="nx">mm</span><span class="p">.</span><span class="nx">observe</span><span class="p">(</span><span class="nx">target</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="nx">config</span><span class="p">);</span>
+<span class="p">});</span>
+<span class="kd">var</span> <span class="nx">mm</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">MutationObserver</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
+	<span class="nx">getStyles</span><span class="p">()</span>
+	<span class="nx">setStyles</span><span class="p">()</span>
+<span class="p">});</span>
+<span class="nx">mo</span><span class="p">.</span><span class="nx">observe</span><span class="p">(</span><span class="nx">parent</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="nx">config</span><span class="p">);</span>
+<span class="nx">mo</span><span class="p">.</span><span class="nx">disconnect</span><span class="p">();</span>
+</code></pre>
+</div>
+
+<p>あんまりキレイなコードではないですが、動きました!</p>
+
+<h3 id="section-5">監視対象を入れ子にしてみた</h3>
+
+<p>親要素である.Gallery-contentを監視して、そこに変化があれば子要素である.media-imageを監視開始。変更があった時に処理を実行するようにしました。</p>
+
+<p>監視をやめるタイミングとかがまだ良く分かってないのですが、ちまちま使っていって理解を深めたいと思ってます。</p>
+
+<p>でも、これによって別の画像を開いたときも検知できるようになりました。</p>
+
+<p>むしろ、これ使えばクリック不要で原寸画像表示させられるし最初からこれだけでいけたのでは…？</p>
+
+<p>いやでも、ユーザーが任意に実行するという事が大切なので、自動置き換えを実装したとしてもオプションで選べるようにしようと思います。</p>
+
+<h2 id="section-6">動作不備報告など</h2>
+
+<p><a href="https://github.com/woopsdez/Twitter-original-image-chromeextension/issues">https://github.com/woopsdez/Twitter-original-image-chromeextension/issues</a></p>
+
+<p>TwitterやFacebookなどでメッセージいただいても良いのですが、自分で登録するのも面倒なのでこちらに書いてもらえた方がありがたいです。</p>
+
+		</section>
+
+		<footer>
+			<ul class="share left">
+				<li><a href="http://twitter.com/share?text=Twitterの画像を原寸表示するChrome拡張をリリースしました。" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" class="smallbutton lightgray"><i class="fa fa-twitter"></i>Twitter</a></li>
+				<li><a href="https://www.facebook.com/sharer/sharer.php?u=http://blog.mikiishijima.com/works/2016/07/26/launch-toi-chromeextention/" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" class="smallbutton lightgray"><i class="fa fa-facebook"></i>Facebook</a></li>
+			</ul>
+		</footer>
+
+		<div class="postprofile">
+			<img src="https://dl.dropboxusercontent.com/u/797976/profile/woopsdez-owner-sq.jpg" class="author" alt="user">
+			<div class="info">
+				<h4>Miki Ishijima</h4>
+				<a href="http://mikiishijima.com/">http://mikiishijima.com/</a>
+				<p>デザインワーク、ソフトウェア開発のワークフロー、デザイン自体の考え方に関する著書を持つ。2013年にザ・マーズナレッジ株式会社設立。</p>
+				<ul class="social">
+					<li><a href="http://twitter.com/woopsdez" class="twitter" target="_blank"><i class="fa fa-twitter"></i></a></li>
+					<li><a href="http://facebook.com/woopsdez" class="facebook" target="_blank"><i class="fa fa-facebook"></i></a></li>
+					<li><a href="http://github.com/woopsdez" class="github" target="_blank"><i class="fa fa-github-alt"></i></a></li>
+					<li><a href="http://blog.mikiishijima.com/feed.xml" class="rss" target="_blank"><i class="fa fa-rss"></i></a></li>
+				</ul>
+			</div>
+		</div>
+
+		
+		<div class="comments">
+			<a href="javascript:;" class="readmore smallbutton blue"><i class="fa fa-comments"></i>View Comments...</a>
+			<div id="disqus_thread"></div>
+			<div id="g-comments"></div>
+		</div>
+		
+
+	</article>
+
+</section>
+
+	<footer class="wrapper">
+	<div class="smallnav">
+		
+			<a href="http://blog.mikiishijima.com/about/">About Me</a> &bull;
+		
+			<a href="http://blog.mikiishijima.com/contact/">Contact</a> &bull;
+		
+			
+		
+			
+		
+			
+		
+			
+		
+	</div>
+	<div>
+		Copyright &copy; <a href="http://blog.mikiishijima.com/">Miki Ishijima Blog</a>. 2016 &bull; All rights reserved.
+		<span class="ghost">Proudly published with <a href="http://jekyllrb.com/" target="_blank">Jekyll</a>.</span>
+	</div>
+</footer>
+
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script type="text/javascript">
+		var config = {
+			'disqus_shortname': '',
+			'google_comments': true,
+			'analytics_id': 'UA-413655-12',
+			'readingtime': true,
+			'autoload_comments': false
+		};
+	</script>
+	<script async type="text/javascript" src="http://blog.mikiishijima.com/assets/js/theme.min.js"></script>
+	<script>
+	// 記事サイドバーに目次を追加
+	$('.profile').append('<ul id="headlines"></ul>');
+	$('.postbody h2').each(function(){
+		$('#headlines').append('<li><a href="#' + $(this).attr('id') + '">' + $(this).text() + '</a></li>')
+	});
+	$('#headlines a').click(function(e){
+			e.preventDefault();
+			var self = String($(this).attr('href'));
+			console.log('element ' + self);
+
+			var pos = $(self).offset().top;
+			var offset = pos - 100;
+			console.log('num ' + pos + ' / ' + offset);
+			$('html, body').animate({scrollTop: offset}, 1000);
+			
+	});
+	</script>
+  </body>
+</html>

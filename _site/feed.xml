@@ -5,9 +5,149 @@
 		<description>趣味のゲームやプログラミング、レビューなど個人イシジマミキにより近しい内容を書いています。普遍的なデザインの話はThe Marsknowledge Blogで。</description>
 		<link>http://blog.mikiishijima.com/</link>
 		<atom:link href="http://blog.mikiishijima.com/feed.xml" rel="self" type="application/rss+xml" />
-		<pubDate>Sun, 24 Jul 2016 23:56:06 +0900</pubDate>
-		<lastBuildDate>Sun, 24 Jul 2016 23:56:06 +0900</lastBuildDate>
+		<pubDate>Fri, 29 Jul 2016 05:42:12 +0900</pubDate>
+		<lastBuildDate>Fri, 29 Jul 2016 05:42:12 +0900</lastBuildDate>
 		<generator>Jekyll v3.1.2</generator>
+		
+			<item>
+				<title>Twitterの画像を原寸表示するChrome拡張をリリースしました。</title>
+				<description>&lt;p&gt;Twitterをブラウザで見ていると、画像が小さく、文字が書いてあると見辛くて仕方がないのでChrome拡張を自作しました。&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;似たような拡張はいくつかあったのですが、わたしがインストールしたものはうまく動かなかったので、習作を兼ねて。と、いうことにしています。&lt;/p&gt;
+
+&lt;p&gt;&lt;small&gt;例にもれず、後から高機能でちゃんと動作するものが見つかるというお決まりのパターンでした。&lt;/small&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/content/images/2016/07/launch-toi-chromeextention/02.png&quot; alt=&quot;&quot; /&gt;
+&lt;a href=&quot;https://chrome.google.com/webstore/detail/twitter-original-images-m/gngemdehcfeffjiifgpjedncfppnmcko&quot;&gt;TOI Twitter元画像ビューアー - Chrome ウェブストア&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;下手くそながら、二ヶ国語対応した自分、褒めたい! ぜひダウンロードしてやってくださいね。&lt;/p&gt;
+
+&lt;h2 id=&quot;section&quot;&gt;動作概要&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Gallery(画像表示用モーダル)表示時にボタンを追加&lt;/li&gt;
+  &lt;li&gt;ボタン or キーボード操作時、画像に付与されているstyleを除去&lt;/li&gt;
+  &lt;li&gt;除去前にstyleを変数に格納し、原寸から表示用サイズに戻ることもできる(ボタン、キーボードでのトグル操作)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;こんな風に動きます。&lt;/p&gt;
+
+&lt;style&gt;.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }&lt;/style&gt;
+&lt;div class=&quot;embed-container&quot;&gt;&lt;iframe src=&quot;https://www.youtube.com/embed/dhz06Hh_Yno&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;section-1&quot;&gt;苦労したこと&lt;/h2&gt;
+
+&lt;p&gt;Chromeのデベロッパーツールで、画像を原寸表示にするのは非常に簡単です。適用されているスタイルをはずして、真ん中寄せにしてあげるだけで意図した表示にできました。「お、こりゃスグにできるな。」なんて思ったり。&lt;/p&gt;
+
+&lt;p&gt;しかし、それをChrome拡張で実装するのには、いくつかの工夫と学習が必要でした。&lt;/p&gt;
+
+&lt;h2 id=&quot;section-2&quot;&gt;自動で原寸表示に失敗&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/content/images/2016/07/launch-toi-chromeextention/03.png&quot; alt=&quot;&quot; /&gt;
+この表示がGallery。&lt;/p&gt;
+
+&lt;p&gt;最初は、画像をGalleryで表示する時点で、勝手に原寸表示にしようとしていました。&lt;/p&gt;
+
+&lt;p&gt;しかし、クリックするまではGallery内に画像はロードされていないので、jsロード時に見当らない要素をいくら操作してもなんにも動かないのです。&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;.Gallery-content&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;removeAttr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;Style&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;.Gallery-media img&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;removeAttr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;Style&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;.Gallery-content、.Gallery-media img、どちらも画像クリックするまでは追加されない要素なので、こう書いても実行されない。&lt;/p&gt;
+
+&lt;h2 id=&quot;section-3&quot;&gt;ボタンクリックで発火&lt;/h2&gt;
+
+&lt;p&gt;と、言うことは画像が表示されてから、上記コードを実行する必要があります。&lt;/p&gt;
+
+&lt;p&gt;想定していた動作イメージと違いクリックが必要になってしまったので、ちょっと苦しいなと思いつつ自分の技量で実装できる事を優先。&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;.Gallery-content&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+	&lt;span class=&quot;s1&quot;&gt;&#39;&amp;lt;button type=&quot;button&quot; id=&quot;toi-btn&quot; class=&quot;toi-btn&quot;&amp;gt;&amp;lt;img src=&quot;&#39;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;imgURL&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;&quot; alt=&quot;View original size&quot; /&amp;gt;&amp;lt;span&amp;gt;Open!&amp;lt;/span&amp;gt;&amp;lt;/button&amp;gt;&#39;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;#toi-btn&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;on&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;click&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+	&lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;.Gallery-content&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;removeAttr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;Style&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+	&lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;.Gallery-media img&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;removeAttr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;Style&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;画像を表示されているdiv.Gallery-content内にボタンを追加。そのボタンがクリックされたら、スタイルを除去するコードが実行されるように。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/content/images/2016/07/launch-toi-chromeextention/04.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;左上の丸いのがボタン。&lt;/p&gt;
+
+&lt;h2 id=&quot;section-4&quot;&gt;用済みのボタンの処理&lt;/h2&gt;
+
+&lt;p&gt;無事、画像は原寸表示できるようになりました。しかしコード実行後、クリックしても動かないボタンが表示されたままになってしまう。&lt;/p&gt;
+
+&lt;p&gt;せっかくだから、原寸表示ができるようになったらボタンを非表示にしたい。そして、表示用のサイズに戻ったらまたボタンを表示させたくなります。&lt;/p&gt;
+
+&lt;p&gt;削除するのは簡単。クリックされた時に自分自身をremove()すれば良い。しかし、また画像が表示用サイズに戻ったときに再度ボタンを追加するのが出来なかった。&lt;/p&gt;
+
+&lt;p&gt;拡張開発時は、Gallery自体がhtmlとしてloadされているような挙動だったので、unloadを検知してボタンの追加ができないか模索してみたのですが、ダメでした。&lt;/p&gt;
+
+&lt;h3 id=&quot;unload&quot;&gt;ページを閉じる、更新時などに特定の動作ができる.unload()&lt;/h3&gt;
+
+&lt;p&gt;facebookなどでよくある、投稿フォームに文字が残っていたら「リロード本当にするの？」みたいに質問してくるヤツとかがコレで真似できます。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/content/images/2016/07/launch-toi-chromeextention/01.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;node&quot;&gt;Nodeの変化を監視できる？&lt;/h2&gt;
+&lt;p&gt;そのような事を旦那さんに話したら、MutationObserverというのがある、それで監視ができるらしいと教えてもらいました。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://developer.mozilla.org/en/docs/Web/API/MutationObserver&quot;&gt;MutationObserver - Web APIs MDN&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;htmlを読み込んだり読み込まなかったりしていたので、.unload()などのメソッドばかり調べていたけど、監視!&lt;/p&gt;
+
+&lt;p&gt;そうか、変化を監視してコールバックで指定した関数を実行すればいいんですねー! なるほどなるほど。&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;config&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;attributes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;childList&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;characterData&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;parent&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getElementsByClassName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;Gallery-content&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;target&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getElementsByClassName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;media-image&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;mo&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;MutationObserver&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(){&lt;/span&gt;
+	&lt;span class=&quot;nx&quot;&gt;mm&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;observe&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;target&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;config&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;mm&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;MutationObserver&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(){&lt;/span&gt;
+	&lt;span class=&quot;nx&quot;&gt;getStyles&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+	&lt;span class=&quot;nx&quot;&gt;setStyles&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;mo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;observe&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;parent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;config&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;mo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;disconnect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;あんまりキレイなコードではないですが、動きました!&lt;/p&gt;
+
+&lt;h3 id=&quot;section-5&quot;&gt;監視対象を入れ子にしてみた&lt;/h3&gt;
+
+&lt;p&gt;親要素である.Gallery-contentを監視して、そこに変化があれば子要素である.media-imageを監視開始。変更があった時に処理を実行するようにしました。&lt;/p&gt;
+
+&lt;p&gt;監視をやめるタイミングとかがまだ良く分かってないのですが、ちまちま使っていって理解を深めたいと思ってます。&lt;/p&gt;
+
+&lt;p&gt;でも、これによって別の画像を開いたときも検知できるようになりました。&lt;/p&gt;
+
+&lt;p&gt;むしろ、これ使えばクリック不要で原寸画像表示させられるし最初からこれだけでいけたのでは…？&lt;/p&gt;
+
+&lt;p&gt;いやでも、ユーザーが任意に実行するという事が大切なので、自動置き換えを実装したとしてもオプションで選べるようにしようと思います。&lt;/p&gt;
+
+&lt;h2 id=&quot;section-6&quot;&gt;動作不備報告など&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/woopsdez/Twitter-original-image-chromeextension/issues&quot;&gt;https://github.com/woopsdez/Twitter-original-image-chromeextension/issues&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;TwitterやFacebookなどでメッセージいただいても良いのですが、自分で登録するのも面倒なのでこちらに書いてもらえた方がありがたいです。&lt;/p&gt;
+</description>
+				<pubDate>Tue, 26 Jul 2016 00:00:00 +0900</pubDate>
+				<link>http://blog.mikiishijima.com/works/2016/07/26/launch-toi-chromeextention/</link>
+				<guid isPermaLink="true">http://blog.mikiishijima.com/works/2016/07/26/launch-toi-chromeextention/</guid>
+				
+				
+					<category>works</category>
+				
+			</item>
 		
 			<item>
 				<title>結婚で、足りないものを埋めていく</title>
@@ -1096,137 +1236,6 @@ mv /yourdomain.com/blog/htaccess.txt yourdomain.com/blog/.htaccess;
 				<pubDate>Fri, 04 Dec 2015 07:59:17 +0900</pubDate>
 				<link>http://blog.mikiishijima.com/diary/2015/12/04/started-lowcarb-life/</link>
 				<guid isPermaLink="true">http://blog.mikiishijima.com/diary/2015/12/04/started-lowcarb-life/</guid>
-				
-				
-					<category>diary</category>
-				
-			</item>
-		
-			<item>
-				<title>母親になります。</title>
-				<description>&lt;p&gt;日記のような取り留めのないコトを、ネット上に書くのはやめていたいのだけど、自分がいつ何をしていたかをブログによって知れるのは便利なので、開き直ることにします。&lt;/p&gt;
-
-&lt;p&gt;来年の3月には、母親になれそうです。&lt;/p&gt;
-
-&lt;p&gt;最初はこのような報告をネット上ですることなどに躊躇をしていました。&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Facebookなどのソーシャル上での妊娠報告&lt;/li&gt;
-  &lt;li&gt;「お腹に赤ちゃんがいます」バッジをぶらさげること&lt;/li&gt;
-  &lt;li&gt;ベビーカーを使うこと(まだ先の話)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;など、ネット上ではいくつかの批判記事があがっており、その度に反響があるのですっかり毒されてしまっていました。もちろん、妊婦だからと他者の自由を奪って良い理由はありません。しかしながら、自分で選びとった選択に対して周囲の顔色を伺う必要もないなと思っています。要は認知、寛容、バランスですね。&lt;/p&gt;
-
-&lt;p&gt;子供をもうけようという人もいれば、それ以外の事柄を選択しようという人がいる。それだけなので。&lt;/p&gt;
-
-&lt;p&gt;そういった当たり前を忘れて、「ああ、こんな記事もあるし、どうしようかな…。」と考えてしまった時点で染まってしまっていることに気付き、距離感を見直す意味でも妊娠期間を「デトックス」と決めました。&lt;/p&gt;
-
-&lt;h2 id=&quot;section&quot;&gt;生活をシンプルに&lt;/h2&gt;
-
-&lt;p&gt;デトックスは、タンスの中はもちろん食生活や、興味の範囲、交流においても影響します。しかし「切り離す」「捨てる」などでは決っしてなく、絡まってしまった糸をほぐすように、生活をシンプルにしていく行為として行います。&lt;/p&gt;
-
-&lt;p&gt;思えば、抱えきれないほどに背負い込んでしまった事柄が増えていき、それらを無碍に扱うなどしてしまっていたので遅すぎたのかもしれません。あらためて、自分の許容量の少なさに驚いています。&lt;/p&gt;
-
-&lt;p&gt;仕事と決断、行動の速さには自信がありましたが、それらは人が普通に行っているたくさんの事柄を無視して、注力してきた結果でしかないのかも。とも思いはじめました。そりゃ、人より寝るのが遅くて、家のことをロクにせず仕事にかまけていれば、時間も多くとれるよね。と。&lt;/p&gt;
-
-&lt;h2 id=&quot;section-1&quot;&gt;2015年 32歳 厄年の心持ち&lt;/h2&gt;
-
-&lt;p&gt;占い好きの私は、まだ数年続く厄年に諦めて、「仕事量を調整し、勉学に励む年」と2015年を定義していました。そういったスピリチュアルな業界では、なぜか子供を授かると厄年から開放されるという言い伝え？があります。&lt;/p&gt;
-
-&lt;p&gt;仕事量も調節しているし、年齢的にも、経済的にも十分かなと思い母親になる決意を固めました。&lt;/p&gt;
-
-&lt;p&gt;うちの役員から、「子作りは二年みた方がいい」と聞いていたのでのんびりすすめる感じで計画しました。
-タイミング法を用いたらすんなりと妊娠してしまったので驚いていますが。&lt;/p&gt;
-
-&lt;p&gt;妊娠発覚時点で早々に産休をとり、環境を自分で選べています。過去の私や支えてくれた人々のおかげです。多方面へ迷惑をかけるカタチとなってしまいましたが、妊娠初期にとって非常にありがたかったです。おもにつわりなどの理由で。皆さん、ありがとうございます。&lt;/p&gt;
-
-&lt;h2 id=&quot;section-2&quot;&gt;改善された生活とは&lt;/h2&gt;
-
-&lt;p&gt;非常に当たり前のことで恥ずかしいのですが、&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;早寝早起き&lt;/li&gt;
-  &lt;li&gt;三食の食事&lt;/li&gt;
-  &lt;li&gt;家事、炊事&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;が、ちゃんとできるようになりました。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/content/images/2015/11/IMG_0094.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;三食中お昼のみは外食です。三食、家で食べていると旦那さんと二人ずっとひきこもっているようで鬱屈するので。おかげでいま、すごく肌がキレイです。旦那さんはお通じもよくなりました。いいね。&lt;/p&gt;
-
-&lt;h2 id=&quot;section-3&quot;&gt;でも、一体いつ仕事するんだ&lt;/h2&gt;
-&lt;p&gt;ただ、少し仕事をしただけであっという間に１日が終わってしまいます。
-これだけの時間のなかで頭脳労働に切り替えたり、費す時間が確保するのが難しいです。&lt;/p&gt;
-
-&lt;p&gt;他の方々は、それを実践していたのですね。本当にすごい。&lt;/p&gt;
-
-&lt;h2 id=&quot;section-4&quot;&gt;独身時代からの「仕事」に対する意識変化&lt;/h2&gt;
-
-&lt;p&gt;そういった状況も手伝って、わたしの中で仕事に対する重要度が変わりました。以前から仕事は「人生の暇潰し」という、いい加減な思想を持っていましたが、もう少し具体的というか、実感がこもりました。&lt;/p&gt;
-
-&lt;p&gt;家族(家のこと)という新な柱が出現したのです。&lt;/p&gt;
-
-&lt;p&gt;独身時代の私は、仕事をして、自分のごはんを食べられていればそれは大人だし、それで完結するものと思っていました。しかし、「家族のことを考える」というテーマもあったのですね。&lt;/p&gt;
-
-&lt;p&gt;知ってはいたかもですが、自分が本当にそれをするとは、どうしても思えていなかったです。他の人はするかもしれないが、自分はしないと思っていたような。&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;自分 (人生観、生き方、知識などの内面のこと)&lt;/li&gt;
-  &lt;li&gt;仕事 (経済、社会、他者のとの交流も含めた外面のこと)&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;NEW!→&lt;/code&gt; 家族(最も小さな社会、自分と、自分と似ているが異なる他者との交流。内と外の間。皮のようなもの)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;32歳という、自分の生活ルールや環境が定まって安定しはじめた「今」になって、また新しい刺激、テーマが立ちふさがったのです。&lt;/p&gt;
-
-&lt;h2 id=&quot;section-5&quot;&gt;年代それぞれのテーマ&lt;/h2&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;10代には「社会での協調」を学び&lt;/li&gt;
-  &lt;li&gt;20代では「社会での自立」を学び&lt;/li&gt;
-  &lt;li&gt;30代でようやく「自分を見つめる」ことができる。&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;そのように思っていましたが、30代で見つめる「自分」という範囲は思ったよりも広いものでした。夫、子供。物理的に1人じゃないんですね。ああ、びっくり。&lt;/p&gt;
-
-&lt;p&gt;「自分でもある他者」のような、でもやっぱり「他者」。
-境界線がヒドく曖昧な、自分のパーソナルスペースに入っていることが当たり前の「他者」。&lt;/p&gt;
-
-&lt;p&gt;「ああ、『大人』というのは自分自身のこと以外も気にかけられる人のことなのだな。」と自分の幼なさに気付かされます。&lt;/p&gt;
-
-&lt;p&gt;それに気付くことができたのも、妊娠がいいきっかけになりました。きっと、そうでなくても気付くことはできたのでしょうが、私にとってはこのタイミングだったようです。&lt;/p&gt;
-
-&lt;p&gt;これまで同業の人とばかり交流していたので、産婦人科をはじめとする違う職業、価値観の人々の中に入って見回すのは刺激的ですね。&lt;/p&gt;
-
-&lt;h2 id=&quot;section-6&quot;&gt;近況&lt;/h2&gt;
-
-&lt;p&gt;おっと、開き直ったらとりとめのない話ばかり書いてしまいました。&lt;/p&gt;
-
-&lt;p&gt;最後は、のちの自分が楽しめるように近況を書いて終わりにします。数年後に見返して、同じテーマに対してまた全然違う印象を持っているかもしれないと思うと楽しみ。&lt;/p&gt;
-
-&lt;p&gt;最近は20週に入り、性別が分かりました。胎児のときの愛称を決めたときから漠然と思っていましたが、できたら欲しいなと思っていた性別の子でとってもうれしいです。思い通りには育たないとは思いつつも、やはり人間として自分も尊敬できるような芯のしっかりした人になって欲しいなと考えてしまいます。&lt;/p&gt;
-
-&lt;p&gt;お腹を蹴ったり動くようになり、キックゲームというのをはじめました。赤ちゃんが蹴った場所を「キック!」といいながら軽く叩き返すものです。実際に蹴りの回数が増えた感じがします。&lt;/p&gt;
-
-&lt;p&gt;そのうち、こちらからキックを求めたり、回数を指定できるようにもなるらしいので楽しみ。&lt;/p&gt;
-
-&lt;h2 id=&quot;section-7&quot;&gt;分かりあえない心地良さ&lt;/h2&gt;
-
-&lt;p&gt;言葉が通じないのが分かった上でとるコミュニケーションというのは「分かりあえない前提」があるからか、より優しくなれる気がします。&lt;/p&gt;
-
-&lt;p&gt;一方通行であり、思い込みでしかなく、ひいては傲慢さにも繋るとは思うのですが、「分かりあえるのが当たり前」と思っている状態よりは幸せかなと。微妙に一致しなかったり、分かりあえない時の感情のゆらぎが激しいですからね。とくに恋愛においては。少女漫画やステキな漫画と現実の区別がつかなくて陥りがちでした。&lt;/p&gt;
-
-&lt;p&gt;良い意味で「期待しない」のはお互いに寛容になれるのでわたしは好きです。&lt;/p&gt;
-
-&lt;p&gt;生まれてしばらくたったら「通じるのに、通じないコミュニケーション」をしていくのですよね。たぶんその時にもまた何かおもしろい発見があるのでしょう。不安でもあるけど楽しみです。&lt;/p&gt;
-
-&lt;p&gt;元気な子が生まれますように。&lt;/p&gt;
-</description>
-				<pubDate>Sun, 01 Nov 2015 07:59:50 +0900</pubDate>
-				<link>http://blog.mikiishijima.com/diary/2015/11/01/become-the-mother01/</link>
-				<guid isPermaLink="true">http://blog.mikiishijima.com/diary/2015/11/01/become-the-mother01/</guid>
 				
 				
 					<category>diary</category>

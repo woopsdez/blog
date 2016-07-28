@@ -7,6 +7,7 @@ var browserSync = require('browser-sync');
 var cp          = require('child_process');
 var minimist    = require('minimist');
 var runSequence = require('run-sequence');
+const del       = require('del')
 const imagemin  = require('gulp-imagemin');
 const pngquant  = require('imagemin-pngquant');
 
@@ -24,7 +25,7 @@ if (option['e'] === 'production') {
     config = {option:'--config' ,yml: '_config.yml,_config_dev.yml'};
 };
 
-gulp.task('jekyll-build', function (done) {
+gulp.task('jekyll-build', ['image'], function (done) {
     console.log(option['e']);
     console.log(config.option, config.yml);
     browserSync.notify(messages.jekyllBuild);
@@ -76,7 +77,11 @@ gulp.task('browser-sync', ['sass', 'jekyll-build'], function() {
 /**
  * Resize & Optimize Image
  */ 
-gulp.task('image', function() {
+gulp.task('del-image', function() {
+    del(['_site/content/']);
+});
+
+gulp.task('image',['del-image'], function() {
     gulp.src('content/images/**/**/**/*.{jpg,png}', {base:'content/images/'})
     .pipe(imageResize({width : 1000}))
     .pipe(imagemin({
@@ -111,7 +116,7 @@ gulp.task('watch', function () {
  * Default task, running just `gulp` will compile the sass,
  * compile the jekyll site, launch BrowserSync & watch files.
  */ 
-gulp.task('default', ['browser-sync', 'watch', 'image']);
+gulp.task('default', ['browser-sync', 'watch']);
 
 // 本番環境にのみ残しておきたい記事があるため、完全同期のhookではなく、ファイル追記のみ行うglynnでデプロイします。
 // gulp.task('deploy', function (callback) {
