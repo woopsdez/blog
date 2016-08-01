@@ -1165,13 +1165,6 @@ nav {
       margin: 40px 0 30px;
       font-weight: 600;
       color: #1d1d1d; }
-    .posts article section ul, .posts article section ol {
-      margin: 30px 0 0 6%;
-      padding: 0;
-      line-height: 28px; }
-      .posts article section ul li, .posts article section ol li {
-        padding: 0 0 0 3%;
-        margin: 10px 0; }
     .posts article section ul li {
       list-style: square; }
     .posts article section .container {

@@ -5,13 +5,15 @@
 		<description>趣味のゲームやプログラミング、レビューなど個人イシジマミキにより近しい内容を書いています。普遍的なデザインの話はThe Marsknowledge Blogで。</description>
 		<link> /</link>
 		<atom:link href=" /feed.xml" rel="self" type="application/rss+xml" />
-		<pubDate>Tue, 02 Aug 2016 08:10:38 +0900</pubDate>
-		<lastBuildDate>Tue, 02 Aug 2016 08:10:38 +0900</lastBuildDate>
+		<pubDate>Tue, 02 Aug 2016 08:36:12 +0900</pubDate>
+		<lastBuildDate>Tue, 02 Aug 2016 08:36:12 +0900</lastBuildDate>
 		<generator>Jekyll v3.1.2</generator>
 		
 			<item>
-				<title>赤ちゃんの授乳、おむつ替えを記録する育児アプリ 育ログ</title>
-				<description>&lt;p&gt;出産当初、Facebookなどでいろんなアプリを教えてもらいましたがけっきょく育ログに落ち着きました。どこが良かったのかを5ヶ月たった今、レビュー。ちゃあんと使っている感想なので参考になると思います。&lt;/p&gt;
+				<title>ママデザイナーが育児アプリをレビューしたら、育ログが圧勝だった件</title>
+				<description>&lt;p&gt;出産当初、Facebookなどでいろんなアプリを教えてもらいましたがけっきょく育ログに落ち着きました。どこが良かったのかを5ヶ月たった今、レビュー。ちゃんと使っているうえでの感想なので参考になると思います。&lt;/p&gt;
+
+&lt;p&gt;断っておくと、お金もなにも貰っていませんよ!&lt;/p&gt;
 
 &lt;!--more--&gt;
 
@@ -32,11 +34,51 @@
   &lt;li&gt;&lt;a href=&quot;https://itunes.apple.com/us/app/sprout-baby-tracker/id551448817?mt=8&quot;&gt;Sprout Baby Tracker&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;自分がこんなに見た目を重視しているとは思いませんでした。&lt;/p&gt;
+&lt;p&gt;自分がこんなに見た目を重視しているとは思いませんでした。他のふたつは起動してから、「思ってたのと違う」とスグにアンインストールしてしまったのです。&lt;/p&gt;
 
-&lt;h2 id=&quot;section-2&quot;&gt;赤ちゃんの生活サイクルを見える化して、先回りしたい。&lt;/h2&gt;
+&lt;p&gt;並べてみてみると、その理由も一目瞭然。&lt;strong&gt;育ログはやることがシンプルそう&lt;/strong&gt;なのです。&lt;/p&gt;
 
-&lt;p&gt;「育児アプリ」というと、主語が大きすぎます。そりゃ育児っていうと下手したら子どもが独立するまでも範疇に含められるので当たり前ですね。&lt;/p&gt;
+&lt;h2 id=&quot;section-2&quot;&gt;多機能なのに、シンプルな見た目を実現&lt;/h2&gt;
+
+&lt;p&gt;赤ちゃんの行動記録をするのには、たくさんの機能が必要です。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;おむつ替え
+    &lt;ul&gt;
+      &lt;li&gt;おしっこ&lt;/li&gt;
+      &lt;li&gt;うんち
+        &lt;ul&gt;
+          &lt;li&gt;うんちの状態&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;授乳
+    &lt;ul&gt;
+      &lt;li&gt;左右&lt;/li&gt;
+      &lt;li&gt;またはどちらか&lt;/li&gt;
+      &lt;li&gt;授乳に要した時間&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;睡眠時間
+    &lt;ul&gt;
+      &lt;li&gt;寝た時間&lt;/li&gt;
+      &lt;li&gt;起きた時間&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;その他に散歩や離乳食、予防接種、上記以外に与えたのみものなんかの記録もしたいですね。&lt;/p&gt;
+
+&lt;p&gt;出産してすぐは、赤ちゃんのお世話のイメージなんてつきません。&lt;/p&gt;
+
+&lt;p&gt;それなのに行動を記録しようとすると、実際のアプリと脳内イメージに齟齬があります。&lt;/p&gt;
+
+&lt;p&gt;まだ、お世話のフローも出来ていないのに行動記録をしようとすると&lt;/p&gt;
+
+&lt;h2 id=&quot;section-3&quot;&gt;赤ちゃんロギングで生活にゆとりを&lt;/h2&gt;
+
+&lt;p&gt;「育児アプリ」というと、主語が大きすぎます。そりゃ育児っていうと&lt;strong&gt;下手したら子どもが独立するまでも範疇に含められるので当たり前&lt;/strong&gt;ですね。&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;授乳だけ記録するもの&lt;/li&gt;
@@ -45,7 +87,10 @@
   &lt;li&gt;育児情報を得るもの&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;これだけ用途があります。検索語句を変えるだけでも、見つけるアプリの振れ幅が大きいので、今回は&lt;code class=&quot;highlighter-rouge&quot;&gt;授乳、おむつ替え、睡眠サイクル&lt;/code&gt;「」&lt;/p&gt;
+&lt;p&gt;一歳になるまでに限定しても用途がこれだけあります。&lt;/p&gt;
+
+&lt;p&gt;検索語句を変えるだけでも、見つけるアプリの振れ幅が大きいので、今回は&lt;strong&gt;授乳、おむつ替え、睡眠サイクルを簡単に記録でき、グラフなどで見やすくなっている&lt;/strong&gt;アプリに限定し、そのジャンルを「赤ちゃんログ」と命名します。&lt;/p&gt;
+
 </description>
 				<pubDate>Tue, 02 Aug 2016 00:00:00 +0900</pubDate>
 				<link> /review/2016/08/02/babycareapp-ikulog/</link>
