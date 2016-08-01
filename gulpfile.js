@@ -25,7 +25,7 @@ if (option['e'] === 'production') {
     config = {option:'--config' ,yml: '_config.yml,_config_dev.yml'};
 };
 
-gulp.task('jekyll-build', ['image'], function (done) {
+gulp.task('jekyll-build', function (done) {
     console.log(option['e']);
     console.log(config.option, config.yml);
     browserSync.notify(messages.jekyllBuild);
@@ -38,29 +38,6 @@ gulp.task('jekyll-build', ['image'], function (done) {
  */
 gulp.task('jekyll-rebuild', ['jekyll-build'], function () {
     browserSync.reload();
-});
-
-/**
- * Deploy the Jekyll Site 現在使われておりません
- */
-
-// parse command line argument
-var argv = minimist(process.argv.slice(2));
-
-gulp.task('add', function() {
-    return gulp.src('.')
-        .pipe(git.add());
-});
-
-gulp.task('commit', function() {
-    return gulp.src('.')
-        .pipe(git.commit(argv['m']));
-});
-
-gulp.task('push', function() {
-    return git.push('origin', 'master', function (err) {
-        if (err) throw err;
-    });
 });
 
 /**

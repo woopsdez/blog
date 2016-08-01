@@ -3,11 +3,58 @@
 	<channel>
 		<title>Miki Ishijima Blog</title>
 		<description>趣味のゲームやプログラミング、レビューなど個人イシジマミキにより近しい内容を書いています。普遍的なデザインの話はThe Marsknowledge Blogで。</description>
-		<link>http://blog.mikiishijima.com/</link>
-		<atom:link href="http://blog.mikiishijima.com/feed.xml" rel="self" type="application/rss+xml" />
-		<pubDate>Fri, 29 Jul 2016 05:42:12 +0900</pubDate>
-		<lastBuildDate>Fri, 29 Jul 2016 05:42:12 +0900</lastBuildDate>
+		<link> /</link>
+		<atom:link href=" /feed.xml" rel="self" type="application/rss+xml" />
+		<pubDate>Tue, 02 Aug 2016 08:10:38 +0900</pubDate>
+		<lastBuildDate>Tue, 02 Aug 2016 08:10:38 +0900</lastBuildDate>
 		<generator>Jekyll v3.1.2</generator>
+		
+			<item>
+				<title>赤ちゃんの授乳、おむつ替えを記録する育児アプリ 育ログ</title>
+				<description>&lt;p&gt;出産当初、Facebookなどでいろんなアプリを教えてもらいましたがけっきょく育ログに落ち着きました。どこが良かったのかを5ヶ月たった今、レビュー。ちゃあんと使っている感想なので参考になると思います。&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;h2 id=&quot;section&quot;&gt;なりよりも見た目が良い&lt;/h2&gt;
+
+&lt;div class=&quot;container&quot;&gt;
+	&lt;a href=&quot;&quot;&gt;&lt;img src=&quot;/content/images/2016/08/babycareapp-ikulog/homescreen.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;
+	&lt;div class=&quot;reference&quot;&gt;
+		&lt;strong&gt;主要画面の比較&lt;/strong&gt;
+		&lt;p&gt;&lt;/p&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;section-1&quot;&gt;比較対象&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://itunes.apple.com/jp/app/yurogu-wm-shirudekantan-yu/id833305402&quot;&gt;育ログ&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://itunes.apple.com/jp/app/yu-ernoto-shou-rutaima-shui/id779656557?mt=8&amp;amp;ign-mpt=uo%3D4&quot;&gt;育児ノート&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://itunes.apple.com/us/app/sprout-baby-tracker/id551448817?mt=8&quot;&gt;Sprout Baby Tracker&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;自分がこんなに見た目を重視しているとは思いませんでした。&lt;/p&gt;
+
+&lt;h2 id=&quot;section-2&quot;&gt;赤ちゃんの生活サイクルを見える化して、先回りしたい。&lt;/h2&gt;
+
+&lt;p&gt;「育児アプリ」というと、主語が大きすぎます。そりゃ育児っていうと下手したら子どもが独立するまでも範疇に含められるので当たり前ですね。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;授乳だけ記録するもの&lt;/li&gt;
+  &lt;li&gt;寝かしつけに使うもの&lt;/li&gt;
+  &lt;li&gt;思い出作りに使うもの&lt;/li&gt;
+  &lt;li&gt;育児情報を得るもの&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;これだけ用途があります。検索語句を変えるだけでも、見つけるアプリの振れ幅が大きいので、今回は&lt;code class=&quot;highlighter-rouge&quot;&gt;授乳、おむつ替え、睡眠サイクル&lt;/code&gt;「」&lt;/p&gt;
+</description>
+				<pubDate>Tue, 02 Aug 2016 00:00:00 +0900</pubDate>
+				<link> /review/2016/08/02/babycareapp-ikulog/</link>
+				<guid isPermaLink="true"> /review/2016/08/02/babycareapp-ikulog/</guid>
+				
+				
+					<category>review</category>
+				
+			</item>
 		
 			<item>
 				<title>Twitterの画像を原寸表示するChrome拡張をリリースしました。</title>
@@ -141,8 +188,8 @@
 &lt;p&gt;TwitterやFacebookなどでメッセージいただいても良いのですが、自分で登録するのも面倒なのでこちらに書いてもらえた方がありがたいです。&lt;/p&gt;
 </description>
 				<pubDate>Tue, 26 Jul 2016 00:00:00 +0900</pubDate>
-				<link>http://blog.mikiishijima.com/works/2016/07/26/launch-toi-chromeextention/</link>
-				<guid isPermaLink="true">http://blog.mikiishijima.com/works/2016/07/26/launch-toi-chromeextention/</guid>
+				<link> /works/2016/07/26/launch-toi-chromeextention/</link>
+				<guid isPermaLink="true"> /works/2016/07/26/launch-toi-chromeextention/</guid>
 				
 				
 					<category>works</category>
@@ -200,8 +247,8 @@
 &lt;p&gt;結婚ってスゴくね!?&lt;/p&gt;
 </description>
 				<pubDate>Sun, 24 Jul 2016 00:00:00 +0900</pubDate>
-				<link>http://blog.mikiishijima.com/diary/2016/07/24/in-marriage-we-fill-those-missing/</link>
-				<guid isPermaLink="true">http://blog.mikiishijima.com/diary/2016/07/24/in-marriage-we-fill-those-missing/</guid>
+				<link> /diary/2016/07/24/in-marriage-we-fill-those-missing/</link>
+				<guid isPermaLink="true"> /diary/2016/07/24/in-marriage-we-fill-those-missing/</guid>
 				
 				
 					<category>diary</category>
@@ -499,8 +546,8 @@
 &lt;p&gt;妊娠糖尿病と診断されても、悲観的にならず楽しく食事をしていきましょう! 何かの役に立てば幸いです。&lt;/p&gt;
 </description>
 				<pubDate>Thu, 02 Jun 2016 00:00:00 +0900</pubDate>
-				<link>http://blog.mikiishijima.com/diary/2016/06/02/lowcarb-matanitylife-01/</link>
-				<guid isPermaLink="true">http://blog.mikiishijima.com/diary/2016/06/02/lowcarb-matanitylife-01/</guid>
+				<link> /diary/2016/06/02/lowcarb-matanitylife-01/</link>
+				<guid isPermaLink="true"> /diary/2016/06/02/lowcarb-matanitylife-01/</guid>
 				
 				
 					<category>diary</category>
@@ -644,8 +691,8 @@
 &lt;p&gt;とにかく今は楽しく、幸せにあふれている。そんなコトを未来の自分のために記録しておきます。ではでは。&lt;/p&gt;
 </description>
 				<pubDate>Fri, 06 May 2016 00:00:00 +0900</pubDate>
-				<link>http://blog.mikiishijima.com/diary/2016/05/06/gavebirth/</link>
-				<guid isPermaLink="true">http://blog.mikiishijima.com/diary/2016/05/06/gavebirth/</guid>
+				<link> /diary/2016/05/06/gavebirth/</link>
+				<guid isPermaLink="true"> /diary/2016/05/06/gavebirth/</guid>
 				
 				
 					<category>diary</category>
@@ -702,8 +749,8 @@
 &lt;p&gt;まわりにプライベートワークを勧めるのであれば、まずは自分がプライベートワークをして、得している様を見せていきましょう。&lt;/p&gt;
 </description>
 				<pubDate>Tue, 03 May 2016 00:00:00 +0900</pubDate>
-				<link>http://blog.mikiishijima.com/private-works/2016/05/03/the-importance-of-the-private-work/</link>
-				<guid isPermaLink="true">http://blog.mikiishijima.com/private-works/2016/05/03/the-importance-of-the-private-work/</guid>
+				<link> /private-works/2016/05/03/the-importance-of-the-private-work/</link>
+				<guid isPermaLink="true"> /private-works/2016/05/03/the-importance-of-the-private-work/</guid>
 				
 				
 					<category>private-works</category>
@@ -799,8 +846,8 @@
 &lt;p&gt;これからも、このブログで答えのないテーマや気付きを書いていきたいと思います。あなたのブログは、どうですか？&lt;/p&gt;
 </description>
 				<pubDate>Tue, 03 May 2016 00:00:00 +0900</pubDate>
-				<link>http://blog.mikiishijima.com/private-works/2016/05/03/myblogpolicy/</link>
-				<guid isPermaLink="true">http://blog.mikiishijima.com/private-works/2016/05/03/myblogpolicy/</guid>
+				<link> /private-works/2016/05/03/myblogpolicy/</link>
+				<guid isPermaLink="true"> /private-works/2016/05/03/myblogpolicy/</guid>
 				
 				
 					<category>private-works</category>
@@ -944,8 +991,8 @@
 &lt;p&gt;ぜひチェックしてくださいな。&lt;/p&gt;
 </description>
 				<pubDate>Mon, 02 May 2016 00:00:00 +0900</pubDate>
-				<link>http://blog.mikiishijima.com/private-works/2016/05/02/undefinde-variables/</link>
-				<guid isPermaLink="true">http://blog.mikiishijima.com/private-works/2016/05/02/undefinde-variables/</guid>
+				<link> /private-works/2016/05/02/undefinde-variables/</link>
+				<guid isPermaLink="true"> /private-works/2016/05/02/undefinde-variables/</guid>
 				
 				
 					<category>private-works</category>
@@ -1033,8 +1080,8 @@
 &lt;p&gt;&lt;a href=&quot;https://github.com/woopsdez/floaty-color-clock/issues/&quot;&gt;https://github.com/woopsdez/floaty-color-clock/issues/&lt;/a&gt;&lt;/p&gt;
 </description>
 				<pubDate>Sun, 01 May 2016 00:00:00 +0900</pubDate>
-				<link>http://blog.mikiishijima.com/private-works/2016/05/01/floatycolorclock/</link>
-				<guid isPermaLink="true">http://blog.mikiishijima.com/private-works/2016/05/01/floatycolorclock/</guid>
+				<link> /private-works/2016/05/01/floatycolorclock/</link>
+				<guid isPermaLink="true"> /private-works/2016/05/01/floatycolorclock/</guid>
 				
 				
 					<category>private-works</category>
@@ -1140,105 +1187,11 @@ mv /yourdomain.com/blog/htaccess.txt yourdomain.com/blog/.htaccess;
 &lt;p&gt;来年にはtumblrに移行してるかもしれませんが、ひとまずこれでよろしくお願いします。&lt;/p&gt;
 </description>
 				<pubDate>Tue, 05 Apr 2016 00:00:00 +0900</pubDate>
-				<link>http://blog.mikiishijima.com/private-works/2016/04/05/hello-jekyll/</link>
-				<guid isPermaLink="true">http://blog.mikiishijima.com/private-works/2016/04/05/hello-jekyll/</guid>
+				<link> /private-works/2016/04/05/hello-jekyll/</link>
+				<guid isPermaLink="true"> /private-works/2016/04/05/hello-jekyll/</guid>
 				
 				
 					<category>private-works</category>
-				
-			</item>
-		
-			<item>
-				<title>帰ってから、甘いものが食べたくなってもいいようにと思ったのだ。</title>
-				<description>&lt;p&gt;&lt;a rel=&quot;nofollow&quot; href=&quot;http://www.amazon.co.jp/gp/product/4167753693/ref=as_li_ss_il?ie=UTF8&amp;amp;camp=247&amp;amp;creative=7399&amp;amp;creativeASIN=4167753693&amp;amp;linkCode=as2&amp;amp;tag=fastfargroove-22&quot;&gt;&lt;img border=&quot;0&quot; src=&quot;http://ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;amp;ASIN=4167753693&amp;amp;Format=_SL250_&amp;amp;ID=AsinImage&amp;amp;MarketPlace=JP&amp;amp;ServiceVersion=20070822&amp;amp;WS=1&amp;amp;tag=fastfargroove-22&quot; /&gt;&lt;/a&gt;&lt;img src=&quot;http://ir-jp.amazon-adsystem.com/e/ir?t=fastfargroove-22&amp;amp;l=as2&amp;amp;o=9&amp;amp;a=4167753693&quot; width=&quot;1&quot; height=&quot;1&quot; border=&quot;0&quot; alt=&quot;&quot; style=&quot;border:none !important; margin:0px !important;&quot; /&gt; &lt;a rel=&quot;nofollow&quot; href=&quot;http://www.amazon.co.jp/gp/product/B0006M197K/ref=as_li_ss_il?ie=UTF8&amp;amp;camp=247&amp;amp;creative=7399&amp;amp;creativeASIN=B0006M197K&amp;amp;linkCode=as2&amp;amp;tag=fastfargroove-22&quot;&gt;&lt;img border=&quot;0&quot; src=&quot;http://ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;amp;ASIN=B0006M197K&amp;amp;Format=_SL250_&amp;amp;ID=AsinImage&amp;amp;MarketPlace=JP&amp;amp;ServiceVersion=20070822&amp;amp;WS=1&amp;amp;tag=fastfargroove-22&quot; /&gt;&lt;/a&gt;&lt;img src=&quot;http://ir-jp.amazon-adsystem.com/e/ir?t=fastfargroove-22&amp;amp;l=as2&amp;amp;o=9&amp;amp;a=B0006M197K&quot; width=&quot;1&quot; height=&quot;1&quot; border=&quot;0&quot; alt=&quot;&quot; style=&quot;border:none !important; margin:0px !important;&quot; /&gt;
-&lt;small&gt;タイトルの元ネタたち&lt;/small&gt;&lt;/p&gt;
-
-&lt;p&gt;このエントリは&lt;a href=&quot;http://www.adventar.org/calendars/740&quot;&gt;糖質制限 Advent Calendar&lt;/a&gt;の 4日目のエントリです。前日は Fried_GarlicHKTさんの「&lt;a href=&quot;http://hokkun-k.tumblr.com/post/134462376558/diet&quot;&gt;ダイエットにおける正反対な主張
-&lt;/a&gt;」でした。&lt;/p&gt;
-
-&lt;h2 id=&quot;section&quot;&gt;妊娠とわたしと糖質制限&lt;/h2&gt;
-
-&lt;p&gt;低糖質ダイエットはカロリー計算とは無縁なので、肉、魚、野菜、乳製品などは食べ放題です。要は炭水化物の摂取を減らせばいいのですね。&lt;/p&gt;
-
-&lt;p&gt;&lt;small&gt;※わたしの場合はダイエット目的ではなく、血糖値コントロールのために実践しています。妊娠糖尿病というヤツです。&lt;/small&gt;&lt;/p&gt;
-
-&lt;p&gt;結果的に、赤ちゃん分の体重微増、顔肉すっきり(若干)してきたような。&lt;/p&gt;
-
-&lt;h2 id=&quot;section-1&quot;&gt;それまでのコンビニでの買い物&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;野菜生活 (200ml/糖質13.3g)&lt;/li&gt;
-  &lt;li&gt;飲むヨーグルト プルーンFe (190g中/炭水化物：23.2g)&lt;/li&gt;
-  &lt;li&gt;午後の紅茶 ミルクティー (100ml/炭水化物7.8g)&lt;/li&gt;
-  &lt;li&gt;コンビニ弁当(ハンバーグ or パスタ or サンドイッチ)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;計算が苦手なのですが、ざっくり計算して200g近い糖質を摂取していそうな感じです。これとは別にアルコールや夕食、そして間食で甘いもの。飲み物はジュースときているのですから、そりゃあかなりの糖質を1日に摂取していたのでしょう。&lt;/p&gt;
-
-&lt;p&gt;上記のような「食事とも言えない何か」から、血糖値コントロール訓練の副産物で自炊率 70%(旦那談)になり、妊娠糖尿病発覚から約3ヶ月。少しずつ慣れてきたので「糖質制限初心者」くらいにはなったのではないでしょうか。&lt;/p&gt;
-
-&lt;h2 id=&quot;section-2&quot;&gt;甘いものが欲しい…!&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src=&quot;/content/content/images/2015/12/lowcarb-01.png&quot; alt=&quot;はじめの一歩 42巻より&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;はじめの一歩 42巻より&lt;/p&gt;
-
-&lt;p&gt;減量とは違うので、ステーキなどはバリバリ食べまくるのだけれど、なによりも「甘いもの」。これが食べたくてたまらない!!!&lt;/p&gt;
-
-&lt;p&gt;お茶がわりにジュースを飲むような食生活をしていた自分にとって、&lt;code class=&quot;highlighter-rouge&quot;&gt;主食が食べられないことよりも、甘いものが食べられないのがツラい&lt;/code&gt;と気付きました。&lt;/p&gt;
-
-&lt;p&gt;たいして意識していなかったけど、「甘いもの」は主食以上にわたしの食生活を埋めつくしていたんですね…。&lt;/p&gt;
-
-&lt;h3 id=&quot;section-3&quot;&gt;摂取量を決めて適度なガス抜きを!&lt;/h3&gt;
-
-&lt;p&gt;そんな時にネットで知ったのがナチュラルローソンの存在。低糖質のおやつがたくさんあるんですってよ奥さん!&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://natural.lawson.co.jp/index.html&quot;&gt;&lt;img src=&quot;/content/images/2015/12/lowcarb-02.png&quot; alt=&quot;ナチュラルローソン&quot; /&gt;&lt;/a&gt;
-&lt;small&gt;堕落型糖質制限者の救世主 ナチュラルローソン&lt;/small&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://otokono-toushitsuseigen.com/archives/407&quot;&gt;半年で15キロヤセたアラサー男のストレスフリー糖質制限&lt;/a&gt;というブログを見つけて知り、喜び勇んで最寄りのナチュローへダッシュ。紹介されている商品の一部しか揃っていませんでしたが、それでもかなり私の甘いものへの欲求を満たしてくれました。&lt;/p&gt;
-
-&lt;h2 id=&quot;section-4&quot;&gt;リピート確定、満足度の高い低糖質スイーツ&lt;/h2&gt;
-
-&lt;h3 id=&quot;section-5&quot;&gt;グリコ “カロリーコントロールアイス” チョコバー ～ビター～&lt;/h3&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://kenko.lawson.jp/recommend/&quot;&gt;&lt;img src=&quot;/content/images/2015/12/lowcarb-03.jpg&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;チョコ感たっぷり&lt;/li&gt;
-  &lt;li&gt;甘みがしっかり感じられる&lt;/li&gt;
-  &lt;li&gt;量がちょうど良い&lt;/li&gt;
-  &lt;li&gt;糖質が普通のラクトアイスの半分! &lt;small&gt;※ 日本食品標準成分表2010ラクトアイス(普通脂肪)と比較&lt;/small&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;食べたあとの血糖値も平均値をキープできる!!! もっ最高です!&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/content/images/2015/12/lowcarb-05.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;アイスって甘味も感じやすいし、特別感もあって良いガス抜きになりますね。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/content/images/2015/12/p4.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;ナチュラルローソンには、パンケーキやクリームサンドなどでも低糖質のものがたくさんあります。すでにたくさんのレビューがあるので、ここでの紹介は割愛いたしますが、ダイエットとして糖質制限する方もぜひ試してください。&lt;/p&gt;
-
-&lt;h2 id=&quot;section-6&quot;&gt;クリスマスケーキもあるよ&lt;/h2&gt;
-&lt;p&gt;恋人や伴侶とのクリスマスにケーキがないのは絵になりませんね!!!&lt;/p&gt;
-
-&lt;p&gt;え？ケーキはあるけど彼女がいない？うわなにするやめry&lt;/p&gt;
-
-&lt;p&gt;かといって、相手にも我慢を強いるのも楽しさ半減です。そんなアナタにおすすめなのがローソンの低糖質ケーキ!!!&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://www.lawson.co.jp/recommend/xmas2015/img/xmascake_l19.jpg&quot; alt=&quot;ブランのガトーショコラ 5号&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;5号という4-8人向けのケーキサイズで糖質が35.4gというのは非常にありがたいものです。&lt;/p&gt;
-
-&lt;p&gt;この冬はナチュラルローソンとともに気軽に糖質制限をはじめてみては？&lt;/p&gt;
-</description>
-				<pubDate>Fri, 04 Dec 2015 07:59:17 +0900</pubDate>
-				<link>http://blog.mikiishijima.com/diary/2015/12/04/started-lowcarb-life/</link>
-				<guid isPermaLink="true">http://blog.mikiishijima.com/diary/2015/12/04/started-lowcarb-life/</guid>
-				
-				
-					<category>diary</category>
 				
 			</item>
 		

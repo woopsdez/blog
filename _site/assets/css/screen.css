@@ -1108,6 +1108,8 @@ nav {
   clear: both; }
   .posts article.featured header {
     display: none; }
+  .posts article img {
+    max-height: 600px; }
   .posts article img[alt="featureimage"] {
     display: none; }
   .posts article iframe {
