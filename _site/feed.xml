@@ -5,8 +5,8 @@
 		<description>趣味のゲームやプログラミング、レビューなど個人イシジマミキにより近しい内容を書いています。普遍的なデザインの話はThe Marsknowledge Blogで。</description>
 		<link> /</link>
 		<atom:link href=" /feed.xml" rel="self" type="application/rss+xml" />
-		<pubDate>Tue, 02 Aug 2016 08:36:12 +0900</pubDate>
-		<lastBuildDate>Tue, 02 Aug 2016 08:36:12 +0900</lastBuildDate>
+		<pubDate>Tue, 02 Aug 2016 11:20:23 +0900</pubDate>
+		<lastBuildDate>Tue, 02 Aug 2016 11:20:23 +0900</lastBuildDate>
 		<generator>Jekyll v3.1.2</generator>
 		
 			<item>
@@ -70,15 +70,67 @@
 
 &lt;p&gt;その他に散歩や離乳食、予防接種、上記以外に与えたのみものなんかの記録もしたいですね。&lt;/p&gt;
 
-&lt;p&gt;出産してすぐは、赤ちゃんのお世話のイメージなんてつきません。&lt;/p&gt;
+&lt;p&gt;実はこの3つ、どのアプリも階層型をベースにしています。&lt;/p&gt;
 
-&lt;p&gt;それなのに行動を記録しようとすると、実際のアプリと脳内イメージに齟齬があります。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/content/images/2016/08/babycareapp-ikulog/nav-01.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;まだ、お世話のフローも出来ていないのに行動記録をしようとすると&lt;/p&gt;
+&lt;p&gt;育ログがスゴいと思うのは、テーブルビューを使わずに、タイムラインで表現したところ。&lt;/p&gt;
 
-&lt;h2 id=&quot;section-3&quot;&gt;赤ちゃんロギングで生活にゆとりを&lt;/h2&gt;
+&lt;div class=&quot;container&quot;&gt;
+	&lt;a href=&quot;&quot;&gt;&lt;img src=&quot;/content/images/2016/08/babycareapp-ikulog/homescreen-hotspot.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;
+	&lt;div class=&quot;reference&quot;&gt;
+		&lt;strong&gt;水色部分が主要ナビゲーション&lt;/strong&gt;
+		&lt;p&gt;&lt;/p&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
 
-&lt;p&gt;「育児アプリ」というと、主語が大きすぎます。そりゃ育児っていうと&lt;strong&gt;下手したら子どもが独立するまでも範疇に含められるので当たり前&lt;/strong&gt;ですね。&lt;/p&gt;
+&lt;p&gt;画面を占める範囲がとっても少ないことが分かりますね。タイムラインにアイコンを配置するだけで良いので、&lt;strong&gt;UIデザインに欠かせない要素、「直感的な操作」が実現できている&lt;/strong&gt;と感じました。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/content/images/2016/08/babycareapp-ikulog/uiflow.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;UIflowで見るとこんな感じ。工程も削減できているので、はじめてでもベテランでも使いやすくなっています。ユーザビリティ、5つの原則のひとつ&lt;strong&gt;効率性が他のアプリよりも優れているように思えます&lt;/strong&gt;。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/content/images/2016/08/babycareapp-ikulog/movie.gif&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;操作画面を見るとシンプルさが良く分かります。&lt;/p&gt;
+
+&lt;h2 id=&quot;section-3&quot;&gt;リクエスト&lt;/h2&gt;
+
+&lt;h3 id=&quot;section-4&quot;&gt;タイムラインがもっと広いといいな&lt;/h3&gt;
+
+&lt;p&gt;欲を言うと、もう少しタイムラインを広く見られるとiPhone4などの小さめ端末ではありがたいです。
+&lt;img src=&quot;/content/images/2016/08/babycareapp-ikulog/redesign.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;上記は子どもコントローラーを削除してタイムラインの高さを確保しています。&lt;/p&gt;
+
+&lt;p&gt;兄弟の管理は、下部のタブバーのいずれかといれかえるカタチではいかがでしょう。わたしはカレンダーや健康情報はそれほど活用していないので、影響が未知数ですが…。&lt;/p&gt;
+
+&lt;h3 id=&quot;section-5&quot;&gt;データをクラウド化して欲しい…!&lt;/h3&gt;
+
+&lt;p&gt;アプリは、データをデバイスに保持します。
+旦那さんと共有できないのがツラい。
+バックアップと復元を小まめにすれば擬似的に実現できるけど、煩雑すぎるので採用はしません。&lt;/p&gt;
+
+&lt;p&gt;データ蓄積がモノを言うアプリは、いろんなデバイスでそのデータを扱えるようになっていると嬉しいかなと。&lt;/p&gt;
+
+&lt;h2 id=&quot;section-6&quot;&gt;なぜログするのか&lt;/h2&gt;
+
+&lt;p&gt;今さらですが、いちおう前提条件を共有しておくと、赤ちゃんが産まれてスグは、なんで泣いているか分かりません。それが命にかかわるか、たいしたことないのかもです。&lt;/p&gt;
+
+&lt;p&gt;ですので、赤ちゃんの1日のスケジュールを把握することで予測をつける必要があるのです。&lt;/p&gt;
+
+&lt;p&gt;それができると、数ヶ月経つころには、眠くて泣いているのか、お腹が空いているのかなど目星がつきやすくなるので、両親の計画もたてやすくなります。&lt;/p&gt;
+
+&lt;h2 id=&quot;section-7&quot;&gt;選択肢はそれほど多くない&lt;/h2&gt;
+
+&lt;p&gt;「育児アプリ」でくくれば数は多いものの、実際のシーンと照らしあわせるとまだまだ数は少ない印象です。
+&lt;strong&gt;下手したら子どもが独立するまでも範疇に含められるので当たり前&lt;/strong&gt;ですね。&lt;/p&gt;
+
+&lt;p&gt;検索語句をどうしたらいいか迷いました。語句を変えるだけでも、見つけるアプリの振れ幅が大きいです。「育児日記」というものに該当するのですが、日記アプリがノイズになります。&lt;/p&gt;
+
+&lt;p&gt;「育児アプリ」はざっくりしすぎていて、おすすめアプリ系の記事はまったく役に立たなかったです。本当におすすめしているのかと小一時間。そもそも、どのくらい使ったうえでレビューするのですかね。ちょっと疑問。&lt;/p&gt;
+
+&lt;p&gt;一歳になるまでに限定しても用途がこれだけあります。&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;授乳だけ記録するもの&lt;/li&gt;
@@ -87,10 +139,13 @@
   &lt;li&gt;育児情報を得るもの&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;一歳になるまでに限定しても用途がこれだけあります。&lt;/p&gt;
+&lt;p&gt;育児関連のITサービスはこれからもっと増えていくのではないでしょうか。&lt;/p&gt;
 
-&lt;p&gt;検索語句を変えるだけでも、見つけるアプリの振れ幅が大きいので、今回は&lt;strong&gt;授乳、おむつ替え、睡眠サイクルを簡単に記録でき、グラフなどで見やすくなっている&lt;/strong&gt;アプリに限定し、そのジャンルを「赤ちゃんログ」と命名します。&lt;/p&gt;
+&lt;p&gt;なんと、私と同じようなニーズで実際にアプリを自作された方もいらっしゃいました。スゴい! 自分も、PCからもデータ管理できる育児アプリ作ってみようかな。と思わされました。&lt;/p&gt;
 
+&lt;p&gt;最後にちょっと脱線しましたが、割とガチ目にアプリレビューをしてみました。これから、出産を控えている方の役に立てば幸いです。&lt;/p&gt;
+
+&lt;p&gt;ではでは、楽しい育児ライフを!&lt;/p&gt;
 </description>
 				<pubDate>Tue, 02 Aug 2016 00:00:00 +0900</pubDate>
 				<link> /review/2016/08/02/babycareapp-ikulog/</link>
