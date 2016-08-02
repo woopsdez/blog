@@ -10,9 +10,11 @@ published: true
 
 出産当初、Facebookなどでいろんなアプリを教えてもらいましたがけっきょく育ログに落ち着きました。どこが良かったのかを5ヶ月たった今、レビュー。ちゃんと使っているうえでの感想なので参考になると思います。
 
+<!--more-->
+
 断っておくと、お金もなにも貰っていませんよ!
 
-<!--more-->
+[![](/content/images/2016/08/babycareapp-ikulog/btn.png)](https://itunes.apple.com/jp/app/yurogu-wm-shirudekantan-yu/id833305402?mt=8)
 
 ## なりよりも見た目が良い
 
