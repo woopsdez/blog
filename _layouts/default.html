@@ -11,11 +11,20 @@
 		<meta name="MobileOptimized" content="320" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+		<!-- facebook -->
 		<meta property="og:title" content="{{page.title}}" />
     <meta property="og:type" content="blog" />
     <meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.url }}" />
     <meta property="og:image" content="{{ site.baseurl }}{{ page.banner_image }}" />
 		<meta property="og:description" content="{% if page.excerpt %}{{page.excerpt | strip_html}}{% else %}{{site.description}}{% endif %}">
+
+		<!-- twitter -->
+	  <meta name="twitter:card" content="summary_large_image">
+	  <meta name="twitter:creator" content="@woopsdez">
+	  <meta name="twitter:site" content="@woopsdez">
+	  <meta name="twitter:title" content="{{page.title}}">
+	  <meta name="twitter:description" content="{% if page.excerpt %}{{page.excerpt | strip_html}}{% else %}{{site.description}}{% endif %}">
+	  <meta name="twitter:image" content="{{ site.baseurl }}{{ page.banner_image }}">
 
 		<link rel="alternate" type="application/rss+xml" href="{{ site.baseurl }}/feed.xml">
 		<link rel="prefetch" href="{{ site.baseurl }}">

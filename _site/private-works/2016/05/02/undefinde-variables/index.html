@@ -144,6 +144,7 @@ Qiitaに投稿しています。
 		<meta name="MobileOptimized" content="320" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+		<!-- facebook -->
 		<meta property="og:title" content="Floaty Color Clock開発で得られたこと" />
     <meta property="og:type" content="blog" />
     <meta property="og:url" content=" /private-works/2016/05/02/undefinde-variables/" />
@@ -282,6 +283,147 @@ Qiitaに投稿しています。
 
 ぜひチェックしてくださいな。
 ">
+
+		<!-- twitter -->
+	  <meta name="twitter:card" content="summary_large_image">
+	  <meta name="twitter:creator" content="@woopsdez">
+	  <meta name="twitter:site" content="@woopsdez">
+	  <meta name="twitter:title" content="Floaty Color Clock開発で得られたこと">
+	  <meta name="twitter:description" content="「クリックでふわっと動くアレやコレ」を作ってみたい。そんな思いから着手したFloaty Color Clockですが、ついでで開発しはじめた天気予報機能が難しく思わぬ方向に…。この記事は開発中の思い出話を書いていきます。
+
+Undefindの嵐
+
+7年前のPHPコード、おみくじゴハンのリファクタリング、そしてFloaty Color Clockの開発。
+
+どちらもNotice, undefindの嵐でした。わたしが良く怒られたケースはこちら。
+
+1
+2
+3
+4	if(fuga === true){
+		var hoge = fuga; // fugaがtrueじゃないとif文の中を通らない
+	}
+	var hage = hoge * 2; //するとhogeはここで初出になる
+
+
+if文の中で使ったあと、後に続く処理でしれっと変数を呼び出していると怒られるのですね。
+
+じゃあ、ちゃんとif文を経由させたり、if文を経由しなくても値が入ってるようにすれば良いのでは？と、グローバルで変数に初期値を入れておいたり、isset()やundefindチェックをしたりしています。
+
+HTML内で呼び出すこともあるので、長ったらしい文になるのは避けたいところ。
+
+1
+2
+3
+4&lt;!-- これが --&gt;
+&lt;img src="&lt;?php echo $hoge ?&gt;"&gt;
+&lt;!-- こうなってしまう --&gt;
+&lt;img src="&lt;?php if(isset($hoge)){echo $hoge} ?&gt;"&gt;
+
+
+関数内で完結させる
+プログラミングの師匠(@tai2)に、アドバイスを求めたところ下記の返答をいただきました。
+
+
+  「グローバルで変数を定義し、関数内でもやりとりさせてしまっているのをやめ、関数で完結させる。値は引数として受け渡しするといい。」
+
+
+なるほどなるほど。
+
+マインクラフト内でのLuaプログラミングでは、それができていたのに今回の開発ではしっちゃかめっちゃかになってしまっていました。
+
+自分のスキルより難しい実装が入ると、コード全体の把握がおろそかになってしまうのがわたしの悪いクセ。
+
+
+	
+	
+		右京さんの口癖
+		
+	
+
+
+ユーザー設定がある場合の初期値のやりくりが苦手
+「二回目に処理するとき、一回目に保存しておいた値があるならそちらを利用する。」というのがうまく書けません。
+
+1
+2
+3
+4var color = 'white'; // 初期値
+if(user.setColor !== undefind){ //ユーザーが設定した値があるかどうか
+	color = user.setColor; //あれば、初期値として扱う
+}
+
+
+こんな感じで書けばいいのですよね。いまもですが、分岐の流れ、今はどこの処理に辿りついたかを理解するのに時間がかかります。
+
+
+	
+	
+		映画のようにはなかなかいかない
+		
+	
+
+
+
+
+時刻に合わせて回転する画像
+他の方から見れば簡単なことですが、算数が苦手なわたしは「よくこの実装を思いつけたな」と有頂天になっています。
+
+小学校で習った「割合の公式」の出番です!
+
+
+
+  
+    「割合」＝「比べる値」÷「もとの値」
+    「比べる値」＝「もとの値」×「割合」
+    「もとの値」＝「比べる値」÷「割合」
+  
+
+
+まず、24時間を円とみなして、現在時刻ではどの角度にいるのかを割り出す必要があります。
+
+必要な値として
+
+
+  24時間の秒数(86400s)
+  0時から現在時刻までの秒数
+  24時間を100%とした時の現在時刻の割合
+  円の角度 360°
+
+
+が分かればあとは
+
+1
+2var per = _nowsec / 86400 //割合を求める
+var nowdeg = _per * 360 // 360°中 per%は何°になるかが分かる
+
+
+という式で求められるのですね。
+
+あとはこの値を、jQueryにてcssのプロパティにセットしていけばOKです。
+
+1$('.bg image').css('transform','rotate('+ nowdeg +'deg)')
+
+
+上記がhtml内で毎秒実行される訳です。
+
+cssの値を変更するのだから、cssファイルの書き換えを行うのでは？それにはどうしたら？と疑問に思ってましたが、jsでhtml内にインラインで書いちゃえばいいのですよね。
+
+すでに知っている知識でも、いっぱいいっぱいになるとこぼれ落ちちゃう。
+
+Qiitaに投稿しています。
+
+
+
+
+  Chromeエクステンションで、どうしてもJSONPでやりとりしないといけない場合の対処 - Qiita
+  gulpでのgit操作 commit messageをコマンドライン引数で渡そう - Qiita
+  jekyllで構築したサイト、本番へアップしたらcssが適用されない場合に試しておきたいbaseurlの便利な変更の仕方。 - Qiita
+
+
+ぜひチェックしてくださいな。
+">
+	  <meta name="twitter:image" content=" /content/images/2016/05/undefinde-variables/fcc-screenshot.png">
 
 		<link rel="alternate" type="application/rss+xml" href=" /feed.xml">
 		<link rel="prefetch" href=" ">
