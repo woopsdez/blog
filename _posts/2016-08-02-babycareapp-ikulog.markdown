@@ -14,7 +14,26 @@ published: true
 
 断っておくと、お金もなにも貰っていませんよ!
 
-[![](/content/images/2016/08/babycareapp-ikulog/btn.png)](https://itunes.apple.com/jp/app/yurogu-wm-shirudekantan-yu/id833305402?mt=8)
+
+<div style="display: flex;
+  align-items: center;
+  justify-content: center;">
+	<div>
+		<img src="/content/images/2016/08/babycareapp-ikulog/appicon.png" alt="">
+	</div>
+	
+	<div>
+			<ul>
+				<li>
+					<a href="https://itunes.apple.com/jp/app/yurogu-wm-shirudekantan-yu/id833305402?mt=8">育ログ iOS版</a>
+				</li>
+				<li>
+					<a href="https://play.google.com/store/apps/details?id=jp.co.docomohealthcare.android.ikulog">育ログ Android版</a>
+				</li>
+			</ul>
+		
+	</div>
+</div>
 
 ## なりよりも見た目が良い
 
@@ -113,5 +132,9 @@ UIflowで見るとこんな感じ。工程も削減できているので、は�
 なんと、私と同じようなニーズで実際にアプリを自作された方もいらっしゃいました。スゴい! 自分も、PCからもデータ管理できる育児アプリ作ってみようかな。と思わされました。
 
 最後にちょっと脱線しましたが、割とガチ目にアプリレビューをしてみました。これから、出産を控えている方の役に立てば幸いです。
+
+本業でデザイン・トレーニングをしています。アプリ制作もしているので気軽にお問い合わせください。
+
+<a href="mailto:miki_ishijima@themarsknowledge.com">miki_ishijima@themarsknowledge.com</a>
 
 ではでは、楽しい育児ライフを!

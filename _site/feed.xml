@@ -5,8 +5,8 @@
 		<description>趣味のゲームやプログラミング、レビューなど個人イシジマミキにより近しい内容を書いています。普遍的なデザインの話はThe Marsknowledge Blogで。</description>
 		<link> /</link>
 		<atom:link href=" /feed.xml" rel="self" type="application/rss+xml" />
-		<pubDate>Tue, 02 Aug 2016 11:48:05 +0900</pubDate>
-		<lastBuildDate>Tue, 02 Aug 2016 11:48:05 +0900</lastBuildDate>
+		<pubDate>Tue, 02 Aug 2016 11:59:35 +0900</pubDate>
+		<lastBuildDate>Tue, 02 Aug 2016 11:59:35 +0900</lastBuildDate>
 		<generator>Jekyll v3.1.2</generator>
 		
 			<item>
@@ -17,7 +17,25 @@
 
 &lt;p&gt;断っておくと、お金もなにも貰っていませんよ!&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://itunes.apple.com/jp/app/yurogu-wm-shirudekantan-yu/id833305402?mt=8&quot;&gt;&lt;img src=&quot;/content/images/2016/08/babycareapp-ikulog/btn.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;div style=&quot;display: flex;
+  align-items: center;
+  justify-content: center;&quot;&gt;
+	&lt;div&gt;
+		&lt;img src=&quot;/content/images/2016/08/babycareapp-ikulog/appicon.png&quot; alt=&quot;&quot; /&gt;
+	&lt;/div&gt;
+	
+	&lt;div&gt;
+			&lt;ul&gt;
+				&lt;li&gt;
+					&lt;a href=&quot;https://itunes.apple.com/jp/app/yurogu-wm-shirudekantan-yu/id833305402?mt=8&quot;&gt;育ログ iOS版&lt;/a&gt;
+				&lt;/li&gt;
+				&lt;li&gt;
+					&lt;a href=&quot;https://play.google.com/store/apps/details?id=jp.co.docomohealthcare.android.ikulog&quot;&gt;育ログ Android版&lt;/a&gt;
+				&lt;/li&gt;
+			&lt;/ul&gt;
+		
+	&lt;/div&gt;
+&lt;/div&gt;
 
 &lt;h2 id=&quot;section&quot;&gt;なりよりも見た目が良い&lt;/h2&gt;
 
@@ -146,6 +164,10 @@
 &lt;p&gt;なんと、私と同じようなニーズで実際にアプリを自作された方もいらっしゃいました。スゴい! 自分も、PCからもデータ管理できる育児アプリ作ってみようかな。と思わされました。&lt;/p&gt;
 
 &lt;p&gt;最後にちょっと脱線しましたが、割とガチ目にアプリレビューをしてみました。これから、出産を控えている方の役に立てば幸いです。&lt;/p&gt;
+
+&lt;p&gt;本業でデザイン・トレーニングをしています。アプリ制作もしているので気軽にお問い合わせください。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;mailto:miki_ishijima@themarsknowledge.com&quot;&gt;miki_ishijima@themarsknowledge.com&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;ではでは、楽しい育児ライフを!&lt;/p&gt;
 </description>
