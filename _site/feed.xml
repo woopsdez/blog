@@ -3,11 +3,107 @@
 	<channel>
 		<title>Miki Ishijima Blog</title>
 		<description>趣味のゲームやプログラミング、レビューなど個人イシジマミキにより近しい内容を書いています。普遍的なデザインの話はThe Marsknowledge Blogで。</description>
-		<link> /</link>
-		<atom:link href=" /feed.xml" rel="self" type="application/rss+xml" />
-		<pubDate>Wed, 03 Aug 2016 23:29:40 +0900</pubDate>
-		<lastBuildDate>Wed, 03 Aug 2016 23:29:40 +0900</lastBuildDate>
+		<link>http://blog.mikiishijima.com/</link>
+		<atom:link href="http://blog.mikiishijima.com/feed.xml" rel="self" type="application/rss+xml" />
+		<pubDate>Sat, 08 Oct 2016 19:47:01 +0900</pubDate>
+		<lastBuildDate>Sat, 08 Oct 2016 19:47:01 +0900</lastBuildDate>
 		<generator>Jekyll v3.1.2</generator>
+		
+			<item>
+				<title>女性の気持ちをなだめる手続きについて</title>
+				<description>&lt;p&gt;ある男性は彼女がイライラしはじめたら、とりあえず甘いものを食べさせると言っていました。怒る理由の大半が、「疲れ」の自分にとっては適切な対処だなと思います。&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;エンジニアである旦那さんに「俺のために書いてほしい(切迫)」と言われたので、私ひとりでは制御しきれない感情を、一緒にコントロールしてもらうために役立ったことをまとめてみます。&lt;/p&gt;
+
+&lt;h1 id=&quot;section&quot;&gt;ごめんまでの経路&lt;/h1&gt;
+
+&lt;p&gt;&lt;img src=&quot;/content/images/2016/09/framework-to-appease-the-womens-feelings/01.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;わたしは、なぜ自分がこんなに怒っているか相手に共感してもらいたいと考えています。&lt;/p&gt;
+
+&lt;p&gt;ですので、何を言っても「ごめん」を連発されてしまうと、&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;旦那さんが訳も分からず謝罪をしている&lt;/li&gt;
+  &lt;li&gt;対話ができない → 共感してもらえない&lt;/li&gt;
+  &lt;li&gt;共感してもらえない自分は可哀そう&lt;/li&gt;
+  &lt;li&gt;だから、もっと怒っていいハズだ&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;となります。&lt;/p&gt;
+
+&lt;p&gt;&lt;small&gt;仕事でも面倒な上司が「『ごめん』じゃないんだよ。理由を聞いてるんだよ。」と言いますね。アレです。&lt;/small&gt;&lt;/p&gt;
+
+&lt;p&gt;それによって怒りが増幅されると、1,2時間はクールダウンにかかってしまいます。仕事にも、育児にも悪影響がでるので、早めに鎮火すべく旦那さんに以下のようにチャットに書いて欲しいとお願いしました。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/content/images/2016/09/framework-to-appease-the-womens-feelings/02.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;section-1&quot;&gt;言葉は決まっている&lt;/h1&gt;
+
+&lt;p&gt;冒頭に、旦那さんは感謝の気持ちを書いてくれています。
+とても良い案ですが、今回は効果を得られませんでした。&lt;/p&gt;
+
+&lt;p&gt;わたしが怒り頂点でチャットにグチ爆撃をしている時は、&lt;strong&gt;すでに欲しい言葉がある程度決まっている&lt;/strong&gt;のです。&lt;/p&gt;
+
+&lt;p&gt;女性特有なのか、わたしだけかは不明ですが&lt;strong&gt;「言葉にせずとも欲しいものを与えてくれる」事を期待していまうのはもはや刷り込み&lt;/strong&gt;かもしれません。&lt;/p&gt;
+
+&lt;h1 id=&quot;section-2&quot;&gt;自分からリクエストした言葉でも溜飲は下げられる&lt;/h1&gt;
+
+&lt;blockquote&gt;
+  &lt;ol&gt;
+    &lt;li&gt;まめが何をしていて、どう大変だったかを書いて&lt;/li&gt;
+    &lt;li&gt;それなのに、自分は今何しているかの現状を書いて&lt;/li&gt;
+    &lt;li&gt;そいで最後に今回のミスによってまめに生じる負担を想像して書いて&lt;/li&gt;
+    &lt;li&gt;「ごめん」なんだよー&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;チャット中で、わたしは具体的にどういう言葉を欲っしているかを書きました。ですので、次に来る言葉は新鮮味はありませんし、旦那さん本人が本当にそう思っているかは不明です。&lt;/p&gt;
+
+&lt;p&gt;しかし、その言葉をかけられるだけで、わたしの「共感してもらいたい」という目的は達成されたのです。&lt;/p&gt;
+
+&lt;p&gt;最後には、「ありがとう」と言えるまでに感情をコントロール化に置くことができました。&lt;/p&gt;
+
+&lt;h1 id=&quot;section-3&quot;&gt;女性にとって、事実は編集するもの&lt;/h1&gt;
+
+&lt;p&gt;そこまで行けば、ほぼゴールが見えてきます。&lt;/p&gt;
+
+&lt;p&gt;あとは、同じフローで言葉を返し、目をみつめて手をにぎってチューするだけです。&lt;/p&gt;
+
+&lt;p&gt;ですが、まだ火はくすぶっています。その時に油断して「マジレス」をしてしまうと、火は再度燃え広がりますのでお気をつけてください。&lt;/p&gt;
+
+&lt;p&gt;わたしの場合は怒ると、事実は大幅に湾曲され、自分がいかに辛くて悲しくて、それを癒される権利を保有しているかを証明することに全力を注ぐようになります。&lt;/p&gt;
+
+&lt;p&gt;ですので、2,3日少し眠れないことを「ここ最近ずっと」と長いスパンのように言いますし、そんなに大変な過失がないミスのリカバリも「すっごく大変だった」と言うようになります。&lt;/p&gt;
+
+&lt;p&gt;そこまで行くと、もうひたすらに上記の流れを繰り返して少しずつクールダウンさせるしかなくなってしまいます。&lt;/p&gt;
+
+&lt;p&gt;事実の訂正をしたい場合はわたしが一度寝しずまってから、次の日になど機嫌のいい時に、不自然でない会話の流れで訂正されることをオススメします。&lt;/p&gt;
+
+&lt;h1 id=&quot;section-4&quot;&gt;「ごめん」は頭とお尻&lt;/h1&gt;
+
+&lt;p&gt;女性が怒ったとき、どのような原因かが分かりづらいですよね。&lt;/p&gt;
+
+&lt;p&gt;謝罪の意思を示そうと「とにかく謝る」という対策をとられている方がもいると思います。&lt;/p&gt;
+
+&lt;p&gt;しかし、女性の中には「言うだけ言ったらスッキリする」「謝罪されたらスッキリする」「泣いたらスッキリする」など様々です。&lt;/p&gt;
+
+&lt;p&gt;今回のわたしのように「共感」をしてもらう事が解決の糸口になっているケースも存在します。&lt;/p&gt;
+
+&lt;p&gt;ですので、連発するのではなく、間に共感しているというアピールをするのを意識していただければ、今後数十年にも及ぶ夫婦生活が少しでも楽しいものになるのではないでしょうか。&lt;/p&gt;
+
+&lt;p&gt;現場からは以上です。&lt;/p&gt;
+</description>
+				<pubDate>Sun, 18 Sep 2016 06:36:21 +0900</pubDate>
+				<link>http://blog.mikiishijima.com/diary/2016/09/18/framework-to-appease-the-womens-feelings/</link>
+				<guid isPermaLink="true">http://blog.mikiishijima.com/diary/2016/09/18/framework-to-appease-the-womens-feelings/</guid>
+				
+				
+					<category>diary</category>
+				
+			</item>
 		
 			<item>
 				<title>ママデザイナーが育児アプリをレビューしたら、育ログが圧勝だった件</title>
@@ -172,8 +268,8 @@
 &lt;p&gt;ではでは、楽しい育児ライフを!&lt;/p&gt;
 </description>
 				<pubDate>Tue, 02 Aug 2016 00:00:00 +0900</pubDate>
-				<link> /review/2016/08/02/babycareapp-ikulog/</link>
-				<guid isPermaLink="true"> /review/2016/08/02/babycareapp-ikulog/</guid>
+				<link>http://blog.mikiishijima.com/review/2016/08/02/babycareapp-ikulog/</link>
+				<guid isPermaLink="true">http://blog.mikiishijima.com/review/2016/08/02/babycareapp-ikulog/</guid>
 				
 				
 					<category>review</category>
@@ -312,8 +408,8 @@
 &lt;p&gt;TwitterやFacebookなどでメッセージいただいても良いのですが、自分で登録するのも面倒なのでこちらに書いてもらえた方がありがたいです。&lt;/p&gt;
 </description>
 				<pubDate>Tue, 26 Jul 2016 00:00:00 +0900</pubDate>
-				<link> /works/2016/07/26/launch-toi-chromeextention/</link>
-				<guid isPermaLink="true"> /works/2016/07/26/launch-toi-chromeextention/</guid>
+				<link>http://blog.mikiishijima.com/works/2016/07/26/launch-toi-chromeextention/</link>
+				<guid isPermaLink="true">http://blog.mikiishijima.com/works/2016/07/26/launch-toi-chromeextention/</guid>
 				
 				
 					<category>works</category>
@@ -371,8 +467,8 @@
 &lt;p&gt;結婚ってスゴくね!?&lt;/p&gt;
 </description>
 				<pubDate>Sun, 24 Jul 2016 00:00:00 +0900</pubDate>
-				<link> /diary/2016/07/24/in-marriage-we-fill-those-missing/</link>
-				<guid isPermaLink="true"> /diary/2016/07/24/in-marriage-we-fill-those-missing/</guid>
+				<link>http://blog.mikiishijima.com/diary/2016/07/24/in-marriage-we-fill-those-missing/</link>
+				<guid isPermaLink="true">http://blog.mikiishijima.com/diary/2016/07/24/in-marriage-we-fill-those-missing/</guid>
 				
 				
 					<category>diary</category>
@@ -670,8 +766,8 @@
 &lt;p&gt;妊娠糖尿病と診断されても、悲観的にならず楽しく食事をしていきましょう! 何かの役に立てば幸いです。&lt;/p&gt;
 </description>
 				<pubDate>Thu, 02 Jun 2016 00:00:00 +0900</pubDate>
-				<link> /diary/2016/06/02/lowcarb-matanitylife-01/</link>
-				<guid isPermaLink="true"> /diary/2016/06/02/lowcarb-matanitylife-01/</guid>
+				<link>http://blog.mikiishijima.com/diary/2016/06/02/lowcarb-matanitylife-01/</link>
+				<guid isPermaLink="true">http://blog.mikiishijima.com/diary/2016/06/02/lowcarb-matanitylife-01/</guid>
 				
 				
 					<category>diary</category>
@@ -815,8 +911,8 @@
 &lt;p&gt;とにかく今は楽しく、幸せにあふれている。そんなコトを未来の自分のために記録しておきます。ではでは。&lt;/p&gt;
 </description>
 				<pubDate>Fri, 06 May 2016 00:00:00 +0900</pubDate>
-				<link> /diary/2016/05/06/gavebirth/</link>
-				<guid isPermaLink="true"> /diary/2016/05/06/gavebirth/</guid>
+				<link>http://blog.mikiishijima.com/diary/2016/05/06/gavebirth/</link>
+				<guid isPermaLink="true">http://blog.mikiishijima.com/diary/2016/05/06/gavebirth/</guid>
 				
 				
 					<category>diary</category>
@@ -873,8 +969,8 @@
 &lt;p&gt;まわりにプライベートワークを勧めるのであれば、まずは自分がプライベートワークをして、得している様を見せていきましょう。&lt;/p&gt;
 </description>
 				<pubDate>Tue, 03 May 2016 00:00:00 +0900</pubDate>
-				<link> /private-works/2016/05/03/the-importance-of-the-private-work/</link>
-				<guid isPermaLink="true"> /private-works/2016/05/03/the-importance-of-the-private-work/</guid>
+				<link>http://blog.mikiishijima.com/private-works/2016/05/03/the-importance-of-the-private-work/</link>
+				<guid isPermaLink="true">http://blog.mikiishijima.com/private-works/2016/05/03/the-importance-of-the-private-work/</guid>
 				
 				
 					<category>private-works</category>
@@ -970,8 +1066,8 @@
 &lt;p&gt;これからも、このブログで答えのないテーマや気付きを書いていきたいと思います。あなたのブログは、どうですか？&lt;/p&gt;
 </description>
 				<pubDate>Tue, 03 May 2016 00:00:00 +0900</pubDate>
-				<link> /private-works/2016/05/03/myblogpolicy/</link>
-				<guid isPermaLink="true"> /private-works/2016/05/03/myblogpolicy/</guid>
+				<link>http://blog.mikiishijima.com/private-works/2016/05/03/myblogpolicy/</link>
+				<guid isPermaLink="true">http://blog.mikiishijima.com/private-works/2016/05/03/myblogpolicy/</guid>
 				
 				
 					<category>private-works</category>
@@ -1115,8 +1211,8 @@
 &lt;p&gt;ぜひチェックしてくださいな。&lt;/p&gt;
 </description>
 				<pubDate>Mon, 02 May 2016 00:00:00 +0900</pubDate>
-				<link> /private-works/2016/05/02/undefinde-variables/</link>
-				<guid isPermaLink="true"> /private-works/2016/05/02/undefinde-variables/</guid>
+				<link>http://blog.mikiishijima.com/private-works/2016/05/02/undefinde-variables/</link>
+				<guid isPermaLink="true">http://blog.mikiishijima.com/private-works/2016/05/02/undefinde-variables/</guid>
 				
 				
 					<category>private-works</category>
@@ -1204,115 +1300,8 @@
 &lt;p&gt;&lt;a href=&quot;https://github.com/woopsdez/floaty-color-clock/issues/&quot;&gt;https://github.com/woopsdez/floaty-color-clock/issues/&lt;/a&gt;&lt;/p&gt;
 </description>
 				<pubDate>Sun, 01 May 2016 00:00:00 +0900</pubDate>
-				<link> /private-works/2016/05/01/floatycolorclock/</link>
-				<guid isPermaLink="true"> /private-works/2016/05/01/floatycolorclock/</guid>
-				
-				
-					<category>private-works</category>
-				
-			</item>
-		
-			<item>
-				<title>ghostからjekyllに移行しました。</title>
-				<description>&lt;p&gt;ghostはシンプルで使いやすかった。でも月1000円は高い。管理の手間はあるけれど触ってて楽しいjekyllによるセルフホスティングに移行しました。&lt;/p&gt;
-
-&lt;div class=&quot;container&quot;&gt;
-	&lt;a href=&quot;&quot;&gt;&lt;img src=&quot;/content/images/2016/04/ghost-logos.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;
-	&lt;div class=&quot;reference&quot;&gt;
-		&lt;strong&gt;node.jsで動くちょう今っぽいおしゃれブログプラットホーム&lt;/strong&gt;
-		&lt;p&gt;&lt;/p&gt;
-	&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;p&gt;自分でホスティングするのが嫌。&lt;/p&gt;
-
-&lt;p&gt;今っぽいシンプルなブログプラットホームがいい。&lt;/p&gt;
-
-&lt;p&gt;そういう理由でghost(pro)を利用していました。しかし、&lt;strong&gt;月1000円前後でブログ1個。無料の場合はブログすら持てない。&lt;/strong&gt;というのは、ちょっとワタシには高すぎたかな。&lt;/p&gt;
-
-&lt;h2 id=&quot;section&quot;&gt;ブログ難民の流れ&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;2005年〜 Movable Type&lt;/li&gt;
-  &lt;li&gt;2007年〜 WordPress&lt;/li&gt;
-  &lt;li&gt;2014年〜 ghost&lt;/li&gt;
-  &lt;li&gt;2016年〜 jekyll&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;シンプルでおしゃれで今っぽい技術。それでいて、ほぼ無料に近いサービスというのは無いのでしょうか。&lt;/p&gt;
-
-&lt;p&gt;いまのところはtumblrが一番良さそうですが、本腰入れて使ったことがないからなんとも言えないですね。記事のimport/exportやURLがどうなってるのかも気になるところ。&lt;/p&gt;
-
-&lt;p&gt;それでも、いろんな可能性を考えるのが面倒になって、触ってて楽しかったjekyllでの運用となりました。&lt;/p&gt;
-
-&lt;h2 id=&quot;section-1&quot;&gt;メンテナンスを考えないですむブログ環境&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src=&quot;/content/images/2016/04/spanner.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;書くだけに集中したいと言いつつ、おしゃれっぽさや「スゴそう感」で環境選んじゃうのでいつも苦労します。ミーハーですね。&lt;/p&gt;
-
-&lt;p&gt;今回は「10年ほぼメンテナンスフリー」を目標に考えてみましたが、そうしたら国内の老舗サービスしか候補に残りませんでした。&lt;/p&gt;
-
-&lt;p&gt;個人ブログくらい無責任におもしろそうな技術使いたいのでそれは断念。&lt;/p&gt;
-
-&lt;h2 id=&quot;section-2&quot;&gt;良いお勉強になった&lt;/h2&gt;
-
-&lt;p&gt;構築にあたって、gulpとgit-hookについて勉強できました。&lt;/p&gt;
-
-&lt;div class=&quot;container&quot;&gt;
-	&lt;a href=&quot;&quot;&gt;&lt;img src=&quot;/content/images/2016/04/gulp_logo.jpg&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;
-	&lt;div class=&quot;reference&quot;&gt;
-		&lt;strong&gt;サイト制作中によくやるアレやコレを自動化できるヤーツ&lt;/strong&gt;
-		&lt;p&gt;&lt;/p&gt;
-	&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;p&gt;gulpではjekyllのビルド、scssのコンパイル、ブラウザの自動リロードをしてくれる便利なnpmパッケージを使ってます。github-pageならデプロイまで簡単。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/shakyShane/jekyll-gulp-sass-browser-sync&quot;&gt;jekyll-gulp-sass-browser-sync
-&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;あとは、ビルド時に画像をリサイズ、最適化できるようにしたいです。&lt;/p&gt;
-
-&lt;p&gt;画像の保存場所を記事と同じディレクトリにしたいのだけど、それはどの技術でできるのかがさっぱり検討つかないのでまた今度。&lt;/p&gt;
-
-&lt;p&gt;デプロイはgit-hookを使ってます。push時にはワークツリーのファイルを配置することができないらしく、&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;受けとる場所(rep/ファイルなし、情報のみ)&lt;/li&gt;
-  &lt;li&gt;ソースファイルを展開する場所(rep/ワークツリーあり)&lt;/li&gt;
-  &lt;li&gt;公開用ディレクトリ(_site以下にある静的ファイル)&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;と3つのディレクトリが必要になっています。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/content/images/2016/04/hook-memo.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;2でローカルと同じソースファイルがサーバーに配置されるので、そこから_siteだけをcpで&lt;code class=&quot;highlighter-rouge&quot;&gt;public_html/blog&lt;/code&gt;にコピーしてきています。&lt;/p&gt;
-
-&lt;p&gt;hookはpost-updateを使っています。中身はこんな感じ。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-code&quot;&gt;# ソースファイル リポジトリへ移動してファイルを取得
-cd /yourdomain.com/blog-source;
-git --git-dir=.git pull origin master;
-
-# 公開用ディレクトリのファイルを全消去して新にコピー
-rm -rf /yourdomain.com/blog/*;
-cp -r youdomain.com/blog-source/_site/* /yourdomain.com/blog/;
-
-# htaccess.txtを正式な名前リネーム
-mv /yourdomain.com/blog/htaccess.txt yourdomain.com/blog/.htaccess; 
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;最後のhtaccessは別に不要ですが、os xのfinderでリネームしようとすると「.(ドット)から始まるファイル名はシステムのみ」と怒られるのでこっちでやってます。&lt;/p&gt;
-
-&lt;p&gt;ブログのメンテを行ったあとって無闇に記事を書きたくなりますよね。&lt;/p&gt;
-
-&lt;p&gt;来年にはtumblrに移行してるかもしれませんが、ひとまずこれでよろしくお願いします。&lt;/p&gt;
-</description>
-				<pubDate>Tue, 05 Apr 2016 00:00:00 +0900</pubDate>
-				<link> /private-works/2016/04/05/hello-jekyll/</link>
-				<guid isPermaLink="true"> /private-works/2016/04/05/hello-jekyll/</guid>
+				<link>http://blog.mikiishijima.com/private-works/2016/05/01/floatycolorclock/</link>
+				<guid isPermaLink="true">http://blog.mikiishijima.com/private-works/2016/05/01/floatycolorclock/</guid>
 				
 				
 					<category>private-works</category>
