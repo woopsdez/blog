@@ -2,7 +2,7 @@
 layout: post
 title: 幸せは自給自足
 categories: diary
-date: 2016-10-08 19:13:29
+date: '2016-10-08 19:13:29'
 banner_image: "/content/images/2016/10/be-happy-with-self-sufficiencyh/banner.jpg"
 featured: true
 comments: true

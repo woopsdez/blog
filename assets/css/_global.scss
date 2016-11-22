@@ -5,7 +5,7 @@
 body, html {
 	height: 100%;
 	background: #FFF;
-	font: 400 20px "Open Sans", sans-serif;
+	font: 400 18px "Open Sans", sans-serif;
 	font-family: Lato, 游ゴシック体, 'Yu Gothic', YuGothic, 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', Meiryo, メイリオ, sans-sans-serif;
 	color: #3b3b3b;
 	padding: 0;
@@ -30,9 +30,9 @@ h1 a:hover, p a:hover {
 }
 
 h1, h2, h3, h4 {
-	margin: 30px 0;
-	font: 700 36px Lato, 游ゴシック体, 'Yu Gothic', YuGothic, 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', Meiryo, メイリオ, sans-sans-serif;
-	line-height: 56px;
+	margin: 30px 0 10px;
+	font: 700 1.6em Lato, 游ゴシック体, 'Yu Gothic', YuGothic, 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', Meiryo, メイリオ, sans-sans-serif;
+	line-height: 1.4;
 	color: #262b30;
 
 	i {
@@ -40,24 +40,15 @@ h1, h2, h3, h4 {
 	}
 }
 
-h2 {
-	margin: 30px 0 20px;
-	font: 700 28px Lato, 游ゴシック体, 'Yu Gothic', YuGothic, 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', Meiryo, メイリオ, sans-sans-serif;
-}
-
-h3 {
-	margin: 20px 0 10px;
-	font: 600 24px 'Open Sans', sans-serif;
-}
-
-h4 {
-	margin: 20px 0 10px;
-	font: 600 22px 'Open Sans', sans-serif;
+.well{
+	padding: 5px 15px;
+	background: #efefef;
+	
+	p{margin: 10px 0;}
 }
 
 p {
-	margin: 30px 0;
-	line-height: 28px;
+	margin: 0 0 20px;
 	color: #333332;
 	word-wrap: break-word;
 }
@@ -68,7 +59,6 @@ strong, em {
 
 small{
 	color: #666;
-	font-size: 16px;
 }
 
 img {
@@ -78,7 +68,7 @@ img {
 }
 
 hr {
-	width: 70%;
+	width: 100%;
 	height: 3px;
 	margin: 30px auto;
 	border: 0;
@@ -92,7 +82,6 @@ code {
 	border: 1px solid #e6e6e6;
 	border-radius: 4px;
 	font-family: lato sans-serif;
-	font-size: 16px;
 }
 
 blockquote, q, cite {

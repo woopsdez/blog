@@ -211,7 +211,7 @@
 	section {
 		margin: 0 0 30px;
 
-		& > p:first-child {
+		#toc-container + p {
 			margin: 40px 0 30px;
 			font-weight: 600;
 			color: #1d1d1d;
@@ -400,6 +400,22 @@
 	> p{
 			strong{
 			background: #F2F1C2;
+		}
+	}
+
+	.row{
+		.thumbnail{
+			width: inherit;
+			margin: 0 auto;
+		}
+		@media screen and (min-width: 401px) {
+			display: flex;
+			.thumbnail{
+				margin:0 20px 20px 0;
+				padding: 10px;
+				border: 1px solid #efefef;
+			}
+			.sentence{  }
 		}
 	}
 }

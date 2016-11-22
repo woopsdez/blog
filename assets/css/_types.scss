@@ -1,0 +1,40 @@
+$font-size-base : 18px;
+
+html,body{
+	font-size: $font-size-base;
+}
+
+.postbody{
+	// fontsize
+	h2 { font-size: $font-size-base * 1.6; }
+	h3 { font-size: $font-size-base * 1.4; }
+	h4 { font-size: $font-size-base * 1.2; }
+	h5 { font-size: $font-size-base * 1.0; }
+	h6 { font-size: $font-size-base * 1.0; }
+	small,code,.well
+	   { font-size: $font-size-base * 0.8; }
+   #toc-container{
+   		 font-size: $font-size-base * 0.8;;
+   }
+
+	// margin
+	h2 { margin: 2.0rem 0 10px; }
+	h3 { margin: 1.8rem 0 10px; }
+	h4 { margin: 0rem 0 10px; }
+	h5 { margin: 0rem 0 10px; }
+	h6 { margin: 0rem 0 10px; }
+	small,code,.well
+	    { margin: 0 0 20px }
+
+	// eyecath
+	h1,h2,h3,h4,h5,h6{
+		&:before{
+			display: inline-block;
+			margin-right: 10px;
+		    font-family: FontAwesome;
+		}
+	}
+
+	h2:before {content: "■";}
+	h4:before { content:"\f0da";}
+}
