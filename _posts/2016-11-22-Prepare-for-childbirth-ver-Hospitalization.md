@@ -1,8 +1,8 @@
 ---
 layout: post
 title: 出産の準備「入院〜退院まで編」
-date: 2016-11-17 00:05:04
 categories: diary
+date: '2016-11-22 23:05:53'
 banner_image: "/content/images/2016/11/Items-to-prepare-for-childbirth/banner.png"
 featured: true
 comments: true
@@ -147,7 +147,7 @@ published: true
 
 乾燥機付き洗濯機だと雨だろうがなんだろうが絶対乾くので、取り出した衣服をそのまま病院に持ってくればいいんですよね。
 
-家事に自身のない旦那さんと、二人で出産を乗り越えるならあった方がいいかもです。
+家事に自信のない旦那さんと、二人で出産を乗り越えるならあった方がいいかもです。
 
 #### 洗面用具
 いろいろ揃っている病院でしたが、母の入浴に関する設備だけは揃っていませんでした。

@@ -5,282 +5,506 @@
 		<description>趣味のゲームやプログラミング、レビューなど個人イシジマミキにより近しい内容を書いています。普遍的なデザインの話はThe Marsknowledge Blogで。</description>
 		<link> /</link>
 		<atom:link href=" /feed.xml" rel="self" type="application/rss+xml" />
-		<pubDate>Tue, 22 Nov 2016 22:48:01 +0900</pubDate>
-		<lastBuildDate>Tue, 22 Nov 2016 22:48:01 +0900</lastBuildDate>
+		<pubDate>Sun, 18 Dec 2016 23:08:03 +0900</pubDate>
+		<lastBuildDate>Sun, 18 Dec 2016 23:08:03 +0900</lastBuildDate>
 		<generator>Jekyll v3.1.2</generator>
 		
 			<item>
-				<title>出産についての記憶2</title>
-				<description>&lt;p&gt;臨月までにいろいろ準備しておいた方がいいよ！とネットで知りましたが、いらないものなどもけっこうあったので自分なりに振り分けしてみます。&lt;/p&gt;
+				<title>プロトタイピングにまつわる低レベルな問題</title>
+				<description>&lt;p&gt;まわりではすでにプロトタイプからの開発が当たり前のようで、議論に入る前でつまづいている事があるのは少し恥ずかしいです。しかし、同じような誤ちをした事がある人、これからする人は絶対いると思うので、備忘録としてまとめておきます。&lt;/p&gt;
 
 &lt;!--more--&gt;
 
-&lt;h2 id=&quot;section&quot;&gt;自身について&lt;/h2&gt;
 &lt;ul&gt;
-  &lt;li&gt;初産&lt;/li&gt;
-  &lt;li&gt;荻窪&lt;/li&gt;
-  &lt;li&gt;赤川クリニック&lt;/li&gt;
-  &lt;li&gt;個室&lt;/li&gt;
-  &lt;li&gt;入院中に世話してくれる人 夫(フリーランス)&lt;/li&gt;
-  &lt;li&gt;入院は4日(通常分娩として。帝王切開はもっと長い)&lt;/li&gt;
-  &lt;li&gt;子どもは別の病院に入院したのでおむつとかはそちらの病院が用意してくださいました。&lt;/li&gt;
+  &lt;li&gt;作り込みすぎ問題&lt;/li&gt;
+  &lt;li&gt;精度が低すぎて役に立たない問題&lt;/li&gt;
+  &lt;li&gt;議論に適切なプロトタイピングの粒度が分からない問題&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;section-1&quot;&gt;荷物準備ポリシー&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;ムダな買い置きはしない (使ってみるまで必要か分からないものはなるべく用意しない)&lt;/li&gt;
-  &lt;li&gt;必要なときに、ネットや近くのお店を使って購入する&lt;/li&gt;
-  &lt;li&gt;搬入・搬出のストレスを最低限に&lt;/li&gt;
-  &lt;li&gt;廉価かついくらあっても困らないもの、絶対に有用だと分かっているものはAmazonウィッシュリストや家族から希望を聞かれた時にリクエストする&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;自分がやってるとざっとこんな感じのトコロで躓いちゃうことがありました。&lt;/p&gt;
 
-&lt;hr /&gt;
+&lt;h2 id=&quot;section&quot;&gt;そんなに作る必要ある？問題&lt;/h2&gt;
 
-&lt;p&gt;下記リストは、All Aboutさんの&lt;a href=&quot;url&quot;&gt;記事名&lt;/a&gt;から引用したものです。&lt;/p&gt;
+&lt;p&gt;利用するソフトがグラフィックデザイン向けソフトではなく、Sketchなどの画面設計用のソフトに以降したのですが、肝心の本人の&lt;strong&gt;脳味噌が設計脳に以降できていない&lt;/strong&gt;事があります。&lt;/p&gt;
 
-&lt;h2 id=&quot;section-2&quot;&gt;絶対必要なもの&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;母子手帳セット 1式&lt;/li&gt;
-  &lt;li&gt;診察券&lt;/li&gt;
-  &lt;li&gt;健康保険証&lt;/li&gt;
-  &lt;li&gt;印鑑&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;たとえば、何か新しいアプリを作りはじめるとしましょう。&lt;/p&gt;
 
-&lt;h2 id=&quot;section-3&quot;&gt;産後・入院準備用品&lt;/h2&gt;
+&lt;p&gt;まだアナタの頭の中にしかイメージがないので、他のメンバーにどういうアプリなのかを伝える必要があります。この時に必要な情報は「何ができるアプリなのか」だけでなく「どういう操作でそれが達成できるのか」だとしましょう。&lt;/p&gt;
 
-&lt;h3 id=&quot;section-4&quot;&gt;産後に必要なもの&lt;/h3&gt;
+&lt;p&gt;どこをタップして、フリックして選ぶと、こうなる。というストーリーが伝わればいいという段階です。&lt;/p&gt;
 
-&lt;h4 id=&quot;section-5&quot;&gt;母&lt;/h4&gt;
+&lt;p&gt;それなのに、色はどうしよう。フォント、これがいいかな？など&lt;strong&gt;本質ではない事柄に注力してしまう&lt;/strong&gt;事が問題なのです。&lt;/p&gt;
 
-&lt;div class=&quot;well&quot;&gt;
-&lt;p&gt;出産するまでは、どういう用途に使うものかがまったく分からないので購入もイメージしずらいと思います。&lt;/p&gt;
-&lt;p&gt;私の入院した病院では、産後に必要なものを全て用意してくれたので不要でした。(その分が分娩費用などに加算されているとは思います。) &lt;/p&gt;
-&lt;p&gt;出産する病院を選ぶときに、こういうった事で悩まなくて良いというのも、選ぶ条件のひとつにしても良いかもしれません。&lt;/p&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;産褥（さんじょく）ショーツか生理用ショーツ 2枚&lt;/li&gt;
-  &lt;li&gt;産褥（さんじょく）ニッパー 2枚&lt;/li&gt;
-  &lt;li&gt;ウエストニッパー 2枚&lt;/li&gt;
-  &lt;li&gt;お産パッド 2パック&lt;/li&gt;
-  &lt;li&gt;生理用ナプキン 小1パック&lt;/li&gt;
-  &lt;li&gt;洗浄綿 1箱&lt;/li&gt;
-  &lt;li&gt;授乳用ハーフトップブラジャー 2～3枚&lt;/li&gt;
-  &lt;li&gt;産後用ワイヤー入りブラジャー 1枚&lt;/li&gt;
-  &lt;li&gt;授乳インナー 1枚&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;section-6&quot;&gt;子&lt;/h4&gt;
-
-&lt;div class=&quot;well&quot;&gt;
-&lt;p&gt;母児同室の病院でしたが、産後すぐ肺に穴があいてしまったため近くの総合病院に子どもだけ移転しました。&lt;/p&gt;
-&lt;p&gt;東京都は子どもにかかる医療費を負担してくれるので、入院中もミルク代しかかかりませんでした。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;上記理由から、子どもの入院中に必要なものは精度が低いので、参考程度にとどめておいてください。&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;container&quot;&gt;
+	&lt;a href=&quot;&quot;&gt;&lt;img src=&quot;/content/images/2016/12/low-level-problems-related-to-prototyping/02.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;
+	&lt;div class=&quot;reference&quot;&gt;
+		&lt;strong&gt;画像：Adobe XDで作った、名付けアプリの低精度プロトタイプ&lt;/strong&gt;
+		&lt;p&gt;&lt;/p&gt;
+	&lt;/div&gt;
 &lt;/div&gt;
 
-&lt;h4 id=&quot;section-7&quot;&gt;新生児服&lt;/h4&gt;
+&lt;p&gt;低精度プロトタイプなのにちょっとキレイに作っちゃってますね。&lt;/p&gt;
 
-&lt;p&gt;病院は暖いので20°以下になることがなければ、短肌着+長肌着の組み合わせだけで十分でした。それも、病院側で用意いてくださっていたので使わなかったです。&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;最初に入力させる情報は何か&lt;/li&gt;
+  &lt;li&gt;名付けのどういった問題を解決しているのか&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;上記を知るのには、画面の要素が分かればいいのに、書体とかヘッダーの色とかデザイナーが故に調整できてしまって変に時間かけてしまう。&lt;/p&gt;
+
+&lt;p&gt;こうなるくらいなら&lt;strong&gt;いっそUIパーツだけで構築するなどの縛りを入れた方がいいのかもしれない&lt;/strong&gt;と考えています。&lt;/p&gt;
+
+&lt;p&gt;グラフィックソフトに慣れてしまっているだけに、似たようなインターフェイスのソフトを開くと条件反射的にグラフィックデザイナーモードになってしまう時があるので、意識的に動かないと時間をムダにしちゃう時がありました。&lt;/p&gt;
+
+&lt;p&gt;グラフィックデザインできる人が低精度プロトタイプ作らないように役割分担するのもアリかも。&lt;/p&gt;
+
+&lt;h2 id=&quot;section-1&quot;&gt;精度が低すぎて役に立たない問題&lt;/h2&gt;
+
+&lt;div class=&quot;container&quot;&gt;
+	&lt;a href=&quot;&quot;&gt;&lt;img src=&quot;/content/images/2016/12/low-level-problems-related-to-prototyping/uianimation.gif&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;
+	&lt;div class=&quot;reference&quot;&gt;
+		&lt;strong&gt;画像：こんなに動くの簡単に作れて、スゴいねー。&lt;/strong&gt;
+		&lt;p&gt;&lt;/p&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;インターフェイス実装・機能開発に必要な工数見積をするのに、UIを決定しないといけない事がありました。&lt;/p&gt;
+
+&lt;p&gt;開発途中の画面を見ながらおのおのがジェスチャーで議論をするのですが、いまいち伝えきれないもどかしさをメンバーが感じていたので、プロトタイプを作ることにしました。&lt;/p&gt;
+
+&lt;p&gt;各自がそれぞれ絵コンテを用意し、自分がPrincipleを使って実装してみたのですが、結論から言うと議論に役立てられませんでした。&lt;/p&gt;
+
+&lt;p&gt;UIパーツ群を利用して作ったプロトタイピングは、四角が並んでいるだけなのです。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;実際にどのようなコンテンツが入るのか&lt;/li&gt;
+  &lt;li&gt;操作パネルを上に重ねた場合にみづらくならないか&lt;/li&gt;
+  &lt;li&gt;ホバーエリアは十分に確保できているか&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;という点を確認できないプロトタイピングだったので、議論の冒頭で動きだけみて「すごいねー」で終わってしまったのです。とほほ。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;議論に間に合わせることにフォーカスしすぎて、精度をおろそかにしてしまいました。&lt;/strong&gt;もう少し時間をかけて高精度なプロトタイプを作ってみてからの議論でも良かったなと思います。&lt;/p&gt;
+
+&lt;p&gt;サービスをアジャイルで開発しているので、定例のたびになるべく見える成果を出したくなってしまいます。そうすると、自分の場合は精度が犠牲になりがちだなと感じました。&lt;/p&gt;
+
+&lt;p&gt;高精度プロトタイピングを作る過程で、サービスの理解を深められることもあるので、そこは焦らずしっかり工数をとるべきだったなと思います。&lt;/p&gt;
+
+&lt;h2 id=&quot;section-2&quot;&gt;議論に適切なプロトタイピングの精度が分からない問題&lt;/h2&gt;
+
+&lt;p&gt;上記に関連するのですが、サービス開発やプロトタイピングに慣れていない場合、今どのフェーズで議論しているのかを見誤りやすく、議論してみるまで適切な精度が分からない事がありました。&lt;/p&gt;
+
+&lt;p&gt;デザイナーである自分がしっかりハンドリングすべき！できればそうしたい！ってのがあるんですが、これはエゴですね。サービスの軸となるメンバーにしっかり頼り、MTGでどういう部分をクリアにするのか事前に握っておけば良かったのかもしれません。&lt;/p&gt;
+
+&lt;p&gt;あとは、サービス開発フローチャートとか作ってみてクライアントやチームに共有し、自分がプロジェクトをちゃんと俯瞰で見れているのか認識するとかでしょうか。&lt;/p&gt;
+
+&lt;p&gt;サービス開発のフェーズとかフローを一般化している企業さんとか多いと思うので、なんかそういう資料良いのがあったら教えてください。&lt;/p&gt;
+
+&lt;h2 id=&quot;section-3&quot;&gt;まとめ&lt;/h2&gt;
+
+&lt;p&gt;記事に書くことで振り替えってみると、なんとか試みが見えてきますね。&lt;/p&gt;
+
+&lt;p&gt;自分の中の頭で起こっていることは普通のことで、それ以外の事はちょっと変わったこと。&lt;/p&gt;
+
+&lt;p&gt;UIデザイン実装で議論をしていると「えー、普通こうじゃない？」と思ってしまう事があり、&lt;strong&gt;何故それが普通だと思うのが、その方が良いのかを自問自答してみると思い込みでしかない。&lt;/strong&gt;決定的な説得力には欠けるという事に気付かされます。&lt;/p&gt;
+
+&lt;p&gt;個人差はありますが、プロトタイピングは&lt;strong&gt;それらの差を少しずつ縮めていく作業だと思えるようになってきました。&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;UIデザインは、チームみんなが議論ができるエモい部分がすごくあります。コードレビューやデザインレビューとは違い、いろんな立場の人がいり乱れて話ができるのが良いですね。&lt;/p&gt;
+
+&lt;p&gt;ネガティブな意見もポジティブな意見も億さず言える環境作りが、すごく大切です。&lt;/p&gt;
+
+&lt;p&gt;この問題を振り替えることで、手法以前の問題も浮き彫りになりました。さまざまなカタチでwebに関っていますが、もう少しここの部分をさまざまな企業さんと一緒にやってみたいです。&lt;/p&gt;
+</description>
+				<pubDate>Sun, 18 Dec 2016 20:25:14 +0900</pubDate>
+				<link> /works/2016/12/18/low-level-problems-related-to-prototyping/</link>
+				<guid isPermaLink="true"> /works/2016/12/18/low-level-problems-related-to-prototyping/</guid>
+				
+				
+					<category>works</category>
+				
+			</item>
+		
+			<item>
+				<title>shift10で話した脱アドビ話。SketchはAiの代替じゃないよ。</title>
+				<description>&lt;!--more--&gt;
+
+&lt;p&gt;Shift10という年末に行われるwebデザイナー向けのイベントで、2016年のツールについてお話する機会がありました。&lt;/p&gt;
+
+&lt;p&gt;その内容でいくつか掘り下げて欲しいというリクエストもあったので補足情報として書いておきます。&lt;/p&gt;
+
+&lt;h2 id=&quot;section&quot;&gt;脱アドビしたい理由&lt;/h2&gt;
+
+&lt;p&gt;アドビ製品はどれも良いですが、主となるPhotoshopやIllustratorをプロジェクトによっては使わないケースがあります。&lt;/p&gt;
+
+&lt;p&gt;&lt;small&gt;Adobe XDは、パワポがわりにけっこう立ち上げてます&lt;/small&gt;&lt;/p&gt;
+
+&lt;p&gt;1ヶ月で10時間もさわれない場合、月々払っている費用とのバランスが悪いのではないか。無駄な支出は減らしたい。というのが発端です。&lt;/p&gt;
+
+&lt;h2 id=&quot;section-1&quot;&gt;デザインどうしてんの？&lt;/h2&gt;
+
+&lt;p&gt;仕事では、グラフィックデザインを請けるより、インターフェイス設計や、デザイン批評、会社で新しく立ち上げるデザインチームのトレーニングというのをメインにするように動いています。&lt;/p&gt;
+
+&lt;p&gt;ですので、スタジオで撮影した写真をゴリゴリ合成するというような事がなくなりました。&lt;/p&gt;
+
+&lt;p&gt;だから、脱アドビと言えているのでしょうね。&lt;/p&gt;
+
+&lt;h2 id=&quot;section-2&quot;&gt;プロトタイピングにまつわる低レベルな問題&lt;/h2&gt;
+
+&lt;p&gt;まわりではすでにプロトタイプからの開発が当たり前のようで、議論に入る前でつまづいている事があるのは少し恥ずかしいです。&lt;/p&gt;
+
+&lt;p&gt;みんなすんなりチームで議論できているのですか？ いいなー。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;作り込みすぎ問題&lt;/li&gt;
+  &lt;li&gt;精度が低すぎて役に立たない問題&lt;/li&gt;
+  &lt;li&gt;議論に適切なプロトタイピングの粒度が分からない問題&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;自分がやってるとざっとこんな感じのトコロでハタと躓いちゃうことがありました。&lt;/p&gt;
+
+&lt;h3 id=&quot;section-3&quot;&gt;そんなに作る必要ある？問題&lt;/h3&gt;
+
+&lt;p&gt;利用するソフトがグラフィックデザイン向けソフトではなく、Sketchなどの画面設計用のソフトに以降したのですが、肝心の本人の&lt;strong&gt;脳味噌が設計脳に以降できていない&lt;/strong&gt;事があります。&lt;/p&gt;
+
+&lt;p&gt;たとえば、何か新しいアプリを作りはじめるとしましょう。&lt;/p&gt;
+
+&lt;p&gt;まだアナタの頭の中にしかイメージがないので、他のメンバーにどういうアプリなのかを伝える必要があります。この時に必要な情報は「何ができるアプリなのか」だけでなく「どういう操作でそれが達成できるのか」だとしましょう。&lt;/p&gt;
+
+&lt;p&gt;どこをタップして、フリックして選ぶと、こうなる。というストーリーが伝わればいいという段階です。&lt;/p&gt;
+
+&lt;p&gt;それなのに、色はどうしよう。フォント、これがいいかな？など&lt;strong&gt;本質ではない事柄に注力してしまう&lt;/strong&gt;事が問題なのです。&lt;/p&gt;
+
+&lt;div class=&quot;container&quot;&gt;
+	&lt;a href=&quot;&quot;&gt;&lt;img src=&quot;/content/images/2016/12/independent-from-adobe-on-shift10/02.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;
+	&lt;div class=&quot;reference&quot;&gt;
+		&lt;strong&gt;画像：Adobe XDで作った、名付けアプリの低精度プロトタイプ&lt;/strong&gt;
+		&lt;p&gt;&lt;/p&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;低精度プロトタイプなのにちょっとキレイに作っちゃってますね。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;最初に入力させる情報は何か&lt;/li&gt;
+  &lt;li&gt;名付けのどういった問題を解決しているのか&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;上記を知るのには、画面の要素が分かればいいのに、書体とかヘッダーの色とかデザイナーが故に調整できてしまって変に時間かけてしまう。&lt;/p&gt;
+
+&lt;p&gt;こうなるくらいなら&lt;strong&gt;いっそUIパーツだけで構築するなどの縛りを入れた方がいいのかもしれない&lt;/strong&gt;と考えています。&lt;/p&gt;
+
+&lt;p&gt;グラフィックソフトに慣れてしまっているだけに、似たようなインターフェイスのソフトを開くと条件反射的にグラフィックデザイナーモードになってしまう時があるので、意識的に動かないと時間をムダにしちゃう時がありました。&lt;/p&gt;
+
+&lt;p&gt;グラフィックデザインできる人が低精度プロトタイプ作らないように役割分担するのもアリかも。&lt;/p&gt;
+
+&lt;h3 id=&quot;section-4&quot;&gt;精度が低すぎて役に立たない問題&lt;/h3&gt;
+
+&lt;p&gt;インターフェイス実装・機能開発に必要は工数見積をするのに、UIを決定しないといけない事がありました。&lt;/p&gt;
+
+&lt;p&gt;開発途中の画面を見ながらおのおのがジェスチャーで議論をするのですが、いまいち伝えきれないもどかしさをメンバーが感じていたので、プロトタイプを作ることにしました。&lt;/p&gt;
+
+&lt;p&gt;各自がそれぞれ絵コンテを用意し、自分がPrincipleを使って実装してみたのですが、結論から言うと議論に役立てられませんでした。&lt;/p&gt;
+
+&lt;p&gt;UIパーツ群を利用して作ったプロトタイピングは、四角が並んでいるだけなのです。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;実際にどのようなコンテンツが入るのか&lt;/li&gt;
+  &lt;li&gt;操作パネルを上に重ねた場合にみづらくならないか&lt;/li&gt;
+  &lt;li&gt;ホバーエリアは十分に確保できているか&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;という点を確認できないプロトタイピングだったので、議論の冒頭で動きだけみて「すごいねー」で終わってしまったのです。とほほ。&lt;/p&gt;
+
+&lt;div class=&quot;container&quot;&gt;
+	&lt;a href=&quot;&quot;&gt;&lt;img src=&quot;/content/images/2016/12/independent-from-adobe-on-shift10/uianimation.gif&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;
+	&lt;div class=&quot;reference&quot;&gt;
+		&lt;strong&gt;画像：こんなに動くの簡単に作れて、スゴいねー。&lt;/strong&gt;
+		&lt;p&gt;&lt;/p&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;議論に間に合わせることにフォーカスしすぎて、精度をおろそかにしてしまいました。&lt;/strong&gt;もう少し時間をかけて高精度なプロトタイプを作ってみてからの議論でも良かったなと思います。&lt;/p&gt;
+
+&lt;p&gt;サービスをアジャイルで開発しているので、定例のたびになるべく見える成果を出したくなってしまいます。そうすると、自分の場合は精度が犠牲になりがちだなと感じました。&lt;/p&gt;
+
+&lt;p&gt;高精度プロトタイピングを作る過程で、サービスの理解を深められることもあるので、そこは焦らずしっかり工数をとるべきだったなと思います。&lt;/p&gt;
+
+&lt;h3 id=&quot;section-5&quot;&gt;議論に適切なプロトタイピングの精度が分からない問題&lt;/h3&gt;
+
+&lt;p&gt;上記に関連するのですが、サービス開発やプロトタイピングに慣れていない場合、今どのフェーズで議論しているのかを見誤りやすく、議論してみるまで適切な精度が分からない事がありました。&lt;/p&gt;
+
+&lt;p&gt;デザイナーである自分がしっかりハンドリングすべき！できればそうしたい！ってのがあるんですが、これはエゴですね。サービスの軸となるメンバーにしっかり頼り、MTGでどういう部分をクリアにするのか事前に握っておけば良かったのかもしれません。&lt;/p&gt;
+
+&lt;p&gt;あとは、サービス開発フローチャートとか作ってみてクライアントやチームに共有してみて自分がプロジェクトをちゃんと俯瞰で見れているのか認識するとかでしょうか。&lt;/p&gt;
+
+&lt;p&gt;サービス開発のフェーズとかフローを一般化している企業さんとか多いと思うので、なんかそういう資料良いのがあったら教えてください。&lt;/p&gt;
+
+&lt;h2 id=&quot;section-6&quot;&gt;まとめ&lt;/h2&gt;
+
+&lt;p&gt;記事に書くことで振り替えってみると、なんとか試みが見えてきますね。&lt;/p&gt;
+</description>
+				<pubDate>Sun, 18 Dec 2016 20:25:14 +0900</pubDate>
+				<link> /works/2016/12/18/independent-from-adobe-on-shift10/</link>
+				<guid isPermaLink="true"> /works/2016/12/18/independent-from-adobe-on-shift10/</guid>
+				
+				
+					<category>works</category>
+				
+			</item>
+		
+			<item>
+				<title>出産の準備「自宅編」</title>
+				<description>&lt;p&gt;「わざわざ店舗へ行ってモノを買う意味が分からない。Amazonで良くない？」派ですが、ベビー用品では通用しませんでした。カワイイベビー服はだいたい着せづらい。赤ちゃん向け体温計とか基本不要。西友のベビーコーナーがどれほど心強かったことか。&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;h2 id=&quot;section&quot;&gt;前提条件&lt;/h2&gt;
+
+&lt;h3 id=&quot;section-1&quot;&gt;夫婦について&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;職業：IT関連&lt;/li&gt;
+  &lt;li&gt;職場：自宅(ふたりともほぼフリーランス)&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;親家族：両家とも他県&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;子どものおしゃれには興味なし&lt;/li&gt;
+  &lt;li&gt;イベントごとは身の丈にあった規模で&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;section-2&quot;&gt;産褥期について&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;里帰り出産せず&lt;/li&gt;
+  &lt;li&gt;両親に手伝いを依頼せず&lt;/li&gt;
+  &lt;li&gt;旦那さんが一ヶ月育休をとってくれた&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;section-3&quot;&gt;自宅環境&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;3LDKS
+    &lt;ul&gt;
+      &lt;li&gt;仕事場&lt;/li&gt;
+      &lt;li&gt;寝室&lt;/li&gt;
+      &lt;li&gt;ゲーム・図書部屋&lt;/li&gt;
+      &lt;li&gt;リビング / ダイニング&lt;/li&gt;
+      &lt;li&gt;キッチン&lt;/li&gt;
+      &lt;li&gt;納屋&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;1フロア&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;section-4&quot;&gt;購入ポリシー&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;大量購入は「絶対にあって困らないもの」のみ&lt;/li&gt;
+  &lt;li&gt;「必要かどうか分からないもの」は必要になってから買う&lt;/li&gt;
+  &lt;li&gt;高価なものはお爺ちゃん・お婆ちゃんと相談する&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;section-5&quot;&gt;新生児服&lt;/h2&gt;
+
+&lt;div class=&quot;well&quot;&gt;
+	&lt;p&gt;本やネットでいくら読んでも、短肌着・長肌着・コンビ肌着などの違いと良さがぜんっぜん分からなかった。&lt;/p&gt;
+	&lt;p&gt;スナップがあって良かったとか、それが面倒だったとか。そもそも違いを解説しているのに分かりやすい図説の一枚もないとか。&lt;/p&gt;
+	&lt;p&gt;つくづく「一般的な意見」というのは、具体的な参考にならないなと感じました。&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;ベビー服関連は以下のものがリストに挙がっていました。&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;短肌着&lt;/li&gt;
   &lt;li&gt;長肌着&lt;/li&gt;
-  &lt;li&gt;紙おむつ&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;section-8&quot;&gt;入院中に必要なもの&lt;/h2&gt;
-
-&lt;div class=&quot;well&quot;&gt;
-	&lt;p&gt;出産から1日あけ、退院までの生活がはじまります。&lt;/p&gt;
-
-	&lt;p&gt;下記のものは自身が入院生活を快適に過ごすためのものなので、「余裕があれば持っていく」程度にしておきましょう。&lt;/p&gt;
-
-	&lt;p&gt;私は子どもと離れて入院生活を送りましたが、むしろそのおかげでしっかり睡眠をとって休むことができて、良かったのかな？と少しだけ思いました。&lt;/p&gt;
-&lt;/div&gt;
-
-&lt;h3 id=&quot;section-9&quot;&gt;母&lt;/h3&gt;
-
-&lt;h4 id=&quot;section-10&quot;&gt;パジャマ 2～3枚&lt;/h4&gt;
-
-&lt;p&gt;母の診察も場合によってはあるため、授乳用ではなく前開きのが便利。
-旦那さんが毎日通ってくれたため、パジャマ2枚を洗濯して着ていました。&lt;/p&gt;
-
-&lt;h4 id=&quot;section-11&quot;&gt;ママ用普段着&lt;/h4&gt;
-
-&lt;p&gt;着て来たものを退院時に着るのでいいや派。&lt;/p&gt;
-
-&lt;h4 id=&quot;section-12&quot;&gt;入院用バッグ&lt;/h4&gt;
-&lt;p&gt;産後用、退院時用と入院中用では荷物が異なるので、小さいバックに小分けしてひとまとめにすると自分も他の人も便利。&lt;/p&gt;
-
-&lt;h4 id=&quot;section-13&quot;&gt;授乳アイテム&lt;/h4&gt;
-
-&lt;p&gt;基本は病院側で用意しておいてもらえます。&lt;/p&gt;
-
-&lt;p&gt;私は下記が不要でした。&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;哺乳瓶&lt;/li&gt;
-  &lt;li&gt;搾乳器&lt;/li&gt;
-  &lt;li&gt;粉ミルク&lt;/li&gt;
-  &lt;li&gt;母乳パッド
-    &lt;ul&gt;
-      &lt;li&gt;入院中は必要なほど出なかったので不要&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;これらはあると嬉しかったです。有用だったかどうかは別です。&lt;/p&gt;
-
-&lt;p&gt;入院中は授乳がうまくいかず、退院後も心配だったので、病院で借りて快適だったものは購入して自宅でも使っていました。&lt;/p&gt;
-
-&lt;h4 id=&quot;section-14&quot;&gt;おっぱいクリーム&lt;/h4&gt;
-&lt;p&gt;カレンデュラオイルを病院から購入。ヒリヒリして痛いので気休め程度でも痛みをやわらげたくて買いました。&lt;/p&gt;
-
-&lt;p&gt;1ヶ月後くらいでおっぱいもみるみる出るようになったので、ほとんど使わなかった。結果的に見れば不要かも。&lt;/p&gt;
-
-&lt;h4 id=&quot;section-15&quot;&gt;授乳クッション&lt;/h4&gt;
-
-&lt;h4 id=&quot;section-16&quot;&gt;ドーナツ（円座）クッション 1個&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;排泄アイテム
-    &lt;ul&gt;
-      &lt;li&gt;紙おむつ 1パック △&lt;/li&gt;
-      &lt;li&gt;携帯用おしり拭き 1パック ○&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;その他
-    &lt;ul&gt;
-      &lt;li&gt;ガーゼ 10枚 ◎&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;h1 id=&quot;section-17&quot;&gt;新生児衣料関連&lt;/h1&gt;
-&lt;ul&gt;
+  &lt;li&gt;コンビ肌着&lt;/li&gt;
+  &lt;li&gt;2WAYオール&lt;/li&gt;
+  &lt;li&gt;ベスト&lt;/li&gt;
+  &lt;li&gt;アフガン&lt;/li&gt;
+  &lt;li&gt;セレモニードレス&lt;/li&gt;
   &lt;li&gt;赤ちゃん用の衣類洗剤&lt;/li&gt;
   &lt;li&gt;ベビーハンガー&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h1 id=&quot;section-18&quot;&gt;ミルク・授乳用品&lt;/h1&gt;
+&lt;h3 id=&quot;ok&quot;&gt;短肌着 &amp;amp; コンビ肌着でOK&lt;/h3&gt;
+
+&lt;p&gt;短肌着はお腹までの服。&lt;/p&gt;
+
+&lt;p&gt;長肌着は足までの服。スカートっぽいです。&lt;/p&gt;
+
+&lt;p&gt;コンビ肌着は長肌着と同じですが、股にボタンがついててズボンみたくできます。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/content/images/2016/11/Prepare-for-childbirth-ver-gothome/01.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;産まれてしばらくは病院以外の外出はありませんでした。我が子は、家の中でほとんど寝ており、オシャレが必要なケースはなし。&lt;/p&gt;
+
+&lt;h3 id=&quot;gap&quot;&gt;約半年間、快適に着れた服はGAPと西友&lt;/h3&gt;
+
+&lt;p&gt;西友で買ったベビーウェアセットがとても優秀なので、おしゃれ度を気にしない方にはおすすめです。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.the-seiyu.com/front/commodity/00000000/994959421093992/&quot;&gt;&lt;img src=&quot;/content/images/2016/11/Prepare-for-childbirth-ver-gothome/02.png&quot; alt=&quot;&quot; /&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.the-seiyu.com/front/commodity/00000000/994959421093992/&quot;&gt;ベビー男児 4枚組 ディズニー シンセイジハダギ アソート 　 - SEIYUドットコム【SEIYU倉庫館】&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;3000円くらいでリーズナブル。親が慣れないうちはオシッコをもらしてしまうので3セットをフル回転させてました。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/content/images/2016/11/Prepare-for-childbirth-ver-gothome/03.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;西友のセット コンビ肌着の着用例。生後7ヶ月あたりですが全然着られてる。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/content/images/2016/11/Prepare-for-childbirth-ver-gothome/04.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;出産祝でGAPのロンパースをいただきましたが、これも優秀。ロンパースなので、首が座ってからの利用です。&lt;/p&gt;
+
+&lt;div class=&quot;well&quot;&gt;
+	&lt;p&gt;頭からかぶって着せるタイプの服は、首がすわるまでは着せずらいので最初のうちに買う服は、前開きにしておくといいですよ。&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;最初はちょっと大きかったですが、半年たって8kg越えた今でもインナーとして使っています。&lt;/p&gt;
+
+&lt;h3 id=&quot;section-6&quot;&gt;ネットで買うのは、ムズかしかった。&lt;/h3&gt;
+
+&lt;p&gt;いくつかネットでの購入を検討しましたが、&lt;strong&gt;カワイイと思ったものはレビューが低く、「首まわりが小さすぎて入らなかった」「伸びないので着せづらかった」&lt;/strong&gt;と、赤ちゃんの状況を理解して作られたように思えないような感想が多かったです。怖くなって買うのをヤメてしまいました。&lt;/p&gt;
+
+&lt;p&gt;赤ちゃん向け衣服は充実してきたと思っていましたが、内情はそうでもないのでしょうか。赤ちゃん本舗や西松屋なんかの通販であれば良いのかもしれません。&lt;/p&gt;
+
+&lt;p&gt;その代わり、西友のベビー用品スペースは、限られた棚で商品を並べるので、実績のあるものしか置かないのでしょう。衣服にしろ、おもちゃにしろあまりハズれがありませんでした。&lt;/p&gt;
+
+&lt;p&gt;ネットで吟味に吟味を重ねて購入したオモチャが、西友にしれっと置いてあった時は脱力してしまいました。&lt;/p&gt;
+
+&lt;h2 id=&quot;section-7&quot;&gt;ミルク・授乳用品&lt;/h2&gt;
+
+&lt;h4 id=&quot;section-8&quot;&gt;産まれる前からあった方がいいもの&lt;/h4&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;調乳ポット・哺乳瓶ケース 1個 △&lt;/li&gt;
-  &lt;li&gt;粉ミルク 1缶 △&lt;/li&gt;
-  &lt;li&gt;ミルクスケール 1本 △&lt;/li&gt;
-  &lt;li&gt;ミルカー 1個 △&lt;/li&gt;
-  &lt;li&gt;哺乳瓶ケース 1個 ○&lt;/li&gt;
-  &lt;li&gt;哺乳瓶洗浄ブラシ 1個 ◎&lt;/li&gt;
-  &lt;li&gt;乳首専用ブラシ 1個 ◎&lt;/li&gt;
-  &lt;li&gt;哺乳瓶消毒＆保存ケース 1個 ◎&lt;/li&gt;
-  &lt;li&gt;哺乳瓶洗剤 1個 ◎&lt;/li&gt;
-  &lt;li&gt;授乳服 3～4枚 ○&lt;/li&gt;
-  &lt;li&gt;授乳スカーフ 1枚 △&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;section-19&quot;&gt;ベビーバス・ケア商品&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;ベビーバス 1個 ◎&lt;/li&gt;
-  &lt;li&gt;浴用ネット 1個 △&lt;/li&gt;
-  &lt;li&gt;湯温計 1個 △&lt;/li&gt;
-  &lt;li&gt;沐浴剤 1個 ○&lt;/li&gt;
-  &lt;li&gt;ベビーソープ 1個 ◎&lt;/li&gt;
-  &lt;li&gt;沐浴布 1枚 ◎&lt;/li&gt;
-  &lt;li&gt;バスローブ 1枚 △&lt;/li&gt;
-  &lt;li&gt;バスタオル 多めに △&lt;/li&gt;
-  &lt;li&gt;ベビーオイル／ローション 1本 △&lt;/li&gt;
-  &lt;li&gt;ベビー綿棒 1箱 ◎&lt;/li&gt;
-  &lt;li&gt;ベビー用爪きり 1つ ◎&lt;/li&gt;
-  &lt;li&gt;ベビーブラシ＆くし 各1個 △&lt;/li&gt;
-  &lt;li&gt;ベビー用体温計 1個 ○&lt;/li&gt;
-  &lt;li&gt;ベビー用体重計 1個 △&lt;/li&gt;
-  &lt;li&gt;バストイ 1個 △&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;section-20&quot;&gt;おむつ・トイレ用品&lt;/h1&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;布おむつ（紙のみの方は不要） 30枚 △&lt;/li&gt;
-  &lt;li&gt;おむつライナー 1箱 △&lt;/li&gt;
-  &lt;li&gt;おむつカバー（紙のみの方は不要） 5枚 △&lt;/li&gt;
-  &lt;li&gt;おしり拭き 1箱 ◎&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;おしり拭き詰替用 1パック ◎&lt;/p&gt;
+  &lt;li&gt;哺乳瓶 2本&lt;/li&gt;
+  &lt;li&gt;粉ミルク 1缶&lt;/li&gt;
+  &lt;li&gt;洗浄用具
+    &lt;ul&gt;
+      &lt;li&gt;哺乳瓶洗浄ブラシ&lt;/li&gt;
+      &lt;li&gt;乳首専用ブラシ&lt;/li&gt;
+    &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;紙おむつ 1パック △&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;携帯用おしり拭き 1パック ○&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;おむつ替えシート 2枚 ○&lt;/li&gt;
-  &lt;li&gt;おむつ＆肌着用洗剤 1箱 ◎&lt;/li&gt;
-  &lt;li&gt;紙おむつ用ゴミ箱（布のみの方は不要） 1個 △&lt;/li&gt;
-  &lt;li&gt;布おむつ用バケツ（紙のみの方は不要） 1個 △&lt;/li&gt;
-  &lt;li&gt;おむつポーチ 1個 △&lt;/li&gt;
-  &lt;li&gt;トング（紙のみの方は不要） 1個 ○&lt;/li&gt;
-  &lt;li&gt;手袋（紙のみの方は不要） 1個 ○&lt;/li&gt;
+  &lt;li&gt;消毒用具&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h1 id=&quot;section-21&quot;&gt;ベビールーム用品&lt;/h1&gt;
+&lt;h3 id=&quot;section-9&quot;&gt;哺乳瓶の本数は、「まとめて派」「こまめ派」で違う&lt;/h3&gt;
+
+&lt;p&gt;我が家の場合は、1本の哺乳瓶で事足りました。飲み終わったらミルトンに哺乳瓶をつけておくだけ。&lt;/p&gt;
+
+&lt;p&gt;運用も非常にラクだったので、ミルトンにして良かったなと思っています。レンジでチンするタイプも簡単そうでしたが、「匂いが気になる」というレビューを読んでいたので漬けおきタイプの採用です。&lt;/p&gt;
+
+&lt;h3 id=&quot;section-10&quot;&gt;迷ったら産院に合わせておこう&lt;/h3&gt;
+
+&lt;p&gt;産後の数日は、赤ちゃんのお世話を実際にしてみて、分からないことを助産師さんたちに聞きながら過ごすことになります。&lt;/p&gt;
+
+&lt;p&gt;プロフェッショナルな方々のフローは洗練されているものです。&lt;/p&gt;
+
+&lt;p&gt;家でも同じように運用しましたが、旦那さんにもすんなり伝わりましたし、伝えずともエラーしにくい流れになっていたように思います。&lt;/p&gt;
+
+&lt;p&gt;哺乳瓶の洗い方、搾乳した母乳は何に入れて保管するか、いつまでに処分するかなどです。&lt;/p&gt;
+
+&lt;h3 id=&quot;section-11&quot;&gt;乳首が明暗を分けることも&lt;/h3&gt;
+
+&lt;p&gt;ドクター Bettaの哺乳瓶を2本をプレゼントでいただきました。最初は150ml、今は240mlを使ってます。ありがとう。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.amazon.co.jp/%E3%83%99%E3%83%83%E3%82%BF-Betta-%E3%83%89%E3%82%AF%E3%82%BF%E3%83%BC%E3%83%99%E3%83%83%E3%82%BF-%E5%93%BA%E4%B9%B3%E3%81%B3%E3%82%93-%E3%82%B9%E3%83%9A%E3%82%B7%E3%83%A3%E3%83%AB5%E7%82%B9%E3%82%BB%E3%83%83%E3%83%88/dp/B01A9S4W9M/ref=as_li_ss_il?ie=UTF8&amp;amp;qid=1479832679&amp;amp;sr=8-9&amp;amp;keywords=%E3%83%89%E3%82%AF%E3%82%BF%E3%83%BC%E3%83%99%E3%83%83%E3%82%BF&amp;amp;linkCode=li3&amp;amp;tag=fastfargroove-22&amp;amp;linkId=a25b75fc49500d7e985214a7c54227d4&quot; target=&quot;_blank&quot;&gt;&lt;img border=&quot;0&quot; src=&quot;//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;amp;ASIN=B01A9S4W9M&amp;amp;Format=_SL600_&amp;amp;ID=AsinImage&amp;amp;MarketPlace=JP&amp;amp;ServiceVersion=20070822&amp;amp;WS=1&amp;amp;tag=fastfargroove-22&quot; /&gt;&lt;/a&gt;&lt;img src=&quot;https://ir-jp.amazon-adsystem.com/e/ir?t=fastfargroove-22&amp;amp;l=li3&amp;amp;o=9&amp;amp;a=B01A9S4W9M&quot; width=&quot;1&quot; height=&quot;1&quot; border=&quot;0&quot; alt=&quot;&quot; style=&quot;border:none !important; margin:0px !important;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;3本準備して、ほとんど1本でやりくりできました。&lt;/p&gt;
+
+&lt;p&gt;ご家庭によっては5,6本買っておいてまとめて消毒するとかも聞いていたので拍子抜け。こればっかりは実際に赤ちゃんと過ごしてみないと分からないところでしょう。&lt;/p&gt;
+
+&lt;h4 id=&quot;section-12&quot;&gt;乳首には種類があるゾ&lt;/h4&gt;
+
+&lt;p&gt;それに対して乳首はいくつか必要でした、これまでで3個くらい使った。&lt;/p&gt;
+
+&lt;p&gt;うちの子は吸引力が凄まじく、スタンダード乳首だとミルク瞬殺でした。で、物足りないらしくすぐ泣き出してた。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.betta.co.jp/contents/special/201209_firstbetta_nipple/index.php&quot;&gt;&lt;img src=&quot;/content/images/2016/11/Prepare-for-childbirth-ver-gothome/05.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;
+ベッタベビーストア/特集:はじめてのドクターベッタ哺乳びん　〜　乳首のタイプから選ぶ編&lt;/p&gt;
+
+&lt;h5 id=&quot;section-13&quot;&gt;哺乳瓶の本数は消毒フローにもよる？&lt;/h5&gt;
+
+&lt;h3 id=&quot;section-14&quot;&gt;後からでいいもの&lt;/h3&gt;
+
 &lt;ul&gt;
-  &lt;li&gt;ベビーベッド 1台 △&lt;/li&gt;
-  &lt;li&gt;ベッドガード 1枚 △&lt;/li&gt;
-  &lt;li&gt;ベビー布団 1組 ◎&lt;/li&gt;
-  &lt;li&gt;ベビー枕 1個 ○&lt;/li&gt;
-  &lt;li&gt;タオルケット・綿毛布 1枚 ○&lt;/li&gt;
-  &lt;li&gt;スリーパー 1枚 △&lt;/li&gt;
-  &lt;li&gt;キルティングマット 2枚 ◎&lt;/li&gt;
-  &lt;li&gt;防水シーツ（おねしょシーツ） 1～2枚 ◎&lt;/li&gt;
-  &lt;li&gt;フィットシーツ 2枚 ◎&lt;/li&gt;
-  &lt;li&gt;ベビーモニター 1台 △&lt;/li&gt;
-  &lt;li&gt;ベッドメリー 1個 △&lt;/li&gt;
+  &lt;li&gt;調乳ポット&lt;/li&gt;
+  &lt;li&gt;授乳服&lt;/li&gt;
+  &lt;li&gt;授乳スカーフ&lt;/li&gt;
+  &lt;li&gt;搾乳器&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h1 id=&quot;section-22&quot;&gt;お出かけ用品&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;チャイルドシート 1台 △&lt;/li&gt;
-  &lt;li&gt;A型ベビーカー 1台 ○&lt;/li&gt;
-  &lt;li&gt;子守帯／抱っこひも 1個 ○&lt;/li&gt;
-  &lt;li&gt;クーファン 1台 △&lt;/li&gt;
-  &lt;li&gt;ベビー用帽子 1～2枚 △&lt;/li&gt;
-  &lt;li&gt;ママコート 1枚 △&lt;/li&gt;
-  &lt;li&gt;マザーズバッグ 1個 △&lt;/li&gt;
-  &lt;li&gt;哺乳瓶保温ケース 1個 △&lt;/li&gt;
-  &lt;li&gt;足カバー 1個 △&lt;/li&gt;
-&lt;/ul&gt;
+&lt;h2 id=&quot;section-15&quot;&gt;ベビーバス・ケア商品&lt;/h2&gt;
 
-&lt;h1 id=&quot;section-23&quot;&gt;その他&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;命名用紙 1枚 △&lt;/li&gt;
-  &lt;li&gt;おしゃぶり 1個 △&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;おもちゃ 1個 △&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;マグカップ （病室になければ用意）&lt;/li&gt;
-  &lt;li&gt;ティッシュ （病室になければ用意）&lt;/li&gt;
-  &lt;li&gt;ストローボトル（陣痛の最中に、寝ながら水分補給できます）&lt;/li&gt;
-  &lt;li&gt;リップクリーム（冬場のお産時に、唇が乾燥しやすい人に）&lt;/li&gt;
-  &lt;li&gt;ゴルフボール（陣痛の痛み逃しに使います）&lt;/li&gt;
-  &lt;li&gt;小さなカバン（院内での移動時、必要最低限の荷物を持ちたい時に）&lt;/li&gt;
-  &lt;li&gt;洗面用具&lt;/li&gt;
-  &lt;li&gt;カーディガン&lt;/li&gt;
-  &lt;li&gt;時計&lt;/li&gt;
-  &lt;li&gt;メモ帳&lt;/li&gt;
-  &lt;li&gt;携帯電話&lt;/li&gt;
-  &lt;li&gt;携帯充電器&lt;/li&gt;
-  &lt;li&gt;デジカメ&lt;/li&gt;
-  &lt;li&gt;ビデオカメラ&lt;/li&gt;
-  &lt;li&gt;ハ－ブティー&lt;/li&gt;
-  &lt;li&gt;ポプリ・アロマオイル&lt;/li&gt;
-  &lt;li&gt;筆記用具&lt;/li&gt;
-  &lt;li&gt;洗濯用品&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;ベビーバス 1個 ◎
+浴用ネット 1個 △
+湯温計 1個 △
+沐浴剤 1個 ○
+ベビーソープ 1個 ◎
+ガーゼ 10枚 ◎
+沐浴布 1枚 ◎
+バスローブ 1枚 △
+バスタオル 多めに △
+ベビーオイル／ローション 1本 △
+ベビー綿棒 1箱 ◎
+ベビー用爪きり 1つ ◎
+ベビーブラシ＆くし 各1個 △
+ベビー用体温計 1個 ○
+ベビー用体重計 1個 △
+バストイ 1個 △&lt;/p&gt;
+
+&lt;h2 id=&quot;section-16&quot;&gt;おむつ・トイレ用品&lt;/h2&gt;
+
+&lt;p&gt;紙おむつか布おむつどちらかは必ず用意しましょう&lt;/p&gt;
+
+&lt;p&gt;紙おむつ 1パック △
+布おむつ（紙のみの方は不要） 30枚 △
+おむつライナー 1箱 △
+おむつカバー（紙のみの方は不要） 5枚 △
+おしり拭き 1箱 ◎
+おしり拭き詰替用 1パック ◎
+携帯用おしり拭き 1パック ○
+おむつ替えシート 2枚 ○
+おむつ＆肌着用洗剤 1箱 ◎
+紙おむつ用ゴミ箱（布のみの方は不要） 1個 △
+布おむつ用バケツ（紙のみの方は不要） 1個 △
+おむつポーチ 1個 △
+トング（紙のみの方は不要） 1個 ○
+手袋（紙のみの方は不要） 1個 ○&lt;/p&gt;
+
+&lt;h2 id=&quot;section-17&quot;&gt;ベビールーム用品&lt;/h2&gt;
+
+&lt;p&gt;ベビーベッド 1台 △
+ベッドガード 1枚 △
+ベビー布団 1組 ◎
+ベビー枕 1個 ○
+タオルケット・綿毛布 1枚 ○
+スリーパー 1枚 △
+キルティングマット 2枚 ◎
+防水シーツ（おねしょシーツ） 1～2枚 ◎
+フィットシーツ 2枚 ◎
+ベビーモニター 1台 △
+ベッドメリー 1個 △&lt;/p&gt;
+
+&lt;h2 id=&quot;section-18&quot;&gt;お出かけ用品&lt;/h2&gt;
+
+&lt;p&gt;チャイルドシート 1台 △
+A型ベビーカー 1台 ○
+子守帯／抱っこひも 1個 ○
+クーファン 1台 △
+ベビー用帽子 1～2枚 △
+ママコート 1枚 △
+マザーズバッグ 1個 △
+哺乳瓶保温ケース 1個 △
+足カバー 1個 △&lt;/p&gt;
+
+&lt;h2 id=&quot;section-19&quot;&gt;その他&lt;/h2&gt;
+
+&lt;p&gt;命名用紙 1枚 △
+おしゃぶり 1個 △
+おもちゃ 1個 △&lt;/p&gt;
 </description>
-				<pubDate>Thu, 17 Nov 2016 09:05:04 +0900</pubDate>
-				<link> /diary/2016/11/17/Memories-of-childbirth2/</link>
-				<guid isPermaLink="true"> /diary/2016/11/17/Memories-of-childbirth2/</guid>
+				<pubDate>Tue, 22 Nov 2016 23:05:53 +0900</pubDate>
+				<link> /diary/2016/11/22/Prepare-for-childbirth-ver-gothome/</link>
+				<guid isPermaLink="true"> /diary/2016/11/22/Prepare-for-childbirth-ver-gothome/</guid>
 				
 				
 					<category>diary</category>
@@ -439,7 +663,7 @@
 
 &lt;p&gt;乾燥機付き洗濯機だと雨だろうがなんだろうが絶対乾くので、取り出した衣服をそのまま病院に持ってくればいいんですよね。&lt;/p&gt;
 
-&lt;p&gt;家事に自身のない旦那さんと、二人で出産を乗り越えるならあった方がいいかもです。&lt;/p&gt;
+&lt;p&gt;家事に自信のない旦那さんと、二人で出産を乗り越えるならあった方がいいかもです。&lt;/p&gt;
 
 &lt;h4 id=&quot;section-19&quot;&gt;洗面用具&lt;/h4&gt;
 &lt;p&gt;いろいろ揃っている病院でしたが、母の入浴に関する設備だけは揃っていませんでした。&lt;/p&gt;
@@ -546,9 +770,9 @@
 
 &lt;p&gt;出産、がんばってー！&lt;/p&gt;
 </description>
-				<pubDate>Thu, 17 Nov 2016 09:05:04 +0900</pubDate>
-				<link> /diary/2016/11/17/Items-to-prepare-for-childbirth/</link>
-				<guid isPermaLink="true"> /diary/2016/11/17/Items-to-prepare-for-childbirth/</guid>
+				<pubDate>Tue, 22 Nov 2016 23:05:53 +0900</pubDate>
+				<link> /diary/2016/11/22/Prepare-for-childbirth-ver-Hospitalization/</link>
+				<guid isPermaLink="true"> /diary/2016/11/22/Prepare-for-childbirth-ver-Hospitalization/</guid>
 				
 				
 					<category>diary</category>
@@ -1370,209 +1594,6 @@
 				
 				
 					<category>diary</category>
-				
-			</item>
-		
-			<item>
-				<title>産みました</title>
-				<description>&lt;p&gt;妊娠中から出産が落ちつくまでの「なぜ産もうと思ったのか、産んでどう思ったのか。」とりとめのない文章が、下書きのまま積り積もってしまいました。かいつまんで振り返ってみます。&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;h2 id=&quot;section&quot;&gt;臨月から出産&lt;/h2&gt;
-
-&lt;p&gt;冗談かと思うほどお腹がパンパンになり、家族や大家さんに「こんなに大きくなるんだっけ」と言われました。&lt;/p&gt;
-
-&lt;p&gt;産まれたサイズは2890g。3000g以下で産まれたのは、わたしの糖質制限のたまものだと思いたい。&lt;/p&gt;
-
-&lt;div class=&quot;tumblr-post&quot; data-href=&quot;https://embed.tumblr.com/embed/post/YqAzfaGPv2LGBkan4yHI6A/140146315015&quot; data-did=&quot;8fff13476716da564f17113950fd35a5da1f3bf0&quot;&gt;&lt;a href=&quot;http://nonsugar-diary.tumblr.com/post/140146315015/ずいぶん大きくなりました&quot;&gt;http://nonsugar-diary.tumblr.com/post/140146315015/ずいぶん大きくなりました&lt;/a&gt;&lt;/div&gt;
-&lt;script async=&quot;&quot; src=&quot;https://secure.assets.tumblr.com/post.js&quot;&gt;&lt;/script&gt;
-
-&lt;p&gt;出産日の一週間前から毎日録画していたビデオ日記が消えてしまったのは悲しいですが、陣痛10分間隔時の様子、破水した瞬間の音声、分娩室に入ってからの1時間のデータはしっかり残っています。&lt;/p&gt;
-
-&lt;div class=&quot;tumblr-post&quot; data-href=&quot;https://embed.tumblr.com/embed/post/YqAzfaGPv2LGBkan4yHI6A/140963838712&quot; data-did=&quot;9010ce8133acd5f8d92ee3c2fa6242324f592332&quot;&gt;&lt;a href=&quot;http://nonsugar-diary.tumblr.com/post/140963838712/ちび樹-入院2日目&quot;&gt;http://nonsugar-diary.tumblr.com/post/140963838712/ちび樹-入院2日目&lt;/a&gt;&lt;/div&gt;
-&lt;script async=&quot;&quot; src=&quot;https://secure.assets.tumblr.com/post.js&quot;&gt;&lt;/script&gt;
-
-&lt;p&gt;&lt;small&gt;この教訓からiCloudでのメディアバックアップをやめ、Google Photoに移行しました。写真.app上でデータを消してしまうと、他デバイスからも消えるの知らなかった。ローカルにデータが同期されるもんだと思ってたんです。悲しすぎる。&lt;/small&gt;&lt;/p&gt;
-
-&lt;p&gt;ちなみに出産は4時間ほど。助産師さんが「ほとんど一人でやってましたよ」と言ってくれるほどスムーズに産まれました。&lt;/p&gt;
-
-&lt;p&gt;旦那さん曰く「顔にすごい血管浮いてた」そうな。&lt;/p&gt;
-
-&lt;p&gt;顔が赤いのはそのせい。&lt;/p&gt;
-
-&lt;div class=&quot;tumblr-post&quot; data-href=&quot;https://embed.tumblr.com/embed/post/YqAzfaGPv2LGBkan4yHI6A/140793037695&quot; data-did=&quot;917979400019e3d7b839ba245cfeb07ac5b035ca&quot;&gt;&lt;a href=&quot;http://nonsugar-diary.tumblr.com/post/140793037695/う産まれた&quot;&gt;http://nonsugar-diary.tumblr.com/post/140793037695/う産まれた&lt;/a&gt;&lt;/div&gt;
-&lt;script async=&quot;&quot; src=&quot;https://secure.assets.tumblr.com/post.js&quot;&gt;&lt;/script&gt;
-
-&lt;h2 id=&quot;section-1&quot;&gt;結婚について&lt;/h2&gt;
-
-&lt;p&gt;経済的にも精神面でも自分のことは自分でカタをつけられる「余裕のある年齢」になったときに、相手がいたから「じゃあ、結婚しようか」となりました。&lt;/p&gt;
-
-&lt;p&gt;旦那さんの「数えきれないほどの魅力」が決意を後押ししたのは言うまでもありませんが、一番はそれでしょう。&lt;/p&gt;
-
-&lt;p&gt;これまで、何回か婚約に近しいところまでいきつつも白紙になっていたのです。&lt;/p&gt;
-
-&lt;p&gt;「この結婚失敗だったと思いたくない、思われたくない。」結婚したらもう引き返せないように感じていたからでしょう。&lt;/p&gt;
-
-&lt;p&gt;しかし、30代に入れば、離婚歴のある友人がまわりに増えていきます。その環境のおかげで、「失敗しても別にいいや」となり、それなら今好きな人と結婚しよう。と思えました。&lt;/p&gt;
-
-&lt;div class=&quot;container&quot;&gt;
-	&lt;a href=&quot;http://www.amazon.co.jp/gp/product/4569792189/ref=as_li_ss_il?ie=UTF8&amp;amp;camp=247&amp;amp;creative=7399&amp;amp;creativeASIN=4569792189&amp;amp;linkCode=as2&amp;amp;tag=fastfargroove-22&quot;&gt;&lt;img src=&quot;/content/images/2016/05/gavebirth/02.jpg&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;
-	&lt;div class=&quot;reference&quot;&gt;
-		&lt;strong&gt;お恥ずかしい写真ですいません。&lt;/strong&gt;
-		&lt;p&gt;&lt;/p&gt;
-	&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;h2 id=&quot;section-2&quot;&gt;出産について&lt;/h2&gt;
-
-&lt;p&gt;「好きな人の小さいころに会いたかった」&lt;/p&gt;
-
-&lt;p&gt;ロマンチックな感想で恥ずかしいですが、それ以上の理由はありません。旦那さんは絶対可愛らしい子供だったと思います。&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;旦那さんと、子どもが会話している様子&lt;/li&gt;
-  &lt;li&gt;旦那さんが子どもを抱っこしている様子&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;そんなことを想像するだけで、ごはん10杯はいけます。&lt;/p&gt;
-
-&lt;p&gt;産院で行われるマタニティクラスで、生後二ヶ月の赤ちゃんと触れあうという回があったのですが、旦那さんが赤ちゃんを抱っこする姿に一種のカタルシスというか。胸が熱くなりました。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/content/images/2016/05/gavebirth/01.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;曽田先生の作品によく出てくる、こんな表情です。&lt;/p&gt;
-
-&lt;h3 id=&quot;section-3&quot;&gt;「子供が産まれたら大変だよ〜」&lt;/h3&gt;
-
-&lt;p&gt;妊娠期間中、耳にタコができるくらい言われるこの言葉。これ、やめた方がいいと思うんですよね。&lt;/p&gt;
-
-&lt;p&gt;確かに大変ではあるんです。でも重大なことに気付いてなかった。「この大変だよ〜」と言う人々、みんな笑顔なんですよね。それに気付かず言葉だけ鵜呑みにして、結婚・出産を後回しにしていました。&lt;/p&gt;
-
-&lt;p&gt;今思うともっと早く産んでおけば良かった。&lt;/p&gt;
-
-&lt;p&gt;&lt;small&gt;でも、今の環境だからこそゆとりのあるライフスタイルで子育てできているのかもしれないから、今が良い時期だったとは思うんです。タイムマシンで過去に戻れるとしても、また似たような道程を歩むと思います。&lt;/small&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;section-4&quot;&gt;子供を産むと出来なくなる事なんて無かった&lt;/h3&gt;
-
-&lt;p&gt;「海外に住みたい」「まだまだ仕事がしたい」「長期旅行にでかけたい」&lt;/p&gt;
-
-&lt;p&gt;だから、子供はまだいらない。&lt;/p&gt;
-
-&lt;p&gt;そう思ってましたが、なんら実現するためのアクションをしていなかった。&lt;/p&gt;
-
-&lt;p&gt;で、産んでみたら、出来ることが増えたというか。そんな印象。&lt;/p&gt;
-
-&lt;p&gt;人生周回プレイに入った。そんな感じ。&lt;/p&gt;
-
-&lt;p&gt;自分が小さいころ、どう育てられてきたか、親から何を受け継いでいたのか。自分はそれをどこで変えたのか。&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;「小さいころ、よくこうして歌っていたな」&lt;/li&gt;
-  &lt;li&gt;「今の喋り方、母親に似てたな」&lt;/li&gt;
-  &lt;li&gt;「和食ばかり作るようになったのは外食ばかりしていた反動かな」&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;子どもと生活をしながら、そんな事ばかり考えるようになりました。改めて、小さいころの思い出が「地続きである」そんな印象です。&lt;/p&gt;
-
-&lt;p&gt;また、両親がどんな思いで私たちを愛してくれていたかも、分かるようになりました。&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;「頭のカタチがキレイになるように寝かせよう」&lt;/li&gt;
-  &lt;li&gt;「虫歯ができないように気をつけなくちゃ」&lt;/li&gt;
-  &lt;li&gt;「栄養が偏らないように、いろんな野菜を食べよう」&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;これまで、自分ひとりで生きてきたと本気で思っていましたが、親になってみて初めて、「愛されて産まれてきたんだな。」と感じることができました。&lt;/p&gt;
-
-&lt;p&gt;家族仲はあまり良くない方でしたが、子どものおかげでうまく回るようになった。まさに子はかすがいですな。&lt;/p&gt;
-
-&lt;p&gt;子供が産まれても、海外に住もうと思えば住める。仕事だってやれる。長期旅行にだって出掛けられる。けっきょく自分は、やらない理由を並べたてて、後回しにしてただけだったんですね。&lt;/p&gt;
-
-&lt;p&gt;知識だけが増えて、体験していなかったのに食わず嫌いばかりしていた気分です。産む産まないは関係なかったのにね。&lt;/p&gt;
-
-&lt;div class=&quot;container&quot;&gt;
-	&lt;a href=&quot;http://www.amazon.co.jp/gp/product/4002011364/ref=as_li_ss_il?ie=UTF8&amp;amp;camp=247&amp;amp;creative=7399&amp;amp;creativeASIN=4002011364&amp;amp;linkCode=as2&amp;amp;tag=fastfargroove-22&quot;&gt;&lt;img src=&quot;http://ecx.images-amazon.com/images/I/41RutoMs7jL._SY400_.jpg&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;
-	&lt;div class=&quot;reference&quot;&gt;
-		&lt;strong&gt;古い本だけど、哲学書として読むとおもしろい&lt;/strong&gt;
-		&lt;p&gt;&lt;/p&gt;
-	&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;p&gt;本の冒頭に「母親になれるか」という章があります。&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;自分は人間が出来ていないから、赤ちゃんをそだてる資格がないと思うのにも賛成できない。人間は完成するものでないし、完成に近づいたにしても、そのころには子どもをそだてられない。だが親になることは、人間を完成に近づける機会であることにまちがいない。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;わたし自身、産まない選択をしようとしていたので、産む産まないどっちが良いかはそれぞれだと思っていますが、妊娠中にこの文章を読んで、「未熟だけれど、それもでいいか。」と思えたのでした。&lt;/p&gt;
-
-&lt;p&gt;とにかく今は楽しく、幸せにあふれている。そんなコトを未来の自分のために記録しておきます。ではでは。&lt;/p&gt;
-</description>
-				<pubDate>Fri, 06 May 2016 00:00:00 +0900</pubDate>
-				<link> /diary/2016/05/06/gavebirth/</link>
-				<guid isPermaLink="true"> /diary/2016/05/06/gavebirth/</guid>
-				
-				
-					<category>diary</category>
-				
-			</item>
-		
-			<item>
-				<title>プライベートワークの重要さ</title>
-				<description>&lt;p&gt;プライベートワークの良いところは、学習に直結しているところです。しかし、副産物もまたおいしい。勉強しているだけなのに、その分野で注目されて、最先端の情報が集ってくるようになります。&lt;/p&gt;
-
-&lt;h2 id=&quot;section&quot;&gt;学習モチベーションの維持につながる&lt;/h2&gt;
-
-&lt;p&gt;仕事ほどではないにしろ、他者の目があることでゆるやかな強制力が働くので、なにかを試す時は必ずコンテンツとして楽しめるようにしています。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://mikiishijima.com/privateworks/&quot;&gt;mikiishijima.com - プライベートワーク &lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;リリースまで到達できると、使ってくれるユーザーの反応が見えてきてモチベーションが上がりやすくなるからです。&lt;/p&gt;
-
-&lt;p&gt;Twitterでのエゴサーチや、「インストールしたよ。」とのコメントで、下手な運用はできなくなった。と、責任感も少し芽生えます。&lt;/p&gt;
-
-&lt;h2 id=&quot;section-1&quot;&gt;良い情報が集まりはじめる&lt;/h2&gt;
-
-&lt;p&gt;開発中に、検索して見つからなかったノウハウは備忘録としてQiitaに投稿しています。他の人がストックしてくれるとやっぱり嬉しいですよね。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/content/images/2016/05/undefinde-variables/qiita-woopsdez.png&quot; alt=&quot;http://qiita.com/woopsdez&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://qiita.com/woopsdez/items/bc6108460de13d668e78&quot;&gt;Chromeエクステンションで、どうしてもJSONPでやりとりしないといけない場合の対処 - Qiita&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://qiita.com/woopsdez/items/cb0e59245d4ee13e8ae5&quot;&gt;gulpでのgit操作 commit messageをコマンドライン引数で渡そう - Qiita&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://qiita.com/woopsdez/items/cc2b64800a6de3112920&quot;&gt;jekyllで構築したサイト、本番へアップしたらcssが適用されない場合に試しておきたいbaseurlの便利な変更の仕方。 - Qiita&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;学習して、それを後の自分のためにオンラインで記録しているだけなのに、自分の事を知る人が増え、良い情報が集ってくる流れが勝手にできていくのです。&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;学習過程を公開する&lt;/li&gt;
-  &lt;li&gt;人が集まる&lt;/li&gt;
-  &lt;li&gt;良い情報が見つかりやすくなる&lt;/li&gt;
-  &lt;li&gt;学習がさらにしやすくなる&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;良い循環ができていきますね。&lt;/p&gt;
-
-&lt;h2 id=&quot;section-2&quot;&gt;ただ、強制されるものではない&lt;/h2&gt;
-
-&lt;p&gt;しかし、自分がそれをしているからといって、部下や生徒がしない事を責めたり、強制したりするのは間違いです。「こんなに楽しいことがあるよ」という提案にとどめておきましょう。&lt;/p&gt;
-
-&lt;p&gt;「本当にやる気があるなら、時間を作って何か開発するはずだ」と、いうのは&lt;strong&gt;「相手も自分と同じでなくてはならない」というただの同調圧力です。&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;わたし達は同じ肌の色、同じ言葉、同じようなものを食べて育っている単一民族国家です。だからこそ、少しの違いが気になってしまうのは仕方のないこと。&lt;/p&gt;
-
-&lt;p&gt;ただ、それを意識しておくことで、プライベートワークが本当にプライベートワークとして、開放された自由な開発学習になるはずです。&lt;/p&gt;
-
-&lt;p&gt;まわりにプライベートワークを勧めるのであれば、まずは自分がプライベートワークをして、得している様を見せていきましょう。&lt;/p&gt;
-</description>
-				<pubDate>Tue, 03 May 2016 00:00:00 +0900</pubDate>
-				<link> /private-works/2016/05/03/the-importance-of-the-private-work/</link>
-				<guid isPermaLink="true"> /private-works/2016/05/03/the-importance-of-the-private-work/</guid>
-				
-				
-					<category>private-works</category>
 				
 			</item>
 		
