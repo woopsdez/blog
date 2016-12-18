@@ -3,10 +3,10 @@
 	<channel>
 		<title>Miki Ishijima Blog</title>
 		<description>趣味のゲームやプログラミング、レビューなど個人イシジマミキにより近しい内容を書いています。普遍的なデザインの話はThe Marsknowledge Blogで。</description>
-		<link> /</link>
-		<atom:link href=" /feed.xml" rel="self" type="application/rss+xml" />
-		<pubDate>Sun, 18 Dec 2016 23:08:03 +0900</pubDate>
-		<lastBuildDate>Sun, 18 Dec 2016 23:08:03 +0900</lastBuildDate>
+		<link>http://blog.mikiishijima.com/</link>
+		<atom:link href="http://blog.mikiishijima.com/feed.xml" rel="self" type="application/rss+xml" />
+		<pubDate>Sun, 18 Dec 2016 23:18:18 +0900</pubDate>
+		<lastBuildDate>Sun, 18 Dec 2016 23:18:18 +0900</lastBuildDate>
 		<generator>Jekyll v3.1.2</generator>
 		
 			<item>
@@ -117,136 +117,8 @@
 &lt;p&gt;この問題を振り替えることで、手法以前の問題も浮き彫りになりました。さまざまなカタチでwebに関っていますが、もう少しここの部分をさまざまな企業さんと一緒にやってみたいです。&lt;/p&gt;
 </description>
 				<pubDate>Sun, 18 Dec 2016 20:25:14 +0900</pubDate>
-				<link> /works/2016/12/18/low-level-problems-related-to-prototyping/</link>
-				<guid isPermaLink="true"> /works/2016/12/18/low-level-problems-related-to-prototyping/</guid>
-				
-				
-					<category>works</category>
-				
-			</item>
-		
-			<item>
-				<title>shift10で話した脱アドビ話。SketchはAiの代替じゃないよ。</title>
-				<description>&lt;!--more--&gt;
-
-&lt;p&gt;Shift10という年末に行われるwebデザイナー向けのイベントで、2016年のツールについてお話する機会がありました。&lt;/p&gt;
-
-&lt;p&gt;その内容でいくつか掘り下げて欲しいというリクエストもあったので補足情報として書いておきます。&lt;/p&gt;
-
-&lt;h2 id=&quot;section&quot;&gt;脱アドビしたい理由&lt;/h2&gt;
-
-&lt;p&gt;アドビ製品はどれも良いですが、主となるPhotoshopやIllustratorをプロジェクトによっては使わないケースがあります。&lt;/p&gt;
-
-&lt;p&gt;&lt;small&gt;Adobe XDは、パワポがわりにけっこう立ち上げてます&lt;/small&gt;&lt;/p&gt;
-
-&lt;p&gt;1ヶ月で10時間もさわれない場合、月々払っている費用とのバランスが悪いのではないか。無駄な支出は減らしたい。というのが発端です。&lt;/p&gt;
-
-&lt;h2 id=&quot;section-1&quot;&gt;デザインどうしてんの？&lt;/h2&gt;
-
-&lt;p&gt;仕事では、グラフィックデザインを請けるより、インターフェイス設計や、デザイン批評、会社で新しく立ち上げるデザインチームのトレーニングというのをメインにするように動いています。&lt;/p&gt;
-
-&lt;p&gt;ですので、スタジオで撮影した写真をゴリゴリ合成するというような事がなくなりました。&lt;/p&gt;
-
-&lt;p&gt;だから、脱アドビと言えているのでしょうね。&lt;/p&gt;
-
-&lt;h2 id=&quot;section-2&quot;&gt;プロトタイピングにまつわる低レベルな問題&lt;/h2&gt;
-
-&lt;p&gt;まわりではすでにプロトタイプからの開発が当たり前のようで、議論に入る前でつまづいている事があるのは少し恥ずかしいです。&lt;/p&gt;
-
-&lt;p&gt;みんなすんなりチームで議論できているのですか？ いいなー。&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;作り込みすぎ問題&lt;/li&gt;
-  &lt;li&gt;精度が低すぎて役に立たない問題&lt;/li&gt;
-  &lt;li&gt;議論に適切なプロトタイピングの粒度が分からない問題&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;自分がやってるとざっとこんな感じのトコロでハタと躓いちゃうことがありました。&lt;/p&gt;
-
-&lt;h3 id=&quot;section-3&quot;&gt;そんなに作る必要ある？問題&lt;/h3&gt;
-
-&lt;p&gt;利用するソフトがグラフィックデザイン向けソフトではなく、Sketchなどの画面設計用のソフトに以降したのですが、肝心の本人の&lt;strong&gt;脳味噌が設計脳に以降できていない&lt;/strong&gt;事があります。&lt;/p&gt;
-
-&lt;p&gt;たとえば、何か新しいアプリを作りはじめるとしましょう。&lt;/p&gt;
-
-&lt;p&gt;まだアナタの頭の中にしかイメージがないので、他のメンバーにどういうアプリなのかを伝える必要があります。この時に必要な情報は「何ができるアプリなのか」だけでなく「どういう操作でそれが達成できるのか」だとしましょう。&lt;/p&gt;
-
-&lt;p&gt;どこをタップして、フリックして選ぶと、こうなる。というストーリーが伝わればいいという段階です。&lt;/p&gt;
-
-&lt;p&gt;それなのに、色はどうしよう。フォント、これがいいかな？など&lt;strong&gt;本質ではない事柄に注力してしまう&lt;/strong&gt;事が問題なのです。&lt;/p&gt;
-
-&lt;div class=&quot;container&quot;&gt;
-	&lt;a href=&quot;&quot;&gt;&lt;img src=&quot;/content/images/2016/12/independent-from-adobe-on-shift10/02.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;
-	&lt;div class=&quot;reference&quot;&gt;
-		&lt;strong&gt;画像：Adobe XDで作った、名付けアプリの低精度プロトタイプ&lt;/strong&gt;
-		&lt;p&gt;&lt;/p&gt;
-	&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;p&gt;低精度プロトタイプなのにちょっとキレイに作っちゃってますね。&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;最初に入力させる情報は何か&lt;/li&gt;
-  &lt;li&gt;名付けのどういった問題を解決しているのか&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;上記を知るのには、画面の要素が分かればいいのに、書体とかヘッダーの色とかデザイナーが故に調整できてしまって変に時間かけてしまう。&lt;/p&gt;
-
-&lt;p&gt;こうなるくらいなら&lt;strong&gt;いっそUIパーツだけで構築するなどの縛りを入れた方がいいのかもしれない&lt;/strong&gt;と考えています。&lt;/p&gt;
-
-&lt;p&gt;グラフィックソフトに慣れてしまっているだけに、似たようなインターフェイスのソフトを開くと条件反射的にグラフィックデザイナーモードになってしまう時があるので、意識的に動かないと時間をムダにしちゃう時がありました。&lt;/p&gt;
-
-&lt;p&gt;グラフィックデザインできる人が低精度プロトタイプ作らないように役割分担するのもアリかも。&lt;/p&gt;
-
-&lt;h3 id=&quot;section-4&quot;&gt;精度が低すぎて役に立たない問題&lt;/h3&gt;
-
-&lt;p&gt;インターフェイス実装・機能開発に必要は工数見積をするのに、UIを決定しないといけない事がありました。&lt;/p&gt;
-
-&lt;p&gt;開発途中の画面を見ながらおのおのがジェスチャーで議論をするのですが、いまいち伝えきれないもどかしさをメンバーが感じていたので、プロトタイプを作ることにしました。&lt;/p&gt;
-
-&lt;p&gt;各自がそれぞれ絵コンテを用意し、自分がPrincipleを使って実装してみたのですが、結論から言うと議論に役立てられませんでした。&lt;/p&gt;
-
-&lt;p&gt;UIパーツ群を利用して作ったプロトタイピングは、四角が並んでいるだけなのです。&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;実際にどのようなコンテンツが入るのか&lt;/li&gt;
-  &lt;li&gt;操作パネルを上に重ねた場合にみづらくならないか&lt;/li&gt;
-  &lt;li&gt;ホバーエリアは十分に確保できているか&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;という点を確認できないプロトタイピングだったので、議論の冒頭で動きだけみて「すごいねー」で終わってしまったのです。とほほ。&lt;/p&gt;
-
-&lt;div class=&quot;container&quot;&gt;
-	&lt;a href=&quot;&quot;&gt;&lt;img src=&quot;/content/images/2016/12/independent-from-adobe-on-shift10/uianimation.gif&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;
-	&lt;div class=&quot;reference&quot;&gt;
-		&lt;strong&gt;画像：こんなに動くの簡単に作れて、スゴいねー。&lt;/strong&gt;
-		&lt;p&gt;&lt;/p&gt;
-	&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;p&gt;&lt;strong&gt;議論に間に合わせることにフォーカスしすぎて、精度をおろそかにしてしまいました。&lt;/strong&gt;もう少し時間をかけて高精度なプロトタイプを作ってみてからの議論でも良かったなと思います。&lt;/p&gt;
-
-&lt;p&gt;サービスをアジャイルで開発しているので、定例のたびになるべく見える成果を出したくなってしまいます。そうすると、自分の場合は精度が犠牲になりがちだなと感じました。&lt;/p&gt;
-
-&lt;p&gt;高精度プロトタイピングを作る過程で、サービスの理解を深められることもあるので、そこは焦らずしっかり工数をとるべきだったなと思います。&lt;/p&gt;
-
-&lt;h3 id=&quot;section-5&quot;&gt;議論に適切なプロトタイピングの精度が分からない問題&lt;/h3&gt;
-
-&lt;p&gt;上記に関連するのですが、サービス開発やプロトタイピングに慣れていない場合、今どのフェーズで議論しているのかを見誤りやすく、議論してみるまで適切な精度が分からない事がありました。&lt;/p&gt;
-
-&lt;p&gt;デザイナーである自分がしっかりハンドリングすべき！できればそうしたい！ってのがあるんですが、これはエゴですね。サービスの軸となるメンバーにしっかり頼り、MTGでどういう部分をクリアにするのか事前に握っておけば良かったのかもしれません。&lt;/p&gt;
-
-&lt;p&gt;あとは、サービス開発フローチャートとか作ってみてクライアントやチームに共有してみて自分がプロジェクトをちゃんと俯瞰で見れているのか認識するとかでしょうか。&lt;/p&gt;
-
-&lt;p&gt;サービス開発のフェーズとかフローを一般化している企業さんとか多いと思うので、なんかそういう資料良いのがあったら教えてください。&lt;/p&gt;
-
-&lt;h2 id=&quot;section-6&quot;&gt;まとめ&lt;/h2&gt;
-
-&lt;p&gt;記事に書くことで振り替えってみると、なんとか試みが見えてきますね。&lt;/p&gt;
-</description>
-				<pubDate>Sun, 18 Dec 2016 20:25:14 +0900</pubDate>
-				<link> /works/2016/12/18/independent-from-adobe-on-shift10/</link>
-				<guid isPermaLink="true"> /works/2016/12/18/independent-from-adobe-on-shift10/</guid>
+				<link>http://blog.mikiishijima.com/works/2016/12/18/low-level-problems-related-to-prototyping/</link>
+				<guid isPermaLink="true">http://blog.mikiishijima.com/works/2016/12/18/low-level-problems-related-to-prototyping/</guid>
 				
 				
 					<category>works</category>
@@ -503,8 +375,8 @@ A型ベビーカー 1台 ○
 おもちゃ 1個 △&lt;/p&gt;
 </description>
 				<pubDate>Tue, 22 Nov 2016 23:05:53 +0900</pubDate>
-				<link> /diary/2016/11/22/Prepare-for-childbirth-ver-gothome/</link>
-				<guid isPermaLink="true"> /diary/2016/11/22/Prepare-for-childbirth-ver-gothome/</guid>
+				<link>http://blog.mikiishijima.com/diary/2016/11/22/Prepare-for-childbirth-ver-gothome/</link>
+				<guid isPermaLink="true">http://blog.mikiishijima.com/diary/2016/11/22/Prepare-for-childbirth-ver-gothome/</guid>
 				
 				
 					<category>diary</category>
@@ -771,8 +643,8 @@ A型ベビーカー 1台 ○
 &lt;p&gt;出産、がんばってー！&lt;/p&gt;
 </description>
 				<pubDate>Tue, 22 Nov 2016 23:05:53 +0900</pubDate>
-				<link> /diary/2016/11/22/Prepare-for-childbirth-ver-Hospitalization/</link>
-				<guid isPermaLink="true"> /diary/2016/11/22/Prepare-for-childbirth-ver-Hospitalization/</guid>
+				<link>http://blog.mikiishijima.com/diary/2016/11/22/Prepare-for-childbirth-ver-Hospitalization/</link>
+				<guid isPermaLink="true">http://blog.mikiishijima.com/diary/2016/11/22/Prepare-for-childbirth-ver-Hospitalization/</guid>
 				
 				
 					<category>diary</category>
@@ -824,8 +696,8 @@ A型ベビーカー 1台 ○
 &lt;p&gt;「幸せ」を感じられると自然と自分に自身がつくのかもしれません。&lt;/p&gt;
 </description>
 				<pubDate>Sat, 08 Oct 2016 19:13:29 +0900</pubDate>
-				<link> /diary/2016/10/08/be-happy-with-self-sufficiencyh/</link>
-				<guid isPermaLink="true"> /diary/2016/10/08/be-happy-with-self-sufficiencyh/</guid>
+				<link>http://blog.mikiishijima.com/diary/2016/10/08/be-happy-with-self-sufficiencyh/</link>
+				<guid isPermaLink="true">http://blog.mikiishijima.com/diary/2016/10/08/be-happy-with-self-sufficiencyh/</guid>
 				
 				
 					<category>diary</category>
@@ -920,8 +792,8 @@ A型ベビーカー 1台 ○
 &lt;p&gt;現場からは以上です。&lt;/p&gt;
 </description>
 				<pubDate>Sun, 18 Sep 2016 06:36:21 +0900</pubDate>
-				<link> /diary/2016/09/18/framework-to-appease-the-womens-feelings/</link>
-				<guid isPermaLink="true"> /diary/2016/09/18/framework-to-appease-the-womens-feelings/</guid>
+				<link>http://blog.mikiishijima.com/diary/2016/09/18/framework-to-appease-the-womens-feelings/</link>
+				<guid isPermaLink="true">http://blog.mikiishijima.com/diary/2016/09/18/framework-to-appease-the-womens-feelings/</guid>
 				
 				
 					<category>diary</category>
@@ -1091,8 +963,8 @@ A型ベビーカー 1台 ○
 &lt;p&gt;ではでは、楽しい育児ライフを!&lt;/p&gt;
 </description>
 				<pubDate>Tue, 02 Aug 2016 00:00:00 +0900</pubDate>
-				<link> /review/2016/08/02/babycareapp-ikulog/</link>
-				<guid isPermaLink="true"> /review/2016/08/02/babycareapp-ikulog/</guid>
+				<link>http://blog.mikiishijima.com/review/2016/08/02/babycareapp-ikulog/</link>
+				<guid isPermaLink="true">http://blog.mikiishijima.com/review/2016/08/02/babycareapp-ikulog/</guid>
 				
 				
 					<category>review</category>
@@ -1231,8 +1103,8 @@ A型ベビーカー 1台 ○
 &lt;p&gt;TwitterやFacebookなどでメッセージいただいても良いのですが、自分で登録するのも面倒なのでこちらに書いてもらえた方がありがたいです。&lt;/p&gt;
 </description>
 				<pubDate>Tue, 26 Jul 2016 00:00:00 +0900</pubDate>
-				<link> /works/2016/07/26/launch-toi-chromeextention/</link>
-				<guid isPermaLink="true"> /works/2016/07/26/launch-toi-chromeextention/</guid>
+				<link>http://blog.mikiishijima.com/works/2016/07/26/launch-toi-chromeextention/</link>
+				<guid isPermaLink="true">http://blog.mikiishijima.com/works/2016/07/26/launch-toi-chromeextention/</guid>
 				
 				
 					<category>works</category>
@@ -1290,8 +1162,8 @@ A型ベビーカー 1台 ○
 &lt;p&gt;結婚ってスゴくね!?&lt;/p&gt;
 </description>
 				<pubDate>Sun, 24 Jul 2016 00:00:00 +0900</pubDate>
-				<link> /diary/2016/07/24/in-marriage-we-fill-those-missing/</link>
-				<guid isPermaLink="true"> /diary/2016/07/24/in-marriage-we-fill-those-missing/</guid>
+				<link>http://blog.mikiishijima.com/diary/2016/07/24/in-marriage-we-fill-those-missing/</link>
+				<guid isPermaLink="true">http://blog.mikiishijima.com/diary/2016/07/24/in-marriage-we-fill-those-missing/</guid>
 				
 				
 					<category>diary</category>
@@ -1589,8 +1461,153 @@ A型ベビーカー 1台 ○
 &lt;p&gt;妊娠糖尿病と診断されても、悲観的にならず楽しく食事をしていきましょう! 何かの役に立てば幸いです。&lt;/p&gt;
 </description>
 				<pubDate>Thu, 02 Jun 2016 00:00:00 +0900</pubDate>
-				<link> /diary/2016/06/02/lowcarb-matanitylife-01/</link>
-				<guid isPermaLink="true"> /diary/2016/06/02/lowcarb-matanitylife-01/</guid>
+				<link>http://blog.mikiishijima.com/diary/2016/06/02/lowcarb-matanitylife-01/</link>
+				<guid isPermaLink="true">http://blog.mikiishijima.com/diary/2016/06/02/lowcarb-matanitylife-01/</guid>
+				
+				
+					<category>diary</category>
+				
+			</item>
+		
+			<item>
+				<title>産みました</title>
+				<description>&lt;p&gt;妊娠中から出産が落ちつくまでの「なぜ産もうと思ったのか、産んでどう思ったのか。」とりとめのない文章が、下書きのまま積り積もってしまいました。かいつまんで振り返ってみます。&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;h2 id=&quot;section&quot;&gt;臨月から出産&lt;/h2&gt;
+
+&lt;p&gt;冗談かと思うほどお腹がパンパンになり、家族や大家さんに「こんなに大きくなるんだっけ」と言われました。&lt;/p&gt;
+
+&lt;p&gt;産まれたサイズは2890g。3000g以下で産まれたのは、わたしの糖質制限のたまものだと思いたい。&lt;/p&gt;
+
+&lt;div class=&quot;tumblr-post&quot; data-href=&quot;https://embed.tumblr.com/embed/post/YqAzfaGPv2LGBkan4yHI6A/140146315015&quot; data-did=&quot;8fff13476716da564f17113950fd35a5da1f3bf0&quot;&gt;&lt;a href=&quot;http://nonsugar-diary.tumblr.com/post/140146315015/ずいぶん大きくなりました&quot;&gt;http://nonsugar-diary.tumblr.com/post/140146315015/ずいぶん大きくなりました&lt;/a&gt;&lt;/div&gt;
+&lt;script async=&quot;&quot; src=&quot;https://secure.assets.tumblr.com/post.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;出産日の一週間前から毎日録画していたビデオ日記が消えてしまったのは悲しいですが、陣痛10分間隔時の様子、破水した瞬間の音声、分娩室に入ってからの1時間のデータはしっかり残っています。&lt;/p&gt;
+
+&lt;div class=&quot;tumblr-post&quot; data-href=&quot;https://embed.tumblr.com/embed/post/YqAzfaGPv2LGBkan4yHI6A/140963838712&quot; data-did=&quot;9010ce8133acd5f8d92ee3c2fa6242324f592332&quot;&gt;&lt;a href=&quot;http://nonsugar-diary.tumblr.com/post/140963838712/ちび樹-入院2日目&quot;&gt;http://nonsugar-diary.tumblr.com/post/140963838712/ちび樹-入院2日目&lt;/a&gt;&lt;/div&gt;
+&lt;script async=&quot;&quot; src=&quot;https://secure.assets.tumblr.com/post.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;&lt;small&gt;この教訓からiCloudでのメディアバックアップをやめ、Google Photoに移行しました。写真.app上でデータを消してしまうと、他デバイスからも消えるの知らなかった。ローカルにデータが同期されるもんだと思ってたんです。悲しすぎる。&lt;/small&gt;&lt;/p&gt;
+
+&lt;p&gt;ちなみに出産は4時間ほど。助産師さんが「ほとんど一人でやってましたよ」と言ってくれるほどスムーズに産まれました。&lt;/p&gt;
+
+&lt;p&gt;旦那さん曰く「顔にすごい血管浮いてた」そうな。&lt;/p&gt;
+
+&lt;p&gt;顔が赤いのはそのせい。&lt;/p&gt;
+
+&lt;div class=&quot;tumblr-post&quot; data-href=&quot;https://embed.tumblr.com/embed/post/YqAzfaGPv2LGBkan4yHI6A/140793037695&quot; data-did=&quot;917979400019e3d7b839ba245cfeb07ac5b035ca&quot;&gt;&lt;a href=&quot;http://nonsugar-diary.tumblr.com/post/140793037695/う産まれた&quot;&gt;http://nonsugar-diary.tumblr.com/post/140793037695/う産まれた&lt;/a&gt;&lt;/div&gt;
+&lt;script async=&quot;&quot; src=&quot;https://secure.assets.tumblr.com/post.js&quot;&gt;&lt;/script&gt;
+
+&lt;h2 id=&quot;section-1&quot;&gt;結婚について&lt;/h2&gt;
+
+&lt;p&gt;経済的にも精神面でも自分のことは自分でカタをつけられる「余裕のある年齢」になったときに、相手がいたから「じゃあ、結婚しようか」となりました。&lt;/p&gt;
+
+&lt;p&gt;旦那さんの「数えきれないほどの魅力」が決意を後押ししたのは言うまでもありませんが、一番はそれでしょう。&lt;/p&gt;
+
+&lt;p&gt;これまで、何回か婚約に近しいところまでいきつつも白紙になっていたのです。&lt;/p&gt;
+
+&lt;p&gt;「この結婚失敗だったと思いたくない、思われたくない。」結婚したらもう引き返せないように感じていたからでしょう。&lt;/p&gt;
+
+&lt;p&gt;しかし、30代に入れば、離婚歴のある友人がまわりに増えていきます。その環境のおかげで、「失敗しても別にいいや」となり、それなら今好きな人と結婚しよう。と思えました。&lt;/p&gt;
+
+&lt;div class=&quot;container&quot;&gt;
+	&lt;a href=&quot;http://www.amazon.co.jp/gp/product/4569792189/ref=as_li_ss_il?ie=UTF8&amp;amp;camp=247&amp;amp;creative=7399&amp;amp;creativeASIN=4569792189&amp;amp;linkCode=as2&amp;amp;tag=fastfargroove-22&quot;&gt;&lt;img src=&quot;/content/images/2016/05/gavebirth/02.jpg&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;
+	&lt;div class=&quot;reference&quot;&gt;
+		&lt;strong&gt;お恥ずかしい写真ですいません。&lt;/strong&gt;
+		&lt;p&gt;&lt;/p&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;section-2&quot;&gt;出産について&lt;/h2&gt;
+
+&lt;p&gt;「好きな人の小さいころに会いたかった」&lt;/p&gt;
+
+&lt;p&gt;ロマンチックな感想で恥ずかしいですが、それ以上の理由はありません。旦那さんは絶対可愛らしい子供だったと思います。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;旦那さんと、子どもが会話している様子&lt;/li&gt;
+  &lt;li&gt;旦那さんが子どもを抱っこしている様子&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;そんなことを想像するだけで、ごはん10杯はいけます。&lt;/p&gt;
+
+&lt;p&gt;産院で行われるマタニティクラスで、生後二ヶ月の赤ちゃんと触れあうという回があったのですが、旦那さんが赤ちゃんを抱っこする姿に一種のカタルシスというか。胸が熱くなりました。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/content/images/2016/05/gavebirth/01.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;曽田先生の作品によく出てくる、こんな表情です。&lt;/p&gt;
+
+&lt;h3 id=&quot;section-3&quot;&gt;「子供が産まれたら大変だよ〜」&lt;/h3&gt;
+
+&lt;p&gt;妊娠期間中、耳にタコができるくらい言われるこの言葉。これ、やめた方がいいと思うんですよね。&lt;/p&gt;
+
+&lt;p&gt;確かに大変ではあるんです。でも重大なことに気付いてなかった。「この大変だよ〜」と言う人々、みんな笑顔なんですよね。それに気付かず言葉だけ鵜呑みにして、結婚・出産を後回しにしていました。&lt;/p&gt;
+
+&lt;p&gt;今思うともっと早く産んでおけば良かった。&lt;/p&gt;
+
+&lt;p&gt;&lt;small&gt;でも、今の環境だからこそゆとりのあるライフスタイルで子育てできているのかもしれないから、今が良い時期だったとは思うんです。タイムマシンで過去に戻れるとしても、また似たような道程を歩むと思います。&lt;/small&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;section-4&quot;&gt;子供を産むと出来なくなる事なんて無かった&lt;/h3&gt;
+
+&lt;p&gt;「海外に住みたい」「まだまだ仕事がしたい」「長期旅行にでかけたい」&lt;/p&gt;
+
+&lt;p&gt;だから、子供はまだいらない。&lt;/p&gt;
+
+&lt;p&gt;そう思ってましたが、なんら実現するためのアクションをしていなかった。&lt;/p&gt;
+
+&lt;p&gt;で、産んでみたら、出来ることが増えたというか。そんな印象。&lt;/p&gt;
+
+&lt;p&gt;人生周回プレイに入った。そんな感じ。&lt;/p&gt;
+
+&lt;p&gt;自分が小さいころ、どう育てられてきたか、親から何を受け継いでいたのか。自分はそれをどこで変えたのか。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;「小さいころ、よくこうして歌っていたな」&lt;/li&gt;
+  &lt;li&gt;「今の喋り方、母親に似てたな」&lt;/li&gt;
+  &lt;li&gt;「和食ばかり作るようになったのは外食ばかりしていた反動かな」&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;子どもと生活をしながら、そんな事ばかり考えるようになりました。改めて、小さいころの思い出が「地続きである」そんな印象です。&lt;/p&gt;
+
+&lt;p&gt;また、両親がどんな思いで私たちを愛してくれていたかも、分かるようになりました。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;「頭のカタチがキレイになるように寝かせよう」&lt;/li&gt;
+  &lt;li&gt;「虫歯ができないように気をつけなくちゃ」&lt;/li&gt;
+  &lt;li&gt;「栄養が偏らないように、いろんな野菜を食べよう」&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;これまで、自分ひとりで生きてきたと本気で思っていましたが、親になってみて初めて、「愛されて産まれてきたんだな。」と感じることができました。&lt;/p&gt;
+
+&lt;p&gt;家族仲はあまり良くない方でしたが、子どものおかげでうまく回るようになった。まさに子はかすがいですな。&lt;/p&gt;
+
+&lt;p&gt;子供が産まれても、海外に住もうと思えば住める。仕事だってやれる。長期旅行にだって出掛けられる。けっきょく自分は、やらない理由を並べたてて、後回しにしてただけだったんですね。&lt;/p&gt;
+
+&lt;p&gt;知識だけが増えて、体験していなかったのに食わず嫌いばかりしていた気分です。産む産まないは関係なかったのにね。&lt;/p&gt;
+
+&lt;div class=&quot;container&quot;&gt;
+	&lt;a href=&quot;http://www.amazon.co.jp/gp/product/4002011364/ref=as_li_ss_il?ie=UTF8&amp;amp;camp=247&amp;amp;creative=7399&amp;amp;creativeASIN=4002011364&amp;amp;linkCode=as2&amp;amp;tag=fastfargroove-22&quot;&gt;&lt;img src=&quot;http://ecx.images-amazon.com/images/I/41RutoMs7jL._SY400_.jpg&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;
+	&lt;div class=&quot;reference&quot;&gt;
+		&lt;strong&gt;古い本だけど、哲学書として読むとおもしろい&lt;/strong&gt;
+		&lt;p&gt;&lt;/p&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;本の冒頭に「母親になれるか」という章があります。&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;自分は人間が出来ていないから、赤ちゃんをそだてる資格がないと思うのにも賛成できない。人間は完成するものでないし、完成に近づいたにしても、そのころには子どもをそだてられない。だが親になることは、人間を完成に近づける機会であることにまちがいない。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;わたし自身、産まない選択をしようとしていたので、産む産まないどっちが良いかはそれぞれだと思っていますが、妊娠中にこの文章を読んで、「未熟だけれど、それもでいいか。」と思えたのでした。&lt;/p&gt;
+
+&lt;p&gt;とにかく今は楽しく、幸せにあふれている。そんなコトを未来の自分のために記録しておきます。ではでは。&lt;/p&gt;
+</description>
+				<pubDate>Fri, 06 May 2016 00:00:00 +0900</pubDate>
+				<link>http://blog.mikiishijima.com/diary/2016/05/06/gavebirth/</link>
+				<guid isPermaLink="true">http://blog.mikiishijima.com/diary/2016/05/06/gavebirth/</guid>
 				
 				
 					<category>diary</category>
