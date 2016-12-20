@@ -66,7 +66,7 @@ gulp.task('image',['del-image'], function() {
         svgoPlugins: [{removeViewBox: false}],
         use: [pngquant()]
     }))
-    .pipe(gulp.dest('content/images/'));
+    .pipe(gulp.dest('_site/content/images/'));
 });
 
 /**

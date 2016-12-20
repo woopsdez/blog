@@ -14,9 +14,6 @@ content_url: 	    "/content"
 logourl: 				  "/assets/img/bloglogo.jpg"
 paginate: 				10
 excerpt_separator: "<!--more-->"
-featured: true
-comments: true
-published: false
 
 # Author Settings
 author_name: 				"Miki Ishijima"
