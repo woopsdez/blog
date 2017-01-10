@@ -3,10 +3,10 @@
 	<channel>
 		<title>Miki Ishijima Blog</title>
 		<description>趣味のゲームやプログラミング、レビューなど個人イシジマミキにより近しい内容を書いています。普遍的なデザインの話はThe Marsknowledge Blogで。</description>
-		<link>http://blog.mikiishijima.com/</link>
-		<atom:link href="http://blog.mikiishijima.com/feed.xml" rel="self" type="application/rss+xml" />
-		<pubDate>Tue, 10 Jan 2017 16:31:56 +0900</pubDate>
-		<lastBuildDate>Tue, 10 Jan 2017 16:31:56 +0900</lastBuildDate>
+		<link>/</link>
+		<atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
+		<pubDate>Tue, 10 Jan 2017 22:18:30 +0900</pubDate>
+		<lastBuildDate>Tue, 10 Jan 2017 22:18:30 +0900</lastBuildDate>
 		<generator>Jekyll v3.1.2</generator>
 		
 			<item>
@@ -190,8 +190,8 @@
 &lt;p&gt;2017年は今以上にもっとアクセシビリティの比重が増えていくことでしょう。そういった時に出てくるツールとはいったいどんなものなのか。楽しみにまた、いろんなアプリを使ってみたいと思います。&lt;/p&gt;
 </description>
 				<pubDate>Tue, 20 Dec 2016 11:13:51 +0900</pubDate>
-				<link>http://blog.mikiishijima.com/works/2016/12/20/independent-from-adobe-on-shift10/</link>
-				<guid isPermaLink="true">http://blog.mikiishijima.com/works/2016/12/20/independent-from-adobe-on-shift10/</guid>
+				<link>/works/2016/12/20/independent-from-adobe-on-shift10/</link>
+				<guid isPermaLink="true">/works/2016/12/20/independent-from-adobe-on-shift10/</guid>
 				
 				
 					<category>works</category>
@@ -383,8 +383,8 @@
 &lt;p&gt;精神的・体調的にも落ちやすい生理期間中は少しでもストレスを軽くしておきたいのでナプキンつけてる違和感がないのは、一考の価値ありだと思います。&lt;/p&gt;
 </description>
 				<pubDate>Tue, 20 Dec 2016 07:38:48 +0900</pubDate>
-				<link>http://blog.mikiishijima.com/review/2016/12/20/clothnapkins/</link>
-				<guid isPermaLink="true">http://blog.mikiishijima.com/review/2016/12/20/clothnapkins/</guid>
+				<link>/review/2016/12/20/clothnapkins/</link>
+				<guid isPermaLink="true">/review/2016/12/20/clothnapkins/</guid>
 				
 				
 					<category>review</category>
@@ -499,8 +499,8 @@
 &lt;p&gt;この問題を振り替えることで、手法以前の問題も浮き彫りになりました。さまざまなカタチでwebに関っていますが、もう少しここの部分をさまざまな企業さんと一緒にやってみたいです。&lt;/p&gt;
 </description>
 				<pubDate>Sun, 18 Dec 2016 20:25:14 +0900</pubDate>
-				<link>http://blog.mikiishijima.com/works/2016/12/18/low-level-problems-related-to-prototyping/</link>
-				<guid isPermaLink="true">http://blog.mikiishijima.com/works/2016/12/18/low-level-problems-related-to-prototyping/</guid>
+				<link>/works/2016/12/18/low-level-problems-related-to-prototyping/</link>
+				<guid isPermaLink="true">/works/2016/12/18/low-level-problems-related-to-prototyping/</guid>
 				
 				
 					<category>works</category>
@@ -757,8 +757,8 @@ A型ベビーカー 1台 ○
 おもちゃ 1個 △&lt;/p&gt;
 </description>
 				<pubDate>Tue, 22 Nov 2016 23:05:53 +0900</pubDate>
-				<link>http://blog.mikiishijima.com/diary/2016/11/22/Prepare-for-childbirth-ver-gothome/</link>
-				<guid isPermaLink="true">http://blog.mikiishijima.com/diary/2016/11/22/Prepare-for-childbirth-ver-gothome/</guid>
+				<link>/diary/2016/11/22/Prepare-for-childbirth-ver-gothome/</link>
+				<guid isPermaLink="true">/diary/2016/11/22/Prepare-for-childbirth-ver-gothome/</guid>
 				
 				
 					<category>diary</category>
@@ -1025,8 +1025,8 @@ A型ベビーカー 1台 ○
 &lt;p&gt;出産、がんばってー！&lt;/p&gt;
 </description>
 				<pubDate>Tue, 22 Nov 2016 23:05:53 +0900</pubDate>
-				<link>http://blog.mikiishijima.com/diary/2016/11/22/Prepare-for-childbirth-ver-Hospitalization/</link>
-				<guid isPermaLink="true">http://blog.mikiishijima.com/diary/2016/11/22/Prepare-for-childbirth-ver-Hospitalization/</guid>
+				<link>/diary/2016/11/22/Prepare-for-childbirth-ver-Hospitalization/</link>
+				<guid isPermaLink="true">/diary/2016/11/22/Prepare-for-childbirth-ver-Hospitalization/</guid>
 				
 				
 					<category>diary</category>
@@ -1078,8 +1078,8 @@ A型ベビーカー 1台 ○
 &lt;p&gt;「幸せ」を感じられると自然と自分に自身がつくのかもしれません。&lt;/p&gt;
 </description>
 				<pubDate>Sat, 08 Oct 2016 19:13:29 +0900</pubDate>
-				<link>http://blog.mikiishijima.com/diary/2016/10/08/be-happy-with-self-sufficiencyh/</link>
-				<guid isPermaLink="true">http://blog.mikiishijima.com/diary/2016/10/08/be-happy-with-self-sufficiencyh/</guid>
+				<link>/diary/2016/10/08/be-happy-with-self-sufficiencyh/</link>
+				<guid isPermaLink="true">/diary/2016/10/08/be-happy-with-self-sufficiencyh/</guid>
 				
 				
 					<category>diary</category>
@@ -1174,8 +1174,8 @@ A型ベビーカー 1台 ○
 &lt;p&gt;現場からは以上です。&lt;/p&gt;
 </description>
 				<pubDate>Sun, 18 Sep 2016 06:36:21 +0900</pubDate>
-				<link>http://blog.mikiishijima.com/diary/2016/09/18/framework-to-appease-the-womens-feelings/</link>
-				<guid isPermaLink="true">http://blog.mikiishijima.com/diary/2016/09/18/framework-to-appease-the-womens-feelings/</guid>
+				<link>/diary/2016/09/18/framework-to-appease-the-womens-feelings/</link>
+				<guid isPermaLink="true">/diary/2016/09/18/framework-to-appease-the-womens-feelings/</guid>
 				
 				
 					<category>diary</category>
@@ -1345,8 +1345,8 @@ A型ベビーカー 1台 ○
 &lt;p&gt;ではでは、楽しい育児ライフを!&lt;/p&gt;
 </description>
 				<pubDate>Tue, 02 Aug 2016 00:00:00 +0900</pubDate>
-				<link>http://blog.mikiishijima.com/review/2016/08/02/babycareapp-ikulog/</link>
-				<guid isPermaLink="true">http://blog.mikiishijima.com/review/2016/08/02/babycareapp-ikulog/</guid>
+				<link>/review/2016/08/02/babycareapp-ikulog/</link>
+				<guid isPermaLink="true">/review/2016/08/02/babycareapp-ikulog/</guid>
 				
 				
 					<category>review</category>
@@ -1485,8 +1485,8 @@ A型ベビーカー 1台 ○
 &lt;p&gt;TwitterやFacebookなどでメッセージいただいても良いのですが、自分で登録するのも面倒なのでこちらに書いてもらえた方がありがたいです。&lt;/p&gt;
 </description>
 				<pubDate>Tue, 26 Jul 2016 00:00:00 +0900</pubDate>
-				<link>http://blog.mikiishijima.com/works/2016/07/26/launch-toi-chromeextention/</link>
-				<guid isPermaLink="true">http://blog.mikiishijima.com/works/2016/07/26/launch-toi-chromeextention/</guid>
+				<link>/works/2016/07/26/launch-toi-chromeextention/</link>
+				<guid isPermaLink="true">/works/2016/07/26/launch-toi-chromeextention/</guid>
 				
 				
 					<category>works</category>
@@ -1544,8 +1544,8 @@ A型ベビーカー 1台 ○
 &lt;p&gt;結婚ってスゴくね!?&lt;/p&gt;
 </description>
 				<pubDate>Sun, 24 Jul 2016 00:00:00 +0900</pubDate>
-				<link>http://blog.mikiishijima.com/diary/2016/07/24/in-marriage-we-fill-those-missing/</link>
-				<guid isPermaLink="true">http://blog.mikiishijima.com/diary/2016/07/24/in-marriage-we-fill-those-missing/</guid>
+				<link>/diary/2016/07/24/in-marriage-we-fill-those-missing/</link>
+				<guid isPermaLink="true">/diary/2016/07/24/in-marriage-we-fill-those-missing/</guid>
 				
 				
 					<category>diary</category>
