@@ -17,19 +17,19 @@ var jekyll   = process.platform === 'win32' ? 'jekyll.bat' : 'jekyll';
  * Build the Jekyll Site
  */
 var messages = {jekyllBuild: '<span style="color: grey">Running:</span> $ jekyll build'};
-var option = minimist(process.argv.slice(2));
-var config = {localBuild: '_config.yml,_config_dev.yml'};
-if (option['e'] === 'production') {
-    config = {option:'', yml: ''};
-} else {
-    config = {option:'--config' ,yml: '_config.yml,_config_dev.yml'};
-};
+// var option = minimist(process.argv.slice(2));
+// var config = {localBuild: '_config.yml,_config_dev.yml'};
+// if (option['e'] === 'production') {
+//     config = {option:'', yml: ''};
+// } else {
+//     config = {option:'--config' ,yml: '_config.yml,_config_dev.yml'};
+// };
 
 gulp.task('jekyll-build', function (done) {
-    console.log(option['e']);
-    console.log(config.option, config.yml);
+    // console.log(option['e']);
+    // console.log(config.option, config.yml);
     browserSync.notify(messages.jekyllBuild);
-    return cp.spawn( jekyll , ['build', config.option, config.yml], {stdio: 'inherit'})
+    return cp.spawn( jekyll , ['build'], {stdio: 'inherit'})
         .on('close', done);
 });
 
