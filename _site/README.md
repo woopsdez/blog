@@ -44,12 +44,6 @@
 * assets         - サイト自体に使用するassets
 * htaccess.txt
 
-## 一部古いURLを維持するための作業。
-反響のあった記事URLを移行後も保持しておくため、本番環境にのみ残したい記事ファイルが存在します。
-
-* 2016年5月 下記条件だと、残したい記事ファイルも消えてしまうので、glynnでFTPアップロードに変更。
-* 2016年4月 hookを使ってgit pushした時に同期するように。
-
 ## 自動で行われること
 * scssのコンパイル
 * ブラウザのオートリロード
@@ -61,3 +55,16 @@
 * 画像を記事をひとつのフォルダにまとめて管理
 * pluginを使って画像をレスポンシブ対応 [robwierzbowski/jekyll-picture-tag: Easy responsive images for Jekyll.](https://github.com/robwierzbowski/jekyll-picture-tag)
 * **done!** <del>github-pagesへもbaseurlを対応させたい</del>
+
+---
+
+## 一部古いURLを維持するための作業。
+反響のあった記事URLを移行後も保持しておくため、本番環境にのみ残したい記事ファイルが存在します。
+
+* 2016年5月 下記条件だと、残したい記事ファイルも消えてしまうので、glynnでFTPアップロードに変更。
+* 2016年4月 hookを使ってgit pushした時に同期するように。
+
+## 過去につまづいた事
+
+* 2017年1月 記事がbuildされない事件
+	* 原因は日付を文字列にしていなかったせい。
