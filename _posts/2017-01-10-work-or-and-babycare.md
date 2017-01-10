@@ -1,10 +1,10 @@
 ---
 layout: post
-title: 両立なんてしたくないんだよー。バカー。
-date: 2017-01-10 15:37:48
+title: 両立なんてしたくないんだよー。
+date: '2017-01-10 15:37:48'
 categories: diary
-banner_image: ""
-featured: false
+banner_image: "/content/images/2017/01/work-or-and-babycare/banner.jpg"
+featured: true
 comments: true
 published: true
 ---
