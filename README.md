@@ -48,7 +48,7 @@
 反響のあった記事URLを移行後も保持しておくため、本番環境にのみ残したい記事ファイルが存在します。
 
 * 2016年5月 下記条件だと、残したい記事ファイルも消えてしまうので、glynnでFTPアップロードに変更。
-* 2016年4月 hookを使ってgit pushした時に同期するよう。
+* 2016年4月 hookを使ってgit pushした時に同期するように。
 
 ## 自動で行われること
 * scssのコンパイル
@@ -60,4 +60,4 @@
 ## TODO
 * 画像を記事をひとつのフォルダにまとめて管理
 * pluginを使って画像をレスポンシブ対応 [robwierzbowski/jekyll-picture-tag: Easy responsive images for Jekyll.](https://github.com/robwierzbowski/jekyll-picture-tag)
-* github-pagesへもbaseurlを対応させたい
+* **done!** <del>github-pagesへもbaseurlを対応させたい</del>
