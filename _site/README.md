@@ -20,6 +20,7 @@
 * package.json
 * gulpfile.js
 * node_modules
+* hogehoge
 
 ### jekyll
 

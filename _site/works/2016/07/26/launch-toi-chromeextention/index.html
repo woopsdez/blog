@@ -232,7 +232,7 @@
 
 <p>しかし、クリックするまではGallery内に画像はロードされていないので、jsロード時に見当らない要素をいくら操作してもなんにも動かないのです。</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="nx">$</span><span class="p">(</span><span class="s1">'.Gallery-content'</span><span class="p">).</span><span class="nx">removeAttr</span><span class="p">(</span><span class="s1">'Style'</span><span class="p">);</span>
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="nx">$</span><span class="p">(</span><span class="s1">'.Gallery-content'</span><span class="p">).</span><span class="nx">removeAttr</span><span class="p">(</span><span class="s1">'Style'</span><span class="p">);</span>
 <span class="nx">$</span><span class="p">(</span><span class="s1">'.Gallery-media img'</span><span class="p">).</span><span class="nx">removeAttr</span><span class="p">(</span><span class="s1">'Style'</span><span class="p">);</span>
 </code></pre>
 </div>
@@ -245,7 +245,7 @@
 
 <p>想定していた動作イメージと違いクリックが必要になってしまったので、ちょっと苦しいなと思いつつ自分の技量で実装できる事を優先。</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="nx">$</span><span class="p">(</span><span class="s1">'.Gallery-content'</span><span class="p">).</span><span class="nx">append</span><span class="p">(</span>
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="nx">$</span><span class="p">(</span><span class="s1">'.Gallery-content'</span><span class="p">).</span><span class="nx">append</span><span class="p">(</span>
 	<span class="s1">'&lt;button type="button" id="toi-btn" class="toi-btn"&gt;&lt;img src="'</span> <span class="o">+</span> <span class="nx">imgURL</span> <span class="o">+</span> <span class="s1">'" alt="View original size" /&gt;&lt;span&gt;Open!&lt;/span&gt;&lt;/button&gt;'</span>
 <span class="p">);</span>
 <span class="nx">$</span><span class="p">(</span><span class="s1">'#toi-btn'</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">'click'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">){</span>
@@ -292,7 +292,7 @@
 
 <p>そうか、変化を監視してコールバックで指定した関数を実行すればいいんですねー! なるほどなるほど。</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">config</span> <span class="o">=</span> <span class="p">{</span> <span class="na">attributes</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> <span class="na">childList</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> <span class="na">characterData</span><span class="p">:</span> <span class="kc">true</span> <span class="p">};</span>
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">config</span> <span class="o">=</span> <span class="p">{</span> <span class="na">attributes</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> <span class="na">childList</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> <span class="na">characterData</span><span class="p">:</span> <span class="kc">true</span> <span class="p">};</span>
 <span class="kd">var</span> <span class="nx">parent</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementsByClassName</span><span class="p">(</span><span class="s1">'Gallery-content'</span><span class="p">);</span>
 <span class="kd">var</span> <span class="nx">target</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementsByClassName</span><span class="p">(</span><span class="s1">'media-image'</span><span class="p">);</span>
 <span class="kd">var</span> <span class="nx">mo</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">MutationObserver</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
