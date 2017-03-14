@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 「仕事と育児の両立」私はできないなぁ。
+title: 仕事と育児の両立についての所感
 date: '2017-01-10 15:37:48'
 categories: diary
 banner_image: "/content/images/2017/01/work-or-and-babycare/banner.jpg"
