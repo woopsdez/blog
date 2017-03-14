@@ -3,6 +3,7 @@
 
 ## 開発環境の準備
 1. Jekyll - ```$ gem install jekyll```
+1. jekyll plugin - ```gem install jekyll-paginate```
 2. NodeJS - use the installer.
 3. GulpJS - ```$ npm install -g gulp``` (mac users may need sudo)
 4. homebrew - ```/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"```
@@ -20,6 +21,7 @@
 * package.json
 * gulpfile.js
 * node_modules
+* hogehoge
 
 ### jekyll
 
