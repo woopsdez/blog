@@ -3,7 +3,7 @@ layout: post
 title: これまで使ってきた3台のベビーカーから最強のベビーカーを決める
 date: '2017-05-25'
 categories: review
-banner_image: "/content/images/2017/05/netsuper-theseiyu/banner.jpg"
+banner_image: "/content/images/2017/05/lookingfor-thestrongeststroller/03.jpg"
 featured: true
 comments: true
 published: true
