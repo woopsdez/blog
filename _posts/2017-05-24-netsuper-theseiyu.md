@@ -216,3 +216,7 @@ published: true
 チンするご飯やサバの水煮缶なども欲しいところですが、今のところはこんな感じです。
 
 ネットスーパーどこがいいか迷っている方の参考になれば幸いです。
+
+<a href="https://www.amazon.co.jp/%E3%82%B5%E3%82%A4%E3%83%9C%E3%82%A6-%E5%B0%BE%E8%A5%BF%E9%A3%9F%E5%93%81-%E3%82%A2%E3%83%AB%E3%83%95%E3%82%A1%E7%B1%B312%E7%A8%AE%E9%A1%9E%E5%85%A8%E9%83%A8%E3%82%BB%E3%83%83%E3%83%88%EF%BC%88%E9%9D%9E%E5%B8%B8%E9%A3%9F-5%E5%B9%B4%E4%BF%9D%E5%AD%98-%E5%90%84%E5%91%B31%E9%A3%9F%C3%9712%E7%A8%AE%E9%A1%9E-%EF%BC%89/dp/B00CP1AQM4/ref=as_li_ss_il?ie=UTF8&qid=1495641077&sr=8-3&keywords=%E9%98%B2%E7%81%BD%E3%82%BB%E3%83%83%E3%83%88&linkCode=li3&tag=fastfargroove-22&linkId=cc9ab2d60c7c81f15bdcb2599722b3a4" target="_blank"><img border="0" src="//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B00CP1AQM4&Format=_SL250_&ID=AsinImage&MarketPlace=JP&ServiceVersion=20070822&WS=1&tag=fastfargroove-22" ></a><img src="https://ir-jp.amazon-adsystem.com/e/ir?t=fastfargroove-22&l=li3&o=9&a=B00CP1AQM4" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+
+<a href="http://amzn.to/2rQAHDw">尾西食品　アルファ米12種類全部セット（非常食 5年保存 各味1食×12種類 ）</a>
