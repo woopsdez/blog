@@ -234,9 +234,14 @@
 
 <p>しかし、クリックするまではGallery内に画像はロードされていないので、jsロード時に見当らない要素をいくら操作してもなんにも動かないのです。</p>
 
-<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="nx">$</span><span class="p">(</span><span class="s1">'.Gallery-content'</span><span class="p">).</span><span class="nx">removeAttr</span><span class="p">(</span><span class="s1">'Style'</span><span class="p">);</span>
+<div class="language-js highlighter-rouge">
+  <div class="highlight">
+    <pre class="highlight">
+      <code><span class="nx">$</span><span class="p">(</span><span class="s1">'.Gallery-content'</span><span class="p">).</span><span class="nx">removeAttr</span><span class="p">(</span><span class="s1">'Style'</span><span class="p">);</span>
 <span class="nx">$</span><span class="p">(</span><span class="s1">'.Gallery-media img'</span><span class="p">).</span><span class="nx">removeAttr</span><span class="p">(</span><span class="s1">'Style'</span><span class="p">);</span>
-</code></pre>
+</code>
+    </pre>
+  </div>
 </div>
 
 <p>.Gallery-content、.Gallery-media img、どちらも画像クリックするまでは追加されない要素なので、こう書いても実行されない。</p>
@@ -247,14 +252,19 @@
 
 <p>想定していた動作イメージと違いクリックが必要になってしまったので、ちょっと苦しいなと思いつつ自分の技量で実装できる事を優先。</p>
 
-<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="nx">$</span><span class="p">(</span><span class="s1">'.Gallery-content'</span><span class="p">).</span><span class="nx">append</span><span class="p">(</span>
+<div class="language-js highlighter-rouge">
+  <div class="highlight">
+    <pre class="highlight">
+      <code><span class="nx">$</span><span class="p">(</span><span class="s1">'.Gallery-content'</span><span class="p">).</span><span class="nx">append</span><span class="p">(</span>
 	<span class="s1">'&lt;button type="button" id="toi-btn" class="toi-btn"&gt;&lt;img src="'</span> <span class="o">+</span> <span class="nx">imgURL</span> <span class="o">+</span> <span class="s1">'" alt="View original size" /&gt;&lt;span&gt;Open!&lt;/span&gt;&lt;/button&gt;'</span>
 <span class="p">);</span>
 <span class="nx">$</span><span class="p">(</span><span class="s1">'#toi-btn'</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">'click'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">){</span>
 	<span class="nx">$</span><span class="p">(</span><span class="s1">'.Gallery-content'</span><span class="p">).</span><span class="nx">removeAttr</span><span class="p">(</span><span class="s1">'Style'</span><span class="p">);</span>
 	<span class="nx">$</span><span class="p">(</span><span class="s1">'.Gallery-media img'</span><span class="p">).</span><span class="nx">removeAttr</span><span class="p">(</span><span class="s1">'Style'</span><span class="p">);</span>
 <span class="p">});</span>
-</code></pre>
+</code>
+    </pre>
+  </div>
 </div>
 
 <p>画像を表示されているdiv.Gallery-content内にボタンを追加。そのボタンがクリックされたら、スタイルを除去するコードが実行されるように。</p>
@@ -294,7 +304,10 @@
 
 <p>そうか、変化を監視してコールバックで指定した関数を実行すればいいんですねー! なるほどなるほど。</p>
 
-<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">config</span> <span class="o">=</span> <span class="p">{</span> <span class="na">attributes</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> <span class="na">childList</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> <span class="na">characterData</span><span class="p">:</span> <span class="kc">true</span> <span class="p">};</span>
+<div class="language-js highlighter-rouge">
+  <div class="highlight">
+    <pre class="highlight">
+      <code><span class="kd">var</span> <span class="nx">config</span> <span class="o">=</span> <span class="p">{</span> <span class="na">attributes</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> <span class="na">childList</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> <span class="na">characterData</span><span class="p">:</span> <span class="kc">true</span> <span class="p">};</span>
 <span class="kd">var</span> <span class="nx">parent</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementsByClassName</span><span class="p">(</span><span class="s1">'Gallery-content'</span><span class="p">);</span>
 <span class="kd">var</span> <span class="nx">target</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementsByClassName</span><span class="p">(</span><span class="s1">'media-image'</span><span class="p">);</span>
 <span class="kd">var</span> <span class="nx">mo</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">MutationObserver</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
@@ -306,7 +319,9 @@
 <span class="p">});</span>
 <span class="nx">mo</span><span class="p">.</span><span class="nx">observe</span><span class="p">(</span><span class="nx">parent</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="nx">config</span><span class="p">);</span>
 <span class="nx">mo</span><span class="p">.</span><span class="nx">disconnect</span><span class="p">();</span>
-</code></pre>
+</code>
+    </pre>
+  </div>
 </div>
 
 <p>あんまりキレイなコードではないですが、動きました!</p>
@@ -367,6 +382,8 @@
 
 	<ul>
 		
+		<li><a href="/review/2017/05/31/work-or-and-babycare2/">実家でなく近場の旅館に。居心地の良かった1歳児との温泉宿</a></li>
+		
 		<li><a href="/review/2017/05/31/nikko-hotel-okunoin-withbaby/">実家でなく近場の旅館に。居心地の良かった1歳児との温泉宿</a></li>
 		
 		<li><a href="/review/2017/05/25/lookingfor-thestrongeststroller/">これまで使ってきた3台のベビーカーから最強のベビーカーを決める</a></li>
@@ -374,8 +391,6 @@
 		<li><a href="/review/2017/05/24/netsuper-theseiyu/">西友ネットスーパーを1年使ってみて感じたイイトコロを書く</a></li>
 		
 		<li><a href="/review/2017/04/29/reborn-vegetable-first-impression/">キッチン栽培でリボベジ 我が家で実用性のある食材とは</a></li>
-		
-		<li><a href="/diary/2017/04/03/waiting-for-my2ndbaby/">二人目が生まれます</a></li>
 		
 	</ul>
 
@@ -400,7 +415,7 @@
 		
 	</div>
 	<div>
-		Copyright &copy; <a href="/">Miki Ishijima Blog</a>. 2017 &bull; All rights reserved.
+		Copyright &copy; <a href="/">Miki Ishijima Blog</a>. 2018 &bull; All rights reserved.
 		<span class="ghost">Proudly published with <a href="http://jekyllrb.com/" target="_blank">Jekyll</a>.</span>
 	</div>
 </footer>
