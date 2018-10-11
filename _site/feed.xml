@@ -5,8 +5,8 @@
 		<description>趣味のゲームやプログラミング、レビューなど個人イシジマミキにより近しい内容を書いています。普遍的なデザインの話はThe Marsknowledge Blogで。</description>
 		<link>/</link>
 		<atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
-		<pubDate>Thu, 11 Oct 2018 14:31:47 +0900</pubDate>
-		<lastBuildDate>Thu, 11 Oct 2018 14:31:47 +0900</lastBuildDate>
+		<pubDate>Thu, 11 Oct 2018 16:18:01 +0900</pubDate>
+		<lastBuildDate>Thu, 11 Oct 2018 16:18:01 +0900</lastBuildDate>
 		<generator>Jekyll v3.7.2</generator>
 		
 			<item>
@@ -111,11 +111,11 @@
 &lt;/ol&gt;
 </description>
 				<pubDate>Thu, 11 Oct 2018 00:00:00 +0900</pubDate>
-				<link>/review;/2018/10/11/item-happy-to-buy/</link>
-				<guid isPermaLink="true">/review;/2018/10/11/item-happy-to-buy/</guid>
+				<link>/review/2018/10/11/item-happy-to-buy/</link>
+				<guid isPermaLink="true">/review/2018/10/11/item-happy-to-buy/</guid>
 				
 				
-					<category>review;</category>
+					<category>review</category>
 				
 			</item>
 		

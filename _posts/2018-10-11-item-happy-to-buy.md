@@ -2,7 +2,7 @@
 layout: post
 title: 1年間使って買って良かったもの
 date: '2018-10-11'
-categories: review;
+categories: review
 banner_image: "/content/images/2017/01/work-or-and-babycare/banner.jpg"
 featured: true
 comments: true
