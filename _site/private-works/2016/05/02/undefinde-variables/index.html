@@ -16,11 +16,11 @@ Undefindの嵐
 1
 2
 3
-4	if(fuga === true){
+4
+	if(fuga === true){
 		var hoge = fuga; // fugaがtrueじゃないとif文の中を通らない
 	}
 	var hage = hoge * 2; //するとhogeはここで初出になる
-
 
 if文の中で使ったあと、後に続く処理でしれっと変数を呼び出していると怒られるのですね。
 
@@ -31,11 +31,11 @@ HTML内で呼び出すこともあるので、長ったらしい文になるの�
 1
 2
 3
-4&lt;!-- これが --&gt;
+4
+&lt;!-- これが --&gt;
 &lt;img src="&lt;?php echo $hoge ?&gt;"&gt;
 &lt;!-- こうなってしまう --&gt;
 &lt;img src="&lt;?php if(isset($hoge)){echo $hoge} ?&gt;"&gt;
-
 
 関数内で完結させる
 プログラミングの師匠(@tai2)に、アドバイスを求めたところ下記の返答をいただきました。
@@ -64,11 +64,11 @@ HTML内で呼び出すこともあるので、長ったらしい文になるの�
 1
 2
 3
-4var color = 'white'; // 初期値
+4
+var color = 'white'; // 初期値
 if(user.setColor !== undefind){ //ユーザーが設定した値があるかどうか
 	color = user.setColor; //あれば、初期値として扱う
 }
-
 
 こんな感じで書けばいいのですよね。いまもですが、分岐の流れ、今はどこの処理に辿りついたかを理解するのに時間がかかります。
 
@@ -110,16 +110,16 @@ if(user.setColor !== undefind){ //ユーザーが設定した値があるかど�
 が分かればあとは
 
 1
-2var per = _nowsec / 86400 //割合を求める
+2
+var per = _nowsec / 86400 //割合を求める
 var nowdeg = _per * 360 // 360°中 per%は何°になるかが分かる
-
 
 という式で求められるのですね。
 
 あとはこの値を、jQueryにてcssのプロパティにセットしていけばOKです。
 
-1$('.bg image').css('transform','rotate('+ nowdeg +'deg)')
-
+1
+$('.bg image').css('transform','rotate('+ nowdeg +'deg)')
 
 上記がhtml内で毎秒実行される訳です。
 
@@ -160,11 +160,11 @@ Undefindの嵐
 1
 2
 3
-4	if(fuga === true){
+4
+	if(fuga === true){
 		var hoge = fuga; // fugaがtrueじゃないとif文の中を通らない
 	}
 	var hage = hoge * 2; //するとhogeはここで初出になる
-
 
 if文の中で使ったあと、後に続く処理でしれっと変数を呼び出していると怒られるのですね。
 
@@ -175,11 +175,11 @@ HTML内で呼び出すこともあるので、長ったらしい文になるの�
 1
 2
 3
-4&lt;!-- これが --&gt;
+4
+&lt;!-- これが --&gt;
 &lt;img src="&lt;?php echo $hoge ?&gt;"&gt;
 &lt;!-- こうなってしまう --&gt;
 &lt;img src="&lt;?php if(isset($hoge)){echo $hoge} ?&gt;"&gt;
-
 
 関数内で完結させる
 プログラミングの師匠(@tai2)に、アドバイスを求めたところ下記の返答をいただきました。
@@ -208,11 +208,11 @@ HTML内で呼び出すこともあるので、長ったらしい文になるの�
 1
 2
 3
-4var color = 'white'; // 初期値
+4
+var color = 'white'; // 初期値
 if(user.setColor !== undefind){ //ユーザーが設定した値があるかどうか
 	color = user.setColor; //あれば、初期値として扱う
 }
-
 
 こんな感じで書けばいいのですよね。いまもですが、分岐の流れ、今はどこの処理に辿りついたかを理解するのに時間がかかります。
 
@@ -254,16 +254,16 @@ if(user.setColor !== undefind){ //ユーザーが設定した値があるかど�
 が分かればあとは
 
 1
-2var per = _nowsec / 86400 //割合を求める
+2
+var per = _nowsec / 86400 //割合を求める
 var nowdeg = _per * 360 // 360°中 per%は何°になるかが分かる
-
 
 という式で求められるのですね。
 
 あとはこの値を、jQueryにてcssのプロパティにセットしていけばOKです。
 
-1$('.bg image').css('transform','rotate('+ nowdeg +'deg)')
-
+1
+$('.bg image').css('transform','rotate('+ nowdeg +'deg)')
 
 上記がhtml内で毎秒実行される訳です。
 
@@ -300,11 +300,11 @@ Undefindの嵐
 1
 2
 3
-4	if(fuga === true){
+4
+	if(fuga === true){
 		var hoge = fuga; // fugaがtrueじゃないとif文の中を通らない
 	}
 	var hage = hoge * 2; //するとhogeはここで初出になる
-
 
 if文の中で使ったあと、後に続く処理でしれっと変数を呼び出していると怒られるのですね。
 
@@ -315,11 +315,11 @@ HTML内で呼び出すこともあるので、長ったらしい文になるの�
 1
 2
 3
-4&lt;!-- これが --&gt;
+4
+&lt;!-- これが --&gt;
 &lt;img src="&lt;?php echo $hoge ?&gt;"&gt;
 &lt;!-- こうなってしまう --&gt;
 &lt;img src="&lt;?php if(isset($hoge)){echo $hoge} ?&gt;"&gt;
-
 
 関数内で完結させる
 プログラミングの師匠(@tai2)に、アドバイスを求めたところ下記の返答をいただきました。
@@ -348,11 +348,11 @@ HTML内で呼び出すこともあるので、長ったらしい文になるの�
 1
 2
 3
-4var color = 'white'; // 初期値
+4
+var color = 'white'; // 初期値
 if(user.setColor !== undefind){ //ユーザーが設定した値があるかどうか
 	color = user.setColor; //あれば、初期値として扱う
 }
-
 
 こんな感じで書けばいいのですよね。いまもですが、分岐の流れ、今はどこの処理に辿りついたかを理解するのに時間がかかります。
 
@@ -394,16 +394,16 @@ if(user.setColor !== undefind){ //ユーザーが設定した値があるかど�
 が分かればあとは
 
 1
-2var per = _nowsec / 86400 //割合を求める
+2
+var per = _nowsec / 86400 //割合を求める
 var nowdeg = _per * 360 // 360°中 per%は何°になるかが分かる
-
 
 という式で求められるのですね。
 
 あとはこの値を、jQueryにてcssのプロパティにセットしていけばOKです。
 
-1$('.bg image').css('transform','rotate('+ nowdeg +'deg)')
-
+1
+$('.bg image').css('transform','rotate('+ nowdeg +'deg)')
 
 上記がhtml内で毎秒実行される訳です。
 
@@ -576,21 +576,21 @@ Qiitaに投稿しています。
 <figure class="highlight">
   <pre>
     <code class="language-javascript" data-lang="javascript">
-      <table style="border-spacing: 0">
+      <table class="rouge-table">
         <tbody>
           <tr>
-            <td class="gutter gl" style="text-align: right">
+            <td class="gutter gl">
               <pre class="lineno">1
 2
 3
-4</pre>
+4
+</pre>
             </td>
             <td class="code">
               <pre>	<span class="k">if</span><span class="p">(</span><span class="nx">fuga</span> <span class="o">===</span> <span class="kc">true</span><span class="p">){</span>
 		<span class="kd">var</span> <span class="nx">hoge</span> <span class="o">=</span> <span class="nx">fuga</span><span class="p">;</span> <span class="c1">// fugaがtrueじゃないとif文の中を通らない</span>
 	<span class="p">}</span>
-	<span class="kd">var</span> <span class="nx">hage</span> <span class="o">=</span> <span class="nx">hoge</span> <span class="o">*</span> <span class="mi">2</span><span class="p">;</span> <span class="c1">//するとhogeはここで初出になる</span><span class="w">
-</span></pre>
+	<span class="kd">var</span> <span class="nx">hage</span> <span class="o">=</span> <span class="nx">hoge</span> <span class="o">*</span> <span class="mi">2</span><span class="p">;</span> <span class="c1">//するとhogeはここで初出になる</span></pre>
             </td>
           </tr>
         </tbody>
@@ -608,21 +608,21 @@ Qiitaに投稿しています。
 <figure class="highlight">
   <pre>
     <code class="language-php" data-lang="php">
-      <table style="border-spacing: 0">
+      <table class="rouge-table">
         <tbody>
           <tr>
-            <td class="gutter gl" style="text-align: right">
+            <td class="gutter gl">
               <pre class="lineno">1
 2
 3
-4</pre>
+4
+</pre>
             </td>
             <td class="code">
               <pre><span class="c">&lt;!-- これが --&gt;</span>
 <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"</span><span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="nv">$hoge</span> <span class="cp">?&gt;</span><span class="s">"</span><span class="nt">&gt;</span>
 <span class="c">&lt;!-- こうなってしまう --&gt;</span>
-<span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"</span><span class="cp">&lt;?php</span> <span class="k">if</span><span class="p">(</span><span class="nb">isset</span><span class="p">(</span><span class="nv">$hoge</span><span class="p">)){</span><span class="k">echo</span> <span class="nv">$hoge</span><span class="p">}</span> <span class="cp">?&gt;</span><span class="s">"</span><span class="nt">&gt;</span><span class="w">
-</span></pre>
+<span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"</span><span class="cp">&lt;?php</span> <span class="k">if</span><span class="p">(</span><span class="nb">isset</span><span class="p">(</span><span class="nv">$hoge</span><span class="p">)){</span><span class="k">echo</span> <span class="nv">$hoge</span><span class="p">}</span> <span class="cp">?&gt;</span><span class="s">"</span><span class="nt">&gt;</span></pre>
             </td>
           </tr>
         </tbody>
@@ -658,21 +658,21 @@ Qiitaに投稿しています。
 <figure class="highlight">
   <pre>
     <code class="language-js" data-lang="js">
-      <table style="border-spacing: 0">
+      <table class="rouge-table">
         <tbody>
           <tr>
-            <td class="gutter gl" style="text-align: right">
+            <td class="gutter gl">
               <pre class="lineno">1
 2
 3
-4</pre>
+4
+</pre>
             </td>
             <td class="code">
               <pre><span class="kd">var</span> <span class="nx">color</span> <span class="o">=</span> <span class="s1">'white'</span><span class="p">;</span> <span class="c1">// 初期値</span>
 <span class="k">if</span><span class="p">(</span><span class="nx">user</span><span class="p">.</span><span class="nx">setColor</span> <span class="o">!==</span> <span class="nx">undefind</span><span class="p">){</span> <span class="c1">//ユーザーが設定した値があるかどうか</span>
 	<span class="nx">color</span> <span class="o">=</span> <span class="nx">user</span><span class="p">.</span><span class="nx">setColor</span><span class="p">;</span> <span class="c1">//あれば、初期値として扱う</span>
-<span class="p">}</span><span class="w">
-</span></pre>
+<span class="p">}</span></pre>
             </td>
           </tr>
         </tbody>
@@ -725,17 +725,17 @@ Qiitaに投稿しています。
 <figure class="highlight">
   <pre>
     <code class="language-javascript" data-lang="javascript">
-      <table style="border-spacing: 0">
+      <table class="rouge-table">
         <tbody>
           <tr>
-            <td class="gutter gl" style="text-align: right">
+            <td class="gutter gl">
               <pre class="lineno">1
-2</pre>
+2
+</pre>
             </td>
             <td class="code">
               <pre><span class="kd">var</span> <span class="nx">per</span> <span class="o">=</span> <span class="nx">_nowsec</span> <span class="o">/</span> <span class="mi">86400</span> <span class="c1">//割合を求める</span>
-<span class="kd">var</span> <span class="nx">nowdeg</span> <span class="o">=</span> <span class="nx">_per</span> <span class="o">*</span> <span class="mi">360</span> <span class="c1">// 360°中 per%は何°になるかが分かる</span><span class="w">
-</span></pre>
+<span class="kd">var</span> <span class="nx">nowdeg</span> <span class="o">=</span> <span class="nx">_per</span> <span class="o">*</span> <span class="mi">360</span> <span class="c1">// 360°中 per%は何°になるかが分かる</span></pre>
             </td>
           </tr>
         </tbody>
@@ -751,15 +751,15 @@ Qiitaに投稿しています。
 <figure class="highlight">
   <pre>
     <code class="language-javascript" data-lang="javascript">
-      <table style="border-spacing: 0">
+      <table class="rouge-table">
         <tbody>
           <tr>
-            <td class="gutter gl" style="text-align: right">
-              <pre class="lineno">1</pre>
+            <td class="gutter gl">
+              <pre class="lineno">1
+</pre>
             </td>
             <td class="code">
-              <pre><span class="nx">$</span><span class="p">(</span><span class="s1">'.bg image'</span><span class="p">).</span><span class="nx">css</span><span class="p">(</span><span class="s1">'transform'</span><span class="p">,</span><span class="s1">'rotate('</span><span class="o">+</span> <span class="nx">nowdeg</span> <span class="o">+</span><span class="s1">'deg)'</span><span class="p">)</span><span class="w">
-</span></pre>
+              <pre><span class="nx">$</span><span class="p">(</span><span class="s1">'.bg image'</span><span class="p">).</span><span class="nx">css</span><span class="p">(</span><span class="s1">'transform'</span><span class="p">,</span><span class="s1">'rotate('</span><span class="o">+</span> <span class="nx">nowdeg</span> <span class="o">+</span><span class="s1">'deg)'</span><span class="p">)</span></pre>
             </td>
           </tr>
         </tbody>
@@ -824,6 +824,8 @@ Qiitaに投稿しています。
 
 	<ul>
 		
+		<li><a href="/review;/2018/10/11/item-happy-to-buy/">1年間使って買って良かったもの</a></li>
+		
 		<li><a href="/review/2017/05/31/nikko-hotel-okunoin-withbaby/">実家でなく近場の旅館に。居心地の良かった1歳児との温泉宿</a></li>
 		
 		<li><a href="/review/2017/05/25/lookingfor-thestrongeststroller/">これまで使ってきた3台のベビーカーから最強のベビーカーを決める</a></li>
@@ -831,8 +833,6 @@ Qiitaに投稿しています。
 		<li><a href="/review/2017/05/24/netsuper-theseiyu/">西友ネットスーパーを1年使ってみて感じたイイトコロを書く</a></li>
 		
 		<li><a href="/review/2017/04/29/reborn-vegetable-first-impression/">キッチン栽培でリボベジ 我が家で実用性のある食材とは</a></li>
-		
-		<li><a href="/diary/2017/04/03/waiting-for-my2ndbaby/">二人目が生まれます</a></li>
 		
 	</ul>
 
@@ -857,7 +857,7 @@ Qiitaに投稿しています。
 		
 	</div>
 	<div>
-		Copyright &copy; <a href="/">Miki Ishijima Blog</a>. 2017 &bull; All rights reserved.
+		Copyright &copy; <a href="/">Miki Ishijima Blog</a>. 2018 &bull; All rights reserved.
 		<span class="ghost">Proudly published with <a href="http://jekyllrb.com/" target="_blank">Jekyll</a>.</span>
 	</div>
 </footer>
