@@ -10,7 +10,7 @@ description: 			"趣味のゲームやプログラミング、レビューなど
 email: 						"woops.mirai@gmail.com"
 port                : 3000
 host                : 127.0.0.1
-baseurl             : "blog/" # does not include hostname
+baseurl             : "" # does not include hostname
 content_url: 	    "/content"
 logourl: 				  "/assets/img/bloglogo.jpg"
 paginate: 				10
