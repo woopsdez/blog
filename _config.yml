@@ -8,10 +8,10 @@ exclude: ["node_modules", "gulpfile.js", "package.json", "themes"]
 title: 						"Miki Ishijima Blog"
 description: 			"趣味のゲームやプログラミング、レビューなど個人イシジマミキにより近しい内容を書いています。普遍的なデザインの話はThe Marsknowledge Blogで。"
 email: 						"woops.mirai@gmail.com"
-baseurl: 					""
-url: 					    "http://mikiishijima.com/blog/"
-content_url: 	    "content"
-logourl: 				  "assets/img/bloglogo.jpg"
+baseurl: 					"blog"
+url: 					    "blog"
+content_url: 	    "/content"
+logourl: 				  "/assets/img/bloglogo.jpg"
 paginate: 				10
 excerpt_separator: "<!--more-->"
 
