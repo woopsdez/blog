@@ -9,7 +9,7 @@ title: 						"Miki Ishijima Blog"
 description: 			"趣味のゲームやプログラミング、レビューなど個人イシジマミキにより近しい内容を書いています。普遍的なデザインの話はThe Marsknowledge Blogで。"
 email: 						"woops.mirai@gmail.com"
 baseurl: 					""
-url: 					    "http://blog.mikiishijima.com/"
+url: 					    "http://mikiishijima.com/blog"
 content_url: 	    "/content"
 logourl: 				  "/assets/img/bloglogo.jpg"
 paginate: 				10
