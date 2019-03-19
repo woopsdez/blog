@@ -86,7 +86,7 @@ Twitterで具体的に「良かったですよ」と意見をいただけたの�
 スピーカー陣とはハングアウトで接続し、その音声をOBSを通じてYoutube Liveへ配信していました。
 
 配信構成図はこちら。
-![](/content/images/2019/03/lookback-design-honyarara/01.png)
+![](/blog/content/images/2019/03/lookback-design-honyarara/01.png)
 
 #### マイク接続できなかった問題
 
@@ -104,7 +104,7 @@ Webカメラのマイク、ヘッドホンのマイクと二つ用意して、�
 ### 動画が一部異なる比率で再生されてしまった → 再エンコしよ
 mpeg形式はOBS側で、異なる比率で配置されてしまうようです。
 
-![](/content/images/2019/03/lookback-design-honyarara/02.jpg)
+![](/blog/content/images/2019/03/lookback-design-honyarara/02.jpg)
 
 * エンコード形式を具体的に指定する
 * こちらで再エンコすることをあらかじめ許諾もらっておく
@@ -191,6 +191,6 @@ iPadがあったからという前提にもなりますが、スッピンでも�
 
 ## さいごに
 
-![](/content/images/2019/03/lookback-design-honyarara/03.jpg)
+![](/blog/content/images/2019/03/lookback-design-honyarara/03.jpg)
 
 Twitterで[#デザインほにゃらら](https://twitter.com/search?f=tweets&vertical=default&q=%23%E3%83%87%E3%82%B6%E3%82%A4%E3%83%B3%E3%81%BB%E3%81%AB%E3%82%83%E3%82%89%E3%82%89&src=typd)ってつけて「すごい！」とか「またやって欲しい！」、「こんなテーマ聞きたい！」、「何時にやってくれ！」とかお願いします。褒められたら、たぶん5月くらいにまたやれそう。
