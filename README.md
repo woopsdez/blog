@@ -1,5 +1,11 @@
 # blog.mikiishijima.com
 
+## TODO
+* サブドメイン時とディレクトリURLの場合の階層の違いをどう対処したら良いか
+* githubのアラートが消えない
+* リンク切れ
+  * ブログ記事のコンテンツ
+  * 投稿者写真
 
 ## 開発環境の準備
 1. Jekyll - ```$ gem install jekyll```

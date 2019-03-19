@@ -10,7 +10,7 @@ description: 			"趣味のゲームやプログラミング、レビューなど
 email: 						"woops.mirai@gmail.com"
 port                : 3000
 host                : 127.0.0.1
-baseurl             : "/blog" # does not include hostname
+baseurl             : "" # does not include hostname
 content_url: 	    "/blog/content"
 logourl: 				  "/assets/img/bloglogo.jpg"
 paginate: 				10
@@ -19,9 +19,9 @@ excerpt_separator: "<!--more-->"
 # Author Settings
 author_name: 				"Miki Ishijima"
 author_url: 				"http://mikiishijima.com/"
-author_bio: 				"デザインワーク、ソフトウェア開発のワークフロー、デザイン自体の考え方に関する著書を持つ。2013年にザ・マーズナレッジ株式会社設立。"
+author_bio: 				"仕事では学び方や伝え方をデザインしています。自分が欲しいものを作り続けるのがライフワーク。"
 author_email: 			"woops.mirai@gmail.com"
-author_image: 			"content/images/about/woopsdez-owner-sq.jpg"
+author_image: 			"/content/images/about/woopsdez-mother.jpg"
 
 
 # Social Settings
