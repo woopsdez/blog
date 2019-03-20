@@ -194,3 +194,9 @@ iPadがあったからという前提にもなりますが、スッピンでも�
 ![](/blog/content/images/2019/03/lookback-design-honyarara/03.jpg)
 
 Twitterで[#デザインほにゃらら](https://twitter.com/search?f=tweets&vertical=default&q=%23%E3%83%87%E3%82%B6%E3%82%A4%E3%83%B3%E3%81%BB%E3%81%AB%E3%82%83%E3%82%89%E3%82%89&src=typd)ってつけて「すごい！」とか「またやって欲しい！」、「こんなテーマ聞きたい！」、「何時にやってくれ！」とかお願いします。褒められたら、たぶん5月くらいにまたやれそう。
+
+### チャンネル登録してね〜。
+
+[デザインほにゃらら - YouTube](https://www.youtube.com/channel/UC8MLV7dCOl_7ZvFsBSYMBIQ)
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/0zrsNHZGjDc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
