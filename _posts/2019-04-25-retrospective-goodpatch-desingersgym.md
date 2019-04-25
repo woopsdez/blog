@@ -3,6 +3,10 @@ layout: post
 title: 「学び方のデザイン」についての振り返り
 date: '2019-04-23'
 categories: work
+banner_image: "blog/content/images/2019/04/retrospective-goodpatch-designesgymbanner.png"
+featured: true
+comments: true
+published: true
 ---
 
 2019年4月23日にGoodpatchさんのUI/UXデザイナー育成オンラインサロン [Designers Gym](https://goodpatch.com/blog/gym-season2/)にて[学び方のデザイン](https://speakerdeck.com/woopsdez/xue-bifang-falsedezain)というテーマにお話させていただきました。今回はその振り返り会です。<!--more-->
