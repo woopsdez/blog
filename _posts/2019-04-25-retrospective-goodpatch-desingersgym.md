@@ -3,7 +3,7 @@ layout: post
 title: 「学び方のデザイン」についての振り返り
 date: '2019-04-23'
 categories: work
-banner_image: "/content/images/2019/04/retrospective-goodpatch-designesgym/banner.png"
+banner_image: "/blog/content/images/2019/04/retrospective-goodpatch-designesgym/banner.png"
 featured: true
 comments: true
 published: true
