@@ -11,7 +11,7 @@ categories: work
 ### 視覚化の良いきっかけになった
 普段、思いついた時にiPadで手書き図説を作成しています。
 
-![](/content/images/2019/04/retrospective-goodpatch-designesgym/01.jpeg)
+![](/blog/content/images/2019/04/retrospective-goodpatch-designesgym/01.jpeg)
 
 それらは単にひとりで考えて思いついている訳ではありません。実際に数人のノンデザイナーさんをトレーニーとしてサンプリングし、そこから得たものをもとに思考整理して図説にまで落としています。
 
@@ -33,7 +33,7 @@ categories: work
 * クローズドデザイン勉強会(趣味 / 希望者とその友だちで3人くらい)
 * Slackチャンネル design-temple (趣味 / これだけ主宰でなくただのメンバー)
 
-![](/content/images/2019/04/retrospective-goodpatch-designesgym/02.png)
+![](/blog/content/images/2019/04/retrospective-goodpatch-designesgym/02.png)
 
 以下のようなことを学びたい人から直接ヒアリングして仕事に適用しています。
 
@@ -58,15 +58,15 @@ categories: work
 
 ### 図説作り直すの大変だった
 
-![](/content/images/2019/04/retrospective-goodpatch-designesgym/04.png)
+![](/blog/content/images/2019/04/retrospective-goodpatch-designesgym/04.png)
 
-![](/content/images/2019/04/retrospective-goodpatch-designesgym/06.png)
+![](/blog/content/images/2019/04/retrospective-goodpatch-designesgym/06.png)
 
 手書きではそれなりにカタチになっているように見えるものでも実は詰めきれていないものがあるものです。
 
 デジタル化をして、しっかり情報を構造化していくにあたりそれらを見つけられ、深く考える機会を得られたのは非常に良かったです。
 
-![](/content/images/2019/04/retrospective-goodpatch-designesgym/03.png)
+![](/blog/content/images/2019/04/retrospective-goodpatch-designesgym/03.png)
 
 また、スライド作成時には非常にiPadが重宝しました。普段から自分の思考整理にも活用していますが
 
@@ -96,7 +96,7 @@ categories: work
 
 #### グラフィックデザイントーンを考える
 
-![](/content/images/2019/04/retrospective-goodpatch-designesgym/05.png)
+![](/blog/content/images/2019/04/retrospective-goodpatch-designesgym/05.png)
 
 自分が好きに作ってよいものなので、まずそこから考えるのが面倒です。かと言って用意されたテンプレートに従うのも仕様理解に手間がかかって嫌なんですが…。
 
