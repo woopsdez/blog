@@ -36,6 +36,7 @@
   "homepage": "https://github.com/shakyShane/jekyll-gulp-sass-browser-sync",
   "dependencies": {
     "gulp-git": "^2.8.0",
-    "imagemin-pngquant": "^6.0.1"
+    "imagemin-pngquant": "^6.0.1",
+    "tar": "^4.4.8"
   }
 }
