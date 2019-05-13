@@ -3,7 +3,7 @@ layout: post
 title: 株式会社ビルディットのデザイン顧問になりました
 date: '2019-05-12'
 categories: work
-banner_image: "/content/images/2019/04/retrospective-goodpatch-designesgym/banner.png"
+banner_image: "/content/images/2019/05/design-advisor-appointment/banner.png"
 featured: true
 comments: true
 published: true
