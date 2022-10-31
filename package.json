@@ -15,7 +15,7 @@
     "gulp-autoprefixer": "6.0.0",
     "gulp-if": "^2.0.2",
     "gulp-image-resize": "^0.13.1",
-    "gulp-imagemin": "^5.0.3",
+    "gulp-imagemin": "^8.0.0",
     "gulp-sass": "^5.1.0",
     "minimist": "^1.2.6",
     "run-sequence": "^2.2.1"
